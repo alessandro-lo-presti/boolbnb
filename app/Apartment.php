@@ -21,5 +21,8 @@ class Apartment extends Model
     "visualization"
   ];
 
+  public function user() {
+      return $this->belongsTo("App\User");
+  }
 
 }
