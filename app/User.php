@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     public function apartments()
     {
-        return $this->hasMany("App\Apartments");
+        return $this->hasMany("App\Apartment");
     }
 
 }
