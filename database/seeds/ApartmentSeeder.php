@@ -28,8 +28,8 @@ class ApartmentSeeder extends Seeder
           $newApartment->image = $faker->imageUrl(640, 480, 'animals', true);
           $newApartment->visibility = $faker->boolean();
           $newApartment->visualization = 0;
-          $users = Count(User::all()->toArray());
-          $newApartment->user_id = rand(1, $users);
+          $users = User::all()->toArray();
+          $newApartment->user_id = $users[rand(0, Count($users)-1)]["id"];
           $newApartment->save();
         }
     }

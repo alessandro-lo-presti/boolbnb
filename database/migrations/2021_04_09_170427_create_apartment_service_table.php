@@ -17,6 +17,7 @@ class CreateApartmentServiceTable extends Migration
             $table->foreignId("apartment_id")->constrained();
             $table->foreignId("service_id")->constrained();
             $table->primary(["apartment_id", "service_id"]);
+            $table->timestamps();
         });
     }
 

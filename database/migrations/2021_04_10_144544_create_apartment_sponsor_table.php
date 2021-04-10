@@ -20,6 +20,7 @@ class CreateApartmentSponsorTable extends Migration
             $table->dateTime('end');
             $table->string('payment_status',100);
             $table->primary(["apartment_id", "sponsor_id"]);
+            $table->timestamps();
         });
     }
 

@@ -17,6 +17,7 @@ class CreateSponsorsTable extends Migration
             $table->id();
             $table->smallInteger('time');
             $table->decimal('price',$precision = 3, $scale = 2);
+            $table->timestamps();
         });
     }
 

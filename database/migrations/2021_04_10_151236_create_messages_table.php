@@ -19,6 +19,7 @@ class CreateMessagesTable extends Migration
             $table->string('email');
             $table->dateTime('date');
             $table->string('body');
+            $table->timestamps();
         });
     }
 
