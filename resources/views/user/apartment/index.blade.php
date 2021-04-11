@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('partials.header')
 <div class="container">
    @foreach ($apartments as $apartment)
    {{$apartment->title}}
@@ -12,4 +13,5 @@
    @endforeach
 
 </div>
+@include('partials.footer')
 @endsection
