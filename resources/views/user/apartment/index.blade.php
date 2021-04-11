@@ -6,7 +6,7 @@
    {{$apartment->title}}
    {{$apartment->address}}
    {{$apartment->city}}
-   <br>
+
 
    @endforeach
 
