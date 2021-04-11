@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\User;
 
 use App\Apartment;
+use App\Message;
+use App\Service;
+use App\Sponsor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -118,6 +121,12 @@ class ApartmentController extends Controller
      */
     public function destroy(Apartment $apartment)
     {
+        $messages = Message::where('apartment_id', $apartment->id)->get();
+        foreach ($messages as $message) {
+          $message->delete();
+        }
+        $apartment->sponsors()->sync([]);
+        $apartment->services()->sync([]);
         $apartment->delete();
         return redirect()->route('apartment.index');
     }
