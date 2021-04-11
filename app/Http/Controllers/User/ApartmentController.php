@@ -19,6 +19,7 @@ class ApartmentController extends Controller
         $apartments=Apartment::where('user_id', Auth::id())->get();
         $data=['apartments'=>$apartments];
         return view('user.apartment.index',$data);
+        // emanuele
     }
 
     /**
