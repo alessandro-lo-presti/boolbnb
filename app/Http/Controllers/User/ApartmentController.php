@@ -16,10 +16,14 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        $apartments=Apartment::where('user_id', Auth::id())->get();
-        $data=['apartments'=>$apartments];
-        return view('user.apartment.index',$data);
-        // emanuele
+        $apartments = Apartment::where('user_id', Auth::id())->get();
+        
+        $data = [
+            'apartments' => $apartments
+        ];
+
+        return view('user.apartment.index', $data);
+        
     }
 
     /**
@@ -40,7 +44,27 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+       
+        $newApartment = new Apartment;
+
+        $newApartment->user_id = Auth::id();
+        $newApartment->title = $data['title'];
+        $newApartment->n_rooms = $data['n_rooms'];
+        $newApartment->n_beds = $data['n_beds'];
+        $newApartment->n_bathrooms = $data['n_bathrooms'];
+        $newApartment->mqs = $data['mqs'];
+        $newApartment->address = $data['address'];
+        $newApartment->city = $data['city'];
+        // $newApartment->longitude = $data['longitude'];
+        // $newApartment->latitude = $data['latitude'];
+        $newApartment->image = Storage::put('apartment_cover', $data['image']);
+        $newApartment->visibility = $data['visibility'];
+        $newApartment->visualization = $data['visualization'];
+
+        $newApartment->save();
+
+        return redirect()->route('apartment.index');
     }
 
     /**
@@ -49,9 +73,12 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Apartment $apartment)
     {
-        return view('user.apartment.show');
+        $data = [
+            'apartment' => $apartment
+        ]; 
+        return view('user.apartment.show', $data);
     }
 
     /**
