@@ -6,6 +6,7 @@
    {{$apartment->title}}
    {{$apartment->address}}
    {{$apartment->city}}
+   <h1>Cristina</h1>
 
 
    @endforeach
