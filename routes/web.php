@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,16 +18,14 @@ Route::get('/', "HomeController@index")->name("index");
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('user')
 		->namespace('User')
 		->middleware('auth')
 		->group(function () {
-			Route::get('/', 'HomeController@index')
-		->name('home');
+            Route::get('/', 'HomeController@index')->name('home');
+            Route::resource('apartment', 'ApartmentController');
+
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
