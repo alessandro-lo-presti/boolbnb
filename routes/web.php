@@ -24,8 +24,7 @@ Route::prefix('user')
 		->middleware('auth')
 		->group(function () {
             Route::get('/', 'HomeController@index')->name('home');
+						Route::get('/sponsor/{apartment}', 'SponsorController@index')->name('sponsor.index');
             Route::resource('apartment', 'ApartmentController');
 
 });
-
-
