@@ -17,13 +17,13 @@ class ApartmentController extends Controller
     public function index()
     {
         $apartments = Apartment::where('user_id', Auth::id())->get();
-        
+
         $data = [
             'apartments' => $apartments
         ];
 
         return view('user.apartment.index', $data);
-        
+
     }
 
     /**
@@ -45,7 +45,7 @@ class ApartmentController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-       
+
         $newApartment = new Apartment;
 
         $newApartment->user_id = Auth::id();
@@ -77,7 +77,7 @@ class ApartmentController extends Controller
     {
         $data = [
             'apartment' => $apartment
-        ]; 
+        ];
         return view('user.apartment.show', $data);
     }
 
@@ -87,9 +87,12 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Apartment $apartment)
     {
-        return view('user.apartment.edit');
+        $data = [
+          'apartment' => $apartment
+        ];
+        return view('user.apartment.edit', $data);
     }
 
     /**
