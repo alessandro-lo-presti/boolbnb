@@ -24,13 +24,22 @@
     </thead>
     <tbody>
         <tr>
-            <th>{{ $post->id }}</th>
-            <td>{{ $post->title }}</td>
-            <td>{{ $post->user_id }}</td>
-            <td>{{ $post->content }}</td>
-            <td><img src="{{asset('storage/'.$post->cover)}}" alt="{{ $post->title }}"></td>
-            <td>{{ $post->created_at }}</td>
-            <td>{{ $post->updated_at }}</td>
+            <th>{{ $apartment->id }}</th>
+            <td>{{ $apartment->title }}</td>
+            <td>{{ $apartment->user_id }}</td>
+            <td>{{ $apartment->n_rooms }}</td>
+            <td>{{ $apartment->n_beds }}</td>
+            <td>{{ $apartment->n_bathrooms }}</td>
+            <td>{{ $apartment->mqs }}</td>
+            <td>{{ $apartment->adress }}</td>
+            <td>{{ $apartment->city }}</td>
+            <td>{{ $apartment->longitude }}</td>
+            <td>{{ $apartment->latitude }}</td>
+            <td><img src="{{asset('storage/'.$apartment->image)}}" alt="{{ $apartment->title }}"></td>
+            <td>{{ $apartment->visibility }}</td>
+            <td>{{ $apartment->visualization }}</td>
+            <td>{{ $apartment->created_at }}</td>
+            <td>{{ $apartment->updated_at }}</td>
           </tr>
     </tbody>
   </table>
