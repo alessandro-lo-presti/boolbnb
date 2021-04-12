@@ -9,11 +9,13 @@ use Illuminate\Http\Request;
 class SponsorController extends Controller
 {
     public function index(Apartment $apartment)
-    {      
+    {
       $sponsors = Sponsor::all();
+
       $data = [
         'sponsors' => $sponsors
       ];
+      
       return view('user.sponsor.index', $data);
     }
 }

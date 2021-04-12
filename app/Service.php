@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-
 class Service extends Model
 {
     protected $fillable = [
-    "name"
-  ];
+        "name"
+    ];
 
     public function apartments() {
-      return $this->belongsToMany("App\Apartment");
+        return $this->belongsToMany("App\Apartment");
     }
+
 }

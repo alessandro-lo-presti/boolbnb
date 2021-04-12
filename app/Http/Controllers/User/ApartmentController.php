@@ -56,6 +56,7 @@ class ApartmentController extends Controller
     {
         $data = $request->all();
 
+        // validation
         $request->validate([
           "title" => "required|unique:apartments|max:50",
           "n_rooms" => "required",
@@ -134,6 +135,8 @@ class ApartmentController extends Controller
     public function update(Request $request, Apartment $apartment)
     {
         $data = $request->all();
+
+        // validation
         $request->validate([
             "title" => "required|unique:apartments|max:50",
             "n_rooms" => "required",
@@ -162,12 +165,17 @@ class ApartmentController extends Controller
     public function destroy(Apartment $apartment)
     {
         $messages = Message::where('apartment_id', $apartment->id)->get();
+
         foreach ($messages as $message) {
           $message->delete();
         }
+
         $apartment->sponsors()->sync([]);
         $apartment->services()->sync([]);
+        
         $apartment->delete();
+
         return redirect()->route('apartment.index');
     }
+
 }

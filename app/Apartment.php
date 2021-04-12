@@ -7,18 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Apartment extends Model
 {
   protected $fillable = [
-    "title",
-    "n_rooms",
-    "n_beds",
-    "n_bathrooms",
-    "mqs",
-    "address",
-    "city",
-    "longitude",
-    "latitude",
-    "image",
-    "visibility",
-    "visualization"
+      "title",
+      "n_rooms",
+      "n_beds",
+      "n_bathrooms",
+      "mqs",
+      "address",
+      "city",
+      "longitude",
+      "latitude",
+      "image",
+      "visibility",
+      "visualization"
   ];
 
   public function user() {
@@ -36,4 +36,5 @@ class Apartment extends Model
   public function messages() {
       return $this->hasMany("App\Message");
   }
+
 }
