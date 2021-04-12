@@ -25,19 +25,19 @@
         </div>
         <div class="form-group">
           <label for="inputRooms">N_rooms</label>
-          <input type="number" class="form-control" id="inputRooms" name="rooms">
+          <input type="number" class="form-control" id="inputRooms" name="n_rooms">
         </div>
         <div class="form-group">
           <label for="inputBedrooms">N_bedrooms</label>
-          <input type="number" class="form-control" id="inputBedrooms" name="bedrooms">
+          <input type="number" class="form-control" id="inputBedrooms" name="n_beds">
         </div>
         <div class="form-group">
           <label for="inputBathrooms">N_bathrooms</label>
-          <input type="number" class="form-control" id="inputBathrooms" name="bathrooms">
+          <input type="number" class="form-control" id="inputBathrooms" name="n_bathrooms">
         </div>
         <div class="form-group">
           <label for="inputMq">Mq</label>
-          <input type="number" class="form-control" id="inputMq" name="mq">
+          <input type="number" class="form-control" id="inputMq" name="mqs">
         </div>
         <div class="form-group">
           <label for="inputAdress">Address</label>
