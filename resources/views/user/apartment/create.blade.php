@@ -1,23 +1,62 @@
 @extends('layouts.app')
 
 @section('content')
+<h1>Inserisci un nuovo appartamente</h1>
+@if ($errors->any())
+  <div class="alert alert-danger">
+    <ul>
+      @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+@endif
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('This is Create in User/Apartment') }}
-                </div>
-            </div>
+    <form action="{{route('apartment.store')}}" method="post" enctype="multipart/form-data">
+        @csrf
+        @method('POST')
+        <div class="form-group">
+          <label for="inputTitle">Title</label>
+          <input type="text" class="form-control" id="inputTitle" name="title">
         </div>
-    </div>
+        <div class="form-group">
+          <label for="image">Scegli l'immagine</label>
+          <input type="file" class="form-control-file" id="image" name="image">
+        </div>
+        <div class="form-group">
+          <label for="inputRooms">N_rooms</label>
+          <input type="number" class="form-control" id="inputRooms" name="rooms">
+        </div>
+        <div class="form-group">
+          <label for="inputBedrooms">N_bedrooms</label>
+          <input type="number" class="form-control" id="inputBedrooms" name="bedrooms">
+        </div>
+        <div class="form-group">
+          <label for="inputBathrooms">N_bathrooms</label>
+          <input type="number" class="form-control" id="inputBathrooms" name="bathrooms">
+        </div>
+        <div class="form-group">
+          <label for="inputMq">Mq</label>
+          <input type="number" class="form-control" id="inputMq" name="mq">
+        </div>
+        <div class="form-group">
+          <label for="inputAdress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" name="address">
+        </div>
+        <div class="form-group">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity" name="city">
+        </div>
+        <div class="form-group">
+          <label for="inputLongitude">Longitude</label>
+          <input type="number" class="form-control" id="inputLongitude" name="longitude">
+        </div>
+        <div class="form-group">
+          <label for="inputLatitude">Latitude</label>
+          <input type="text" class="form-control" id="inputLatitude" name="latitude">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salva</button>
+      </form>
 </div>
 @endsection
