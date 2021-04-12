@@ -50,9 +50,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            // 'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            // 'birthday' => ['required', 'minAge:18']
         ]);
     }
 
@@ -64,10 +65,25 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        // dd($data['birthday'] => 'required|minAge:18');
+        // dd(date('Y-m-d') - $data['birthday']);
+        if ($data['birthday'] <= date('Y-m-d')) {
+          return User::create([
+              'name' => $data['name'],
+              'last_name' => $data['last_name'],
+              'email' => $data['email'],
+              'password' => Hash::make($data['password']),
+              'birthday' => $data['birthday']
+          ]);
+        }
+        else{
+          return User::create([
+              'name' => $data['name'],
+              'last_name' => $data['last_name'],
+              'email' => $data['email'],
+              'password' => Hash::make($data['password']),
+              'birthday' => null
+          ]);
+        }
     }
 }
