@@ -67,12 +67,23 @@ class RegisterController extends Controller
     {
         // dd($data['birthday'] => 'required|minAge:18');
         // dd(date('Y-m-d') - $data['birthday']);
-        return User::create([
-            'name' => $data['name'],
-            'last_name' => $data['last_name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'birthday' => $data['birthday']
-        ]);
+        if ($data['birthday'] <= date('Y-m-d')) {
+          return User::create([
+              'name' => $data['name'],
+              'last_name' => $data['last_name'],
+              'email' => $data['email'],
+              'password' => Hash::make($data['password']),
+              'birthday' => $data['birthday']
+          ]);
+        }
+        else{
+          return User::create([
+              'name' => $data['name'],
+              'last_name' => $data['last_name'],
+              'email' => $data['email'],
+              'password' => Hash::make($data['password']),
+              'birthday' => null
+          ]);
+        }
     }
 }
