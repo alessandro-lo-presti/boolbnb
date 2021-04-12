@@ -31,7 +31,7 @@
             <td>{{ $apartment->n_beds }}</td>
             <td>{{ $apartment->n_bathrooms }}</td>
             <td>{{ $apartment->mqs }}</td>
-            <td>{{ $apartment->adress }}</td>
+            <td>{{ $apartment->address }}</td>
             <td>{{ $apartment->city }}</td>
             <td>{{ $apartment->longitude }}</td>
             <td>{{ $apartment->latitude }}</td>
