@@ -3,54 +3,67 @@
 @section('content')
 @include('partials.header')
 <div class="container">
-   @foreach ($apartments as $apartment)
-   {{$apartment->title}}
-   {{$apartment->address}}
-   {{$apartment->city}}
-   <h1>Cristina</h1>
-   <form action="{{route('apartment.destroy',$apartment->id)}}" method='post'>
-    @csrf
-    @method('delete')
-    <div class="form-group">
-        <button class="btn btn-danger" type="submit">Cancella</button>
-    </div>
-</form>
-{{-- Aggiungi appartamento --}}
-<div>
-    <a class="btn btn-primary" href="{{route('apartment.create')}}">Aggiungi</a>
-</div>
-{{-- Mostra appartamento --}}
-<div>
-    <a class="btn btn-secondary" href="{{route('apartment.show',$apartment->id)}}">Mostra</a>
-</div>
- {{-- Edit appartamento --}}
-<div>
-    <a class="btn btn-warning" href="{{route('apartment.edit',$apartment->id)}}">Cambia</a>
-</div>
 
-   @endforeach
-{{-- Aggiungi appartamento
-<div>
-    <a class="btn btn-primary" href="{{route('apartment.create')}}">Aggiungi</a>
-</div> --}}
-{{-- Mostra appartamento --}}
-{{-- <div>
-    <a class="btn btn-seondary" href="{{route('apartment.show/{}')}}">Mostra</a>
-</div> --}}
- {{-- Edit appartamento --}}
-{{-- <div>
-    <a class="btn btn-warning" href="{{route('apartment.edit')}}">Cambia</a>
-</div> --}}
-{{-- Cancella appartamento --}}
-{{-- <form action="{{route('apartment.destroy')}}" method='post'>
-    @csrf
-    @method('delete')
-    <div class="form-group">
-        <button class="btn btn-danger" type="submit">Cancella</button>
+    {{-- Aggiungi appartamento --}}
+    <div>
+        <a class="btn btn-success mb-2" href="{{route('apartment.create')}}">Aggiungi</a>
     </div>
 
-{{-- </form> --}}
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
 
-</div>
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Address</th>
+                <th>City</th>
+                <th colspan="3" class="text-center">Options</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        @foreach ($apartments as $apartment)
+            <tr>
+                <td><img src="{{asset('storage/'.$apartment->image)}}" alt="{{ $apartment->title }}"></td>
+
+                <td>{{ $apartment->title }}</td>
+
+                <td>{{ $apartment->address }}</td>
+
+                <td>{{ $apartment->city }}</td>
+
+                <td>
+                    {{-- Mostra appartamento --}}
+                    <a class="btn btn-secondary" href="{{route('apartment.show',$apartment->id)}}">Mostra</a>
+                </td>
+
+                <td>
+                    {{-- Edit appartamento --}}
+                    <a class="btn btn-warning" href="{{route('apartment.edit',$apartment->id)}}">Modifica</a>
+                </td>
+
+                <td>
+                    {{-- Cancella appartamento --}}
+                    <form action="{{route('apartment.destroy',$apartment->id)}}" method='post'>
+                        @csrf
+                        @method('delete')
+                        <div class="form-group">
+                            <button class="btn btn-danger" type="submit">Cancella</button>
+                        </div>
+                  </form>
+                </td>
+
+            </tr>
+        @endforeach
+        </tbody>
+
+    </table>
+
 @include('partials.footer')
 @endsection
