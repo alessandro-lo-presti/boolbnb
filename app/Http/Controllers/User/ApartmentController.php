@@ -66,9 +66,10 @@ class ApartmentController extends Controller
         $newApartment->mqs = $data['mqs'];
         $newApartment->address = $data['address'];
         $newApartment->city = $data['city'];
-        $newApartment->longitude = $data['longitude'];
-        $newApartment->latitude = $data['latitude'];
-        $newApartment->image = Storage::put('apartment_cover', $data['image']);
+        $newApartment->longitude = 0;
+        $newApartment->latitude = 0;
+        $newApartment->image = 'text';
+        // $newApartment->image = Storage::put('apartment_cover', $data['image']);
         $newApartment->visibility = 1;
         $newApartment->visualization = 0;
 

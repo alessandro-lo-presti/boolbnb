@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Inserisci un nuovo appartamente</h1>
+<h1 class="text-center">Inserisci un nuovo appartamente</h1>
 @if ($errors->any())
   <div class="alert alert-danger">
     <ul>
@@ -46,14 +46,6 @@
         <div class="form-group">
           <label for="inputCity">City</label>
           <input type="text" class="form-control" id="inputCity" name="city">
-        </div>
-        <div class="form-group">
-          <label for="inputLongitude">Longitude</label>
-          <input type="number" class="form-control" id="inputLongitude" name="longitude">
-        </div>
-        <div class="form-group">
-          <label for="inputLatitude">Latitude</label>
-          <input type="text" class="form-control" id="inputLatitude" name="latitude">
         </div>
 
         <button type="submit" class="btn btn-primary">Salva</button>
