@@ -56,6 +56,16 @@ class ApartmentController extends Controller
     {
         $data = $request->all();
 
+        $request->validate([
+          "title" => "required|unique:apartments|max:50",
+          "n_rooms" => "required",
+          "n_beds" => "required",
+          "n_bathrooms" => "required",
+          "mqs" => "required",
+          "address" => "required|max:100",
+          "city" => "required|max:30"
+        ]);
+
         $newApartment = new Apartment;
 
         $newApartment->user_id = Auth::id();
