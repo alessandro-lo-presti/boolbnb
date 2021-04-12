@@ -2,6 +2,15 @@
 
 @section('content')
 <div class="container">
+    @if($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+          @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
     <form action="{{route('apartment.update', $apartment)}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
@@ -23,7 +32,7 @@
         </div>
         <div class="form-group">
             <label for="inputMq">Mqs</label>
-            <input type="number" class="form-control" id="inputMq" name="mq" value="{{$apartment->mqs}}">
+            <input type="number" class="form-control" id="inputMq" name="mqs" value="{{$apartment->mqs}}">
         </div>
         <div class="form-group">
             <label for="inputAddress">Address</label>

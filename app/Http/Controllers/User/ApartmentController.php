@@ -134,6 +134,16 @@ class ApartmentController extends Controller
     public function update(Request $request, Apartment $apartment)
     {
         $data = $request->all();
+        $request->validate([
+            "title" => "required|unique:apartments|max:50",
+            "n_rooms" => "required",
+            "n_beds" => "required",
+            "n_bathrooms" => "required",
+            "mqs" => "required",
+            "address" => "required|max:100",
+            "city" => "required|max:30"
+          ]);
+
         $apartment->update($data);
 
         if(array_key_exists('services', $data)) {
