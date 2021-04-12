@@ -37,7 +37,13 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        return view('user.apartment.create');
+        $services = Service::all();
+
+        $data =  [
+            "services" => $services
+        ];
+
+        return view('user.apartment.create', $data);
     }
 
     /**
@@ -68,6 +74,10 @@ class ApartmentController extends Controller
 
         $newApartment->save();
 
+        if(array_key_exists('services', $data)) {
+          $newApartment->services()->sync($data["services"]);
+        }
+
         return redirect()->route('apartment.index');
     }
 
@@ -93,9 +103,13 @@ class ApartmentController extends Controller
      */
     public function edit(Apartment $apartment)
     {
+        $services = Service::all();
+
         $data = [
-          'apartment' => $apartment
+          'apartment' => $apartment,
+          "services" => $services
         ];
+
         return view('user.apartment.edit', $data);
     }
 
@@ -110,6 +124,11 @@ class ApartmentController extends Controller
     {
         $data = $request->all();
         $apartment->update($data);
+
+        if(array_key_exists('services', $data)) {
+          $apartment->services()->sync($data["services"]);
+        }
+
         return redirect()->route('apartment.index');
     }
 
