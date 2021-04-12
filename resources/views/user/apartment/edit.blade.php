@@ -11,15 +11,15 @@
         </div>
         <div class="form-group">
             <label for="inputRooms">N_rooms</label>
-            <input type="number" class="form-control" id="inputRooms" name="rooms" value="{{$apartment->N_rooms}}">
+            <input type="number" class="form-control" id="inputRooms" name="n_rooms" value="{{$apartment->N_rooms}}">
         </div>
         <div class="form-group">
             <label for="inputBedrooms">N_bedrooms</label>
-            <input type="number" class="form-control" id="inputBedrooms" name="bedrooms" value="{{$apartment->N_bedrooms}}">
+            <input type="number" class="form-control" id="inputBedrooms" name="n_beds" value="{{$apartment->N_bedrooms}}">
         </div>
         <div class="form-group">
             <label for="inputBathrooms">N_bathrooms</label>
-            <input type="number" class="form-control" id="inputBathroooms" name="bathrooms" value="{{$apartment->N_bathrooms}}">
+            <input type="number" class="form-control" id="inputBathroooms" name="n_sbathrooms" value="{{$apartment->N_bathrooms}}">
         </div>
         <div class="form-group">
             <label for="inputMq">Mqs</label>
