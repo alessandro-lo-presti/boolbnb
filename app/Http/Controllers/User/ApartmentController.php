@@ -72,9 +72,12 @@ class ApartmentController extends Controller
         $newApartment->user_id = Auth::id();
         $data["longitude"] = 0;
         $data["latitude"] = 0;
-        $data["image"] = NULL;
         $data["visibility"] = 1;
         $data["visualization"] = 0;
+
+        if(array_key_exists('apartment_image', $data)) {
+          $data["image"] = Storage::put("covers", $data["apartment_image"]);
+        }
 
         $newApartment->fill($data);
         $newApartment->save();
@@ -139,6 +142,17 @@ class ApartmentController extends Controller
             "address" => "required|max:100",
             "city" => "required|max:30"
           ]);
+
+
+
+        if(!is_null($apartment->image)) {
+          Storage::delete($file);
+        }
+
+        if(array_key_exists('apartment_image', $data)) {
+          $data["image"] = Storage::put("covers", $data["apartment_image"]);
+        }
+
 
         $apartment->update($data);
 
