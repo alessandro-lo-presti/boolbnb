@@ -61,6 +61,13 @@
           <input type="text" class="form-control" id="inputCity" name="city">
         </div>
 
+        @foreach ($services as $service)
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="services[]" value="{{$service->id}}">
+            <label class="form-check-label" for="exampleCheck1">{{$service->name}}</label>
+          </div>
+        @endforeach
+
         <button type="submit" class="btn btn-primary">Salva</button>
 
       </form>
