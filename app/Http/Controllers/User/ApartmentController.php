@@ -58,7 +58,7 @@ class ApartmentController extends Controller
 
         // validation
         $request->validate([
-          "title" => "required|unique:apartments|max:50",
+          "title" => "required|max:50",
           "n_rooms" => "required",
           "n_beds" => "required",
           "n_bathrooms" => "required",
@@ -146,7 +146,7 @@ class ApartmentController extends Controller
 
 
         if(!is_null($apartment->image)) {
-          Storage::delete($file);
+          Storage::delete($apartment->image);
         }
 
         if(array_key_exists('apartment_image', $data)) {
