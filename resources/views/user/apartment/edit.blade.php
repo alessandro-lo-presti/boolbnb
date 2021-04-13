@@ -59,6 +59,13 @@
           <input type="file" value="{{asset('storage/'.$apartment->image)}}" class="form-control-file" id="image" name="image">
         </div>
 
+        @foreach ($services as $service)
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="services[]" value="{{$service->id}}" {{$apartment->services->contains($service->id) ? 'checked' : ''}}>
+            <label class="form-check-label" for="exampleCheck1">{{$service->name}}</label>
+          </div>
+        @endforeach
+
         <button class="btn btn-primary" type="submit">Salva</button>
 
     </form>
