@@ -138,7 +138,7 @@ class ApartmentController extends Controller
 
         // validation
         $request->validate([
-            "title" => "required|unique:apartments|max:50",
+            "title" => "required|max:50",
             "n_rooms" => "required",
             "n_beds" => "required",
             "n_bathrooms" => "required",
@@ -172,7 +172,7 @@ class ApartmentController extends Controller
 
         $apartment->sponsors()->sync([]);
         $apartment->services()->sync([]);
-        
+
         $apartment->delete();
 
         return redirect()->route('apartment.index');
