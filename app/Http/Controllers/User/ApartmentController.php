@@ -70,20 +70,13 @@ class ApartmentController extends Controller
         $newApartment = new Apartment;
 
         $newApartment->user_id = Auth::id();
-        $newApartment->title = $data['title'];
-        $newApartment->n_rooms = $data['n_rooms'];
-        $newApartment->n_beds = $data['n_beds'];
-        $newApartment->n_bathrooms = $data['n_bathrooms'];
-        $newApartment->mqs = $data['mqs'];
-        $newApartment->address = $data['address'];
-        $newApartment->city = $data['city'];
-        $newApartment->longitude = 0;
-        $newApartment->latitude = 0;
-        $newApartment->image = 'text';
-        // $newApartment->image = Storage::put('apartment_cover', $data['image']);
-        $newApartment->visibility = 1;
-        $newApartment->visualization = 0;
+        $data["longitude"] = 0;
+        $data["latitude"] = 0;
+        $data["image"] = NULL;
+        $data["visibility"] = 1;
+        $data["visualization"] = 0;
 
+        $newApartment->fill($data);
         $newApartment->save();
 
         if(array_key_exists('services', $data)) {
