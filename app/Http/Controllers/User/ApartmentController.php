@@ -64,7 +64,8 @@ class ApartmentController extends Controller
           "n_bathrooms" => "required",
           "mqs" => "required",
           "address" => "required|max:100",
-          "city" => "required|max:30"
+          "city" => "required|max:30",
+          "apartment_image" => 'file|image|mimes:jpeg,png,gif,webp|max:4096'
         ]);
 
         $newApartment = new Apartment;
@@ -140,7 +141,8 @@ class ApartmentController extends Controller
             "n_bathrooms" => "required",
             "mqs" => "required",
             "address" => "required|max:100",
-            "city" => "required|max:30"
+            "city" => "required|max:30",
+            "apartment_image" => 'file|image|mimes:jpeg,png,gif,webp|max:4096'
           ]);
 
         if(!is_null($apartment->image)) {
