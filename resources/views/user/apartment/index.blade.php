@@ -30,7 +30,7 @@
         <tbody>
         @foreach ($apartments as $apartment)
             <tr>
-                <td><img src="{{asset('storage/'.$apartment->image)}}" alt="{{ $apartment->title }}"></td>
+                <td><img src="{{ $apartment->image == null ? asset('storage/covers/placeholder.png') : asset('storage/'.$apartment->image)}}" alt="{{ $apartment->title }}"></td>
                 <td>{{ $apartment->title }}</td>
                 <td>{{ $apartment->address }}</td>
                 <td>{{ $apartment->city }}</td>

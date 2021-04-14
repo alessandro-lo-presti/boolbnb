@@ -28,7 +28,7 @@
 
       <tbody>
         <tr>
-          <td scope="row"><img src="{{asset('storage/'.$apartment->image)}}" alt="{{ $apartment->title }}"></td>
+          <td scope="row"><img src="{{ $apartment->image == null ? asset('storage/covers/placeholder.png') : asset('storage/'.$apartment->image)}}" alt="{{ $apartment->title }}"></td>
           <th>{{ $apartment->id }}</th>
           <td>{{ $apartment->title }}</td>
           <td>{{ $apartment->user_id }}</td>

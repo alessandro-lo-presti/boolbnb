@@ -143,8 +143,6 @@ class ApartmentController extends Controller
             "city" => "required|max:30"
           ]);
 
-
-
         if(!is_null($apartment->image)) {
           Storage::delete($apartment->image);
         }
