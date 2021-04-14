@@ -59,10 +59,10 @@ class ApartmentController extends Controller
         // validation
         $request->validate([
           "title" => "required|max:50",
-          "n_rooms" => "required",
-          "n_beds" => "required",
-          "n_bathrooms" => "required",
-          "mqs" => "required",
+          "n_rooms" => "required|max:20",
+          "n_beds" => "required|max:10",
+          "n_bathrooms" => "required|max:5",
+          "mqs" => "required|max:200",
           "address" => "required|max:100",
           "city" => "required|max:30",
           "apartment_image" => 'file|image|mimes:jpeg,png,gif,webp|max:4096'
@@ -136,10 +136,10 @@ class ApartmentController extends Controller
         // validation
         $request->validate([
             "title" => "required|max:50",
-            "n_rooms" => "required",
-            "n_beds" => "required",
-            "n_bathrooms" => "required",
-            "mqs" => "required",
+            "n_rooms" => "required|max:20",
+            "n_beds" => "required|max:10",
+            "n_bathrooms" => "required|max:5",
+            "mqs" => "required|max:200",
             "address" => "required|max:100",
             "city" => "required|max:30",
             "apartment_image" => 'file|image|mimes:jpeg,png,gif,webp|max:4096'
