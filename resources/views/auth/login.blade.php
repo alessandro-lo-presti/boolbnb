@@ -54,7 +54,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-12">
-                                <button type="submit" class="btn" style="width: 100%; color:white; background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%)">
+                                <button type="submit" class="btn" style="width: 100%; color:white; background: #ff5a5f">
                                     {{ __('Accedi') }}
                                 </button>
                                 {{-- @if (Route::has('password.request'))
