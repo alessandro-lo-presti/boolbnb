@@ -10942,3 +10942,13 @@ a.text-dark:focus {
   }
 }
 
+#home .jumbo {
+  font-weight: 300;
+  background-color: black;
+}
+
+#home .jumbo img {
+  margin: auto;
+  width: 95%;
+}
+

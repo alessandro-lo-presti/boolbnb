@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -97,4 +97,37 @@
             </div>
         </div>
     </body>
+</html> --}}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="home">
+        <section class="jumbo">
+            <div class="row">
+                <img src="https://a0.muscache.com/im/pictures/166791ff-bc82-4b88-ba3d-49be1d462dce.jpg?im_w=2560" alt="img-jumbotron">
+            </div>
+            <div class="container">
+                
+                <div class="row d-flex justify-content-center text-white py-4">
+                    <h2>Grazie agli host puoi</h2>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="{{ asset('js/app.js') }}"></script>
+</body>
 </html>
