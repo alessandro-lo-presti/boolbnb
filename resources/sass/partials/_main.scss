@@ -22,6 +22,91 @@
 // sezione show Alessandro
 #show{
 
+  $image_height: 460px;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  section:not(section:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .image-section {
+
+    .image_box_left {
+      height: $image_height;
+
+      img {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+
+    }
+
+    .image_box_right {
+      height: 520px;
+
+      & > div:first-child {
+        margin-bottom: 10px;
+
+        .image_div:last-child > img {
+          border-top-right-radius: 15px;
+        }
+      }
+
+      & > div:last-child {
+
+        .image_div:last-child > img {
+          border-bottom-right-radius: 15px;
+        }
+      }
+
+      .image_div {
+        height: calc(#{$image_height} / 2 - 5px);
+        margin-left: 10px;
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: 992px) {
+
+    .image_box_right > div:first-child {
+
+      .image_div:first-child > img {
+        border-top-right-radius: 15px;
+      }
+
+    }
+
+    .image_box_right > div:last-child {
+
+      .image_div:first-child > img {
+        border-bottom-right-radius: 15px;
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .image_box_left img {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+  }
+
 }
 
 // sezione statistics
