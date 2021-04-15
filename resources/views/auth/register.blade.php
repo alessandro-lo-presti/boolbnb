@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
             <div class="card">
-                <div class="card-header text-center font-weight-bold">{{ __('Registrazione') }}</div>
+                <div class="card-header text-center font-weight-bold" style="background-color: white">{{ __('Registrazione') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -31,12 +31,12 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                <div>Assicurati che corrisponda al nome riportato sul tuo documento d'identità.</div>
+                                <div style="font-size: 12px">Assicurati che corrisponda al nome riportato sul tuo documento d'identità.</div>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="birthday" class="col-md-4 col-form-label text-md-right">{{ __('Birthday') }}</label>
+                            <label for="birthday" class="col-md-4 col-form-label text-md-right">{{ __('Data di nascita') }}</label>
 
                             <div class="col-md-6">
                                 <input id="birthday" type="date" class="form-control @error('birthday') is-invalid @enderror" name="birthday" value="{{ old('birthday') }}" autocomplete="birthday" autofocus>
@@ -47,6 +47,7 @@
                                     </span>
                                 @enderror
                             </div>
+                            <div class="col-md-12" style="font-size: 12px">Per registrarti, devi aver compiuto 18 anni. Il tuo compleanno non sarà condiviso con altre persone che utilizzano Airbnb.</div>
                         </div>
 
                         <div class="form-group row">
@@ -59,6 +60,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                                <div style="font-size: 12px">Ti invieremo tramite email conferme e ricevute dei viaggi.</div>
                             </div>
                         </div>
 
@@ -78,14 +80,15 @@
                         <div class="form-group row">
 
                             <div class="col-md-12">
-                                <input id="password-confirm" placeholder="Conferma la password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" placeholder="Conferma la Password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <div style="font-size: 12px">Selezionando Accetta e continua di seguito, accetto i Termini del Servizio, i Termini del servizio sui pagamenti, l'Informativa sulla Privacy e la Politiche di non discriminazione di Airbnb.</div>
                             </div>
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary" style="width: 100%; color:white; background: #ff5a5f">
+                                    {{ __('Accetta e continua') }}
                                 </button>
                             </div>
                         </div>
