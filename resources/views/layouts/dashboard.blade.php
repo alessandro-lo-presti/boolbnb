@@ -28,14 +28,14 @@
                 </li>
                 <li class="nav-item">
                     {{-- rotta alla home --}}
-                    <a href=""><i class="fas fa-home fa-2x"></i></a>
+                    <a href="Home"><i class="fas fa-home fa-2x"></i></a>
                 </li>
                 <li class="nav-item">
                     {{-- rotta allo apartment/show --}}
-                    <a href=""><i class="fas fa-building fa-2x"></i></a>
+                    <a href="My apartments"><i class="fas fa-building fa-2x"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a href=""><i class="fas fa-sign-out-alt fa-2x"></i></a>
+                    <a href="Logout"><i class="fas fa-sign-out-alt fa-2x"></i></a>
                 </li>
             </ul>
         </div>
