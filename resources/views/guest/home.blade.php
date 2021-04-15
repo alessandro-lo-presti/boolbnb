@@ -115,17 +115,21 @@
 </head>
 <body>
     <div id="home">
+
+        {{-- section jumbotron --}}
         <section class="jumbo">
-            <div class="row">
+            <div class="d-flex justify-content-center">
                 <img src="https://a0.muscache.com/im/pictures/166791ff-bc82-4b88-ba3d-49be1d462dce.jpg?im_w=2560" alt="img-jumbotron">
             </div>
             <div class="container">
-                
                 <div class="row d-flex justify-content-center text-white py-4">
                     <h2>Grazie agli host puoi</h2>
                 </div>
             </div>
         </section>
+
+        
+
     </div>
     
     <script src="{{ asset('js/app.js') }}"></script>

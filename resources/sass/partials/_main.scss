@@ -1,14 +1,27 @@
 // sezione home Emanuele
 #home{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     .jumbo{
-        font-weight: 300;
         background-color: black;
         img{
-            margin: auto;
             width: 95%;
         }
     }
 
+
+    @media screen and (max-width: 767px){
+        .jumbo{
+            background-color: black;
+            img{
+                width: 100%;
+            }
+            h2{
+                font-size: 1.7em;
+            }
+        }
+    }
 }
 
 // sezione login Federico
