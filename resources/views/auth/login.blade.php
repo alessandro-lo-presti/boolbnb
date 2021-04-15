@@ -12,7 +12,6 @@
                         @csrf
 
                         <div class="form-group row">
-                            {{-- <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Indirizzo e-mail') }}</label> --}}
 
                             <div class="col-md-12">
                                 <input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -22,8 +21,6 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
-                            <div class="col-md-12">
                                 <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -33,12 +30,6 @@
                                 @enderror
                             </div>
                         </div>
-
-                        {{-- <div class="form-group row"> --}}
-                            {{-- <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label> --}}
-
-                            
-                        {{-- </div> --}}
 
                         <div class="form-group row">
                             <div class="col-md-8">
@@ -57,11 +48,6 @@
                                 <button type="submit" class="btn" style="width: 100%; color:white; background: #ff5a5f">
                                     {{ __('Accedi') }}
                                 </button>
-                                {{-- @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Hai dimenticato la password?') }}
-                                    </a>
-                                @endif --}}
                             </div>
                         </div>
                         <div class="form-group row mb-0">
