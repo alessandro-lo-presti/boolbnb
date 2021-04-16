@@ -10942,3 +10942,57 @@ a.text-dark:focus {
   }
 }
 
+#login .container .row .card .card-header {
+  background-color: white;
+}
+
+#login .container .row .card .card-body form .form-group input:focus {
+  outline: none;
+}
+
+#login .container .row .card .card-body form .form-group button {
+  width: 100%;
+  color: white;
+  background: #ff5a5f;
+}
+
+#login-email .container .row .card .card-header {
+  background-color: white;
+}
+
+#login-email .container .row .card .card-body form .form-group input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+}
+
+#login-email .container .row .card .card-body form .form-group .text {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+#login-email .container .row .card .card-body form .form-group button {
+  width: 100%;
+  background-color: #222222;
+  color: white;
+}
+
+#login-register .container .row .card .card-header {
+  background-color: white;
+}
+
+#login-register .container .row .card .card-body form .form-group input:focus {
+  outline: none;
+}
+
+#login-register .container .row .card .card-body form .form-group .text {
+  font-size: 12px;
+}
+
+#login-register .container .row .card .card-body form .form-group button {
+  width: 100%;
+  color: white;
+  background: #ff5a5f;
+}
+
