@@ -27,8 +27,8 @@
         </div>
 
         <div class="form-group">
-          <label for="apartment_image">Scegli l'immagine</label>
-          <input type="file" class="form-control-file" id="apartment_image" name="apartment_image" multiple>
+          <label for="apartment_images">Scegli le immagini</label>
+          <input type="file" class="form-control-file" id="apartment_images" name="apartment_images[]" multiple>
         </div>
 
         <div class="form-group">

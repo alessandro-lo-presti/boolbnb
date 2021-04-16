@@ -55,8 +55,8 @@
         </div>
 
         <div class="form-group">
-          <label for="apartment_image">cambia l'immagine</label>
-          <input type="file" value="{{asset('storage/'.$apartment->image)}}" class="form-control-file" id="apartment_image" name="apartment_image">
+          <label for="apartment_images">cambia l'immagine</label>
+          <input type="file" value="{{asset('storage/'.$apartment->image)}}" class="form-control-file" id="apartment_images" name="apartment_images[]" multiple>
         </div>
 
         @foreach ($services as $service)
