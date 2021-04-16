@@ -10947,9 +10947,6 @@ a.text-dark:focus {
   padding: 0;
   box-sizing: border-box;
 }
-#show {
-  font-size: 18px;
-}
 
 #home section.jumbo {
   background-color: black;
@@ -11247,13 +11244,9 @@ a.text-dark:focus {
   margin-left: 5px;
 }
 
-@media (max-width: 768px) {
-  #create,
-  #edit {
-    background-image: none;
-  }
+#show {
+  font-size: 18px;
 }
-
 
 #show * {
   margin: 0;
@@ -11363,6 +11356,13 @@ a.text-dark:focus {
 
   #show .image-section .image_box_left {
     height: calc(460px / 4 * 3);
+  }
+}
+
+@media (max-width: 768px) {
+  #create,
+  #edit {
+    background-image: none;
   }
 }
 

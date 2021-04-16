@@ -188,10 +188,10 @@
                             <h5 class="pt-2">@{{ types[counter].type }}</h5>
                         </div>
 
-                        {{-- <div class="carousel-item active" v-for="(item, index) in types">
-                            <img :src="types[nextCounter].cover" :alt="types[counter].type">
+                        <div class="carousel-item active" v-for="(item, index) in types">
+                            <img :src="types[counter].cover" :alt="types[counter].type">
                             <h5 class="pt-2">@{{ types[counter].type }}</h5>
-                        </div> --}}
+                        </div>
 
                     </div>
     
