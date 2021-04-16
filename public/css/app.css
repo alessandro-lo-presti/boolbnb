@@ -10956,7 +10956,19 @@ a.text-dark:focus {
   width: 95%;
 }
 
-@media screen and (max-width: 767px) {
+#home .explore img {
+  height: 80px;
+  border-radius: 10px;
+}
+
+#home .explore h5,
+#home .explore p,
+#home .explore [class*=col-] {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
   #home .jumbo {
     background-color: black;
   }

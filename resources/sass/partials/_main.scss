@@ -9,11 +9,21 @@
             width: 95%;
         }
     }
-    
+    .explore{
+        img{
+            height: 80px;
+            border-radius: 10px;
+        }
+        h5, p, [class*='col-']{
+            margin: 0;
+            padding: 0;
+        }
+    }
+
     // 1) Max-width 576px
     // 2) Da min-width 577px a max-width 767px
 
-    @media screen and (max-width: 767px){
+    @media screen and (min-width: 576px) and (max-width: 767px){
         .jumbo{
             background-color: black;
             img{

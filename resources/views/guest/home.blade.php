@@ -132,19 +132,26 @@
 
             {{-- section explore --}}
             <section class="explore">
-                <h2 class="py-4">Esplora i dintorni</h2>    
-                <div class="destinations" v-for="(item, index) in destinations">
-                    <div class="destinations_left">
-                        <img :src="item.cover" :alt="item.city">
-                        {{-- <p>@{{ item.cover }}</p> --}}
-                        {{-- <img src="https://a0.muscache.com/im/pictures/847cfb7f-788d-42dc-9148-f375348dde76.jpg?im_q=medq&im_w=240" alt="img"> --}}
+                <h4>Esplora i dintorni</h4>
+                <div class="d-flex flex-wrap mt-3">
+                    <div class="d-flex col-lg-3 col-md-4 mb-2" v-for="(item, index) in destinations">
+                    
+                        <div class="left_side">
+                            <img :src="item.cover" :alt="item.city">
+                        </div>
+    
+                        <div class="right_side d-flex flex-column justify-content-center pl-3">
+                            
+                            <h5 class="">@{{ item.city }}</h5>
+                            <p class="">@{{ item.description }}</p>
+                        
+                        </div>
+    
                     </div>
-                    <div class="destinations_right">
-                        @{{ item.city }}
-                        @{{ item.description }}
-                    </div>
-                </div>    
+                </div>
+
             </section>
+
         </div>
 
     </div>
