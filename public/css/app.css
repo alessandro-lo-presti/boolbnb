@@ -10947,6 +10947,9 @@ a.text-dark:focus {
   padding: 0;
   box-sizing: border-box;
 }
+#show {
+  font-size: 18px;
+}
 
 #home section.jumbo {
   background-color: black;
@@ -11248,6 +11251,118 @@ a.text-dark:focus {
   #create,
   #edit {
     background-image: none;
+  }
+}
+
+
+#show * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#show ul {
+  list-style: none;
+}
+
+#show img {
+  height: 100%;
+  width: 100%;
+}
+
+#show .title-section {
+  margin-bottom: 15px;
+}
+
+#show .title-section p {
+  color: grey;
+  text-decoration: underline;
+}
+
+#show .image-section {
+  height: 460px;
+  margin-bottom: 30px;
+}
+
+#show .image-section .image_box_left {
+  height: 460px;
+}
+
+#show .image-section .image_box_left img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+#show .image-section .image_box_right {
+  height: 460px;
+}
+
+#show .image-section .image_box_right > div:first-child {
+  margin-bottom: 10px;
+}
+
+#show .image-section .image_box_right > div:first-child .image_div:last-child > img {
+  border-top-right-radius: 15px;
+}
+
+#show .image-section .image_box_right > div:last-child .image_div:last-child > img {
+  border-bottom-right-radius: 15px;
+}
+
+#show .image-section .image_box_right .image_div {
+  height: calc(460px / 2 - 5px);
+  margin-left: 10px;
+}
+
+#show .info-section {
+  padding-top: 20px;
+  border-top: 1px solid lightgrey;
+}
+
+#show .info-section h3 {
+  margin-bottom: 10px;
+}
+
+#show .info-section span {
+  display: inline-block;
+  width: 120px;
+}
+
+@media screen and (max-width: 992px) {
+  #show .image_box_right > div:first-child .image_div:first-child > img {
+    border-top-right-radius: 15px;
+  }
+
+  #show .image_box_right > div:last-child .image_div:first-child > img {
+    border-bottom-right-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #show .image_box_left img {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #show .info_box:first-child {
+    margin-bottom: 30px;
+  }
+
+  #show .info_box:last-child {
+    padding-top: 20px;
+    border-top: 1px solid lightgrey;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #show .image-section {
+    height: calc(460px / 4 * 3);
+  }
+
+  #show .image-section .image_box_left {
+    height: calc(460px / 4 * 3);
   }
 }
 

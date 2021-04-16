@@ -329,6 +329,149 @@
 // sezione show Alessandro
 #show{
 
+  $image_height: 460px;
+  font-size: 18px;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+    // title-section
+  .title-section {
+    margin-bottom: 15px;
+
+    p {
+      color: grey;
+      text-decoration: underline;
+    }
+  }
+
+  // image-section
+  .image-section {
+    height: $image_height;
+    margin-bottom: 30px;
+
+    .image_box_left {
+      height: $image_height;
+
+      img {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+
+    }
+
+    .image_box_right {
+      height: $image_height;
+
+      & > div:first-child {
+        margin-bottom: 10px;
+
+        .image_div:last-child > img {
+          border-top-right-radius: 15px;
+        }
+      }
+
+      & > div:last-child {
+
+        .image_div:last-child > img {
+          border-bottom-right-radius: 15px;
+        }
+      }
+
+      .image_div {
+        height: calc(#{$image_height} / 2 - 5px);
+        margin-left: 10px;
+      }
+
+    }
+
+  }
+
+  // info-section
+  .info-section {
+    padding-top: 20px;
+    border-top: 1px solid lightgrey;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    span {
+      display: inline-block;
+      width: 120px;
+    }
+
+  }
+
+  @media screen and (max-width: 992px) {
+
+    // image-section
+    .image_box_right > div:first-child {
+
+      .image_div:first-child > img {
+        border-top-right-radius: 15px;
+      }
+
+    }
+
+    .image_box_right > div:last-child {
+
+      .image_div:first-child > img {
+        border-bottom-right-radius: 15px;
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .image_box_left img {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+  }
+
+  @media screen and (max-width: 575px) {
+
+    // info-section
+    .info_box:first-child {
+      margin-bottom: 30px;
+    }
+
+    .info_box:last-child {
+      padding-top: 20px;
+      border-top: 1px solid lightgrey;
+    }
+
+  }
+
+  @media screen and (max-width: 400px) {
+
+    //image-section
+    .image-section {
+      height: calc(#{$image_height} / 4 * 3);
+
+      .image_box_left {
+        height: calc(#{$image_height} / 4 * 3);
+      }
+    }
+
+  }
+
 }
 
 // sezione statistics
