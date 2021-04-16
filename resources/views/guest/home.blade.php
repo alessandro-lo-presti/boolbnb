@@ -159,8 +159,6 @@
 
                 <div class="d-flex justify-content-center flex-no-wrap mt-3 position-relative">
 
-                    <div class="scroll position-absolute sx bg-primary"></div>
-
                     <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in types">
                     
                         <div class="apartment_type">
@@ -170,23 +168,36 @@
                         
                     </div>
 
-                    <div class="scroll position-absolute dx bg-primary"></div>
-
                 </div>
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+
+                <div class="carousel slide d-flex space-between" data-ride="carousel">
+                    
+                    <button v-on:click="prev()" class="btn btn-primary"></button>
+                    <span class="sr-only">Previous</span>
+                
                     <div class="carousel-inner">
+
+                        {{-- <div class="carousel-item active" v-for="(item, index) in types">
+                            <img :src="types[prevCounter].cover" :alt="types[counter].type">
+                            <h5 class="pt-2">@{{ types[counter].type }}</h5>
+                        </div> --}}
+
                         <div class="carousel-item active" v-for="(item, index) in types">
                             <img :src="types[counter].cover" :alt="types[counter].type">
+                            <h5 class="pt-2">@{{ types[counter].type }}</h5>
                         </div>
+
+                        {{-- <div class="carousel-item active" v-for="(item, index) in types">
+                            <img :src="types[nextCounter].cover" :alt="types[counter].type">
+                            <h5 class="pt-2">@{{ types[counter].type }}</h5>
+                        </div> --}}
+
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" v-on:click="prev()" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" v-on:click="next()" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+    
+                    <button v-on:click="next()" class="btn btn-primary"></button>
+                    <span class="sr-only">Next</span>
+                
                 </div>
 
             </section>

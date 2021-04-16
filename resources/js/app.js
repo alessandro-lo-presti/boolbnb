@@ -9,7 +9,9 @@ require('./bootstrap');
 var app = new Vue({
     el: '#home',
     data: {
-        counter: 0,
+        counter: 1,
+        nextCounter: this.counter +1,
+        prevCounter: this.counter -1,
         destinations: [
 
             {
@@ -97,6 +99,12 @@ var app = new Vue({
             if (this.counter == this.types.length) {
                 this.counter = 0;
             }
+            // if (this.nextCounter == this.types.length){
+            //     this.nextCounter = 0;
+            // }
+            // if (this.prevCounter == 0) {
+            //     this.prevCounter = this.types.length;
+            // }
         },
 
         prev(){
