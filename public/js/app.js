@@ -93,7 +93,43 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+var create = new Vue({
+  el: '#create',
+  data: function data() {
+    return {
+      rooms: 0,
+      beds: 0,
+      bathrooms: 0,
+      mq: 40
+    };
+  },
+  methods: {
+    addRoom: function addRoom() {
+      this.rooms++;
+    },
+    removeRoom: function removeRoom() {
+      this.rooms--;
+    },
+    addBed: function addBed() {
+      this.beds++;
+    },
+    removeBed: function removeBed() {
+      this.beds--;
+    },
+    addBathroom: function addBathroom() {
+      this.bathrooms++;
+    },
+    removeBathroom: function removeBathroom() {
+      this.bathrooms--;
+    },
+    addMq: function addMq() {
+      this.mq += 5;
+    },
+    removeMq: function removeMq() {
+      this.mq -= 5;
+    }
+  }
+});
 
 /***/ }),
 
