@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('script')
+<script src="{{ asset('js/home.js') }}"></script>
+    
+@endsection
+
 @section('content')
 <div class="container">
 
