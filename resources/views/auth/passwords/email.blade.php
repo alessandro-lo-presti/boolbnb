@@ -32,6 +32,14 @@
                         </div>
 
                         <div class="form-group row mb-0">
+                            <div class="col-md-8 col-lg-8">
+                                <a class="btn btn-link" href="{{ route('login') }}">
+                                    {{ __('Torna indietro') }}
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
                             <div class="col-md-12">
                                 <button type="submit" class="btn" style="width: 100%; background-color: rgb(34, 34, 34); color: white">
                                     {{ __('Invia Link di ripristino') }}
