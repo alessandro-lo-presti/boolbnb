@@ -12,8 +12,6 @@
                         @csrf
 
                         <div class="form-group row">
-                            {{-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label> --}}
-
                             <div class="col-md-12">
                                 <input id="name" type="text" placeholder="Nome" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
 
@@ -87,7 +85,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary" style="width: 100%; color:white; background: #ff5a5f">
+                                <button type="submit" class="btn" style="width: 100%; color:white; background: #ff5a5f">
                                     {{ __('Accetta e continua') }}
                                 </button>
                             </div>
