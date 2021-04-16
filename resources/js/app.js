@@ -93,22 +93,17 @@ var app = new Vue({
     },
     methods: {
         next(){
-            console.log('prima' + this.counter);
             this.counter++;
-            if (this.counter == this.types.length + 1) {
+            if (this.counter == this.types.length) {
                 this.counter = 0;
             }
-            console.log('risultato' + this.counter);  
         },
 
         prev(){
-            console.log('prima' + this.counter);
-            this.counter--;
-            if (this.counter < 0) {
+            if (this.counter == 0) {
                 this.counter = this.types.length;
             }
-            console.log('risultato' + this.counter);
-            
+            this.counter--;
         }
 
     }
