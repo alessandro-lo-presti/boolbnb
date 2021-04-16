@@ -10946,8 +10946,12 @@ a.text-dark:focus {
   background-color: white;
 }
 
-#login .container .row .card .card-body form .form-group input:focus {
+#login .container .row .card .card-body form .form-group input:focus,
+#login .container .row .card .card-body form .form-group input:active {
   outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
 }
 
 #login .container .row .card .card-body form .form-group button {
@@ -10960,7 +10964,8 @@ a.text-dark:focus {
   background-color: white;
 }
 
-#login-email .container .row .card .card-body form .form-group input:focus {
+#login-email .container .row .card .card-body form .form-group input:focus,
+#login-email .container .row .card .card-body form .form-group input:active {
   outline: none;
   box-shadow: none;
   border-color: inherit;
@@ -10982,8 +10987,12 @@ a.text-dark:focus {
   background-color: white;
 }
 
-#login-register .container .row .card .card-body form .form-group input:focus {
+#login-register .container .row .card .card-body form .form-group input:focus,
+#login-register .container .row .card .card-body form .form-group input:active {
   outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
 }
 
 #login-register .container .row .card .card-body form .form-group .text {

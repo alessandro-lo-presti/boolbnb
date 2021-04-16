@@ -14,8 +14,11 @@
                 .card-body{
                     form{
                         .form-group{
-                            input:focus{
+                            input:focus, input:active{
                                 outline: none;
+                                box-shadow: none;
+                                border-color: inherit;
+                                -webkit-box-shadow: none;
                             }
                             button{
                                 width: 100%;
@@ -41,7 +44,7 @@
                 .card-body{
                     form{
                         .form-group{
-                            input:focus{
+                            input:focus, input:active{
                                 outline: none;
                                 box-shadow: none;
                                 border-color: inherit;
@@ -75,8 +78,11 @@
                 .card-body{
                     form{
                         .form-group{
-                            input:focus{
+                            input:focus, input:active{
                                 outline: none;
+                                box-shadow: none;
+                                border-color: inherit;
+                                -webkit-box-shadow: none;
                             }
                             .text{
                                 font-size: 12px;

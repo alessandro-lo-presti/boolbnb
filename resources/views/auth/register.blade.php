@@ -22,6 +22,8 @@
                                         </span>
                                     @enderror
                                 </div>
+                            </div>
+                            <div class="form-group row">
                                 <div class="col-md-12">
                                     <input id="last_name" type="text" placeholder="Cognome" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" autocomplete="last_name" autofocus>
     
