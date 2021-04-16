@@ -157,9 +157,9 @@
             <section class="types mt-4">
                 <h4>Una casa ovunque nel mondo</h4>
 
-                <div class="d-flex justify-content-center flex-no-wrap mt-3 position-absolute">
+                <div class="d-flex justify-content-center flex-no-wrap mt-3 position-relative">
 
-                    <div class="scroll position-relative sx bg-primary"></div>
+                    <div class="scroll position-absolute sx bg-primary"></div>
 
                     <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in types">
                     
@@ -170,11 +170,21 @@
                         
                     </div>
 
-                    <div class="scroll position-relative dx bg-primary"></div>
+                    <div class="scroll position-absolute dx bg-primary"></div>
 
                 </div>
 
             </section>
+
+            {{-- section beHost --}}
+            <section class="behost mt-4 position-relative">
+                <div class="description position-absolute text-white">
+                    <h2>ciao</h2>
+                    <p>a tutti</p>
+                    <button class="btn btn-primary">ciao</button>
+                </div>
+            </section>
+
         </div>
 
     </div>

@@ -3,13 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    .jumbo{
+
+    section.jumbo{
         background-color: black;
         img{
             width: 95%;
         }
     }
-    .explore{
+
+    section.explore{
         img{
             height: 80px;
             border-radius: 10px;
@@ -19,7 +21,9 @@
             padding: 0;
         }
     }
-    .types{
+
+    section.types{
+        height: 400px;
         h5, p, [class*='col-']{
             margin: 0;
             padding: 0;
@@ -33,14 +37,30 @@
             width: 30px;
             height: 30px;
             padding: 20px;
+            z-index: 1;
             &.dx{
                 top: 50%;
+                right: 0;
                 transform: translateY(-50%);
             }
             &.sx{
                 top: 50%;
+                left: 0;
                 transform: translateY(-50%);
+         
             }
+        }
+    }
+
+    section.behost{
+        background-image: url('https://a0.muscache.com/im/pictures/c21183f0-b591-4a3c-8342-87c88cc9445f.jpg?im_w=1680');
+        background-size: cover;
+        height: 400px;
+        border-radius: 10px;
+        .description{
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
         }
     }
 

@@ -10948,53 +10948,73 @@ a.text-dark:focus {
   box-sizing: border-box;
 }
 
-#home .jumbo {
+#home section.jumbo {
   background-color: black;
 }
 
-#home .jumbo img {
+#home section.jumbo img {
   width: 95%;
 }
 
-#home .explore img {
+#home section.explore img {
   height: 80px;
   border-radius: 10px;
 }
 
-#home .explore h5,
-#home .explore p,
-#home .explore [class*=col-] {
+#home section.explore h5,
+#home section.explore p,
+#home section.explore [class*=col-] {
   margin: 0;
   padding: 0;
 }
 
-#home .types h5,
-#home .types p,
-#home .types [class*=col-] {
+#home section.types {
+  height: 400px;
+}
+
+#home section.types h5,
+#home section.types p,
+#home section.types [class*=col-] {
   margin: 0;
   padding: 0;
 }
 
-#home .types img {
+#home section.types img {
   height: 250px;
   border-radius: 10px;
 }
 
-#home .types .scroll {
+#home section.types .scroll {
   border-radius: 50%;
   width: 30px;
   height: 30px;
   padding: 20px;
+  z-index: 1;
 }
 
-#home .types .scroll.dx {
+#home section.types .scroll.dx {
   top: 50%;
+  right: 0;
   transform: translateY(-50%);
 }
 
-#home .types .scroll.sx {
+#home section.types .scroll.sx {
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
+}
+
+#home section.behost {
+  background-image: url("https://a0.muscache.com/im/pictures/c21183f0-b591-4a3c-8342-87c88cc9445f.jpg?im_w=1680");
+  background-size: cover;
+  height: 400px;
+  border-radius: 10px;
+}
+
+#home section.behost .description {
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 577px) and (max-width: 767px) {
