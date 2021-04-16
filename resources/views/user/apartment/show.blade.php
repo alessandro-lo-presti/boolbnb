@@ -55,8 +55,8 @@
 
   <section class="row info-section">
 
-    <div class="col-6 d-flex flex-column align-items-center">
-      <h3 class"flex-row">Servizi</h3>
+    <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center info_box">
+      <h3>Servizi</h3>
       <ul>
         @foreach($services as $service)
           <li>
@@ -69,7 +69,7 @@
       </ul>
     </div>
 
-    <div class="col-6 d-flex flex-column align-items-center">
+    <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center info_box">
       <h3>Informazioni</h3>
       <ul>
         <li>

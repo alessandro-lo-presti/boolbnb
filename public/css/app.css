@@ -11036,3 +11036,14 @@ a.text-dark:focus {
   }
 }
 
+@media screen and (max-width: 576px) {
+  #show .info_box:first-child {
+    margin-bottom: 30px;
+  }
+
+  #show .info_box:last-child {
+    padding-top: 20px;
+    border-top: 1px solid lightgrey;
+  }
+}
+
