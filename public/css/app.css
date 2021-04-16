@@ -10985,7 +10985,7 @@ a.text-dark:focus {
 }
 
 #show .image-section .image_box_right {
-  height: 520px;
+  height: 460px;
 }
 
 #show .image-section .image_box_right > div:first-child {
@@ -11044,6 +11044,16 @@ a.text-dark:focus {
   #show .info_box:last-child {
     padding-top: 20px;
     border-top: 1px solid lightgrey;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #show .image-section {
+    height: calc(460px / 4 * 3);
+  }
+
+  #show .image-section .image_box_left {
+    height: calc(460px / 4 * 3);
   }
 }
 

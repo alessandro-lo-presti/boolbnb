@@ -66,7 +66,7 @@
     }
 
     .image_box_right {
-      height: 520px;
+      height: $image_height;
 
       & > div:first-child {
         margin-bottom: 10px;
@@ -148,6 +148,19 @@
     .info_box:last-child {
       padding-top: 20px;
       border-top: 1px solid lightgrey;
+    }
+
+  }
+
+  @media screen and (max-width: 400px) {
+
+    //image-section
+    .image-section {
+      height: calc(#{$image_height} / 4 * 3);
+
+      .image_box_left {
+        height: calc(#{$image_height} / 4 * 3);
+      }
     }
 
   }
