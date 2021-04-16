@@ -16,7 +16,6 @@ class Apartment extends Model
       "city",
       "longitude",
       "latitude",
-      "image",
       "visibility",
       "visualization"
   ];
@@ -35,6 +34,10 @@ class Apartment extends Model
 
   public function messages() {
       return $this->hasMany("App\Message");
+  }
+
+  public function images() {
+      return $this->belongsToMany("App\Image");
   }
 
 }
