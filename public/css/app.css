@@ -11036,7 +11036,7 @@ a.text-dark:focus {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575px) {
   #show .info_box:first-child {
     margin-bottom: 30px;
   }
