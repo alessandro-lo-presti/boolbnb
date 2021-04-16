@@ -10968,7 +10968,36 @@ a.text-dark:focus {
   padding: 0;
 }
 
-@media screen and (min-width: 576px) and (max-width: 767px) {
+#home .types h5,
+#home .types p,
+#home .types [class*=col-] {
+  margin: 0;
+  padding: 0;
+}
+
+#home .types img {
+  height: 250px;
+  border-radius: 10px;
+}
+
+#home .types .scroll {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+}
+
+#home .types .scroll.dx {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#home .types .scroll.sx {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
   #home .jumbo {
     background-color: black;
   }
@@ -10983,6 +11012,12 @@ a.text-dark:focus {
 
   #home section.explore h2 {
     font-size: 1.7em;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  #home .boxes {
+    width: 300px;
   }
 }
 

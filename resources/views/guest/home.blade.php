@@ -110,6 +110,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -133,8 +134,8 @@
             {{-- section explore --}}
             <section class="explore">
                 <h4>Esplora i dintorni</h4>
-                <div class="d-flex flex-wrap mt-3">
-                    <div class="d-flex col-lg-3 col-md-4 mb-2" v-for="(item, index) in destinations">
+                <div class="d-flex justify-content-center flex-wrap mt-3">
+                    <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in destinations">
                     
                         <div class="left_side">
                             <img :src="item.cover" :alt="item.city">
@@ -152,6 +153,28 @@
 
             </section>
 
+            {{-- section types --}}
+            <section class="types mt-4">
+                <h4>Una casa ovunque nel mondo</h4>
+
+                <div class="d-flex justify-content-center flex-no-wrap mt-3 position-absolute">
+
+                    <div class="scroll position-relative sx bg-primary"></div>
+
+                    <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in types">
+                    
+                        <div class="apartment_type">
+                            <img :src="item.cover" :alt="item.type">
+                            <h5 class="pt-2">@{{ item.type }}</h5>
+                        </div>
+                        
+                    </div>
+
+                    <div class="scroll position-relative dx bg-primary"></div>
+
+                </div>
+
+            </section>
         </div>
 
     </div>

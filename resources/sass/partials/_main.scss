@@ -19,11 +19,35 @@
             padding: 0;
         }
     }
+    .types{
+        h5, p, [class*='col-']{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            height: 250px;
+            border-radius: 10px;
+        }
+        .scroll{
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            padding: 20px;
+            &.dx{
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &.sx{
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
 
     // 1) Max-width 576px
     // 2) Da min-width 577px a max-width 767px
 
-    @media screen and (min-width: 576px) and (max-width: 767px){
+    @media screen and (min-width: 577px) and (max-width: 767px){
         .jumbo{
             background-color: black;
             img{
@@ -37,6 +61,13 @@
             h2{
                 font-size: 1.7em;
             }
+        }
+    }
+
+    @media screen and (max-width: 577px){
+
+        .boxes{
+            width: 300px;
         }
     }
 }
