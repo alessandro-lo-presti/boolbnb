@@ -50,18 +50,49 @@
     </div>
 
   </section>
+  <!-- / Images -->
 
-  <section class"row">
 
-    <div class="col-6">
-      prova
+  <section class="row info-section">
+
+    <div class="col-6 d-flex flex-column align-items-center">
+      <h3 class"flex-row">Servizi</h3>
+      <ul>
+        @foreach($services as $service)
+          <li>
+            <span>{{ $service->name }}:</span>
+            @if($apartment->services->contains($service->id))
+              <i class="fas fa-check"></i>
+            @endif
+          </li>
+        @endforeach
+      </ul>
     </div>
 
-    <div class="col-6">
-      prova
+    <div class="col-6 d-flex flex-column align-items-center">
+      <h3>Informazioni</h3>
+      <ul>
+        <li>
+          <span>Stanze:</span>
+          {{ $apartment->n_rooms }}
+        </li>
+        <li>
+          <span>Letti:</span>
+           {{ $apartment->n_beds }}
+        </li>
+        <li>
+          <span>Bagni:</span>
+          {{ $apartment->n_bathrooms }}
+        </li>
+        <li>
+          <span>Mqs:</span>
+          {{ $apartment->mqs }}
+        </li>
+      </ul>
     </div>
 
   </section>
+
 
 </div>
 @endsection
