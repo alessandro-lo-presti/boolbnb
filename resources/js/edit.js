@@ -1,7 +1,5 @@
-require('./bootstrap');
-
-var create = new Vue({
-el: '#create',
+var edit = new Vue({
+el: '#edit',
 data() {
   return {
     rooms: 0,
