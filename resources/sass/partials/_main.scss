@@ -134,11 +134,106 @@
 
 }
 
-// sezione create-edit Giorgio
-#create-edit{
-
+// sezione create Giorgio
+#create{
+  background-color: #FFFFFF;
+  background-image: url('https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  .container{
+    .form{
+      h1{
+        font-size: 32px;
+        color: #484848;
+      }
+      label{
+        font-size: 24px;
+        color: #484848;
+      }
+      .form-group{
+        .counter{
+          font-size: 16px;
+          font-weight: bold;
+          color: #484848;
+          .title{
+            display: inline-block;
+            width: 70px;
+          }
+          a{
+            margin: 0 10px;
+            i{
+              color: $green;
+            }
+          }
+        }
+        input[type='number']{
+          display: none;
+        }
+        input[type='file']:focus{
+          outline: none;
+        }
+      }
+      .services{
+        .form-check{
+          line-height: 20px;
+          i{
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
 }
-
+// sezione edit Giorigio
+#edit{
+  background-color: #FFFFFF;
+  background-image: url('https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  .container{
+    .form{
+      h1{
+        font-size: 32px;
+        color: #484848;
+      }
+      label{
+        font-size: 24px;
+        color: #484848;
+      }
+      .form-group{
+        .counter{
+          font-size: 16px;
+          font-weight: bold;
+          color: #484848;
+          .title{
+            display: inline-block;
+            width: 70px;
+          }
+          a{
+            margin: 0 10px;
+            i{
+              color: $green;
+            }
+          }
+        }
+        input[type='number']{
+          display: none;
+        }
+        input[type='file']:focus{
+          outline: none;
+        }
+      }
+      .services{
+        .form-check{
+          line-height: 20px;
+          i{
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
 // sezione show Alessandro
 #show{
 
@@ -157,4 +252,12 @@
 // sezione advanced-search
 #advanced-search{
 
+}
+
+// mediaquery create-edit
+@media (max-width: 768px) {
+  #create,
+  #edit{
+    background-image: none;
+  }
 }

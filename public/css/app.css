@@ -10947,6 +10947,12 @@ a.text-dark:focus {
   padding: 0;
   box-sizing: border-box;
 }
+#create {
+  background-color: #FFFFFF;
+  background-image: url("https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
 
 #home section.jumbo {
   background-color: black;
@@ -11074,6 +11080,111 @@ a.text-dark:focus {
 @media screen and (max-width: 577px) {
   #home .boxes {
     width: 300px;
+  }
+}
+
+
+#create .container .form h1 {
+  font-size: 32px;
+  color: #484848;
+}
+
+#create .container .form label {
+  font-size: 24px;
+  color: #484848;
+}
+
+#create .container .form .form-group .counter {
+  font-size: 16px;
+  font-weight: bold;
+  color: #484848;
+}
+
+#create .container .form .form-group .counter .title {
+  display: inline-block;
+  width: 70px;
+}
+
+#create .container .form .form-group .counter a {
+  margin: 0 10px;
+}
+
+#create .container .form .form-group .counter a i {
+  color: #38c172;
+}
+
+#create .container .form .form-group input[type=number] {
+  display: none;
+}
+
+#create .container .form .form-group input[type=file]:focus {
+  outline: none;
+}
+
+#create .container .form .services .form-check {
+  line-height: 20px;
+}
+
+#create .container .form .services .form-check i {
+  margin-left: 5px;
+}
+
+#edit {
+  background-color: #FFFFFF;
+  background-image: url("https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#edit .container .form h1 {
+  font-size: 32px;
+  color: #484848;
+}
+
+#edit .container .form label {
+  font-size: 24px;
+  color: #484848;
+}
+
+#edit .container .form .form-group .counter {
+  font-size: 16px;
+  font-weight: bold;
+  color: #484848;
+}
+
+#edit .container .form .form-group .counter .title {
+  display: inline-block;
+  width: 70px;
+}
+
+#edit .container .form .form-group .counter a {
+  margin: 0 10px;
+}
+
+#edit .container .form .form-group .counter a i {
+  color: #38c172;
+}
+
+#edit .container .form .form-group input[type=number] {
+  display: none;
+}
+
+#edit .container .form .form-group input[type=file]:focus {
+  outline: none;
+}
+
+#edit .container .form .services .form-check {
+  line-height: 20px;
+}
+
+#edit .container .form .services .form-check i {
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  #create,
+  #edit {
+    background-image: none;
   }
 }
 

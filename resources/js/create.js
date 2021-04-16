@@ -1,3 +1,4 @@
+require('./bootstrap');
 
 var create = new Vue({
 el: '#create',
