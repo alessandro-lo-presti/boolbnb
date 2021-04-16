@@ -128,7 +128,24 @@
             </div>
         </section>
 
-        
+        <div class="container">
+
+            {{-- section explore --}}
+            <section class="explore">
+                <h2 class="py-4">Esplora i dintorni</h2>    
+                <div class="destinations" v-for="(item, index) in destinations">
+                    <div class="destinations_left">
+                        <img :src="item.cover" :alt="item.city">
+                        {{-- <p>@{{ item.cover }}</p> --}}
+                        {{-- <img src="https://a0.muscache.com/im/pictures/847cfb7f-788d-42dc-9148-f375348dde76.jpg?im_q=medq&im_w=240" alt="img"> --}}
+                    </div>
+                    <div class="destinations_right">
+                        @{{ item.city }}
+                        @{{ item.description }}
+                    </div>
+                </div>    
+            </section>
+        </div>
 
     </div>
     

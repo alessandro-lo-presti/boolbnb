@@ -9,7 +9,9 @@
             width: 95%;
         }
     }
-
+    
+    // 1) Max-width 576px
+    // 2) Da min-width 577px a max-width 767px
 
     @media screen and (max-width: 767px){
         .jumbo{
@@ -17,6 +19,11 @@
             img{
                 width: 100%;
             }
+            h2{
+                font-size: 1.7em;
+            }
+        }
+        section.explore{
             h2{
                 font-size: 1.7em;
             }

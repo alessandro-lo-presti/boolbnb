@@ -10968,5 +10968,9 @@ a.text-dark:focus {
   #home .jumbo h2 {
     font-size: 1.7em;
   }
+
+  #home section.explore h2 {
+    font-size: 1.7em;
+  }
 }
 
