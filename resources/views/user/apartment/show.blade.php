@@ -14,11 +14,12 @@
   </section>
   <!-- / Title-->
 
+
   <!-- Images -->
   <section class="row d-flex justify-content-between image-section">
 
     <div class="image_box_left col-12 col-md-8 col-lg-6">
-      <img src="{{ $apartment->image == null ? asset('storage/covers/placeholder.png') : asset('storage/'.$apartment->image)}}">
+      <img src="{{ array_key_exists(0, $images) ? asset('storage/' . $images[0]["path"]) : asset('storage/covers/placeholder.png')}}">
     </div>
 
     <div class="image_box_right d-none d-md-block col-sm-4 col-lg-6">
@@ -26,11 +27,11 @@
       <div class="d-flex flex-row">
 
         <div class="image_div">
-          <img src="{{ $apartment->image == null ? asset('storage/covers/placeholder.png') : asset('storage/'.$apartment->image)}}">
+          <img src="{{ array_key_exists(1, $images) ? asset('storage/' . $images[1]["path"]) : asset('storage/covers/placeholder.png')}}">
         </div>
 
         <div class="image_div d-none d-lg-block">
-          <img src="{{ $apartment->image == null ? asset('storage/covers/placeholder.png') : asset('storage/'.$apartment->image)}}">
+          <img src="{{ array_key_exists(2, $images) ? asset('storage/' . $images[2]["path"]) : asset('storage/covers/placeholder.png')}}">
         </div>
 
       </div>
@@ -38,11 +39,11 @@
       <div class="d-flex flex-row">
 
         <div class="image_div">
-          <img src="{{ $apartment->image == null ? asset('storage/covers/placeholder.png') : asset('storage/'.$apartment->image)}}">
+          <img src="{{ array_key_exists(3, $images) ? asset('storage/' . $images[3]["path"]) : asset('storage/covers/placeholder.png')}}">
         </div>
 
         <div class="image_div d-none d-lg-block">
-          <img src="{{ $apartment->image == null ? asset('storage/covers/placeholder.png') : asset('storage/'.$apartment->image)}}">
+          <img src="{{ array_key_exists(4, $images) ? asset('storage/' . $images[4]["path"]) : asset('storage/covers/placeholder.png')}}">
         </div>
 
       </div>

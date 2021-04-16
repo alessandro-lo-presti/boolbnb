@@ -108,10 +108,12 @@ class ApartmentController extends Controller
     public function show(Apartment $apartment)
     {
       $services = Service::all();
+      $images = Image::where('apartment_id', $apartment->id)->get()->toArray();
 
         $data = [
             'apartment' => $apartment,
-            'services' => $services
+            'services' => $services,
+            'images' => $images
         ];
 
         return view('user.apartment.show', $data);
