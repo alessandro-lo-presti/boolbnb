@@ -11017,6 +11017,42 @@ a.text-dark:focus {
   transform: translate(-50%, -50%);
 }
 
+#home section.experience {
+  height: 400px;
+}
+
+#home section.experience h5,
+#home section.experience p,
+#home section.experience [class*=col-] {
+  margin: 0;
+  padding: 0;
+}
+
+#home section.experience img {
+  height: 250px;
+  border-radius: 10px;
+}
+
+#home section.experience .scroll {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+  z-index: 1;
+}
+
+#home section.experience .scroll.dx {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#home section.experience .scroll.sx {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
 @media screen and (min-width: 577px) and (max-width: 767px) {
   #home .jumbo {
     background-color: black;
