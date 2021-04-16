@@ -10,8 +10,8 @@ class Image extends Model
       "path"
   ];
 
-  public function apartments() {
-      return $this->belongsToMany("App\Apartment");
+  public function apartment() {
+      return $this->belongsTo("App\Apartment");
   }
 
 }
