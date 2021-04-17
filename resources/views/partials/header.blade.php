@@ -26,7 +26,7 @@
             </div>
 
             <!-- SEARCHBAR -->
-            <div class="box flex-grow-1 search_bar d-flex">
+            {{-- <div class="box flex-grow-1 search_bar d-flex">
 
               <form class="" action="{{ route("search") }}"
               method="get">
@@ -39,7 +39,7 @@
 
               </form>
 
-            </div>
+            </div> --}}
 
             <!-- Rotta show/Ricerca -->
             <div class="box login d-flex align-items-center">

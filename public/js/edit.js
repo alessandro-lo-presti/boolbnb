@@ -140,7 +140,7 @@ var edit = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\user\Documents\Boolean\mamp_public\boolbnb\resources\js\edit.js */"./resources/js/edit.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/edit.js */"./resources/js/edit.js");
 
 
 /***/ })

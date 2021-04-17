@@ -57,23 +57,23 @@ header {
                 }
             }
         }
-        .box.search_bar {
-            max-width: 500px;
-            padding: 5px 10px;
-            box-shadow: 0 0 10px lightgray;
-            border-radius: 5px;
-
-            input {
-                margin: 0 16px;
-                width: calc(100% - 32px);
-                border: none;
-                line-height: 18px;
-                // font-weight: 600;
-            }
-            input:focus {
-                outline: none;
-            }
-        }
+        // .box.search_bar {
+        //     max-width: 500px;
+        //     padding: 5px 10px;
+        //     box-shadow: 0 0 10px lightgray;
+        //     border-radius: 5px;
+        //
+        //     input {
+        //         margin: 0 16px;
+        //         width: calc(100% - 32px);
+        //         border: none;
+        //         line-height: 18px;
+        //         // font-weight: 600;
+        //     }
+        //     input:focus {
+        //         outline: none;
+        //     }
+        // }
     }
 }
 
