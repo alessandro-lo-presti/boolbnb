@@ -171,36 +171,38 @@
                 </div>
 
 
-                <div class="carousel slide d-flex space-between" data-ride="carousel">
-                    
-                    <button v-on:click="prev()" class="btn btn-primary"></button>
-                    <span class="sr-only">Previous</span>
                 
-                    <div class="carousel-inner">
+                <div class="primo d-flex">
 
-                        {{-- <div class="carousel-item active" v-for="(item, index) in types">
-                            <img :src="types[prevCounter].cover" :alt="types[counter].type">
-                            <h5 class="pt-2">@{{ types[counter].type }}</h5>
-                        </div> --}}
-
-                        <div class="carousel-item active" v-for="(item, index) in types">
-                            <img :src="types[counter].cover" :alt="types[counter].type">
-                            <h5 class="pt-2">@{{ types[counter].type }}</h5>
-                        </div>
-
-                        {{-- <div class="carousel-item active" v-for="(item, index) in types">
-                            <img :src="types[nextCounter].cover" :alt="types[counter].type">
-                            <h5 class="pt-2">@{{ types[counter].type }}</h5>
-                        </div> --}}
-
+                    <button v-on:click="prev()" class="btn btn-primary"></button>
+                    <div class="ciao">
+                        <img :src="types[counter].cover" alt="foto">
+                        <p>@{{ types[counter].type }}</p>
                     </div>
+                    <div class="ciao">
+                        <img :src="types[nextCounter].cover" alt="foto">
+                        <p>@{{ types[nextCounter].type }}</p>
+                    </div>
+                  
     
                     <button v-on:click="next()" class="btn btn-primary"></button>
-                    <span class="sr-only">Next</span>
-                
-
-                    {{-- test --}}
                 </div>
+                  
+                <div class="secondo d-flex">
+
+                    <button v-on:click="prev()" class="btn btn-primary"></button>
+
+                    <div class="ciao">
+                        <img :src="types[counter].cover" alt="foto">
+                        <p>@{{ types[counter].type }}</p>
+                    </div>
+                  
+    
+                    <button v-on:click="next()" class="btn btn-primary"></button>
+                </div>
+                  
+                
+                
 
             </section>
 
