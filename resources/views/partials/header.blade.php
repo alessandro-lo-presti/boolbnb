@@ -24,11 +24,23 @@
                         <img class="logo-small" src="https://i.postimg.cc/5242xRKq/Senza-titolo-1.png" alt="Logo piccolo">
                 </a>
             </div>
+
             <!-- SEARCHBAR -->
             <div class="box flex-grow-1 search_bar d-flex">
-              <input type="text">
-              <i class="fas fa-search"></i>
+
+              <form class="" action="{{ route("search") }}"
+              method="get">
+                @csrf
+                @method('GET')
+
+                <input type="text" name="search" placeholder="Search...">
+                <i class="fas fa-search"></i>
+                <input type="submit" name="" value="Cerca">
+
+              </form>
+
             </div>
+
             <!-- Rotta show/Ricerca -->
             <div class="box login d-flex align-items-center">
                 <!-- DROPDOWN UTENTE -->
