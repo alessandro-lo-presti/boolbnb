@@ -11079,6 +11079,11 @@ a.text-dark:focus {
 
 #login .container .row .card .card-header {
   background-color: white;
+  font-size: 18px;
+}
+
+#login .container .row .card .card-body form {
+  font-size: 16px;
 }
 
 #login .container .row .card .card-body form .form-group input:focus,
@@ -11087,12 +11092,29 @@ a.text-dark:focus {
   box-shadow: none;
   border-color: inherit;
   -webkit-box-shadow: none;
+  color: #717171;
+}
+
+#login .container .row .card .card-body form .form-group a {
+  text-decoration: underline;
+  color: #717171;
+  font-size: 16px;
+}
+
+#login .container .row .card .card-body form .form-group a:hover {
+  color: black;
 }
 
 #login .container .row .card .card-body form .form-group button {
+  font-size: 18px;
   width: 100%;
   color: white;
   background: #ff5a5f;
+  margin-bottom: 20px;
+}
+
+#login .container .row .card .card-body form .form-group button:hover {
+  opacity: 0.9;
 }
 
 #login-email .container .row .card .card-header {
