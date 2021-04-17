@@ -37445,9 +37445,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Vue.co
 var app = new Vue({
   el: '#home',
   data: {
-    counter: 1,
-    nextCounter: this.counter + 1,
-    prevCounter: this.counter - 1,
+    nextCounter: 1,
+    counter: 0,
     destinations: [{
       cover: 'https://a0.muscache.com/im/pictures/e8d3d6de-40b1-4341-89f2-afb2a1a4f71f.jpg?im_q=medq&im_w=240',
       city: 'Milano',
@@ -37511,23 +37510,27 @@ var app = new Vue({
   methods: {
     next: function next() {
       this.counter++;
+      this.nextCounter++;
 
       if (this.counter == this.types.length) {
         this.counter = 0;
-      } // if (this.nextCounter == this.types.length){
-      //     this.nextCounter = 0;
-      // }
-      // if (this.prevCounter == 0) {
-      //     this.prevCounter = this.types.length;
-      // }
+      }
 
+      if (this.nextCounter == this.types.length) {
+        this.nextCounter = 0;
+      }
     },
     prev: function prev() {
+      if (this.nextCounter == 0) {
+        this.nextCounter = this.types.length;
+      }
+
       if (this.counter == 0) {
         this.counter = this.types.length;
       }
 
       this.counter--;
+      this.nextCounter--;
     }
   }
 });
