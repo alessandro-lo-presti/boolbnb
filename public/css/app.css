@@ -11140,6 +11140,53 @@ a.text-dark:focus {
   background: #ff5a5f;
 }
 
+#dashboard #dashboard {
+  overflow: hidden;
+}
+
+#dashboard #dashboard ul {
+  max-width: 80px;
+  height: 90vh;
+  background-color: #dddddd;
+}
+
+#dashboard #dashboard ul li {
+  width: 100%;
+  list-style: none;
+  height: 80px;
+  border-bottom: 1px solid #ff5a5f;
+  text-align: center;
+}
+
+#dashboard #dashboard ul li:active,
+#dashboard #dashboard ul li :nth-child(n+2) {
+  background-color: #ff5a5f;
+}
+
+#dashboard #dashboard ul li:active i,
+#dashboard #dashboard ul li :nth-child(n+2) i {
+  color: white;
+}
+
+#dashboard #dashboard ul li:focus :nth-child(n+2) {
+  background-color: #ff5a5f;
+}
+
+#dashboard #dashboard ul li:focus :nth-child(n+2) i {
+  color: white;
+}
+
+#dashboard #dashboard ul a i {
+  color: #ff5a5f;
+  line-height: 80px;
+}
+
+#dashboard #dashboard ul .logo-dash {
+  vertical-align: middle;
+  width: 40px;
+  margin-top: 10px;
+}
+
 #create {
   background-color: #FFFFFF;
   background-image: url("https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png");
