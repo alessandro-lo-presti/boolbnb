@@ -11142,6 +11142,11 @@ a.text-dark:focus {
 
 #login-register .container .row .card .card-header {
   background-color: white;
+  font-size: 18px;
+}
+
+#login-register .container .row .card .card-body form {
+  font-size: 16px;
 }
 
 #login-register .container .row .card .card-body form .form-group input:focus,
@@ -11150,16 +11155,27 @@ a.text-dark:focus {
   box-shadow: none;
   border-color: inherit;
   -webkit-box-shadow: none;
+  color: #717171;
+}
+
+#login-register .container .row .card .card-body form .form-group label {
+  color: #717171;
 }
 
 #login-register .container .row .card .card-body form .form-group .text {
   font-size: 12px;
+  color: #717171;
 }
 
 #login-register .container .row .card .card-body form .form-group button {
+  font-size: 18px;
   width: 100%;
   color: white;
   background: #ff5a5f;
+}
+
+#login-register .container .row .card .card-body form .form-group button:hover {
+  opacity: 0.9;
 }
 
 #create {
