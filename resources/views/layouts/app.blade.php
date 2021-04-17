@@ -88,8 +88,7 @@
         </main>
     </div>
 
-        {{-- js --}}
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- js --}}
     @yield('script')
 
 </body>
