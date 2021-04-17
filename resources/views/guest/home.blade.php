@@ -115,6 +115,7 @@
     <title>Document</title>
 </head>
 <body>
+    @include('partials.header')
     <div id="home">
 
         {{-- section jumbotron --}}
@@ -136,18 +137,18 @@
                 <h4>Esplora i dintorni</h4>
                 <div class="d-flex justify-content-center flex-wrap mt-3">
                     <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in destinations">
-                    
+
                         <div class="left_side">
                             <img :src="item.cover" :alt="item.city">
                         </div>
-    
+
                         <div class="right_side d-flex flex-column justify-content-center pl-3">
-                            
+
                             <h5 class="">@{{ item.city }}</h5>
                             <p class="">@{{ item.description }}</p>
-                        
+
                         </div>
-    
+
                     </div>
                 </div>
 
@@ -160,18 +161,18 @@
                 <div class="d-flex justify-content-center flex-no-wrap mt-3 position-relative">
 
                     <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in types">
-                    
+
                         <div class="apartment_type">
                             <img :src="item.cover" :alt="item.type">
                             <h5 class="pt-2">@{{ item.type }}</h5>
                         </div>
-                        
+
                     </div>
 
                 </div>
 
 
-                
+
                 <div class="primo d-flex justify-content-center mt-4">
 
                     <button v-on:click="prev()" class="btn btn-primary">
@@ -187,13 +188,13 @@
                         <img :src="types[nextCounter].cover" alt="foto">
                         <p>@{{ types[nextCounter].type }}</p>
                     </div>
-    
+
                     <button v-on:click="next()" class="btn btn-primary">
                         <i class="fas fa-angle-right"></i>
                     </button>
 
                 </div>
-                  
+
                 <div class="secondo d-flex justify-content-center mt-4">
 
                     <button v-on:click="prev()" class="btn btn-primary">
@@ -204,15 +205,15 @@
                         <img :src="types[counter].cover" alt="foto">
                         <p>@{{ types[counter].type }}</p>
                     </div>
-                  
-    
+
+
                     <button v-on:click="next()" class="btn btn-primary">
                         <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
-                  
-                
-                
+
+
+
 
             </section>
 
@@ -228,20 +229,20 @@
             {{-- section experience --}}
             <section class="experience mt-5">
                 <h4>scopri le esperienze</h4>
-                <p>attivit&aacute; uniche con esperti del luogo, di persona oppure online</p> 
+                <p>attivit&aacute; uniche con esperti del luogo, di persona oppure online</p>
 
                 <div class="d-flex justify-content-center flex-no-wrap mt-3 position-relative">
 
                     <div class="scroll position-absolute sx bg-primary"></div>
 
                     <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in experiences">
-                    
+
                         <div class="apartment_type">
                             <img :src="item.cover" :alt="item.type">
                             <h5 class="pt-2">@{{ item.title }}</h5>
                             <p class="pt-2">@{{ item.type }}</p>
                         </div>
-                        
+
                     </div>
 
                     <div class="scroll position-absolute dx bg-primary"></div>
@@ -251,7 +252,7 @@
         </div>
 
     </div>
-    
+
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/home.js') }}"></script>
 </body>
