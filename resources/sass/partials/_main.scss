@@ -47,7 +47,7 @@
                 top: 50%;
                 left: 0;
                 transform: translateY(-50%);
-         
+
             }
         }
     }
@@ -90,7 +90,7 @@
                 top: 50%;
                 left: 0;
                 transform: translateY(-50%);
-            
+
             }
         }
     }
@@ -171,12 +171,12 @@
                                 -webkit-box-shadow: none;
                             }
                             .text{
-                                font-size: 15px; 
+                                font-size: 15px;
                                 padding-bottom: 10px;
                             }
                             button{
-                                width: 100%; 
-                                background-color: rgb(34, 34, 34); 
+                                width: 100%;
+                                background-color: rgb(34, 34, 34);
                                 color: white;
                             }
                         }
@@ -208,8 +208,8 @@
                                 font-size: 12px;
                             }
                             button{
-                                width: 100%; 
-                                color:white; 
+                                width: 100%;
+                                color:white;
                                 background: #ff5a5f;
                             }
                         }
@@ -223,6 +223,48 @@
 
 // sezione dashboard Simone
 #dashboard{
+    #dashboard {
+        overflow: hidden;
+        ul {
+            max-width: 80px;
+            height: 90vh;
+            background-color: rgb(221, 221, 221);
+
+            li {
+                width: 100%;
+                list-style: none;
+                height: 80px;
+                border-bottom: 1px solid #ff5a5f;
+                text-align: center;
+                &:active,
+                :nth-child(n+2) {
+                    background-color: #ff5a5f;
+                    i {
+                        color: white;
+                    }
+                }
+                &:focus
+                :nth-child(n+2) {
+                    background-color: #ff5a5f;
+                    i {
+                        color: white;
+                    }
+                }
+            }
+            a {
+                i {
+                    color: #ff5a5f;
+                    line-height: 80px;
+                }
+
+            }
+            .logo-dash {
+                vertical-align: middle;
+                width: 40px;
+                margin-top: 10px;
+            }
+        }
+    }
 
 }
 
