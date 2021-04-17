@@ -172,25 +172,33 @@
 
 
                 
-                <div class="primo d-flex">
+                <div class="primo d-flex justify-content-center mt-4">
 
-                    <button v-on:click="prev()" class="btn btn-primary"></button>
+                    <button v-on:click="prev()" class="btn btn-primary">
+                        <i class="fas fa-angle-left"></i>
+                    </button>
+
                     <div class="ciao">
                         <img :src="types[counter].cover" alt="foto">
                         <p>@{{ types[counter].type }}</p>
                     </div>
+
                     <div class="ciao">
                         <img :src="types[nextCounter].cover" alt="foto">
                         <p>@{{ types[nextCounter].type }}</p>
                     </div>
-                  
     
-                    <button v-on:click="next()" class="btn btn-primary"></button>
+                    <button v-on:click="next()" class="btn btn-primary">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+
                 </div>
                   
-                <div class="secondo d-flex">
+                <div class="secondo d-flex justify-content-center mt-4">
 
-                    <button v-on:click="prev()" class="btn btn-primary"></button>
+                    <button v-on:click="prev()" class="btn btn-primary">
+                        <i class="fas fa-angle-left"></i>
+                    </button>
 
                     <div class="ciao">
                         <img :src="types[counter].cover" alt="foto">
@@ -198,7 +206,9 @@
                     </div>
                   
     
-                    <button v-on:click="next()" class="btn btn-primary"></button>
+                    <button v-on:click="next()" class="btn btn-primary">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
                 </div>
                   
                 
