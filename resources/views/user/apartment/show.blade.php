@@ -60,10 +60,10 @@
       <h3>Servizi</h3>
       <ul>
         @foreach($services as $service)
-          <li>
-            <span>{{ $service->name }}:</span>
+          <li class="d-flex justify-content-between">
+            <span class="info">{{ $service->name }}:</span>
             @if($apartment->services->contains($service->id))
-              <i class="fas fa-check"></i>
+            <span><i class="fas fa-check"></i></span>
             @endif
           </li>
         @endforeach
@@ -73,21 +73,21 @@
     <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center info_box">
       <h3>Informazioni</h3>
       <ul>
-        <li>
-          <span>Stanze:</span>
-          {{ $apartment->n_rooms }}
+        <li class="d-flex justify-content-between">
+          <span class="info">Stanze:</span>
+          <span>{{ $apartment->n_rooms }}</span>
         </li>
-        <li>
-          <span>Letti:</span>
-           {{ $apartment->n_beds }}
+        <li class="d-flex justify-content-between">
+          <span class="info">Letti:</span>
+          <span>{{ $apartment->n_beds }}</span>
         </li>
-        <li>
-          <span>Bagni:</span>
-          {{ $apartment->n_bathrooms }}
+        <li class="d-flex justify-content-between">
+          <span class="info">Bagni:</span>
+          <span>{{ $apartment->n_bathrooms }}</span>
         </li>
-        <li>
-          <span>Mqs:</span>
-          {{ $apartment->mqs }}
+        <li class="d-flex justify-content-between">
+          <span class="info">Mqs:</span>
+          <span>{{ $apartment->mqs }}</span>
         </li>
       </ul>
     </div>

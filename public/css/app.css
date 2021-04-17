@@ -11407,8 +11407,7 @@ header .row .box.login .user .dropdown .btn_dd {
   margin-bottom: 10px;
 }
 
-#show .info-section span {
-  display: inline-block;
+#show .info-section .info {
   width: 120px;
 }
 
