@@ -11119,6 +11119,7 @@ a.text-dark:focus {
 
 #login-email .container .row .card .card-header {
   background-color: white;
+  font-size: 18px;
 }
 
 #login-email .container .row .card .card-body form .form-group input:focus,
@@ -11132,12 +11133,29 @@ a.text-dark:focus {
 #login-email .container .row .card .card-body form .form-group .text {
   font-size: 15px;
   padding-bottom: 10px;
+  color: #717171;
+}
+
+#login-email .container .row .card .card-body form .form-group a {
+  text-decoration: underline;
+  color: #717171;
+  font-size: 16px;
+}
+
+#login-email .container .row .card .card-body form .form-group a:hover {
+  color: black;
 }
 
 #login-email .container .row .card .card-body form .form-group button {
+  font-size: 18px;
   width: 100%;
   background-color: #222222;
   color: white;
+  margin-top: 30px;
+}
+
+#login-email .container .row .card .card-body form .form-group button:hover {
+  background-color: black;
 }
 
 #login-register .container .row .card .card-header {
