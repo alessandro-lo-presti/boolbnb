@@ -10990,6 +10990,7 @@ header .row .box.login .user .dropdown .btn_dd {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 #home section.search p {
@@ -10998,6 +10999,10 @@ header .row .box.login .user .dropdown .btn_dd {
 }
 
 #home section.search .box_search {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 80px;
   background-color: lightgrey;
   border-radius: 100px;
@@ -11015,6 +11020,19 @@ header .row .box.login .user .dropdown .btn_dd {
 
 #home section.search .box_search .search_location input:focus {
   outline: none;
+}
+
+#home section.search .box_search .search_button button {
+  background-color: #ff385c;
+  border-radius: 50%;
+  border: none;
+  padding: 17px;
+  height: 50px;
+  color: #fff;
+}
+
+#home section.search .box_search .search_button button i {
+  font-size: 1.3em;
 }
 
 #home section.jumbo {
@@ -11038,7 +11056,7 @@ header .row .box.login .user .dropdown .btn_dd {
 }
 
 #home section.types {
-  height: 800px;
+  height: 350px;
 }
 
 #home section.types h5,
@@ -11071,6 +11089,29 @@ header .row .box.login .user .dropdown .btn_dd {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+}
+
+#home section.types .carousel {
+  display: flex;
+  justify-content: center;
+}
+
+#home section.types .secondo,
+#home section.types .terzo {
+  display: none;
+}
+
+#home section.types .btn {
+  height: 30px;
+  position: relative;
+  margin-top: 115px;
+}
+
+#home section.types .btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #home section.behost {
@@ -11138,11 +11179,29 @@ header .row .box.login .user .dropdown .btn_dd {
   #home section.explore h2 {
     font-size: 1.7em;
   }
+
+  #home section.types .secondo {
+    display: flex;
+  }
+
+  #home section.types .primo,
+  #home section.types .terzo {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 577px) {
   #home .boxes {
     width: 300px;
+  }
+
+  #home section.types .terzo {
+    display: flex;
+  }
+
+  #home section.types .primo,
+  #home section.types .secondo {
+    display: none;
   }
 }
 

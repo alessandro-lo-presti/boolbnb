@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    position: relative;
 
     section.search{
       p{
@@ -10,6 +11,10 @@
         padding: 0;
       }
       .box_search{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
         height: 80px;
         background-color: lightgrey;
         border-radius: 100px;
@@ -24,6 +29,19 @@
             }
           }
         }
+        .search_button{
+          button{
+            background-color: #ff385c;
+            border-radius: 50%;
+            border: none;
+            padding: 17px;
+            height: 50px;
+            color: #fff;
+            i{
+              font-size: 1.3em;
+            }
+          }
+        }
       }
     }
 
@@ -31,49 +49,67 @@
     section.jumbo{
         background-color: black;
         img{
-            width: 95%;
+          width: 95%;
         }
     }
 
     section.explore{
         img{
-            height: 80px;
-            border-radius: 10px;
+          height: 80px;
+          border-radius: 10px;
         }
         h5, p, [class*='col-']{
-            margin: 0;
-            padding: 0;
+          margin: 0;
+          padding: 0;
         }
     }
 
     section.types{
-        height: 800px;
-        h5, p, [class*='col-']{
-            margin: 0;
-            padding: 0;
+      height: 350px;
+      h5, p, [class*='col-']{
+        margin: 0;
+        padding: 0;
+      }
+      img{
+        height: 250px;
+        border-radius: 10px;
+      }
+      .scroll{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        padding: 20px;
+        z-index: 1;
+        &.dx{
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
         }
-        img{
-            height: 250px;
-            border-radius: 10px;
+        &.sx{
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
         }
-        .scroll{
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            padding: 20px;
-            z-index: 1;
-            &.dx{
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-            }
-            &.sx{
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-
-            }
+      }
+      .carousel{
+        display: flex;
+        justify-content: center;
+      }
+      .secondo,
+      .terzo{
+        display: none;
+      }
+      .btn{
+        height: 30px;
+        position: relative;
+        margin-top: 115px;
+        i{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
+      }
     }
 
     section.behost{
@@ -83,40 +119,40 @@
         border-radius: 10px;
 
         .description{
-            top: 50%;
-            left: 20%;
-            transform: translate(-50%, -50%);
+          top: 50%;
+          left: 20%;
+          transform: translate(-50%, -50%);
         }
     }
 
     section.experience{
-        height: 400px;
-        h5, p, [class*='col-']{
-            margin: 0;
-            padding: 0;
+      height: 400px;
+      h5, p, [class*='col-']{
+        margin: 0;
+        padding: 0;
+      }
+      img{
+        height: 250px;
+        border-radius: 10px;
+      }
+      .scroll{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        padding: 20px;
+        z-index: 1;
+        &.dx{
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
         }
-        img{
-            height: 250px;
-            border-radius: 10px;
-        }
-        .scroll{
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            padding: 20px;
-            z-index: 1;
-            &.dx{
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-            }
-            &.sx{
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
+        &.sx{
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
 
-            }
         }
+      }
     }
 
 
@@ -127,27 +163,45 @@
     // 2) Da min-width 577px a max-width 767px
 
     @media screen and (min-width: 577px) and (max-width: 767px){
-        .jumbo{
-            background-color: black;
-            img{
-                width: 100%;
-            }
-            h2{
-                font-size: 1.7em;
-            }
+      .jumbo{
+        background-color: black;
+        img{
+          width: 100%;
         }
-        section.explore{
-            h2{
-                font-size: 1.7em;
-            }
+        h2{
+          font-size: 1.7em;
         }
+      }
+      section.explore{
+        h2{
+          font-size: 1.7em;
+        }
+      }
+      section.types{
+        .secondo{
+          display: flex;
+        }
+        .primo,
+        .terzo{
+          display: none;
+        }
+      }
     }
 
     @media screen and (max-width: 577px){
 
-        .boxes{
-            width: 300px;
+      .boxes{
+        width: 300px;
+      }
+      section.types{
+        .terzo{
+          display: flex;
         }
+        .primo,
+        .secondo{
+          display: none;
+        }
+      }
     }
 }
 
