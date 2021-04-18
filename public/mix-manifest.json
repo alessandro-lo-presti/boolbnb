@@ -3,5 +3,6 @@
     "/css/app.css": "/css/app.css",
     "/js/create.js": "/js/create.js",
     "/js/edit.js": "/js/edit.js",
-    "/js/home.js": "/js/home.js"
+    "/js/home.js": "/js/home.js",
+    "/js/search.js": "/js/search.js"
 }

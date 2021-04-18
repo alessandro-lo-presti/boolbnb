@@ -22,7 +22,7 @@
                     <p>dove</p>
                     <input type="text" placeholder="dove vuoi andare">
                 </div>
-                <div class="search_button">
+                <div class="search_button d-flex align-items-center ml-3 mr-2">
                     <button>
                         <i class="fas fa-search"></i>
                     </button>
@@ -70,7 +70,7 @@
             <section class="types mt-4">
                 <h4>Una casa ovunque nel mondo</h4>
 
-                <div class="d-flex justify-content-center flex-no-wrap mt-3 position-relative">
+                <div class="primo carousel flex-no-wrap mt-3 position-relative">
 
                     <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in types">
 
@@ -85,31 +85,31 @@
 
 
 
-                <div class="primo d-flex justify-content-center mt-4">
+                <div class="secondo carousel mt-4">
 
-                    <button v-on:click="prev()" class="btn btn-primary">
+                    <button v-on:click="prev()" class="btn btn-primary mr-2">
                         <i class="fas fa-angle-left"></i>
                     </button>
 
-                    <div class="ciao">
+                    <div class="image mr-1">
                         <img :src="types[counter].cover" alt="foto">
                         <p>@{{ types[counter].type }}</p>
                     </div>
 
-                    <div class="ciao">
+                    <div class="image ml-1">
                         <img :src="types[nextCounter].cover" alt="foto">
                         <p>@{{ types[nextCounter].type }}</p>
                     </div>
 
-                    <button v-on:click="next()" class="btn btn-primary">
+                    <button v-on:click="next()" class="btn btn-primary ml-2">
                         <i class="fas fa-angle-right"></i>
                     </button>
 
                 </div>
 
-                <div class="secondo d-flex justify-content-center mt-4">
+                <div class="terzo carousel mt-4">
 
-                    <button v-on:click="prev()" class="btn btn-primary">
+                    <button v-on:click="prev()" class="btn btn-primary mr-2">
                         <i class="fas fa-angle-left"></i>
                     </button>
 
@@ -119,7 +119,7 @@
                     </div>
 
 
-                    <button v-on:click="next()" class="btn btn-primary">
+                    <button v-on:click="next()" class="btn btn-primary ml-2">
                         <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
@@ -130,11 +130,15 @@
             </section>
 
             {{-- section beHost --}}
-            <section class="behost mt-4 position-relative">
-                <div class="description position-absolute text-white">
-                    <h2>ciao</h2>
-                    <p>a tutti</p>
-                    <button class="btn btn-primary">ciao</button>
+            <section class="behost mt-4">
+                <div class="container">
+                    <div class="image_behost">
+                        <div class="description text-white">
+                            <h2>ciao</h2>
+                            <p>a tutti</p>
+                            <button class="btn btn-primary">ciao</button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
