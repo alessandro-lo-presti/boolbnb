@@ -113,16 +113,27 @@
     }
 
     section.behost{
+      // height: 400px;
+      h2,
+      p{
+        padding: 0;
+        margin: 10px 0;
+      }
+      .image_behost{        
+        position: relative;
         background-image: url('https://a0.muscache.com/im/pictures/c21183f0-b591-4a3c-8342-87c88cc9445f.jpg?im_w=1680');
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         height: 400px;
         border-radius: 10px;
-
-        .description{
-          top: 50%;
-          left: 20%;
-          transform: translate(-50%, -50%);
         }
+      .description{
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     section.experience{
@@ -186,6 +197,13 @@
           display: none;
         }
       }
+      section.behost{
+        height: 280px;
+        .image_behost{
+          height: 280px;
+        }
+      }
+
     }
 
     @media screen and (max-width: 577px){
@@ -200,6 +218,14 @@
         .primo,
         .secondo{
           display: none;
+        }
+      }
+      section.behost{
+        .image_behost{
+          height: 195px;
+          .description{
+            top: 40%;
+          }
         }
       }
     }

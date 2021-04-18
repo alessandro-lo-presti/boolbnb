@@ -130,11 +130,15 @@
             </section>
 
             {{-- section beHost --}}
-            <section class="behost mt-4 position-relative">
-                <div class="description position-absolute text-white">
-                    <h2>ciao</h2>
-                    <p>a tutti</p>
-                    <button class="btn btn-primary">ciao</button>
+            <section class="behost mt-4">
+                <div class="container">
+                    <div class="image_behost">
+                        <div class="description text-white">
+                            <h2>ciao</h2>
+                            <p>a tutti</p>
+                            <button class="btn btn-primary">ciao</button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
