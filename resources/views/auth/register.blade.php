@@ -32,6 +32,10 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
                                     <div class="text">Assicurati che corrisponda al nome riportato sul tuo documento d'identità.</div>
                                 </div>
                             </div>
@@ -48,7 +52,12 @@
                                         </span>
                                     @enderror
                                 </div>
-                                <div class="col-md-12 text">Per registrarti, devi aver compiuto 18 anni. Il tuo compleanno non sarà condiviso con altre persone che utilizzano Airbnb.</div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <div class="text">Per registrarti, devi aver compiuto 18 anni. Il tuo compleanno non sarà condiviso con altre persone che utilizzano Airbnb.</div>
+                                </div>
                             </div>
     
                             <div class="form-group row">
@@ -61,6 +70,11 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
                                     <div class="text">Ti invieremo tramite email conferme e ricevute dei viaggi.</div>
                                 </div>
                             </div>
@@ -79,10 +93,14 @@
                             </div>
     
                             <div class="form-group row">
-    
                                 <div class="col-md-12">
                                     <input id="password-confirm" placeholder="Conferma la Password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                    <div class="text">Selezionando Accetta e continua di seguito, accetto i Termini del Servizio, i Termini del servizio sui pagamenti, l'Informativa sulla Privacy e la Politiche di non discriminazione di Airbnb.</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <div class="text">Selezionando Accetta e continua di seguito, accetto i <a href="#">Termini del Servizio</a>, i <a href="#">Termini del servizio sui pagamenti</a>, l'<a href="#">Informativa sulla Privacy</a> e le <a href="#">Politiche di non discriminazione</a> di Airbnb.</div>
                                 </div>
                             </div>
     
