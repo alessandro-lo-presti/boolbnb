@@ -5,7 +5,6 @@
     box-sizing: border-box;
 
     section.search{
-      background-color: green;
       p{
         margin: 0;
         padding: 0;
@@ -17,7 +16,12 @@
         .search_location{
           padding-left: 30px;
           input{
+            border: none;
             width: 150px;
+            background-color: lightgrey;
+            &:focus{
+              outline: none;
+            }
           }
         }
       }
@@ -117,7 +121,7 @@
 
 
 
-    
+
 
     // 1) Max-width 576px
     // 2) Da min-width 577px a max-width 767px
