@@ -14,7 +14,7 @@
           <div :class="(searchInput.length) ? 'active' : ''" class="autocomplete">
 
             <div v-for='suggest in suggests'>
-              @{{ suggests }}
+              @{{ suggest }}
             </div>
 
           </div>
