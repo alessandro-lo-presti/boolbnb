@@ -15,7 +15,13 @@
 </head>
 
 <body>
-    <header>
+    <header class="d-flex float-right">
+        <input type="search-bar">
+         <div class="icona-notifche">notifiche</div>
+         <div class="account">account?</div>
+
+
+
 
     </header>
     <main>
@@ -50,8 +56,14 @@
             </ul>
         </div>
         {{-- my apartment --}}
-        <section class="my_apartment">
-
+        <section id="chart" class="my-apartment float-right">
+            <h1>I miei appartamenti</h1>
+            <div class="container d-flex flex-row justify-content-around flex-wrap">
+            <div v-for="chart in charts" class="cards bg-success"></div>
+            <div class="cards bg-primary"></div>
+            <div class="cards bg-warning"></div>
+            <div class="cards bg-danger"></div>
+        </div>
 
         </section>
     </main>

@@ -11184,8 +11184,15 @@ header .row .box.login .user .dropdown .btn_dd {
   background: #ff5a5f;
 }
 
+header {
+  height: 100px;
+  width: calc(100% - 200px);
+  box-shadow: 1px 3px 2px #817f7fde;
+}
+
 #dashboard {
   overflow: hidden;
+  float: left;
 }
 
 #dashboard ul {
@@ -11249,6 +11256,21 @@ header .row .box.login .user .dropdown .btn_dd {
 
 #dashboard .logo-small {
   display: none;
+}
+
+.my-apartment {
+  width: calc(100% - 200px);
+}
+
+.my-apartment h1 {
+  display: block;
+  text-align: center;
+}
+
+.my-apartment .container .cards {
+  width: 400px;
+  height: 400px;
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 576px) {

@@ -227,9 +227,14 @@
 }
 
 // sezione dashboard Simone
-
+header{
+    height: 100px;
+    width: calc(100% - 200px);
+    box-shadow: 1px 3px 2px #817f7fde;
+}
 #dashboard {
     overflow: hidden;
+    float: left;
     ul {
         max-width: 200px;
         height: 100vh;
@@ -285,6 +290,24 @@
         display: none;
     }
 }
+.my-apartment{
+    width:calc(100% - 200px);
+
+    h1{
+        display: block;
+        text-align:  center;
+    }
+    .container{
+        .cards{
+            width: 400px;
+            height: 400px;
+            margin-top: 50px;
+
+        }
+    }
+}
+
+
 
 @media screen and (max-width: 576px) {
     #dashboard {
