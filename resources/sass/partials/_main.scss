@@ -1,96 +1,100 @@
 // sezione home Emanuele
-#home{
+#home {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    section.jumbo{
+    section.jumbo {
         background-color: black;
-        img{
+        img {
             width: 95%;
         }
     }
 
-    section.explore{
-        img{
+    section.explore {
+        img {
             height: 80px;
             border-radius: 10px;
         }
-        h5, p, [class*='col-']{
+        h5,
+        p,
+        [class*="col-"] {
             margin: 0;
             padding: 0;
         }
     }
 
-    section.types{
+    section.types {
         height: 800px;
-        h5, p, [class*='col-']{
+        h5,
+        p,
+        [class*="col-"] {
             margin: 0;
             padding: 0;
         }
-        img{
+        img {
             height: 250px;
             border-radius: 10px;
         }
-        .scroll{
+        .scroll {
             border-radius: 50%;
             width: 30px;
             height: 30px;
             padding: 20px;
             z-index: 1;
-            &.dx{
+            &.dx {
                 top: 50%;
                 right: 0;
                 transform: translateY(-50%);
             }
-            &.sx{
+            &.sx {
                 top: 50%;
                 left: 0;
                 transform: translateY(-50%);
-
             }
         }
     }
 
-    section.behost{
-        background-image: url('https://a0.muscache.com/im/pictures/c21183f0-b591-4a3c-8342-87c88cc9445f.jpg?im_w=1680');
+    section.behost {
+        background-image: url("https://a0.muscache.com/im/pictures/c21183f0-b591-4a3c-8342-87c88cc9445f.jpg?im_w=1680");
         background-size: cover;
         height: 400px;
         border-radius: 10px;
 
-        .description{
+        .description {
             top: 50%;
             left: 20%;
             transform: translate(-50%, -50%);
         }
     }
 
-    section.experience{
+    section.experience {
         height: 400px;
-        h5, p, [class*='col-']{
+        h5,
+        p,
+        [class*="col-"] {
             margin: 0;
             padding: 0;
         }
-        img{
+        img {
             height: 250px;
             border-radius: 10px;
         }
-        .scroll{
+        .scroll {
             border-radius: 50%;
             width: 30px;
             height: 30px;
             padding: 20px;
             z-index: 1;
-            &.dx{
+            &.dx {
                 top: 50%;
                 right: 0;
                 transform: translateY(-50%);
             }
-            &.sx{
+            &.sx {
                 top: 50%;
                 left: 0;
                 transform: translateY(-50%);
-
             }
         }
     }
@@ -98,51 +102,51 @@
     // 1) Max-width 576px
     // 2) Da min-width 577px a max-width 767px
 
-    @media screen and (min-width: 577px) and (max-width: 767px){
-        .jumbo{
+    @media screen and (min-width: 577px) and (max-width: 767px) {
+        .jumbo {
             background-color: black;
-            img{
+            img {
                 width: 100%;
             }
-            h2{
+            h2 {
                 font-size: 1.7em;
             }
         }
-        section.explore{
-            h2{
+        section.explore {
+            h2 {
                 font-size: 1.7em;
             }
         }
     }
 
-    @media screen and (max-width: 577px){
-
-        .boxes{
+    @media screen and (max-width: 577px) {
+        .boxes {
             width: 300px;
         }
     }
 }
 
 // sezione login Federico
-#login{
-    .container{
-        .row{
-            .card{
-                .card-header{
+#login {
+    .container {
+        .row {
+            .card {
+                .card-header {
                     background-color: white;
                 }
-                .card-body{
-                    form{
-                        .form-group{
-                            input:focus, input:active{
+                .card-body {
+                    form {
+                        .form-group {
+                            input:focus,
+                            input:active {
                                 outline: none;
                                 box-shadow: none;
                                 border-color: inherit;
                                 -webkit-box-shadow: none;
                             }
-                            button{
+                            button {
                                 width: 100%;
-                                color:white;
+                                color: white;
                                 background: #ff5a5f;
                             }
                         }
@@ -154,27 +158,28 @@
 }
 
 //sezione pagina email Federico
-#login-email{
-    .container{
-        .row{
-            .card{
-                .card-header{
+#login-email {
+    .container {
+        .row {
+            .card {
+                .card-header {
                     background-color: white;
                 }
-                .card-body{
-                    form{
-                        .form-group{
-                            input:focus, input:active{
+                .card-body {
+                    form {
+                        .form-group {
+                            input:focus,
+                            input:active {
                                 outline: none;
                                 box-shadow: none;
                                 border-color: inherit;
                                 -webkit-box-shadow: none;
                             }
-                            .text{
+                            .text {
                                 font-size: 15px;
                                 padding-bottom: 10px;
                             }
-                            button{
+                            button {
                                 width: 100%;
                                 background-color: rgb(34, 34, 34);
                                 color: white;
@@ -188,28 +193,29 @@
 }
 
 //sezione pagina register Federico
-#login-register{
-    .container{
-        .row{
-            .card{
-                .card-header{
+#login-register {
+    .container {
+        .row {
+            .card {
+                .card-header {
                     background-color: white;
                 }
-                .card-body{
-                    form{
-                        .form-group{
-                            input:focus, input:active{
+                .card-body {
+                    form {
+                        .form-group {
+                            input:focus,
+                            input:active {
                                 outline: none;
                                 box-shadow: none;
                                 border-color: inherit;
                                 -webkit-box-shadow: none;
                             }
-                            .text{
+                            .text {
                                 font-size: 12px;
                             }
-                            button{
+                            button {
                                 width: 100%;
-                                color:white;
+                                color: white;
                                 background: #ff5a5f;
                             }
                         }
@@ -220,321 +226,358 @@
     }
 }
 
-
 // sezione dashboard Simone
-#dashboard{
-    #dashboard {
-        overflow: hidden;
-        ul {
-            max-width: 80px;
-            height: 90vh;
-            background-color: rgb(221, 221, 221);
 
-            li {
-                width: 100%;
-                list-style: none;
-                height: 80px;
-                border-bottom: 1px solid #ff5a5f;
-                text-align: center;
-                &:active,
-                :nth-child(n+2) {
-                    background-color: #ff5a5f;
-                    i {
-                        color: white;
-                    }
+#dashboard {
+    overflow: hidden;
+    ul {
+        max-width: 200px;
+        height: 100vh;
+        hr {
+            color: #ff5a5f;
+        }
+
+        li {
+            width: 100%;
+            list-style: none;
+            height: 80px;
+            border-bottom: 1px solid #ff5a5f;
+            padding-left: 20px;
+            text-align: left;
+            &:active{
+                background-color: #ff5a5f;
+
+                i {
+                    color: white;
                 }
-                &:focus
-                :nth-child(n+2) {
-                    background-color: #ff5a5f;
-                    i {
-                        color: white;
-                    }
+                span{
+                    color: white;
                 }
             }
+        }
+        &:focus{
+            background-color: #ff5a5f;
             a {
                 i {
-                    color: #ff5a5f;
-                    line-height: 80px;
+                    color: white;
                 }
-
+                span{
+                    color: white;
+                }
             }
-            .logo-dash {
+        }
+    }
+    a {
+        color: #ff5a5f;
+        font-weight: 700;
+        i {
+            color: #ff5a5f;
+            line-height: 80px;
+            margin-right: 10px;
+        }
+    }
+    .logo-big {
+        vertical-align: middle;
+        width: 100px;
+        margin-top: 20px;
+    }
+    .logo-small {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #dashboard {
+        ul {
+            width: 50px;
+            .logo-big {
+                display: none;
+            }
+            .logo-small {
+                display: inline-block;
                 vertical-align: middle;
                 width: 40px;
                 margin-top: 10px;
             }
+            a{
+                li{
+                    span{
+                        display: none;
+                    }
+                }
+            }
         }
     }
-
+}
+@media screen and (max-width: 767px) and (min-width: 577px) {
+    #dashboard {
+        ul {
+            width: 100px;
+            .logo-big {
+                display: none;
+            }
+            .logo-small {
+                display: inline-block;
+                vertical-align: middle;
+                width: 40px;
+                margin-top: 10px;
+            }
+            a{
+                li{
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // sezione create Giorgio
-#create{
-  .container{
-    .card{
-      .card-header{
-        background-color: white;
-      }
-      .card-body{
-        .form-group{
-          label{
-            font-size: 16px;
-          }
-          input:focus,
-          input:active{
-              outline: none;
-              box-shadow: none;
-              border-color: inherit;
-              -webkit-box-shadow: none;
-          }
-          input[type="number"]{
-            display: none;
-          }
-          .counter{
-            .counter-title{
-              width: 60px;
+#create {
+    .container {
+        .card {
+            .card-header {
+                background-color: white;
             }
-            .counter-number{
-              width: 100px;
-              a{
-                i{
-                  color: #ff5a5f;
+            .card-body {
+                .form-group {
+                    label {
+                        font-size: 16px;
+                    }
+                    input:focus,
+                    input:active {
+                        outline: none;
+                        box-shadow: none;
+                        border-color: inherit;
+                        -webkit-box-shadow: none;
+                    }
+                    input[type="number"] {
+                        display: none;
+                    }
+                    .counter {
+                        .counter-title {
+                            width: 60px;
+                        }
+                        .counter-number {
+                            width: 100px;
+                            a {
+                                i {
+                                    color: #ff5a5f;
+                                }
+                            }
+                        }
+                    }
                 }
-              }
+                button {
+                    width: 100%;
+                    color: white;
+                    background: #ff5a5f;
+                }
+                button:focus {
+                    outline: none;
+                    box-shadow: none;
+                    border-color: inherit;
+                    -webkit-box-shadow: none;
+                }
             }
-          }
         }
-        button{
-          width: 100%;
-          color:white;
-          background: #ff5a5f;
-        }
-        button:focus{
-          outline: none;
-          box-shadow: none;
-          border-color: inherit;
-          -webkit-box-shadow: none;
-        }
-      }
     }
-  }
 }
 // sezione edit Giorigio
-#edit{
-  background-color: #FFFFFF;
-  background-image: url('https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png');
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
-  .container{
-    .form{
-      h1{
-        font-size: 32px;
-        color: #484848;
-      }
-      label{
-        font-size: 24px;
-        color: #484848;
-      }
-      .form-group{
-        .counter{
-          font-size: 16px;
-          font-weight: bold;
-          color: #484848;
-          .title{
-            display: inline-block;
-            width: 70px;
-          }
-          a{
-            margin: 0 10px;
-            i{
-              color: $green;
+#edit {
+    background-color: #ffffff;
+    background-image: url("https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png");
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    .container {
+        .form {
+            h1 {
+                font-size: 32px;
+                color: #484848;
             }
-          }
+            label {
+                font-size: 24px;
+                color: #484848;
+            }
+            .form-group {
+                .counter {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #484848;
+                    .title {
+                        display: inline-block;
+                        width: 70px;
+                    }
+                    a {
+                        margin: 0 10px;
+                        i {
+                            color: $green;
+                        }
+                    }
+                }
+                input[type="number"] {
+                    display: none;
+                }
+                input[type="file"]:focus {
+                    outline: none;
+                }
+            }
+            .services {
+                .form-check {
+                    line-height: 20px;
+                    i {
+                        margin-left: 5px;
+                    }
+                }
+            }
         }
-        input[type='number']{
-          display: none;
-        }
-        input[type='file']:focus{
-          outline: none;
-        }
-      }
-      .services{
-        .form-check{
-          line-height: 20px;
-          i{
-            margin-left: 5px;
-          }
-        }
-      }
     }
-  }
 }
 // sezione show Alessandro
-#show{
+#show {
+    $image_height: 530px;
+    font-size: 18px;
 
-  $image_height: 530px;
-  font-size: 18px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    ul {
+        list-style: none;
+    }
 
-  ul {
-    list-style: none;
-  }
-
-  img {
-    height: 100%;
-    width: 100%;
-  }
+    img {
+        height: 100%;
+        width: 100%;
+    }
 
     // title-section
-  .title-section {
-    margin-bottom: 15px;
+    .title-section {
+        margin-bottom: 15px;
 
-    p {
-      color: grey;
-      text-decoration: underline;
-    }
-  }
-
-  // image-section
-  .image-section {
-    height: $image_height;
-    margin-bottom: 30px;
-
-    .image_box_left {
-      height: $image_height;
-
-      img {
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-      }
-
-    }
-
-    .image_box_right {
-      height: $image_height;
-
-      & > div:first-child {
-        margin-bottom: 10px;
-
-        .image_div:last-child > img {
-          border-top-right-radius: 15px;
+        p {
+            color: grey;
+            text-decoration: underline;
         }
-      }
-
-      & > div:last-child {
-
-        .image_div:last-child > img {
-          border-bottom-right-radius: 15px;
-        }
-      }
-
-      .image_div {
-        height: calc(#{$image_height} / 2 - 5px);
-        margin-left: 10px;
-      }
-
     }
-
-  }
-
-  // info-section
-  .info-section {
-    padding-top: 20px;
-    border-top: 1px solid lightgrey;
-
-    h3 {
-      margin-bottom: 10px;
-    }
-
-    .info {
-      width: 120px;
-    }
-
-  }
-
-  @media screen and (max-width: 992px) {
 
     // image-section
-    .image_box_right > div:first-child {
+    .image-section {
+        height: $image_height;
+        margin-bottom: 30px;
 
-      .image_div:first-child > img {
-        border-top-right-radius: 15px;
-      }
+        .image_box_left {
+            height: $image_height;
 
+            img {
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+        }
+
+        .image_box_right {
+            height: $image_height;
+
+            & > div:first-child {
+                margin-bottom: 10px;
+
+                .image_div:last-child > img {
+                    border-top-right-radius: 15px;
+                }
+            }
+
+            & > div:last-child {
+                .image_div:last-child > img {
+                    border-bottom-right-radius: 15px;
+                }
+            }
+
+            .image_div {
+                height: calc(#{$image_height} / 2 - 5px);
+                margin-left: 10px;
+            }
+        }
     }
-
-    .image_box_right > div:last-child {
-
-      .image_div:first-child > img {
-        border-bottom-right-radius: 15px;
-      }
-
-    }
-
-  }
-
-  @media screen and (max-width: 768px) {
-
-    .image_box_left img {
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-    }
-
-  }
-
-  @media screen and (max-width: 575px) {
 
     // info-section
-    .info_box:first-child {
-      margin-bottom: 30px;
+    .info-section {
+        padding-top: 20px;
+        border-top: 1px solid lightgrey;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        .info {
+            width: 120px;
+        }
     }
 
-    .info_box:last-child {
-      padding-top: 20px;
-      border-top: 1px solid lightgrey;
+    @media screen and (max-width: 992px) {
+        // image-section
+        .image_box_right > div:first-child {
+            .image_div:first-child > img {
+                border-top-right-radius: 15px;
+            }
+        }
+
+        .image_box_right > div:last-child {
+            .image_div:first-child > img {
+                border-bottom-right-radius: 15px;
+            }
+        }
     }
 
-  }
-
-  @media screen and (max-width: 400px) {
-
-    //image-section
-    .image-section {
-      height: calc(#{$image_height} / 4 * 3);
-
-      .image_box_left {
-        height: calc(#{$image_height} / 4 * 3);
-      }
+    @media screen and (max-width: 768px) {
+        .image_box_left img {
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
     }
 
-  }
+    @media screen and (max-width: 575px) {
+        // info-section
+        .info_box:first-child {
+            margin-bottom: 30px;
+        }
 
+        .info_box:last-child {
+            padding-top: 20px;
+            border-top: 1px solid lightgrey;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        //image-section
+        .image-section {
+            height: calc(#{$image_height} / 4 * 3);
+
+            .image_box_left {
+                height: calc(#{$image_height} / 4 * 3);
+            }
+        }
+    }
 }
 
 // sezione statistics
-#statistics{
-
+#statistics {
 }
 
 // sezione sponsor
-#sponsor{
-
+#sponsor {
 }
 
 // sezione advanced-search
-#advanced-search{
-
+#advanced-search {
 }
 
 // mediaquery create-edit
 @media (max-width: 768px) {
-  #create,
-  #edit{
-    background-image: none;
-  }
+    #create,
+    #edit {
+        background-image: none;
+    }
 }

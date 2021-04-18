@@ -11184,51 +11184,113 @@ header .row .box.login .user .dropdown .btn_dd {
   background: #ff5a5f;
 }
 
-#dashboard #dashboard {
+#dashboard {
   overflow: hidden;
 }
 
-#dashboard #dashboard ul {
-  max-width: 80px;
-  height: 90vh;
-  background-color: #dddddd;
+#dashboard ul {
+  max-width: 200px;
+  height: 100vh;
 }
 
-#dashboard #dashboard ul li {
+#dashboard ul hr {
+  color: #ff5a5f;
+}
+
+#dashboard ul li {
   width: 100%;
   list-style: none;
   height: 80px;
   border-bottom: 1px solid #ff5a5f;
-  text-align: center;
+  padding-left: 20px;
+  text-align: left;
 }
 
-#dashboard #dashboard ul li:active,
-#dashboard #dashboard ul li :nth-child(n+2) {
+#dashboard ul li:active {
   background-color: #ff5a5f;
 }
 
-#dashboard #dashboard ul li:active i,
-#dashboard #dashboard ul li :nth-child(n+2) i {
+#dashboard ul li:active i {
   color: white;
 }
 
-#dashboard #dashboard ul li:focus :nth-child(n+2) {
+#dashboard ul li:active span {
+  color: white;
+}
+
+#dashboard ul:focus {
   background-color: #ff5a5f;
 }
 
-#dashboard #dashboard ul li:focus :nth-child(n+2) i {
+#dashboard ul:focus a i {
   color: white;
 }
 
-#dashboard #dashboard ul a i {
+#dashboard ul:focus a span {
+  color: white;
+}
+
+#dashboard a {
+  color: #ff5a5f;
+  font-weight: 700;
+}
+
+#dashboard a i {
   color: #ff5a5f;
   line-height: 80px;
+  margin-right: 10px;
 }
 
-#dashboard #dashboard ul .logo-dash {
+#dashboard .logo-big {
   vertical-align: middle;
-  width: 40px;
-  margin-top: 10px;
+  width: 100px;
+  margin-top: 20px;
+}
+
+#dashboard .logo-small {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  #dashboard ul {
+    width: 50px;
+  }
+
+  #dashboard ul .logo-big {
+    display: none;
+  }
+
+  #dashboard ul .logo-small {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    margin-top: 10px;
+  }
+
+  #dashboard ul a li span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 577px) {
+  #dashboard ul {
+    width: 100px;
+  }
+
+  #dashboard ul .logo-big {
+    display: none;
+  }
+
+  #dashboard ul .logo-small {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    margin-top: 10px;
+  }
+
+  #dashboard ul a li span {
+    display: none;
+  }
 }
 
 #create .container .card .card-header {
@@ -11277,7 +11339,7 @@ header .row .box.login .user .dropdown .btn_dd {
 }
 
 #edit {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   background-image: url("https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png");
   background-repeat: no-repeat;
   background-position: 100% 100%;
