@@ -3,12 +3,24 @@
   <script src="{{ asset('js/search.js') }}" defer></script>
 @endsection
 @section('content')
-  <div id="search" class="container">
-    <div class="">
-      <input type="text" name="title" placeholder="search" v-model="searchInput">
-      <button type="submit" name="button" @click="search">Invia</button>
+  <div id="advanced-search" class="container">
+    <div class="card">
+        <div class="card-header">
+          Advanced Search
+        </div>
+        <div class="card-body search">
+          <input type="text" class='form-control' name="title" placeholder="Search..." v-model="searchInput" @keyup='autocomplete' @keyup.enter='search'>
+
+          <div :class="(searchInput.length) ? 'active' : ''" class="autocomplete">
+
+            <div v-for='suggest in suggests'>
+              @{{ suggests }}
+            </div>
+
+          </div>
+        </div>
     </div>
-    <div class="card mt-2" v-for="apartment in apartments">
+    <div class="card mt-4" v-for="apartment in apartments">
       <div class="card-header">
         @{{apartment.title}}
       </div>

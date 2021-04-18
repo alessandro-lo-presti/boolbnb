@@ -94,10 +94,11 @@
 /***/ (function(module, exports) {
 
 var search = new Vue({
-  el: '#search',
+  el: '#advanced-search',
   data: {
     apartments: [],
-    searchInput: ''
+    searchInput: '',
+    suggests: []
   },
   methods: {
     search: function search() {
@@ -105,6 +106,13 @@ var search = new Vue({
 
       axios.get('http://127.0.0.1:8000/api/search?title=' + this.searchInput).then(function (result) {
         _this.apartments = result.data.response;
+      });
+    },
+    autocomplete: function autocomplete() {
+      var _this2 = this;
+
+      axios.get('http://127.0.0.1:8000/api/autocomplete?title=' + this.searchInput).then(function (result) {
+        _this2.suggests = result.data.response;
       });
     }
   }

@@ -11442,6 +11442,29 @@ header .row .box.login .user .dropdown .btn_dd {
   }
 }
 
+#advanced-search * {
+  box-sizing: border-box;
+}
+
+#advanced-search .search {
+  position: relative;
+}
+
+#advanced-search .search .autocomplete {
+  display: none;
+}
+
+#advanced-search .search .autocomplete.active {
+  padding: 5px 10px;
+  position: absolute;
+  top: 58px;
+  left: 20px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 768px) {
   #create,
   #edit {

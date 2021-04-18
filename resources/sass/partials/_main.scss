@@ -528,6 +528,28 @@
 
 // sezione advanced-search
 #advanced-search{
+  * {
+    box-sizing: border-box;
+  }
+
+  .search {
+    position: relative;
+
+    .autocomplete {
+      display: none;
+    }
+
+    .autocomplete.active {
+      padding: 5px 10px;
+      position: absolute;
+      top: 58px;
+      left: 20px;
+      background-color: white;
+      border: 1px solid lightgrey;
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
 }
 

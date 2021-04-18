@@ -31,7 +31,7 @@ class ApartmentController extends Controller
     $data = $request->all();
 
     if(array_key_exists('title', $data)) {
-      $apartments = Apartment::where('title', 'LIKE', '%'.$data['title'].'%')->pluck('title');
+      $apartments = Apartment::select('title')->where('title', 'LIKE', $data['title'].'%')->pluck('title');
       return response()->json([
         "success" => true,
         "response" => $apartments

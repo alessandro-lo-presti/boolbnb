@@ -1,9 +1,10 @@
 var search = new Vue(
   {
-    el: '#search',
+    el: '#advanced-search',
     data: {
       apartments: [],
-      searchInput: ''
+      searchInput: '',
+      suggests: []
     },
     methods: {
       search(){
@@ -13,6 +14,13 @@ var search = new Vue(
             this.apartments = result.data.response;
           }
         );
+      },
+      autocomplete() {
+        axios
+          .get('http://127.0.0.1:8000/api/autocomplete?title=' + this.searchInput)
+          .then((result) => {
+            this.suggests = result.data.response;
+          });
       }
     }
   });
