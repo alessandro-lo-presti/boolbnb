@@ -10992,6 +10992,29 @@ header .row .box.login .user .dropdown .btn_dd {
   box-sizing: border-box;
 }
 
+#home section.search {
+  background-color: green;
+}
+
+#home section.search p {
+  margin: 0;
+  padding: 0;
+}
+
+#home section.search .box_search {
+  height: 80px;
+  background-color: lightgrey;
+  border-radius: 100px;
+}
+
+#home section.search .box_search .search_location {
+  padding-left: 30px;
+}
+
+#home section.search .box_search .search_location input {
+  width: 150px;
+}
+
 #home section.jumbo {
   background-color: black;
 }
