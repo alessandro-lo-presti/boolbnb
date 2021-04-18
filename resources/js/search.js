@@ -4,7 +4,7 @@ var search = new Vue(
     data: {
       apartments: [],
       searchInput: '',
-      suggests: []
+      suggests: [],
     },
     methods: {
       search(){
