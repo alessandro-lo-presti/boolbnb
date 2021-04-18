@@ -103,9 +103,8 @@ var search = new Vue({
     search: function search() {
       var _this = this;
 
-      axios.get('http://127.0.0.1:8000/api/search?search=' + this.searchInput).then(function (result) {
+      axios.get('http://127.0.0.1:8000/api/search?title=' + this.searchInput).then(function (result) {
         _this.apartments = result.data.response;
-        console.log(_this.apartments);
       });
     }
   }
@@ -120,7 +119,7 @@ var search = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\shadi\Documents\mamp_public\boolbnb\resources\js\search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/search.js */"./resources/js/search.js");
 
 
 /***/ })

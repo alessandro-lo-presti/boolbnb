@@ -5,7 +5,7 @@
 @section('content')
   <div id="search" class="container">
     <div class="">
-      <input type="text" name="search" placeholder="search" v-model="searchInput">
+      <input type="text" name="title" placeholder="search" v-model="searchInput">
       <button type="submit" name="button" @click="search">Invia</button>
     </div>
     <div class="card mt-2" v-for="apartment in apartments">
