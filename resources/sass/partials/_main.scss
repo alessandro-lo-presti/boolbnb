@@ -4,6 +4,26 @@
     padding: 0;
     box-sizing: border-box;
 
+    section.search{
+      background-color: green;
+      p{
+        margin: 0;
+        padding: 0;
+      }
+      .box_search{
+        height: 80px;
+        background-color: lightgrey;
+        border-radius: 100px;
+        .search_location{
+          padding-left: 30px;
+          input{
+            width: 150px;
+          }
+        }
+      }
+    }
+
+
     section.jumbo{
         background-color: black;
         img{
