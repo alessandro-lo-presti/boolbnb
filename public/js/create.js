@@ -141,7 +141,7 @@ var create = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\Corso Boolean\mamp-public\marzo\progetto-boolbnb\resources\js\create.js */"./resources/js/create.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/create.js */"./resources/js/create.js");
 
 
 /***/ })

@@ -6,6 +6,7 @@ use App\Apartment;
 use App\Message;
 use App\Service;
 use App\Sponsor;
+use App\Image;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -65,7 +66,7 @@ class ApartmentController extends Controller
           "mqs" => "required|max:200",
           "address" => "required|max:100",
           "city" => "required|max:30",
-          "apartment_image" => 'file|image|mimes:jpeg,png,gif,webp|max:4096'
+          // "apartment_image" => 'file|image|mimes:jpeg,png,gif,webp|max:4096'
         ]);
 
         $newApartment = new Apartment;
@@ -76,12 +77,20 @@ class ApartmentController extends Controller
         $data["visibility"] = 1;
         $data["visualization"] = 0;
 
-        if(array_key_exists('apartment_image', $data)) {
-          $data["image"] = Storage::put("covers", $data["apartment_image"]);
-        }
 
         $newApartment->fill($data);
         $newApartment->save();
+
+        if(array_key_exists('apartment_images', $data)) {
+
+          foreach($data["apartment_images"] as $image) {
+            $newImage = new Image;
+            $newImage->apartment_id = $newApartment->id;
+            $newImage->path = Storage::put("covers", $image);
+            $newImage->save();
+          }
+
+        }
 
         if(array_key_exists('services', $data)) {
           $newApartment->services()->sync($data["services"]);
@@ -98,9 +107,15 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
+      $services = Service::all();
+      $images = Image::where('apartment_id', $apartment->id)->get()->toArray();
+
         $data = [
-            'apartment' => $apartment
+            'apartment' => $apartment,
+            'services' => $services,
+            'images' => $images
         ];
+
         return view('user.apartment.show', $data);
     }
 
@@ -142,19 +157,29 @@ class ApartmentController extends Controller
             "mqs" => "required|max:200",
             "address" => "required|max:100",
             "city" => "required|max:30",
-            "apartment_image" => 'file|image|mimes:jpeg,png,gif,webp|max:4096'
+            // "apartment_image" => 'file|image|mimes:jpeg,png,gif,webp|max:4096'
           ]);
 
-        if(!is_null($apartment->image)) {
-          Storage::delete($apartment->image);
-        }
-
-        if(array_key_exists('apartment_image', $data)) {
-          $data["image"] = Storage::put("covers", $data["apartment_image"]);
-        }
-
+        // if(!is_null($apartment->image)) {
+        //   Storage::delete($apartment->image);
+        // }
+        //
+        // if(array_key_exists('apartment_image', $data)) {
+        //   $data["image"] = Storage::put("covers", $data["apartment_image"]);
+        // }
 
         $apartment->update($data);
+
+        if(array_key_exists('apartment_images', $data)) {
+
+          foreach($data["apartment_images"] as $image) {
+            $newImage = new Image;
+            $newImage->apartment_id = $apartment->id;
+            $newImage->path = Storage::put("covers", $image);
+            $newImage->save();
+          }
+
+        }
 
         if(array_key_exists('services', $data)) {
           $apartment->services()->sync($data["services"]);
@@ -172,9 +197,14 @@ class ApartmentController extends Controller
     public function destroy(Apartment $apartment)
     {
         $messages = Message::where('apartment_id', $apartment->id)->get();
+        $images = Image::where('apartment_id', $apartment->id)->get();
 
         foreach ($messages as $message) {
           $message->delete();
+        }
+
+        foreach ($images as $image) {
+          $image->delete();
         }
 
         $apartment->sponsors()->sync([]);

@@ -25,11 +25,13 @@ class ApartmentSeeder extends Seeder
           $newApartment->city = $faker->city();
           $newApartment->longitude = $faker->longitude($min=-180, $max=180);
           $newApartment->latitude = $faker->latitude($min=-90, $max=90);
-          $newApartment->image = $faker->imageUrl(640, 480, 'animals', true);
+          // $newApartment->image = $faker->imageUrl(640, 480, 'animals', true);
           $newApartment->visibility = $faker->boolean();
           $newApartment->visualization = 0;
+
           $users = User::all()->toArray();
           $newApartment->user_id = $users[rand(0, Count($users)-1)]["id"];
+          
           $newApartment->save();
         }
     }
