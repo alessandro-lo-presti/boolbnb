@@ -12,6 +12,7 @@ var search = new Vue(
         .get('http://127.0.0.1:8000/api/search?title=' + this.searchInput)
         .then((result) => {
             this.apartments = result.data.response;
+            this.searchInput = '';
           }
         );
       },
@@ -19,8 +20,12 @@ var search = new Vue(
         axios
           .get('http://127.0.0.1:8000/api/autocomplete?title=' + this.searchInput)
           .then((result) => {
-            this.suggests = result.data.response;
+            this.suggests = result.data.response
           });
+      },
+      changeSearchInput(suggest) {
+        this.searchInput = suggest;
+        this.search();
       }
     }
   });

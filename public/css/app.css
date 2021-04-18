@@ -11463,6 +11463,7 @@ header .row .box.login .user .dropdown .btn_dd {
   border: 1px solid lightgrey;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 #advanced-search .search .autocomplete.active div {

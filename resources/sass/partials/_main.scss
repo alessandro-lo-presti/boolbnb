@@ -548,6 +548,7 @@
       border: 1px solid lightgrey;
       display: flex;
       flex-direction: column;
+      z-index: 1;
 
       div {
         padding: 0 10px;

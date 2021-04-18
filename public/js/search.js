@@ -106,6 +106,7 @@ var search = new Vue({
 
       axios.get('http://127.0.0.1:8000/api/search?title=' + this.searchInput).then(function (result) {
         _this.apartments = result.data.response;
+        _this.searchInput = '';
       });
     },
     autocomplete: function autocomplete() {
@@ -114,6 +115,10 @@ var search = new Vue({
       axios.get('http://127.0.0.1:8000/api/autocomplete?title=' + this.searchInput).then(function (result) {
         _this2.suggests = result.data.response;
       });
+    },
+    changeSearchInput: function changeSearchInput(suggest) {
+      this.searchInput = suggest;
+      this.search();
     }
   }
 });

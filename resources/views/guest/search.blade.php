@@ -9,12 +9,12 @@
           Advanced Search
         </div>
         <div class="card-body search">
-          <input type="text" class='form-control' name="title" placeholder="Search..." v-model="searchInput" @keyup='autocomplete' @keyup.enter='search'>
+          <input type="text" class='form-control' name="title" placeholder="Search..." v-model="searchInput" @keyup='autocomplete' @keyup.enter='search' autocomplete="off">
 
           <div :class="(searchInput.length) ? 'active' : ''" class="autocomplete">
 
             <div v-for='suggest in suggests'>
-              @{{ suggest }}
+              <span @click='changeSearchInput(suggest)'>@{{ suggest }}</span>
             </div>
 
           </div>
