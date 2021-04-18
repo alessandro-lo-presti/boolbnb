@@ -11391,17 +11391,21 @@ header .row .box.login .user .dropdown .btn_dd {
   margin-left: 10px;
 }
 
-#show .info-section {
-  padding-top: 20px;
-  border-top: 1px solid lightgrey;
-}
-
 #show .info-section h3 {
   margin-bottom: 10px;
 }
 
+#show .info-section .icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
 #show .info-section .info {
-  width: 120px;
+  width: 150px;
+}
+
+#show .info-section .text {
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 992px) {

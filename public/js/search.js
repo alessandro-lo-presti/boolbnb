@@ -119,9 +119,6 @@ var search = new Vue({
     changeSearchInput: function changeSearchInput(suggest) {
       this.searchInput = suggest;
       this.search();
-    },
-    getUrl: function getUrl(id) {
-      return '{{ route("show", ' + id + ')}}';
     }
   }
 });

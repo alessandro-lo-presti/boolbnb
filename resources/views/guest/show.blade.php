@@ -56,40 +56,93 @@
 
   <section class="row info-section">
 
-    <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center info_box">
-      <h3>Servizi</h3>
-      <ul>
-        @foreach($services as $service)
-          <li class="d-flex justify-content-between">
-            <span class="info">{{ $service->name }}:</span>
-            @if($apartment->services->contains($service->id))
-            <span><i class="fas fa-check"></i></span>
-            @endif
-          </li>
-        @endforeach
-      </ul>
-    </div>
+    <div class="col-xs-12 col-sm-6 info_box">
 
-    <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center info_box">
-      <h3>Informazioni</h3>
-      <ul>
-        <li class="d-flex justify-content-between">
-          <span class="info">Stanze:</span>
-          <span>{{ $apartment->n_rooms }}</span>
-        </li>
-        <li class="d-flex justify-content-between">
-          <span class="info">Letti:</span>
-          <span>{{ $apartment->n_beds }}</span>
-        </li>
-        <li class="d-flex justify-content-between">
-          <span class="info">Bagni:</span>
-          <span>{{ $apartment->n_bathrooms }}</span>
-        </li>
-        <li class="d-flex justify-content-between">
-          <span class="info">Mqs:</span>
-          <span>{{ $apartment->mqs }}</span>
-        </li>
-      </ul>
+      <div class="row d-flex">
+
+        <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center">
+          <h3>Servizi</h3>
+          <ul>
+            @foreach($services as $service)
+              <li class="d-flex">
+                <div class="info d-flex">
+                  <span class="icon">
+                    @if ($service -> name == "WiFi")
+                      <i class="fas fa-wifi"></i>
+                    @elseif ($service -> name == "Posto Auto")
+                      <i class="fas fa-car"></i>
+                    @elseif ($service -> name == "Piscina")
+                      <i class="fas fa-swimmer"></i>
+                    @elseif ($service -> name == "Portineria")
+                      <i class="fas fa-door-open"></i>
+                    @elseif ($service -> name == "Sauna")
+                      <i class="fas fa-hot-tub"></i>
+                    @elseif ($service -> name == "Vista Mare")
+                      <i class="fas fa-water"></i>
+                    @endif
+                  </span>
+                  <span class"text">
+                    {{ $service->name }}:
+                  </span>
+                </div>
+                @if($apartment->services->contains($service->id))
+                  <span><i class="fas fa-check"></i></span>
+                @endif
+              </li>
+            @endforeach
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center">
+          <h3>Informazioni</h3>
+          <ul>
+
+            <li class="d-flex">
+              <div class="info d-flex">
+                <span class="icon">
+                  <i class="fas fa-square"></i>
+                </span>
+                <span class="text">Stanze:</span>
+              </div>
+              <span class="text-right">{{ $apartment->n_rooms }}</span>
+            </li>
+
+            <li class="d-flex">
+              <div class="info d-flex">
+                <span class="icon">
+                  <i class="fas fa-bed"></i>
+                </span>
+                <span class="text">Letti:</span>
+              </div>
+              <span class="text-right">{{ $apartment->n_beds }}</span>
+            </li>
+
+            <li class="d-flex">
+              <div class="info d-flex">
+                <span class="icon">
+                  <i class="fas fa-shower"></i>
+                </span>
+                <span class="text">Bagni:</span>
+              </div>
+              <span class="text-right">{{ $apartment->n_bathrooms }}</span>
+            </li>
+
+            <li class="d-flex">
+              <div class="info d-flex">
+                <span class="icon">
+                  <i class="fas fa-ruler-combined"></i>
+                </span>
+                <span class="text">Mqs:</span>
+              </div>
+              <span class="text-right">{{ $apartment->mqs }}</span>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+
     </div>
 
   </section>
