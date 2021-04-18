@@ -270,49 +270,50 @@
 
 // sezione create Giorgio
 #create{
-  background-color: #FFFFFF;
-  background-image: url('https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png');
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
   .container{
-    .form{
-      h1{
-        font-size: 32px;
-        color: #484848;
+    .card{
+      .card-header{
+        background-color: white;
       }
-      label{
-        font-size: 24px;
-        color: #484848;
-      }
-      .form-group{
-        .counter{
-          font-size: 16px;
-          font-weight: bold;
-          color: #484848;
-          .title{
-            display: inline-block;
-            width: 70px;
+      .card-body{
+        .form-group{
+          label{
+            font-size: 16px;
           }
-          a{
-            margin: 0 10px;
-            i{
-              color: $green;
+          input:focus,
+          input:active{
+              outline: none;
+              box-shadow: none;
+              border-color: inherit;
+              -webkit-box-shadow: none;
+          }
+          input[type="number"]{
+            display: none;
+          }
+          .counter{
+            .counter-title{
+              width: 60px;
+            }
+            .counter-number{
+              width: 100px;
+              a{
+                i{
+                  color: #ff5a5f;
+                }
+              }
             }
           }
         }
-        input[type='number']{
-          display: none;
+        button{
+          width: 100%;
+          color:white;
+          background: #ff5a5f;
         }
-        input[type='file']:focus{
+        button:focus{
           outline: none;
-        }
-      }
-      .services{
-        .form-check{
-          line-height: 20px;
-          i{
-            margin-left: 5px;
-          }
+          box-shadow: none;
+          border-color: inherit;
+          -webkit-box-shadow: none;
         }
       }
     }

@@ -11231,56 +11231,49 @@ header .row .box.login .user .dropdown .btn_dd {
   margin-top: 10px;
 }
 
-#create {
-  background-color: #FFFFFF;
-  background-image: url("https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png");
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
+#create .container .card .card-header {
+  background-color: white;
 }
 
-#create .container .form h1 {
-  font-size: 32px;
-  color: #484848;
-}
-
-#create .container .form label {
-  font-size: 24px;
-  color: #484848;
-}
-
-#create .container .form .form-group .counter {
+#create .container .card .card-body .form-group label {
   font-size: 16px;
-  font-weight: bold;
-  color: #484848;
 }
 
-#create .container .form .form-group .counter .title {
-  display: inline-block;
-  width: 70px;
+#create .container .card .card-body .form-group input:focus,
+#create .container .card .card-body .form-group input:active {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
 }
 
-#create .container .form .form-group .counter a {
-  margin: 0 10px;
-}
-
-#create .container .form .form-group .counter a i {
-  color: #38c172;
-}
-
-#create .container .form .form-group input[type=number] {
+#create .container .card .card-body .form-group input[type=number] {
   display: none;
 }
 
-#create .container .form .form-group input[type=file]:focus {
+#create .container .card .card-body .form-group .counter .counter-title {
+  width: 60px;
+}
+
+#create .container .card .card-body .form-group .counter .counter-number {
+  width: 100px;
+}
+
+#create .container .card .card-body .form-group .counter .counter-number a i {
+  color: #ff5a5f;
+}
+
+#create .container .card .card-body button {
+  width: 100%;
+  color: white;
+  background: #ff5a5f;
+}
+
+#create .container .card .card-body button:focus {
   outline: none;
-}
-
-#create .container .form .services .form-check {
-  line-height: 20px;
-}
-
-#create .container .form .services .form-check i {
-  margin-left: 5px;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
 }
 
 #edit {
