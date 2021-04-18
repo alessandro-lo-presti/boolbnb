@@ -227,7 +227,7 @@
 }
 
 // sezione dashboard Simone
-header{
+#h-dash{
     height: 100px;
     width: calc(100% - 200px);
     box-shadow: 1px 3px 2px #817f7fde;
@@ -331,6 +331,12 @@ header{
             }
         }
     }
+    #chart{
+        .cards{
+            width: 150px;
+            height: 150px;
+        }
+    }
 }
 @media screen and (max-width: 767px) and (min-width: 577px) {
     #dashboard {
@@ -352,6 +358,12 @@ header{
                     }
                 }
             }
+        }
+    }
+    #chart{
+        .cards{
+            width: 300px;
+            height: 300px;
         }
     }
 }

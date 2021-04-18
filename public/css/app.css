@@ -10947,7 +10947,7 @@ header {
 }
 
 header .row {
-  height: 100px;
+  height: 75px;
 }
 
 header .row .box.logo img {
@@ -11184,7 +11184,7 @@ header .row .box.login .user .dropdown .btn_dd {
   background: #ff5a5f;
 }
 
-header {
+#h-dash {
   height: 100px;
   width: calc(100% - 200px);
   box-shadow: 1px 3px 2px #817f7fde;
@@ -11292,6 +11292,11 @@ header {
   #dashboard ul a li span {
     display: none;
   }
+
+  #chart .cards {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 @media screen and (max-width: 767px) and (min-width: 577px) {
@@ -11312,6 +11317,11 @@ header {
 
   #dashboard ul a li span {
     display: none;
+  }
+
+  #chart .cards {
+    width: 300px;
+    height: 300px;
   }
 }
 

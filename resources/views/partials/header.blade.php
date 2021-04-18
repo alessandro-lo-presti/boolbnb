@@ -26,20 +26,7 @@
             </div>
 
             <!-- SEARCHBAR -->
-            {{-- <div class="box flex-grow-1 search_bar d-flex">
 
-              <form class="" action="{{ route("search") }}"
-              method="get">
-                @csrf
-                @method('GET')
-
-                <input type="text" name="search" placeholder="Search...">
-                <i class="fas fa-search"></i>
-                <input type="submit" name="" value="Cerca">
-
-              </form>
-
-            </div> --}}
 
             <!-- Rotta show/Ricerca -->
             <div class="box login d-flex align-items-center">
@@ -65,5 +52,6 @@
     </div>
 </header>
 <!-- /header -->
+<script src="{{ asset('js/app.js')}} "></script>
 </body>
 </html>
