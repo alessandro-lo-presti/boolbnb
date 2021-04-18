@@ -81,66 +81,46 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/edit.js":
-/*!******************************!*\
-  !*** ./resources/js/edit.js ***!
-  \******************************/
+/***/ "./resources/js/search.js":
+/*!********************************!*\
+  !*** ./resources/js/search.js ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var edit = new Vue({
-  el: '#edit',
-  data: function data() {
-    return {
-      rooms: 0,
-      beds: 0,
-      bathrooms: 0,
-      mq: 40
-    };
+var search = new Vue({
+  el: '#search',
+  data: {
+    apartments: [],
+    searchInput: ''
   },
   methods: {
-    addRoom: function addRoom() {
-      this.rooms++;
-    },
-    removeRoom: function removeRoom() {
-      this.rooms--;
-    },
-    addBed: function addBed() {
-      this.beds++;
-    },
-    removeBed: function removeBed() {
-      this.beds--;
-    },
-    addBathroom: function addBathroom() {
-      this.bathrooms++;
-    },
-    removeBathroom: function removeBathroom() {
-      this.bathrooms--;
-    },
-    addMq: function addMq() {
-      this.mq += 5;
-    },
-    removeMq: function removeMq() {
-      this.mq -= 5;
+    search: function search() {
+      var _this = this;
+
+      axios.get('http://127.0.0.1:8000/api/search?search=' + this.searchInput).then(function (result) {
+        _this.apartments = result.data.response;
+        console.log(_this.apartments);
+      });
     }
   }
 });
 
 /***/ }),
 
-/***/ 1:
-/*!************************************!*\
-  !*** multi ./resources/js/edit.js ***!
-  \************************************/
+/***/ 4:
+/*!**************************************!*\
+  !*** multi ./resources/js/search.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\shadi\Documents\mamp_public\boolbnb\resources\js\edit.js */"./resources/js/edit.js");
+module.exports = __webpack_require__(/*! C:\Users\shadi\Documents\mamp_public\boolbnb\resources\js\search.js */"./resources/js/search.js");
 
 
 /***/ })
