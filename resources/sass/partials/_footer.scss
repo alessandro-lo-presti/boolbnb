@@ -1,0 +1,44 @@
+//Footer
+footer {
+    background-color: #f7f7f7;
+    .container{
+        .row {
+           max-height: 150px;
+            .box {
+                &.left {
+                    li {
+                        padding-right: 5px;
+                    }
+                }
+                &.center,
+                &.right {
+                    li {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MediaQuery FOOTER
+
+//Cambiare il box left da orizzontale a verticale.
+@media screen and (max-width: 767px) {
+    footer{
+        .container{
+            .row{
+                .box{
+                    &.left{
+                        ul{
+                            li{
+                                display: block;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
