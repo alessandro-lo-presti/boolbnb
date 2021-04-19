@@ -11460,17 +11460,6 @@ header .row .box.login .user .dropdown .btn_dd {
   }
 }
 
-@media screen and (max-width: 575px) {
-  #show .info_box:first-child {
-    margin-bottom: 30px;
-  }
-
-  #show .info_box:last-child {
-    padding-top: 20px;
-    border-top: 1px solid lightgrey;
-  }
-}
-
 @media screen and (max-width: 400px) {
   #show .image-section {
     height: calc(530px / 4 * 3);
