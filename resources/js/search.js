@@ -1,19 +1,31 @@
 var search = new Vue(
   {
-    el: '#search',
+    el: '#advanced-search',
     data: {
       apartments: [],
-      searchInput: ''
+      searchInput: '',
+      suggests: [],
     },
     methods: {
       search(){
         axios
-        .get('http://127.0.0.1:8000/api/search?search=' + this.searchInput)
+        .get('http://127.0.0.1:8000/api/search?title=' + this.searchInput)
         .then((result) => {
             this.apartments = result.data.response;
-            console.log(this.apartments);
+            this.searchInput = '';
           }
         );
+      },
+      autocomplete() {
+        axios
+          .get('http://127.0.0.1:8000/api/autocomplete?title=' + this.searchInput)
+          .then((result) => {
+            this.suggests = result.data.response
+          });
+      },
+      changeSearchInput(suggest) {
+        this.searchInput = suggest;
+        this.search();
       }
     }
   });

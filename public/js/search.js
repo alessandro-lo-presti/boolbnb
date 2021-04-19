@@ -94,19 +94,31 @@
 /***/ (function(module, exports) {
 
 var search = new Vue({
-  el: '#search',
+  el: '#advanced-search',
   data: {
     apartments: [],
-    searchInput: ''
+    searchInput: '',
+    suggests: []
   },
   methods: {
     search: function search() {
       var _this = this;
 
-      axios.get('http://127.0.0.1:8000/api/search?search=' + this.searchInput).then(function (result) {
+      axios.get('http://127.0.0.1:8000/api/search?title=' + this.searchInput).then(function (result) {
         _this.apartments = result.data.response;
-        console.log(_this.apartments);
+        _this.searchInput = '';
       });
+    },
+    autocomplete: function autocomplete() {
+      var _this2 = this;
+
+      axios.get('http://127.0.0.1:8000/api/autocomplete?title=' + this.searchInput).then(function (result) {
+        _this2.suggests = result.data.response;
+      });
+    },
+    changeSearchInput: function changeSearchInput(suggest) {
+      this.searchInput = suggest;
+      this.search();
     }
   }
 });

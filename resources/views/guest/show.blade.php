@@ -65,25 +65,26 @@
 
           <div class="d-flex align-items-center user_name">
 
-            <i class="fas fa-home fa-2x house_i"></i>
+            <i class="fas fa-user-circle fa-2x"></i>
 
             <div>
               <p class="name">
-                {{ $apartment->title }}
+                {{ $apartment->user->name }} {{ $apartment->user->name }}
               </p>
               <p class="under_name">
-                Creato il {{ substr($apartment->created_at, 0, 10) }}
+                Membro dal {{ substr($apartment->user->created_at, 0, 10) }}
               </p>
             </div>
 
           </div>
 
           <p class="card-text card_text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Gli appartamenti di {{ $apartment->user->name }} sono i migliori, forse perché sono gli unici non creati in automatico.<br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
           <div class="">
-            <a href="{{route('apartment.edit',$apartment->id)}}" class="btn btn_user">Modifica Appartamento</a>
+            <a href="#" class="btn btn_user">Contatta {{ $apartment->user->name }}</a>
           </div>
 
         </div>

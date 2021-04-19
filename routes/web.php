@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', "HomeController@index")->name("index");
 Route::get('/search', "HomeController@search")->name("search");
+Route::get('/apartment/{apartment}', "HomeController@show")->name("show");
 
 Auth::routes();
 
