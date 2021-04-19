@@ -32,6 +32,7 @@
             <div class="box login d-flex align-items-center">
                 <!-- DROPDOWN UTENTE -->
                 <div class="user">
+                    @guest
                     <div class="dropdown">
                         <a class="btn btn_dd" href="#" role="button" id="dropdownMenu" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -39,19 +40,23 @@
                         </a>
                         <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenu">
                             <!-- Rotta registrazione utente -->
-                            <a class="dropdown-item" href="{{ route('register') }}">Register</a>
+                            @if (Route::has('register'))
+                            <a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            @endif
+                            @else
                             <!-- Rotta Log In utente -->
                             <a class="dropdown-item" href="{{ route('login') }}">Log In</a>
                             <!-- Rotta sponsor utente -->
                             <a class="dropdown-item" href="#">Sponsor</a>
                         </div>
                     </div>
+                    @endguest
                 </div>
             </div>
         </div>
     </div>
 </header>
 <!-- /header -->
-<script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

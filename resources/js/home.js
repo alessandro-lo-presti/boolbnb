@@ -96,14 +96,14 @@ var app = new Vue({
         next() {
             this.counter++;
             this.nextCounter++;
-            
+
             if (this.counter == this.types.length) {
                 this.counter = 0;
             }
-            
+
             if(this.nextCounter == this.types.length){
                 this.nextCounter = 0;
-            }  
+            }
         },
 
         prev() {
@@ -114,10 +114,10 @@ var app = new Vue({
             if (this.counter == 0) {
                 this.counter = this.types.length;
             }
-            
+
             this.counter--;
             this.nextCounter--;
-            
+
         }
 
     }
