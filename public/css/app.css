@@ -11153,26 +11153,6 @@ header .row .box.login .user .dropdown .btn_dd {
   border-radius: 10px;
 }
 
-#home section.experience .scroll {
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  padding: 20px;
-  z-index: 1;
-}
-
-#home section.experience .scroll.dx {
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-#home section.experience .scroll.sx {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
 @media screen and (min-width: 577px) and (max-width: 767px) {
   #home .jumbo {
     background-color: black;

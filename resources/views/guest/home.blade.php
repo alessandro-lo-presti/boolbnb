@@ -150,9 +150,7 @@
                 <h4>scopri le esperienze</h4>
                 <p>attivit&aacute; uniche con esperti del luogo, di persona oppure online</p>
 
-                <div class="d-flex justify-content-center flex-no-wrap mt-3 position-relative">
-
-                    <div class="scroll position-absolute sx bg-primary"></div>
+                <div class="d-flex justify-content-center flex-wrap mt-3 position-relative">
 
                     <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in experiences">
 
@@ -164,10 +162,8 @@
 
                     </div>
 
-                    <div class="scroll position-absolute dx bg-primary"></div>
-
                 </div>
-
+            </section>
         </div>
 
     </div>
