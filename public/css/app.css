@@ -11781,3 +11781,26 @@ header .row .box.login .user .dropdown .btn_dd {
   }
 }
 
+footer {
+  background-color: #f7f7f7;
+}
+
+footer .container .row {
+  max-height: 150px;
+}
+
+footer .container .row .box.left li {
+  padding-right: 5px;
+}
+
+footer .container .row .box.center li,
+footer .container .row .box.right li {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  footer .container .row .box.left ul li {
+    display: block;
+  }
+}
+
