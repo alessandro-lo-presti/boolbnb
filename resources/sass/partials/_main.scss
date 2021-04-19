@@ -1,9 +1,9 @@
 // sezione home Emanuele
 #home{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
 
     // section searh
     section.search{
@@ -30,21 +30,22 @@
             }
           }
         }
-        .search_button{
-          button{
-            background-color: #ff385c;
-            border-radius: 50%;
-            border: none;
-            padding: 17px;
-            height: 50px;
-            color: #fff;
-            i{
-              font-size: 1.3em;
-            }
+      }
+      .search_button{
+        button{
+          background-color: #ff385c;
+          border-radius: 50%;
+          border: none;
+          padding: 17px;
+          height: 50px;
+          color: #fff;
+          i{
+            font-size: 1.3em;
           }
         }
       }
     }
+  }
 
     // section jumbo
     section.jumbo{
@@ -72,45 +73,33 @@
         margin: 0;
         padding: 0;
       }
-      img{
-        height: 250px;
-        border-radius: 10px;
+  }
+
+  section.types{
+    height: 350px;
+    h5, p, [class*='col-']{
+      margin: 0;
+      padding: 0;
+    }
+    img{
+      height: 250px;
+      border-radius: 10px;
+    }
+    .scroll{
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      padding: 20px;
+      z-index: 1;
+      &.dx{
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
       }
-      .scroll{
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        padding: 20px;
-        z-index: 1;
-        &.dx{
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-        }
-        &.sx{
-          top: 50%;
-          left: 0;
-          transform: translateY(-50%);
-        }
-      }
-      .carousel{
-        display: flex;
-        justify-content: center;
-      }
-      .secondo,
-      .terzo{
-        display: none;
-      }
-      .btn{
-        height: 30px;
-        position: relative;
-        margin-top: 115px;
-        i{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
+      &.sx{
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
       }
     }
 
@@ -133,17 +122,16 @@
       .description{
         position: absolute;
         top: 50%;
-        left: 20%;
+        left: 50%;
         transform: translate(-50%, -50%);
       }
     }
+  }
 
     // section experience
     section.experience{
       height: 400px;
-      h5, p, [class*='col-']{
-        margin: 0;
-        padding: 0;
+      border-radius: 10px;
       }
       img{
         height: 250px;
@@ -154,67 +142,74 @@
       //   flex-direction: column;
       // }
     }
+    img{
+      height: 250px;
+      border-radius: 10px;
+    }
+  }
+  
 
 
     // 1) Max-width 576px
     // 2) Da min-width 577px a max-width 767px
 
-    @media screen and (min-width: 577px) and (max-width: 767px){
-      .jumbo{
-        background-color: black;
-        img{
-          width: 100%;
-        }
-        h2{
-          font-size: 1.7em;
-        }
+  @media screen and (min-width: 577px) and (max-width: 767px){
+    .jumbo{
+      background-color: black;
+      img{
+        width: 100%;
       }
-      section.explore{
-        h2{
-          font-size: 1.7em;
-        }
+      h2{
+        font-size: 1.7em;
       }
-      section.types{
-        .secondo{
-          display: flex;
-        }
-        .primo,
-        .terzo{
-          display: none;
-        }
+    }
+    section.explore{
+      h2{
+        font-size: 1.7em;
       }
-      section.behost{
+    }
+    section.types{
+      .secondo{
+        display: flex;
+      }
+      .primo,
+      .terzo{
+        display: none;
+      }
+    }
+    section.behost{
+      height: 280px;
+      .image_behost{
         height: 280px;
-        .image_behost{
-          height: 280px;
-        }
       }
-
     }
 
-    @media screen and (max-width: 577px){
+  }
 
-      .boxes{
-        width: 300px;
+  @media screen and (max-width: 577px){
+
+    .boxes{
+      width: 300px;
+    }
+    section.types{
+      .terzo{
+        display: flex;
       }
-      section.types{
-        .terzo{
-          display: flex;
-        }
-        .primo,
-        .secondo{
-          display: none;
-        }
+      .primo,
+      .secondo{
+        display: none;
       }
-      section.behost{
-        .image_behost{
-          height: 195px;
-          .description{
-            top: 40%;
-          }
+    }
+    section.behost{
+      .image_behost{
+        height: 195px;
+        .description{
+          top: 40%;
         }
       }
     }
+  }
+  
 }
 
 // sezione login Federico
