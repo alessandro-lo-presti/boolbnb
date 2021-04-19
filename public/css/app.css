@@ -11393,17 +11393,23 @@ header .row .box.login .user .dropdown .btn_dd {
 
 #show .info-section {
   padding-top: 30px;
+  padding-bottom: 30px;
   border-top: 1px solid lightgrey;
 }
 
 #show .info-section .user_box .user_card {
-  max-width: calc(100% - 100px);
+  max-width: 500px;
+  margin: 0 30px;
   padding: 20px 30px;
   border-radius: 10px;
 }
 
 #show .info-section .user_box .user_card .user_name i {
   margin-right: 5px;
+}
+
+#show .info-section .user_box .user_card .user_name .house_i {
+  margin-right: 10px;
 }
 
 #show .info-section .user_box .user_card .user_name .under_name {
@@ -11482,7 +11488,6 @@ header .row .box.login .user .dropdown .btn_dd {
   #show .info_room_box {
     padding-top: 30px;
     border-top: 1px solid lightgrey;
-    padding-bottom: 30px;
   }
 }
 

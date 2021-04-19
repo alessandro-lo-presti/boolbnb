@@ -445,18 +445,24 @@
   // info-section
   .info-section {
     padding-top: 30px;
+    padding-bottom: 30px;
     border-top: 1px solid lightgrey;
 
     .user_box {
 
       .user_card {
-        max-width: calc(100% - 100px);
+        max-width: 500px;
+        margin: 0 30px;
         padding: 20px 30px;
         border-radius: 10px;
 
         .user_name {
           i {
             margin-right: 5px;
+          }
+
+          .house_i {
+            margin-right: 10px;
           }
 
           .under_name {
@@ -512,6 +518,8 @@
 
   }
 
+  // map-section
+
   @media screen and (max-width: 991px) {
 
     // image-section
@@ -562,7 +570,6 @@
     .info_room_box {
       padding-top: 30px;
       border-top: 1px solid lightgrey;
-      padding-bottom: 30px;
     }
 
   }

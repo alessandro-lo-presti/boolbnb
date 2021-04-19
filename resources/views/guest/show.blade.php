@@ -53,9 +53,10 @@
   </section>
   <!-- / Images -->
 
-
+  <!-- info-section -->
   <section class="row info-section">
 
+    <!-- card -->
     <div class="col-xs-12 col-lg-6 d-flex justify-content-center align-items-center user_box">
 
       <div class="card user_card">
@@ -91,10 +92,12 @@
       </div>
 
     </div>
+    <!-- / card -->
 
-    {{--  --}}
+    <!-- info-box -->
     <div class="col-xs-12 col-lg-6 info_box d-flex row">
 
+        <!-- service -->
         <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center services_box">
           <h3>Servizi</h3>
           <ul>
@@ -127,7 +130,9 @@
             @endforeach
           </ul>
         </div>
+        <!-- / service -->
 
+        <!-- info -->
         <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center info_room_box">
           <h3>Info</h3>
           <ul>
@@ -174,11 +179,12 @@
 
           </ul>
         </div>
+        <!-- / info -->
 
     </div>
 
   </section>
-
+  <!-- / info-section -->
 
 </div>
 @endsection
