@@ -56,16 +56,51 @@
 
   <section class="row info-section">
 
-    <div class="col-xs-12 col-sm-6 info_box">
+    <div class="col-xs-12 col-sm-6 d-flex justify-content-center align-items-center user_box">
 
-      <div class="row d-flex">
+      <div class="card user_card">
+
+        <div class="card-body">
+
+          <div class="d-flex align-items-center user_name">
+
+            <i class="fas fa-user-circle fa-2x"></i>
+
+            <div>
+              <p class="name">
+                {{ $apartment->user->name }} {{ $apartment->user->name }}
+              </p>
+              <p class="under_name">
+                Membro dal {{ substr($apartment->user->created_at, 0, 10) }}
+              </p>
+            </div>
+
+          </div>
+
+          <p class="card-text card_text">
+            Gli appartamenti di {{ $apartment->user->name }} sono i migliori, forse perché sono gli unici non creati in automatico.<br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <div class="">
+            <a href="#" class="btn btn_user">Contatta {{ $apartment->user->name }}</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {{--  --}}
+    <div class="col-xs-12 col-sm-6 info_box d-flex">
 
         <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center">
           <h3>Servizi</h3>
           <ul>
             @foreach($services as $service)
               <li class="d-flex">
-                <div class="info d-flex">
+                <div class="services d-flex">
                   <span class="icon">
                     @if ($service -> name == "WiFi")
                       <i class="fas fa-wifi"></i>
@@ -94,10 +129,10 @@
         </div>
 
         <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center">
-          <h3>Informazioni</h3>
+          <h3>Info</h3>
           <ul>
 
-            <li class="d-flex">
+            <li class="d-flex justify-content-between">
               <div class="info d-flex">
                 <span class="icon">
                   <i class="fas fa-square"></i>
@@ -107,7 +142,7 @@
               <span class="text-right">{{ $apartment->n_rooms }}</span>
             </li>
 
-            <li class="d-flex">
+            <li class="d-flex justify-content-between">
               <div class="info d-flex">
                 <span class="icon">
                   <i class="fas fa-bed"></i>
@@ -117,7 +152,7 @@
               <span class="text-right">{{ $apartment->n_beds }}</span>
             </li>
 
-            <li class="d-flex">
+            <li class="d-flex justify-content-between">
               <div class="info d-flex">
                 <span class="icon">
                   <i class="fas fa-shower"></i>
@@ -127,7 +162,7 @@
               <span class="text-right">{{ $apartment->n_bathrooms }}</span>
             </li>
 
-            <li class="d-flex">
+            <li class="d-flex justify-content-between">
               <div class="info d-flex">
                 <span class="icon">
                   <i class="fas fa-ruler-combined"></i>
@@ -139,9 +174,6 @@
 
           </ul>
         </div>
-
-      </div>
-
 
     </div>
 
