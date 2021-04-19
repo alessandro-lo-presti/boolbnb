@@ -11344,7 +11344,7 @@ header .row .box.login .user .dropdown .btn_dd {
 #dashboard ul {
   max-width: 275px;
   height: 100vh;
-  background-color: #F8FAFC;
+  background-color: #f8fafc;
 }
 
 #dashboard ul hr {
@@ -11470,6 +11470,10 @@ header .row .box.login .user .dropdown .btn_dd {
     width: 300px;
     height: 300px;
   }
+}
+
+#ad img {
+  width: 50px;
 }
 
 #create .container .card .card-header {
@@ -11771,7 +11775,7 @@ header .row .box.login .user .dropdown .btn_dd {
 }
 
 #advanced-search .search .autocomplete.active div:hover {
-  background-color: #CCE3F6;
+  background-color: #cce3f6;
 }
 
 @media (max-width: 768px) {
