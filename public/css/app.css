@@ -11391,6 +11391,11 @@ header .row .box.login .user .dropdown .btn_dd {
   margin-left: 10px;
 }
 
+#show .info-section {
+  padding-top: 30px;
+  border-top: 1px solid lightgrey;
+}
+
 #show .info-section .user_box .user_card {
   max-width: calc(100% - 100px);
   padding: 20px 30px;
@@ -11443,7 +11448,7 @@ header .row .box.login .user .dropdown .btn_dd {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   #show .image_box_right > div:first-child .image_div:first-child > img {
     border-top-right-radius: 15px;
   }
@@ -11451,12 +11456,33 @@ header .row .box.login .user .dropdown .btn_dd {
   #show .image_box_right > div:last-child .image_div:first-child > img {
     border-bottom-right-radius: 15px;
   }
+
+  #show .user_box {
+    padding-bottom: 30px;
+  }
+
+  #show .info_box {
+    padding-top: 30px;
+    border-top: 1px solid lightgrey;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #show .image_box_left img {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #show .services_box {
+    padding-bottom: 30px;
+  }
+
+  #show .info_room_box {
+    padding-top: 30px;
+    border-top: 1px solid lightgrey;
+    padding-bottom: 30px;
   }
 }
 

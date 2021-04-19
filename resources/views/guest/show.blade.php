@@ -95,7 +95,7 @@
     {{--  --}}
     <div class="col-xs-12 col-lg-6 info_box d-flex row">
 
-        <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center">
+        <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center services_box">
           <h3>Servizi</h3>
           <ul>
             @foreach($services as $service)
@@ -128,7 +128,7 @@
           </ul>
         </div>
 
-        <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center">
+        <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center info_room_box">
           <h3>Info</h3>
           <ul>
 
