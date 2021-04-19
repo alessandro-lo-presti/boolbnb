@@ -145,25 +145,27 @@
             {{-- section experience --}}
             <section class="experience mt-5">
                 <h4>scopri le esperienze</h4>
+
                 <p>attivit&aacute; uniche con esperti del luogo, di persona oppure online</p>
 
-                <div class="d-flex justify-content-center flex-no-wrap mt-3 position-relative">
+                <div class="experience_card mt-3">
+                    <div class="row d-flex justify-content-center">
 
-                    <div class="scroll position-absolute sx bg-primary"></div>
-
-                    <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in experiences">
-
-                        <div class="apartment_type">
-                            <img :src="item.cover" :alt="item.type">
-                            <h5 class="pt-2">@{{ item.title }}</h5>
-                            <p class="pt-2">@{{ item.type }}</p>
+                        <div class="boxes" v-for="(item, index) in experiences">
+    
+                            <div class="apartment_type">
+                                <img :src="item.cover" :alt="item.type">
+                                <h5 class="pt-2">@{{ item.title }}</h5>
+                                <p class="pt-2">@{{ item.type }}</p>
+                            </div>
+    
                         </div>
-
                     </div>
 
-                    <div class="scroll position-absolute dx bg-primary"></div>
 
                 </div>
+
+            </section>
 
         </div>
 

@@ -5,6 +5,7 @@
     box-sizing: border-box;
     position: relative;
 
+    // section searh
     section.search{
       p{
         margin: 0;
@@ -45,7 +46,7 @@
       }
     }
 
-
+    // section jumbo
     section.jumbo{
         background-color: black;
         img{
@@ -53,6 +54,7 @@
         }
     }
 
+    // section explore
     section.explore{
         img{
           height: 80px;
@@ -63,7 +65,7 @@
           padding: 0;
         }
     }
-
+    // section types
     section.types{
       height: 350px;
       h5, p, [class*='col-']{
@@ -112,8 +114,8 @@
       }
     }
 
+    // section behost
     section.behost{
-      // height: 400px;
       h2,
       p{
         padding: 0;
@@ -136,6 +138,7 @@
       }
     }
 
+    // section experience
     section.experience{
       height: 400px;
       h5, p, [class*='col-']{
@@ -146,28 +149,11 @@
         height: 250px;
         border-radius: 10px;
       }
-      .scroll{
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        padding: 20px;
-        z-index: 1;
-        &.dx{
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-        }
-        &.sx{
-          top: 50%;
-          left: 0;
-          transform: translateY(-50%);
-
-        }
-      }
+      // .apartment_type{
+      //   display: flex;
+      //   flex-direction: column;
+      // }
     }
-
-
-
 
 
     // 1) Max-width 576px
