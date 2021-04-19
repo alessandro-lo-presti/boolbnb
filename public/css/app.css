@@ -11196,8 +11196,9 @@ header .row .box.login .user .dropdown .btn_dd {
 }
 
 #dashboard ul {
-  max-width: 200px;
+  max-width: 275px;
   height: 100vh;
+  background-color: #F8FAFC;
 }
 
 #dashboard ul hr {
@@ -11209,7 +11210,7 @@ header .row .box.login .user .dropdown .btn_dd {
   list-style: none;
   height: 80px;
   border-bottom: 1px solid #ff5a5f;
-  padding-left: 20px;
+  padding-left: 75px;
   text-align: left;
 }
 
@@ -11259,7 +11260,7 @@ header .row .box.login .user .dropdown .btn_dd {
 }
 
 .my-apartment {
-  width: calc(100% - 200px);
+  width: calc(100% - 275px);
 }
 
 .my-apartment h1 {

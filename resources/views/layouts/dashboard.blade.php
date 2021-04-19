@@ -15,11 +15,12 @@
 </head>
 
 <body>
-    <header id="h-dash" class="d-flex float-right">
+    @include('partials.header')
+    {{-- <header id="h-dash" class="d-flex float-right">
         <input type="search-bar">
          <div class="icona-notifche">notifiche</div>
          <div class="account">account?</div>
-    </header>
+    </header> --}}
 
 
 
@@ -28,17 +29,17 @@
         {{-- dashboard --}}
         <div id="dashboard">
             <ul class="nav nav-flush flex-column mb-auto text-center">
-                <div class="nav-item">
+                {{-- <div class="nav-item">
                     {{-- logo --}}
-                    <img class="logo-big"
+                    {{-- <img class="logo-big"
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png"
                         alt="logo-big">
-                    <img class="logo-dash logo-small" src="https://i.postimg.cc/5242xRKq/Senza-titolo-1.png" alt="logo">
-                </div>
-                <hr class="divider">
+                    <img class="logo-dash logo-small" src="https://i.postimg.cc/5242xRKq/Senza-titolo-1.png" alt="logo"> --}}
+                {{-- </div>
+                <hr class="divider"> --}}
 
                 {{-- rotta alla home --}}
-                <a href="Home">
+                <a href="home">
                     <li class="nav-item"><i class="fas fa-home fa-2x"></i><span>Home</span></li>
                 </a>
 
