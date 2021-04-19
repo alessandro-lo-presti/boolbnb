@@ -1,33 +1,30 @@
-// sezione home Emanuele
 #home{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
 
-    // section searh
-    section.search{
-      p{
-        margin: 0;
-        padding: 0;
-      }
-      .box_search{
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 80px;
-        background-color: lightgrey;
-        border-radius: 100px;
-        .search_location{
-          padding-left: 30px;
-          input{
-            border: none;
-            width: 150px;
-            background-color: lightgrey;
-            &:focus{
-              outline: none;
-            }
+  section.search{
+    p{
+      margin: 0;
+      padding: 0;
+    }
+    .box_search{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 80px;
+      background-color: lightgrey;
+      border-radius: 100px;
+      .search_location{
+        padding-left: 30px;
+        input{
+          border: none;
+          width: 150px;
+          background-color: lightgrey;
+          &:focus{
+            outline: none;
           }
         }
       }
@@ -47,28 +44,19 @@
     }
   }
 
-    // section jumbo
-    section.jumbo{
-        background-color: black;
-        img{
-          width: 95%;
-        }
-    }
 
-    // section explore
-    section.explore{
-        img{
-          height: 80px;
-          border-radius: 10px;
-        }
-        h5, p, [class*='col-']{
-          margin: 0;
-          padding: 0;
-        }
-    }
-    // section types
-    section.types{
-      height: 350px;
+  section.jumbo{
+      background-color: black;
+      img{
+        width: 95%;
+      }
+  }
+
+  section.explore{
+      img{
+        height: 80px;
+        border-radius: 10px;
+      }
       h5, p, [class*='col-']{
         margin: 0;
         padding: 0;
@@ -102,24 +90,19 @@
         transform: translateY(-50%);
       }
     }
-
-    // section behost
-    section.behost{
-      h2,
-      p{
-        padding: 0;
-        margin: 10px 0;
-      }
-      .image_behost{
-        position: relative;
-        background-image: url('https://a0.muscache.com/im/pictures/c21183f0-b591-4a3c-8342-87c88cc9445f.jpg?im_w=1680');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 400px;
-        border-radius: 10px;
-        }
-      .description{
+    .carousel{
+      display: flex;
+      justify-content: center;
+    }
+    .secondo,
+    .terzo{
+      display: none;
+    }
+    .btn{
+      height: 30px;
+      position: relative;
+      margin-top: 115px;
+      i{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -128,25 +111,44 @@
     }
   }
 
-    // section experience
-    section.experience{
+  section.behost{
+    // height: 400px;
+    h2,
+    p{
+      padding: 0;
+      margin: 10px 0;
+    }
+    .image_behost{
+      position: relative;
+      background-image: url('https://a0.muscache.com/im/pictures/c21183f0-b591-4a3c-8342-87c88cc9445f.jpg?im_w=1680');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       height: 400px;
       border-radius: 10px;
-
-      img{
-        height: 250px;
-        border-radius: 10px;
       }
-      // .apartment_type{
-      //   display: flex;
-      //   flex-direction: column;
-      // }
+    .description{
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
   }
 
+  section.experience{
+    height: 400px;
+    h5, p, [class*='col-']{
+      margin: 0;
+      padding: 0;
+    }
+    img{
+      height: 250px;
+      border-radius: 10px;
+    }
+  }
 
-
-    // 1) Max-width 576px
-    // 2) Da min-width 577px a max-width 767px
+  // 1) Max-width 576px
+  // 2) Da min-width 577px a max-width 767px
 
   @media screen and (min-width: 577px) and (max-width: 767px){
     .jumbo{
@@ -204,6 +206,8 @@
       }
     }
   }
+
+}
 
 // sezione login Federico
 #login{
