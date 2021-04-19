@@ -10947,11 +10947,11 @@ header {
 }
 
 header .row {
-  height: 100px;
+  height: 80px;
 }
 
 header .row .box.logo img {
-  height: 50px;
+  height: 32px;
 }
 
 header .row .box.logo .logo-small {
