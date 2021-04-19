@@ -26,20 +26,7 @@
             </div>
 
             <!-- SEARCHBAR -->
-            {{-- <div class="box flex-grow-1 search_bar d-flex">
 
-              <form class="" action="{{ route("search") }}"
-              method="get">
-                @csrf
-                @method('GET')
-
-                <input type="text" name="search" placeholder="Search...">
-                <i class="fas fa-search"></i>
-                <input type="submit" name="" value="Cerca">
-
-              </form>
-
-            </div> --}}
 
             <!-- Rotta show/Ricerca -->
             <div class="box login d-flex align-items-center">
@@ -52,9 +39,9 @@
                         </a>
                         <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenu">
                             <!-- Rotta registrazione utente -->
-                            <a class="dropdown-item" href="#">Register</a>
+                            <a class="dropdown-item" href="{{ route('register') }}">Register</a>
                             <!-- Rotta Log In utente -->
-                            <a class="dropdown-item" href="#">Log In</a>
+                            <a class="dropdown-item" href="{{ route('login') }}">Log In</a>
                             <!-- Rotta sponsor utente -->
                             <a class="dropdown-item" href="#">Sponsor</a>
                         </div>
@@ -65,5 +52,6 @@
     </div>
 </header>
 <!-- /header -->
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

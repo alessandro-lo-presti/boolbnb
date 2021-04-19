@@ -15,33 +15,57 @@
 </head>
 
 <body>
-    <header>
+    @include('partials.header')
+    {{-- <header id="h-dash" class="d-flex float-right">
+        <input type="search-bar">
+         <div class="icona-notifche">notifiche</div>
+         <div class="account">account?</div>
+    </header> --}}
 
-    </header>
+
+
+
     <main>
         {{-- dashboard --}}
         <div id="dashboard">
             <ul class="nav nav-flush flex-column mb-auto text-center">
-                <li class="nav-item">
+                {{-- <div class="nav-item">
                     {{-- logo --}}
-                    <img class="logo-dash" src="https://i.postimg.cc/5242xRKq/Senza-titolo-1.png" alt="logo">
-                </li>
-                <li class="nav-item">
-                    {{-- rotta alla home --}}
-                    <a href="Home"><i class="fas fa-home fa-2x"></i></a>
-                </li>
-                <li class="nav-item">
-                    {{-- rotta allo apartment/show --}}
-                    <a href="My apartments"><i class="fas fa-building fa-2x"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a href="Logout"><i class="fas fa-sign-out-alt fa-2x"></i></a>
-                </li>
+                    {{-- <img class="logo-big"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png"
+                        alt="logo-big">
+                    <img class="logo-dash logo-small" src="https://i.postimg.cc/5242xRKq/Senza-titolo-1.png" alt="logo"> --}}
+                {{-- </div>
+                <hr class="divider"> --}}
+
+                {{-- rotta alla home --}}
+                <a href="home">
+                    <li class="nav-item"><i class="fas fa-home fa-2x"></i><span>Home</span></li>
+                </a>
+
+
+                {{-- rotta allo apartment/show --}}
+                <a href="My apartments">
+                    <li class="nav-item"><i class="fas fa-building fa-2x"></i> <span>My apartments</span> </li>
+                </a>
+
+
+                <a href="Logout">
+                    <li class="nav-item"><i class="fas fa-sign-out-alt fa-2x"></i> <span>Logout</span> </li>
+                </a>
+                <a href=""><li></li></a>
+
             </ul>
         </div>
         {{-- my apartment --}}
-        <section class="my_apartment">
-
+        <section id="chart" class="my-apartment float-right">
+            <h1>I miei appartamenti</h1>
+            <div class="container d-flex flex-row justify-content-around flex-wrap">
+            <div v-for="chart in charts" class="cards bg-success"></div>
+            <div class="cards bg-primary"></div>
+            <div class="cards bg-warning"></div>
+            <div class="cards bg-danger"></div>
+        </div>
 
         </section>
     </main>

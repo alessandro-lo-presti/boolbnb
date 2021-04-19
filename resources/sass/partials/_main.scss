@@ -351,310 +351,384 @@
      }
 }
 
-
 // sezione dashboard Simone
-#dashboard{
-    #dashboard {
-        overflow: hidden;
-        ul {
-            max-width: 80px;
-            height: 90vh;
-            background-color: rgb(221, 221, 221);
+#h-dash{
+    height: 100px;
+    width: calc(100% - 200px);
+    box-shadow: 1px 3px 2px #817f7fde;
+}
+#dashboard {
+    overflow: hidden;
+    float: left;
+    ul {
+        max-width: 275px;
+        height: 100vh;
+        background-color: #F8FAFC;
+        hr {
+            color: #ff5a5f;
+        }
 
-            li {
-                width: 100%;
-                list-style: none;
-                height: 80px;
-                border-bottom: 1px solid #ff5a5f;
-                text-align: center;
-                &:active,
-                :nth-child(n+2) {
-                    background-color: #ff5a5f;
-                    i {
-                        color: white;
-                    }
+        li {
+            width: 100%;
+            list-style: none;
+            height: 80px;
+            border-bottom: 1px solid #ff5a5f;
+            padding-left: 75px;
+            text-align: left;
+            &:active{
+                background-color: #ff5a5f;
+
+                i {
+                    color: white;
                 }
-                &:focus
-                :nth-child(n+2) {
-                    background-color: #ff5a5f;
-                    i {
-                        color: white;
-                    }
+                span{
+                    color: white;
                 }
             }
+        }
+        &:focus{
+            background-color: #ff5a5f;
             a {
                 i {
-                    color: #ff5a5f;
-                    line-height: 80px;
+                    color: white;
                 }
-
+                span{
+                    color: white;
+                }
             }
-            .logo-dash {
+        }
+    }
+    a {
+        color: #ff5a5f;
+        font-weight: 700;
+        i {
+            color: #ff5a5f;
+            line-height: 80px;
+            margin-right: 10px;
+        }
+    }
+    .logo-big {
+        vertical-align: middle;
+        width: 100px;
+        margin-top: 20px;
+    }
+    .logo-small {
+        display: none;
+    }
+}
+.my-apartment{
+    width:calc(100% - 275px);
+
+    h1{
+        display: block;
+        text-align:  center;
+    }
+    .container{
+        .cards{
+            width: 400px;
+            height: 400px;
+            margin-top: 50px;
+
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+    #dashboard {
+        ul {
+            width: 50px;
+            .logo-big {
+                display: none;
+            }
+            .logo-small {
+                display: inline-block;
                 vertical-align: middle;
                 width: 40px;
                 margin-top: 10px;
             }
+            a{
+                li{
+                    span{
+                        display: none;
+                    }
+                }
+            }
         }
     }
-
+    #chart{
+        .cards{
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 577px) {
+    #dashboard {
+        ul {
+            width: 100px;
+            .logo-big {
+                display: none;
+            }
+            .logo-small {
+                display: inline-block;
+                vertical-align: middle;
+                width: 40px;
+                margin-top: 10px;
+            }
+            a{
+                li{
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    #chart{
+        .cards{
+            width: 300px;
+            height: 300px;
+        }
+    }
 }
 
 // sezione create Giorgio
-#create{
-  .container{
-    .card{
-      .card-header{
-        background-color: white;
-      }
-      .card-body{
-        .form-group{
-          label{
-            font-size: 16px;
-          }
-          input:focus,
-          input:active{
-              outline: none;
-              box-shadow: none;
-              border-color: inherit;
-              -webkit-box-shadow: none;
-          }
-          input[type="number"]{
-            display: none;
-          }
-          .counter{
-            .counter-title{
-              width: 60px;
+#create {
+    .container {
+        .card {
+            .card-header {
+                background-color: white;
             }
-            .counter-number{
-              width: 100px;
-              a{
-                i{
-                  color: #ff5a5f;
+            .card-body {
+                .form-group {
+                    label {
+                        font-size: 16px;
+                    }
+                    input:focus,
+                    input:active {
+                        outline: none;
+                        box-shadow: none;
+                        border-color: inherit;
+                        -webkit-box-shadow: none;
+                    }
+                    input[type="number"] {
+                        display: none;
+                    }
+                    .counter {
+                        .counter-title {
+                            width: 60px;
+                        }
+                        .counter-number {
+                            width: 100px;
+                            a {
+                                i {
+                                    color: #ff5a5f;
+                                }
+                            }
+                        }
+                    }
                 }
-              }
+                button {
+                    width: 100%;
+                    color: white;
+                    background: #ff5a5f;
+                }
+                button:focus {
+                    outline: none;
+                    box-shadow: none;
+                    border-color: inherit;
+                    -webkit-box-shadow: none;
+                }
             }
-          }
         }
-        button{
-          width: 100%;
-          color:white;
-          background: #ff5a5f;
-        }
-        button:focus{
-          outline: none;
-          box-shadow: none;
-          border-color: inherit;
-          -webkit-box-shadow: none;
-        }
-      }
     }
-  }
 }
 // sezione edit Giorigio
-#edit{
-  background-color: #FFFFFF;
-  background-image: url('https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png');
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
-  .container{
-    .form{
-      h1{
-        font-size: 32px;
-        color: #484848;
-      }
-      label{
-        font-size: 24px;
-        color: #484848;
-      }
-      .form-group{
-        .counter{
-          font-size: 16px;
-          font-weight: bold;
-          color: #484848;
-          .title{
-            display: inline-block;
-            width: 70px;
-          }
-          a{
-            margin: 0 10px;
-            i{
-              color: $green;
+#edit {
+    background-color: #ffffff;
+    background-image: url("https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png");
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    .container {
+        .form {
+            h1 {
+                font-size: 32px;
+                color: #484848;
             }
-          }
+            label {
+                font-size: 24px;
+                color: #484848;
+            }
+            .form-group {
+                .counter {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #484848;
+                    .title {
+                        display: inline-block;
+                        width: 70px;
+                    }
+                    a {
+                        margin: 0 10px;
+                        i {
+                            color: $green;
+                        }
+                    }
+                }
+                input[type="number"] {
+                    display: none;
+                }
+                input[type="file"]:focus {
+                    outline: none;
+                }
+            }
+            .services {
+                .form-check {
+                    line-height: 20px;
+                    i {
+                        margin-left: 5px;
+                    }
+                }
+            }
         }
-        input[type='number']{
-          display: none;
-        }
-        input[type='file']:focus{
-          outline: none;
-        }
-      }
-      .services{
-        .form-check{
-          line-height: 20px;
-          i{
-            margin-left: 5px;
-          }
-        }
-      }
     }
-  }
 }
 // sezione show Alessandro
-#show{
+#show {
+    $image_height: 530px;
+    font-size: 18px;
 
-  $image_height: 530px;
-  font-size: 18px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    ul {
+        list-style: none;
+    }
 
-  ul {
-    list-style: none;
-  }
-
-  img {
-    height: 100%;
-    width: 100%;
-  }
+    img {
+        height: 100%;
+        width: 100%;
+    }
 
     // title-section
-  .title-section {
-    margin-bottom: 15px;
+    .title-section {
+        margin-bottom: 15px;
 
-    p {
-      color: grey;
-      text-decoration: underline;
-    }
-  }
-
-  // image-section
-  .image-section {
-    height: $image_height;
-    margin-bottom: 30px;
-
-    .image_box_left {
-      height: $image_height;
-
-      img {
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-      }
-
-    }
-
-    .image_box_right {
-      height: $image_height;
-
-      & > div:first-child {
-        margin-bottom: 10px;
-
-        .image_div:last-child > img {
-          border-top-right-radius: 15px;
+        p {
+            color: grey;
+            text-decoration: underline;
         }
-      }
-
-      & > div:last-child {
-
-        .image_div:last-child > img {
-          border-bottom-right-radius: 15px;
-        }
-      }
-
-      .image_div {
-        height: calc(#{$image_height} / 2 - 5px);
-        margin-left: 10px;
-      }
-
     }
-
-  }
-
-  // info-section
-  .info-section {
-    padding-top: 20px;
-    border-top: 1px solid lightgrey;
-
-    h3 {
-      margin-bottom: 10px;
-    }
-
-    .info {
-      width: 120px;
-    }
-
-  }
-
-  @media screen and (max-width: 992px) {
 
     // image-section
-    .image_box_right > div:first-child {
+    .image-section {
+        height: $image_height;
+        margin-bottom: 30px;
 
-      .image_div:first-child > img {
-        border-top-right-radius: 15px;
-      }
+        .image_box_left {
+            height: $image_height;
 
+            img {
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+        }
+
+        .image_box_right {
+            height: $image_height;
+
+            & > div:first-child {
+                margin-bottom: 10px;
+
+                .image_div:last-child > img {
+                    border-top-right-radius: 15px;
+                }
+            }
+
+            & > div:last-child {
+                .image_div:last-child > img {
+                    border-bottom-right-radius: 15px;
+                }
+            }
+
+            .image_div {
+                height: calc(#{$image_height} / 2 - 5px);
+                margin-left: 10px;
+            }
+        }
     }
-
-    .image_box_right > div:last-child {
-
-      .image_div:first-child > img {
-        border-bottom-right-radius: 15px;
-      }
-
-    }
-
-  }
-
-  @media screen and (max-width: 768px) {
-
-    .image_box_left img {
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-    }
-
-  }
-
-  @media screen and (max-width: 575px) {
 
     // info-section
-    .info_box:first-child {
-      margin-bottom: 30px;
+    .info-section {
+        padding-top: 20px;
+        border-top: 1px solid lightgrey;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        .info {
+            width: 120px;
+        }
     }
 
-    .info_box:last-child {
-      padding-top: 20px;
-      border-top: 1px solid lightgrey;
+    @media screen and (max-width: 992px) {
+        // image-section
+        .image_box_right > div:first-child {
+            .image_div:first-child > img {
+                border-top-right-radius: 15px;
+            }
+        }
+
+        .image_box_right > div:last-child {
+            .image_div:first-child > img {
+                border-bottom-right-radius: 15px;
+            }
+        }
     }
 
-  }
-
-  @media screen and (max-width: 400px) {
-
-    //image-section
-    .image-section {
-      height: calc(#{$image_height} / 4 * 3);
-
-      .image_box_left {
-        height: calc(#{$image_height} / 4 * 3);
-      }
+    @media screen and (max-width: 768px) {
+        .image_box_left img {
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
     }
 
-  }
+    @media screen and (max-width: 575px) {
+        // info-section
+        .info_box:first-child {
+            margin-bottom: 30px;
+        }
 
+        .info_box:last-child {
+            padding-top: 20px;
+            border-top: 1px solid lightgrey;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        //image-section
+        .image-section {
+            height: calc(#{$image_height} / 4 * 3);
+
+            .image_box_left {
+                height: calc(#{$image_height} / 4 * 3);
+            }
+        }
+    }
 }
 
 // sezione statistics
-#statistics{
-
+#statistics {
 }
 
 // sezione sponsor
-#sponsor{
-
+#sponsor {
 }
 
 // sezione advanced-search
@@ -696,8 +770,8 @@
 
 // mediaquery create-edit
 @media (max-width: 768px) {
-  #create,
-  #edit{
-    background-image: none;
-  }
+    #create,
+    #edit {
+        background-image: none;
+    }
 }
