@@ -619,10 +619,9 @@
     .title-section {
         margin-bottom: 15px;
 
-        p {
-            color: grey;
-            text-decoration: underline;
-        }
+    p {
+      color: #717171;
+      text-decoration: underline;
     }
 
     // image-section
@@ -668,28 +667,30 @@
         padding-top: 20px;
         border-top: 1px solid lightgrey;
 
-        h3 {
-            margin-bottom: 10px;
-        }
+  // info-section
+  .info-section {
+    padding-top: 20px;
+    border-top: 1px solid lightgrey;
 
-        .info {
-            width: 120px;
-        }
+    h3 {
+      margin-bottom: 10px;
     }
 
-    @media screen and (max-width: 992px) {
-        // image-section
-        .image_box_right > div:first-child {
-            .image_div:first-child > img {
-                border-top-right-radius: 15px;
-            }
-        }
+    .info {
+      width: 120px;
+    }
 
-        .image_box_right > div:last-child {
-            .image_div:first-child > img {
-                border-bottom-right-radius: 15px;
-            }
-        }
+  }
+
+  @media screen and (max-width: 992px) {
+
+    // image-section
+    .image_box_right > div:first-child {
+
+      .image_div:first-child > img {
+        border-top-right-radius: 15px;
+      }
+
     }
 
     @media screen and (max-width: 768px) {
@@ -699,16 +700,13 @@
         }
     }
 
-    @media screen and (max-width: 575px) {
-        // info-section
-        .info_box:first-child {
-            margin-bottom: 30px;
-        }
+  }
 
-        .info_box:last-child {
-            padding-top: 20px;
-            border-top: 1px solid lightgrey;
-        }
+  @media screen and (max-width: 768px) {
+
+    .image_box_left img {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
     }
 
     @media screen and (max-width: 400px) {
@@ -716,11 +714,33 @@
         .image-section {
             height: calc(#{$image_height} / 4 * 3);
 
-            .image_box_left {
-                height: calc(#{$image_height} / 4 * 3);
-            }
-        }
+  @media screen and (max-width: 575px) {
+
+    // info-section
+    .info_box:first-child {
+      margin-bottom: 30px;
     }
+
+    .info_box:last-child {
+      padding-top: 20px;
+      border-top: 1px solid lightgrey;
+    }
+
+  }
+
+  @media screen and (max-width: 400px) {
+
+    //image-section
+    .image-section {
+      height: calc(#{$image_height} / 4 * 3);
+
+      .image_box_left {
+        height: calc(#{$image_height} / 4 * 3);
+      }
+    }
+
+  }
+
 }
 
 // sezione statistics

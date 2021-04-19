@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Apartment;
+use App\Service;
+use App\Image;
 
 class HomeController extends Controller
 {
@@ -24,6 +27,20 @@ class HomeController extends Controller
     public function index()
     {
         return view('guest.home');
+    }
+
+    public function show(Apartment $apartment)
+    {
+      $services = Service::all();
+      $images = Image::where('apartment_id', $apartment->id)->get()->toArray();
+
+        $data = [
+            'apartment' => $apartment,
+            'services' => $services,
+            'images' => $images
+        ];
+
+        return view('guest.show', $data);
     }
 
     public function search()
