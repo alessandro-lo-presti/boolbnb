@@ -48,7 +48,7 @@
             <section class="explore">
                 <h4>Esplora i dintorni</h4>
                 <div class="d-flex justify-content-center flex-wrap mt-3">
-                    <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in destinations">
+                    <div class="boxes d-flex col-lg-3 col-sm-6 col-6 mb-2" v-for="(item, index) in destinations">
 
                         <div class="left_side">
                             <img :src="item.cover" :alt="item.city">
