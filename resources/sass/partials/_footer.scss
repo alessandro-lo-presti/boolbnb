@@ -1,18 +1,20 @@
 //Footer
 footer {
     background-color: #f7f7f7;
-    .row {
-       max-height: 150px;
-        .box {
-            &.left {
-                li {
-                    padding-right: 5px;
+    .container{
+        .row {
+           max-height: 150px;
+            .box {
+                &.left {
+                    li {
+                        padding-right: 5px;
+                    }
                 }
-            }
-            &.center,
-            &.right {
-                li {
-                    padding-left: 20px;
+                &.center,
+                &.right {
+                    li {
+                        padding-left: 20px;
+                    }
                 }
             }
         }
