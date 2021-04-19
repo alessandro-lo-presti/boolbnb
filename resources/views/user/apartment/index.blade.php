@@ -76,3 +76,24 @@
 @include('partials.footer')
 @endsection
 
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Annuncio</th>
+        <th scope="col">Titolo</th>
+        <th scope="col">Stanze</th>
+        <th scope="col">Letti</th>
+        <th scope="col">Bagni</th>
+        <th scope="col">Posizione</th>
+      </tr>
+    </thead>
+    <tbody>
+        @foreach ($apartments as $apartment)
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>
