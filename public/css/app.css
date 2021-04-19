@@ -11344,7 +11344,9 @@ header .row .box.login .user .dropdown .btn_dd {
 #dashboard ul {
   max-width: 275px;
   height: 100vh;
-  background-color: #F8FAFC;
+  background-color: #f8fafc;
+  padding-left: 20px;
+  border-left: 1px solid #ff5a5f;
 }
 
 #dashboard ul hr {
@@ -11405,21 +11407,6 @@ header .row .box.login .user .dropdown .btn_dd {
   display: none;
 }
 
-.my-apartment {
-  width: calc(100% - 275px);
-}
-
-.my-apartment h1 {
-  display: block;
-  text-align: center;
-}
-
-.my-apartment .container .cards {
-  width: 400px;
-  height: 400px;
-  margin-top: 50px;
-}
-
 @media screen and (max-width: 576px) {
   #dashboard ul {
     width: 50px;
@@ -11438,11 +11425,6 @@ header .row .box.login .user .dropdown .btn_dd {
 
   #dashboard ul a li span {
     display: none;
-  }
-
-  #chart .cards {
-    width: 150px;
-    height: 150px;
   }
 }
 
@@ -11465,11 +11447,36 @@ header .row .box.login .user .dropdown .btn_dd {
   #dashboard ul a li span {
     display: none;
   }
+}
 
-  #chart .cards {
-    width: 300px;
-    height: 300px;
+#apa-index a {
+  margin-bottom: 5px;
+}
+
+#apa-index a i {
+  display: none;
+}
+
+#apa-index .del {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  #apa-index a {
+    margin-bottom: 5px;
   }
+
+  #apa-index a span {
+    display: none;
+  }
+
+  #apa-index a i {
+    display: inline-block;
+  }
+}
+
+#ad img {
+  width: 50px;
 }
 
 #create .container .card .card-header {
@@ -11771,7 +11778,7 @@ header .row .box.login .user .dropdown .btn_dd {
 }
 
 #advanced-search .search .autocomplete.active div:hover {
-  background-color: #CCE3F6;
+  background-color: #cce3f6;
 }
 
 @media (max-width: 768px) {
