@@ -1,27 +1,46 @@
-//Footer
 footer {
     background-color: #f7f7f7;
     .container{
         .row {
-           max-height: 150px;
-            .box {
-                &.left {
-                    li {
-                        padding-right: 5px;
-                    }
-                }
-                &.center,
-                &.right {
-                    li {
-                        padding-left: 20px;
-                    }
-                }
-            }
+            &.second{
+                height: 30px;
+               .box {
+                   &.left {
+                       ul{
+                           list-style: none;
+                           li {
+                               padding-right: 5px;
+                               display: inline-block;
+                               a {
+                                   color: black;
+                                   &:hover {
+                                       color: lightslategray;
+                                   }
+                               }
+                           }
+                       }
+                   }
+                   &.center,
+                   &.right {
+                       ul{
+                           list-style: none;
+                           li {
+                               padding-left: 20px;
+                               display: inline-block;
+                               a {
+                                   color: black;
+                                   &:hover {
+                                       color: lightslategray;
+                                   }
+                               }
+                           }
+                       }
+                   }
+               }
+           }
         }
     }
 }
-
-// MediaQuery FOOTER
 
 //Cambiare il box left da orizzontale a verticale.
 @media screen and (max-width: 767px) {

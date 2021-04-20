@@ -11804,17 +11804,46 @@ footer {
   background-color: #f7f7f7;
 }
 
-footer .container .row {
-  max-height: 150px;
+footer .container .row.second {
+  height: 30px;
 }
 
-footer .container .row .box.left li {
+footer .container .row.second .box.left ul {
+  list-style: none;
+}
+
+footer .container .row.second .box.left ul li {
   padding-right: 5px;
+  display: inline-block;
 }
 
-footer .container .row .box.center li,
-footer .container .row .box.right li {
+footer .container .row.second .box.left ul li a {
+  color: black;
+}
+
+footer .container .row.second .box.left ul li a:hover {
+  color: lightslategray;
+}
+
+footer .container .row.second .box.center ul,
+footer .container .row.second .box.right ul {
+  list-style: none;
+}
+
+footer .container .row.second .box.center ul li,
+footer .container .row.second .box.right ul li {
   padding-left: 20px;
+  display: inline-block;
+}
+
+footer .container .row.second .box.center ul li a,
+footer .container .row.second .box.right ul li a {
+  color: black;
+}
+
+footer .container .row.second .box.center ul li a:hover,
+footer .container .row.second .box.right ul li a:hover {
+  color: lightslategray;
 }
 
 @media screen and (max-width: 767px) {
