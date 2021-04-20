@@ -1,6 +1,21 @@
 footer {
     background-color: #f7f7f7;
     .container{
+        .first{
+            .box{
+                ul{
+                    list-style: none;
+                    li{
+                        a{
+                            color: black;
+                            &:hover {
+                                color: lightslategray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .row {
             &.second{
                 height: 30px;

@@ -11804,6 +11804,18 @@ footer {
   background-color: #f7f7f7;
 }
 
+footer .container .first .box ul {
+  list-style: none;
+}
+
+footer .container .first .box ul li a {
+  color: black;
+}
+
+footer .container .first .box ul li a:hover {
+  color: lightslategray;
+}
+
 footer .container .row.second {
   height: 30px;
 }

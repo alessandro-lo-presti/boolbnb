@@ -1,7 +1,7 @@
 
     <footer>
         <div class="container">
-            <div class="row d-flex align-items-center justify-content-between first">
+            <div class="d-flex flex-row align-items-start justify-content-between first">
                 <div class="box">
                     <ul>
                         <h6>Informazioni</h6>
