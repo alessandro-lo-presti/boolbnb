@@ -11524,56 +11524,53 @@ header .row .box.login .user .dropdown .btn_dd {
   -webkit-box-shadow: none;
 }
 
-#edit {
-  background-color: #ffffff;
-  background-image: url("https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png");
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
+#edit .container .card .card-header {
+  background-color: white;
 }
 
-#edit .container .form h1 {
-  font-size: 32px;
-  color: #484848;
-}
-
-#edit .container .form label {
-  font-size: 24px;
-  color: #484848;
-}
-
-#edit .container .form .form-group .counter {
+#edit .container .card .card-body .form-group label {
   font-size: 16px;
-  font-weight: bold;
-  color: #484848;
 }
 
-#edit .container .form .form-group .counter .title {
-  display: inline-block;
-  width: 70px;
+#edit .container .card .card-body .form-group input:focus,
+#edit .container .card .card-body .form-group input:active {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
 }
 
-#edit .container .form .form-group .counter a {
-  margin: 0 10px;
-}
-
-#edit .container .form .form-group .counter a i {
-  color: #38c172;
-}
-
-#edit .container .form .form-group input[type=number] {
+#edit .container .card .card-body .form-group input[type=number] {
   display: none;
 }
 
-#edit .container .form .form-group input[type=file]:focus {
+#edit .container .card .card-body .form-group .counter .counter-title {
+  width: 60px;
+}
+
+#edit .container .card .card-body .form-group .counter .counter-number {
+  width: 100px;
+}
+
+#edit .container .card .card-body .form-group .counter .counter-number .hidden {
+  display: none;
+}
+
+#edit .container .card .card-body .form-group .counter .counter-number a i {
+  color: #ff5a5f;
+}
+
+#edit .container .card .card-body button {
+  width: 100%;
+  color: white;
+  background: #ff5a5f;
+}
+
+#edit .container .card .card-body button:focus {
   outline: none;
-}
-
-#edit .container .form .services .form-check {
-  line-height: 20px;
-}
-
-#edit .container .form .services .form-check i {
-  margin-left: 5px;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
 }
 
 #show {

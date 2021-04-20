@@ -502,107 +502,110 @@
 }
 
 // sezione create Giorgio
-#create {
-    .container {
-        .card {
-            .card-header {
-                background-color: white;
+#create{
+  .container{
+    .card{
+      .card-header{
+        background-color: white;
+      }
+      .card-body{
+        .form-group{
+          label{
+            font-size: 16px;
+          }
+          input:focus,
+          input:active{
+              outline: none;
+              box-shadow: none;
+              border-color: inherit;
+              -webkit-box-shadow: none;
+          }
+          input[type="number"]{
+            display: none;
+          }
+          .counter{
+            .counter-title{
+              width: 60px;
             }
-            .card-body {
-                .form-group {
-                    label {
-                        font-size: 16px;
-                    }
-                    input:focus,
-                    input:active {
-                        outline: none;
-                        box-shadow: none;
-                        border-color: inherit;
-                        -webkit-box-shadow: none;
-                    }
-                    input[type="number"] {
-                        display: none;
-                    }
-                    .counter {
-                        .counter-title {
-                            width: 60px;
-                        }
-                        .counter-number {
-                            width: 100px;
-                            a {
-                                i {
-                                    color: #ff5a5f;
-                                }
-                            }
-                        }
-                    }
+            .counter-number{
+              width: 100px;
+              a{
+                i{
+                  color: #ff5a5f;
                 }
-                button {
-                    width: 100%;
-                    color: white;
-                    background: #ff5a5f;
-                }
-                button:focus {
-                    outline: none;
-                    box-shadow: none;
-                    border-color: inherit;
-                    -webkit-box-shadow: none;
-                }
+              }
             }
+          }
         }
+        button{
+          width: 100%;
+          color:white;
+          background: #ff5a5f;
+        }
+        button:focus{
+          outline: none;
+          box-shadow: none;
+          border-color: inherit;
+          -webkit-box-shadow: none;
+        }
+      }
     }
+  }
 }
 // sezione edit Giorigio
-#edit {
-    background-color: #ffffff;
-    background-image: url("https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png");
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
-    .container {
-        .form {
-            h1 {
-                font-size: 32px;
-                color: #484848;
+#edit{
+  .container{
+    .card{
+      .card-header{
+        background-color: white;
+      }
+      .card-body{
+        .form-group{
+          label{
+            font-size: 16px;
+          }
+          input:focus,
+          input:active{
+              outline: none;
+              box-shadow: none;
+              border-color: inherit;
+              -webkit-box-shadow: none;
+          }
+          input[type="number"]{
+            display: none;
+          }
+          .counter{
+            .counter-title{
+              width: 60px;
             }
-            label {
-                font-size: 24px;
-                color: #484848;
+            .counter-number{
+              width: 100px;
+              .hidden{
+                display: none;
+              }
+              a{
+                i{
+                  color: #ff5a5f;
+                }
+              }
             }
-            .form-group {
-                .counter {
-                    font-size: 16px;
-                    font-weight: bold;
-                    color: #484848;
-                    .title {
-                        display: inline-block;
-                        width: 70px;
-                    }
-                    a {
-                        margin: 0 10px;
-                        i {
-                            color: $green;
-                        }
-                    }
-                }
-                input[type="number"] {
-                    display: none;
-                }
-                input[type="file"]:focus {
-                    outline: none;
-                }
-            }
-            .services {
-                .form-check {
-                    line-height: 20px;
-                    i {
-                        margin-left: 5px;
-                    }
-                }
-            }
+          }
         }
+        button{
+          width: 100%;
+          color:white;
+          background: #ff5a5f;
+        }
+        button:focus{
+          outline: none;
+          box-shadow: none;
+          border-color: inherit;
+          -webkit-box-shadow: none;
+        }
+      }
     }
+  }
 }
-
 // sezione show Alessandro
 #show {
     $image_height: 530px;

@@ -100,33 +100,69 @@ var edit = new Vue({
       rooms: 0,
       beds: 0,
       bathrooms: 0,
-      mq: 40
+      mq: 40,
+      phpRooms: 'active',
+      vueRooms: 'hidden',
+      phpBeds: 'active',
+      vueBeds: 'hidden',
+      phpBathrooms: 'active',
+      vueBathrooms: 'hidden',
+      phpMq: 'active',
+      vueMq: 'hidden'
     };
   },
   methods: {
     addRoom: function addRoom() {
+      this.phpRooms = 'hidden';
+      this.vueRooms = 'active';
       this.rooms++;
     },
     removeRoom: function removeRoom() {
-      this.rooms--;
+      this.phpRooms = 'hidden';
+      this.vueRooms = 'active';
+
+      if (this.rooms > 0) {
+        this.rooms--;
+      }
     },
     addBed: function addBed() {
+      this.phpBeds = 'hidden';
+      this.vueBeds = 'active';
       this.beds++;
     },
     removeBed: function removeBed() {
-      this.beds--;
+      this.phpBeds = 'hidden';
+      this.vueBeds = 'active';
+
+      if (this.beds > 0) {
+        this.beds--;
+      }
     },
     addBathroom: function addBathroom() {
+      this.phpBathrooms = 'hidden';
+      this.vueBathrooms = 'active';
       this.bathrooms++;
     },
     removeBathroom: function removeBathroom() {
-      this.bathrooms--;
+      this.phpBathrooms = 'hidden';
+      this.vueBathrooms = 'active';
+
+      if (this.bathrooms > 0) {
+        this.bathrooms--;
+      }
     },
     addMq: function addMq() {
+      this.phpMq = 'hidden';
+      this.vueMq = 'active';
       this.mq += 5;
     },
     removeMq: function removeMq() {
-      this.mq -= 5;
+      this.phpMq = 'hidden';
+      this.vueMq = 'active';
+
+      if (this.mq > 0) {
+        this.mq -= 5;
+      }
     }
   }
 });
@@ -140,7 +176,7 @@ var edit = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/edit.js */"./resources/js/edit.js");
+module.exports = __webpack_require__(/*! C:\Users\shadi\Documents\mamp_public\boolbnb\resources\js\edit.js */"./resources/js/edit.js");
 
 
 /***/ })
