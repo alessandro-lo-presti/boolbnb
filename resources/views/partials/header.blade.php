@@ -38,11 +38,11 @@
                     <div class="user d-flex justify-content-around">
                         @guest
                             <div class="nav-item">
-                                <a class="btn_l btn" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="btn_l" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </div>
                             @if (Route::has('register'))
                                 <div class="nav-item">
-                                    <a class="btn_r btn" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="btn_r" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </div>
                             @endif
                         @else

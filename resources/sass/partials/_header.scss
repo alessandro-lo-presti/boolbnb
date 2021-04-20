@@ -51,32 +51,29 @@ header {
             &.login {
                 .user {
                     width: 200px;
+                    a{
+                        text-decoration: none;
+                    }
 
-                    // .btn_l{
-                    //    border: 1px solid #ff5a5f ;
-                    //    color:  #ff5a5f;
+                    .btn_l{
+                        color:  black;
+                        &:hover{
+                            border: 1px solid #ff5a5f;
+                            border-radius: 10%;
+                        }
+                    }
+                    .btn_r{
+                        color: black;
+                        &:hover{
+                            border: 1px solid #ff5a5f;
+                            border-radius: 10%;
+                        }
+                    }
 
-                    //    &:active{
-                    //        color: white;
-                    //        background-color:#ff5a5f ;
-                    //    }
-                    //    &:focus{
-                    //        color: white;
-                    //        background-color:#ff5a5f ;
-                    //    }
-                    // }
-                    // .btn_r{
-                    //     border: 1px solid #ff5a5f ;
-                    //     color:  #ff5a5f;
-                    //     &:active{
-                    //         color: white;
-                    //         background-color:#ff5a5f ;
-                    //     }
-                    //     &:focus{
-                    //         color: white;
-                    //         background-color:#ff5a5f ;
-                    //     }
-                    // }
+
+
+
+
                     .dropdown {
                         .btn_dd {
                             color: #ff5a5f;

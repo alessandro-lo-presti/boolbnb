@@ -10965,6 +10965,28 @@ header .row .box.login .user {
   width: 200px;
 }
 
+header .row .box.login .user a {
+  text-decoration: none;
+}
+
+header .row .box.login .user .btn_l {
+  color: black;
+}
+
+header .row .box.login .user .btn_l:hover {
+  border: 1px solid #ff5a5f;
+  border-radius: 10%;
+}
+
+header .row .box.login .user .btn_r {
+  color: black;
+}
+
+header .row .box.login .user .btn_r:hover {
+  border: 1px solid #ff5a5f;
+  border-radius: 10%;
+}
+
 header .row .box.login .user .dropdown .btn_dd {
   color: #ff5a5f;
 }
