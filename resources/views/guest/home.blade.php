@@ -24,7 +24,8 @@
                 </div>
                 <div class="search_button d-flex align-items-center ml-3 mr-2">
                     <button>
-                        <i class="fas fa-search"></i>
+                        <a href="{{route('search')}}">
+                        <i class="fas fa-search"></i></a>
                     </button>
                 </div>
             </div>

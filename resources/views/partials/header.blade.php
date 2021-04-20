@@ -18,7 +18,7 @@
             <!-- LOGO -->
             <div class="box logo">
                 <!-- Rotta home del guest -->
-                <a href="#">
+                <a href="{{route ('index')}}">
                     <img class="main" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png"
                         alt="logo">
                         <img class="logo-small" src="https://i.postimg.cc/5242xRKq/Senza-titolo-1.png" alt="Logo piccolo">

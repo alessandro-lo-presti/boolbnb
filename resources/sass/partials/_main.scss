@@ -36,8 +36,11 @@
                     padding: 17px;
                     height: 50px;
                     color: #fff;
-                    i {
-                        font-size: 1.3em;
+                    a {
+                        color: white;
+                        i {
+                            font-size: 1.3em;
+                        }
                     }
                 }
             }
@@ -442,7 +445,6 @@
             }
         }
     }
-
 }
 @media screen and (max-width: 767px) and (min-width: 577px) {
     #dashboard {
@@ -466,29 +468,28 @@
             }
         }
     }
-
 }
 
 //sezione Index
-#apa-index{
-    a{
+#apa-index {
+    a {
         margin-bottom: 5px;
-        i{
+        i {
             display: none;
         }
     }
-    .del{
+    .del {
         text-align: center;
     }
 }
-@media screen and (max-width: 767px){
-    #apa-index{
-        a{
+@media screen and (max-width: 767px) {
+    #apa-index {
+        a {
             margin-bottom: 5px;
-            span{
+            span {
                 display: none;
             }
-            i{
+            i {
                 display: inline-block;
             }
         }

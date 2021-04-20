@@ -11031,7 +11031,11 @@ header .row .box.login .user .dropdown .btn_dd {
   color: #fff;
 }
 
-#home section.search .box_search .search_button button i {
+#home section.search .box_search .search_button button a {
+  color: white;
+}
+
+#home section.search .box_search .search_button button a i {
   font-size: 1.3em;
 }
 
