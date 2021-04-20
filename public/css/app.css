@@ -10967,10 +10967,11 @@ header .row .box.login .user .dropdown .btn_dd {
 }
 
 header .row .search {
+  height: 30px;
+  width: 30px;
   background-color: #ff5a5f;
   border-radius: 100%;
   border: none;
-  padding: 1.7px 3.4px;
   color: #fff;
 }
 
@@ -10980,6 +10981,8 @@ header .row .search a {
 
 header .row .search a i {
   font-size: 1.3em;
+  line-height: 30px;
+  padding-left: 5px;
 }
 
 @media screen and (max-width: 576px) {
