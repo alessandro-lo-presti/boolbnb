@@ -57,6 +57,22 @@ header {
                 }
             }
         }
+
+        .search{
+            background-color: #ff5a5f;
+            border-radius: 100%;
+            border: none;
+            padding: 1.7px 3.4px;
+            color: #fff;
+            a {
+                color: white;
+                i{
+                    font-size: 1.3em;
+
+                }
+
+            }
+        }
         // .box.search_bar {
         //     max-width: 500px;
         //     padding: 5px 10px;
