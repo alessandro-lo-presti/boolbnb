@@ -11804,8 +11804,17 @@ footer {
   background-color: #f7f7f7;
 }
 
+footer .container .first {
+  padding-top: 30px;
+}
+
 footer .container .first .box ul {
   list-style: none;
+}
+
+footer .container .first .box ul h6 {
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 footer .container .first .box ul li a {
@@ -11816,7 +11825,12 @@ footer .container .first .box ul li a:hover {
   color: lightslategray;
 }
 
+footer .container .row {
+  border-top: 1px solid lightslategray;
+}
+
 footer .container .row.second {
+  padding-top: 20px;
   height: 30px;
 }
 

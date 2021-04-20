@@ -2,9 +2,14 @@ footer {
     background-color: #f7f7f7;
     .container{
         .first{
+            padding-top: 30px;
             .box{
                 ul{
                     list-style: none;
+                    h6{
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
                     li{
                         a{
                             color: black;
@@ -17,7 +22,9 @@ footer {
             }
         }
         .row {
+            border-top: 1px solid lightslategray;
             &.second{
+                padding-top: 20px;
                 height: 30px;
                .box {
                    &.left {
