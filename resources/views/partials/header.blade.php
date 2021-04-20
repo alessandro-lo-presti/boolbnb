@@ -30,6 +30,10 @@
                 </div>
 
                 <!-- SEARCHBAR -->
+                <div class="search">
+                    <a href="{{ route('search') }}">
+                        <i class="fas fa-search"></i></a>
+                </div>
 
 
                 <!-- Rotta show/Ricerca -->

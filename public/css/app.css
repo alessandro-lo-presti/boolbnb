@@ -10989,12 +10989,23 @@ header .row .box.login .user .dropdown .btn_dd {
   color: #ff5a5f;
 }
 
-header .row .box.login .user .dropdown .dropdown-toggle::after {
-  display: none;
+header .row .search {
+  height: 30px;
+  width: 30px;
+  background-color: #ff5a5f;
+  border-radius: 100%;
+  border: none;
+  color: #fff;
 }
 
-header .row .box.login .user .dropdown .dropdown-menu .account {
-  padding: 0.25rem 1.5rem;
+header .row .search a {
+  color: white;
+}
+
+header .row .search a i {
+  font-size: 1.3em;
+  line-height: 30px;
+  padding-left: 6px;
 }
 
 @media screen and (max-width: 576px) {
@@ -11022,52 +11033,6 @@ header .row .box.login .user .dropdown .dropdown-menu .account {
   padding: 0;
   box-sizing: border-box;
   position: relative;
-}
-
-#home section.search p {
-  margin: 0;
-  padding: 0;
-}
-
-#home section.search .box_search {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80px;
-  background-color: lightgrey;
-  border-radius: 100px;
-}
-
-#home section.search .box_search .search_location {
-  padding-left: 30px;
-}
-
-#home section.search .box_search .search_location input {
-  border: none;
-  width: 150px;
-  background-color: lightgrey;
-}
-
-#home section.search .box_search .search_location input:focus {
-  outline: none;
-}
-
-#home section.search .box_search .search_button button {
-  background-color: #ff385c;
-  border-radius: 50%;
-  border: none;
-  padding: 17px;
-  height: 50px;
-  color: #fff;
-}
-
-#home section.search .box_search .search_button button a {
-  color: white;
-}
-
-#home section.search .box_search .search_button button a i {
-  font-size: 1.3em;
 }
 
 #home section.jumbo {

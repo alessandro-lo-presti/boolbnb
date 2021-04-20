@@ -4,48 +4,7 @@
     box-sizing: border-box;
     position: relative;
 
-    section.search {
-        p {
-            margin: 0;
-            padding: 0;
-        }
-        .box_search {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 80px;
-            background-color: lightgrey;
-            border-radius: 100px;
-            .search_location {
-                padding-left: 30px;
-                input {
-                    border: none;
-                    width: 150px;
-                    background-color: lightgrey;
-                    &:focus {
-                        outline: none;
-                    }
-                }
-            }
-            .search_button {
-                button {
-                    background-color: #ff385c;
-                    border-radius: 50%;
-                    border: none;
-                    padding: 17px;
-                    height: 50px;
-                    color: #fff;
-                    a {
-                        color: white;
-                        i {
-                            font-size: 1.3em;
-                        }
-                    }
-                }
-            }
-        }
-    }
+
 
     section.jumbo {
         background-color: black;

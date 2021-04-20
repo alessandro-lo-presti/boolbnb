@@ -90,6 +90,23 @@ header {
                 }
             }
         }
+
+        .search {
+            height: 30px;
+            width: 30px;
+            background-color: #ff5a5f;
+            border-radius: 100%;
+            border: none;
+            color: #fff;
+            a {
+                color: white;
+                i {
+                    font-size: 1.3em;
+                    line-height: 30px;
+                    padding-left: 6px;
+                }
+            }
+        }
         // .box.search_bar {
         //     max-width: 500px;
         //     padding: 5px 10px;
