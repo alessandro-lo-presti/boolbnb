@@ -10974,8 +10974,7 @@ header .row .box.login .user .btn_l {
 }
 
 header .row .box.login .user .btn_l:hover {
-  border: 1px solid #ff5a5f;
-  border-radius: 10%;
+  color: #ff5a5f;
 }
 
 header .row .box.login .user .btn_r {
@@ -10983,8 +10982,7 @@ header .row .box.login .user .btn_r {
 }
 
 header .row .box.login .user .btn_r:hover {
-  border: 1px solid #ff5a5f;
-  border-radius: 10%;
+  color: #ff5a5f;
 }
 
 header .row .box.login .user .dropdown .btn_dd {
