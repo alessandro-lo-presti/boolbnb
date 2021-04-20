@@ -10982,7 +10982,7 @@ header .row .search a {
 header .row .search a i {
   font-size: 1.3em;
   line-height: 30px;
-  padding-left: 5px;
+  padding-left: 6px;
 }
 
 @media screen and (max-width: 576px) {
