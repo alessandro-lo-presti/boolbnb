@@ -98,9 +98,9 @@ var create = new Vue({
   el: '#create',
   data: function data() {
     return {
-      rooms: 0,
-      beds: 0,
-      bathrooms: 0,
+      rooms: 1,
+      beds: 1,
+      bathrooms: 1,
       mq: 40
     };
   },
@@ -109,25 +109,33 @@ var create = new Vue({
       this.rooms++;
     },
     removeRoom: function removeRoom() {
-      this.rooms--;
+      if (this.rooms > 1) {
+        this.rooms--;
+      }
     },
     addBed: function addBed() {
       this.beds++;
     },
     removeBed: function removeBed() {
-      this.beds--;
+      if (this.beds > 1) {
+        this.beds--;
+      }
     },
     addBathroom: function addBathroom() {
       this.bathrooms++;
     },
     removeBathroom: function removeBathroom() {
-      this.bathrooms--;
+      if (this.bathrooms > 1) {
+        this.bathrooms--;
+      }
     },
     addMq: function addMq() {
       this.mq += 5;
     },
     removeMq: function removeMq() {
-      this.mq -= 5;
+      if (this.mq > 1) {
+        this.mq -= 5;
+      }
     }
   }
 });

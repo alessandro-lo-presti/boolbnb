@@ -121,7 +121,7 @@ var edit = new Vue({
       this.phpRooms = 'hidden';
       this.vueRooms = 'active';
 
-      if (this.rooms > 0) {
+      if (this.rooms > 1) {
         this.rooms--;
       }
     },
@@ -134,7 +134,7 @@ var edit = new Vue({
       this.phpBeds = 'hidden';
       this.vueBeds = 'active';
 
-      if (this.beds > 0) {
+      if (this.beds > 1) {
         this.beds--;
       }
     },
@@ -147,7 +147,7 @@ var edit = new Vue({
       this.phpBathrooms = 'hidden';
       this.vueBathrooms = 'active';
 
-      if (this.bathrooms > 0) {
+      if (this.bathrooms > 1) {
         this.bathrooms--;
       }
     },
@@ -160,7 +160,7 @@ var edit = new Vue({
       this.phpMq = 'hidden';
       this.vueMq = 'active';
 
-      if (this.mq > 0) {
+      if (this.mq > 1) {
         this.mq -= 5;
       }
     }
