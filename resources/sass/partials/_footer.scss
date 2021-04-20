@@ -9,8 +9,10 @@ footer {
                     h6{
                         text-transform: uppercase;
                         font-weight: bold;
+                        padding-bottom: 15px;
                     }
                     li{
+                        padding-bottom: 15px;
                         a{
                             color: black;
                             &:hover {
@@ -25,7 +27,6 @@ footer {
             border-top: 1px solid lightslategray;
             &.second{
                 padding-top: 20px;
-                height: 30px;
                .box {
                    &.left {
                        ul{

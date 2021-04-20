@@ -11815,6 +11815,11 @@ footer .container .first .box ul {
 footer .container .first .box ul h6 {
   text-transform: uppercase;
   font-weight: bold;
+  padding-bottom: 15px;
+}
+
+footer .container .first .box ul li {
+  padding-bottom: 15px;
 }
 
 footer .container .first .box ul li a {
@@ -11831,7 +11836,6 @@ footer .container .row {
 
 footer .container .row.second {
   padding-top: 20px;
-  height: 30px;
 }
 
 footer .container .row.second .box.left ul {
