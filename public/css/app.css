@@ -10943,6 +10943,9 @@ a.text-dark:focus {
 }
 
 header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background-color: white;
 }
 
@@ -10959,11 +10962,49 @@ header .row .box.logo .logo-small {
 }
 
 header .row .box.login .user {
-  margin-left: 20px;
+  width: 200px;
+}
+
+header .row .box.login .user .btn_l {
+  border: 1px solid #ff5a5f;
+  color: #ff5a5f;
+}
+
+header .row .box.login .user .btn_l:active {
+  color: white;
+  background-color: #ff5a5f;
+}
+
+header .row .box.login .user .btn_l:focus {
+  color: white;
+  background-color: #ff5a5f;
+}
+
+header .row .box.login .user .btn_r {
+  border: 1px solid #ff5a5f;
+  color: #ff5a5f;
+}
+
+header .row .box.login .user .btn_r:active {
+  color: white;
+  background-color: #ff5a5f;
+}
+
+header .row .box.login .user .btn_r:focus {
+  color: white;
+  background-color: #ff5a5f;
 }
 
 header .row .box.login .user .dropdown .btn_dd {
   color: #ff5a5f;
+}
+
+header .row .box.login .user .dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+header .row .box.login .user .dropdown .dropdown-menu .account {
+  padding: 0.25rem 1.5rem;
 }
 
 @media screen and (max-width: 576px) {

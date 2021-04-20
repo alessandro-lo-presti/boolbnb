@@ -1,7 +1,9 @@
-
 // header
 
 header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: white;
     .row {
         height: 80px;
@@ -48,10 +50,44 @@ header {
             // }
             &.login {
                 .user {
-                    margin-left: 20px;
+                    width: 200px;
+
+                    .btn_l{
+                       border: 1px solid #ff5a5f ;
+                       color:  #ff5a5f;
+
+                       &:active{
+                           color: white;
+                           background-color:#ff5a5f ;
+                       }
+                       &:focus{
+                           color: white;
+                           background-color:#ff5a5f ;
+                       }
+                    }
+                    .btn_r{
+                        border: 1px solid #ff5a5f ;
+                        color:  #ff5a5f;
+                        &:active{
+                            color: white;
+                            background-color:#ff5a5f ;
+                        }
+                        &:focus{
+                            color: white;
+                            background-color:#ff5a5f ;
+                        }
+                    }
                     .dropdown {
                         .btn_dd {
                             color: #ff5a5f;
+                        }
+                        .dropdown-toggle::after {
+                            display: none;
+                        }
+                        .dropdown-menu {
+                            .account {
+                                padding: 0.25rem 1.5rem;
+                            }
                         }
                     }
                 }
