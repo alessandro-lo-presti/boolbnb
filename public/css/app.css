@@ -11640,8 +11640,8 @@ header .row .search a:hover {
 }
 
 #show .info-section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   border-top: 1px solid lightgrey;
 }
 
@@ -11702,8 +11702,31 @@ header .row .search a:hover {
   margin-right: 10px;
 }
 
-#show .mail textarea {
+#show .mail-section {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  border-top: 1px solid lightgrey;
+}
+
+#show .mail-section h2 {
+  margin-bottom: 30px;
+}
+
+#show .mail-section .mail_card {
+  padding: 20px 30px;
+}
+
+#show .mail-section textarea {
   resize: none;
+}
+
+#show .mail-section .btn_mail {
+  width: 100px;
+  padding: 5px 10px;
+  background-color: #ff5a5f;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 991px) {
@@ -11716,11 +11739,11 @@ header .row .search a:hover {
   }
 
   #show .user_box {
-    padding-bottom: 30px;
+    padding-bottom: 60px;
   }
 
   #show .info_box {
-    padding-top: 30px;
+    padding-top: 60px;
     border-top: 1px solid lightgrey;
   }
 }
@@ -11734,11 +11757,11 @@ header .row .search a:hover {
 
 @media screen and (max-width: 575px) {
   #show .services_box {
-    padding-bottom: 30px;
+    padding-bottom: 60px;
   }
 
   #show .info_room_box {
-    padding-top: 30px;
+    padding-top: 60px;
     border-top: 1px solid lightgrey;
   }
 }
