@@ -16,4 +16,5 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/create.js', 'public/js')
     .js('resources/js/home.js', 'public/js')
     .js('resources/js/search.js', 'public/js')
+    .js('resources/js/sponsor.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
