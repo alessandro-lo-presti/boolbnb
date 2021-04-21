@@ -4,16 +4,19 @@ var app = new Vue ({
   data:{
     sponsors:[
       {
-        title: 'titolo1',
-        duration: 'durata1'
+        title: 'soft',
+        duration: '1',
+        amount: 2.99
       },
       {
-        title: 'titolo2',
-        duration: 'durata2'
+        title: 'medium',
+        duration: '3',
+        amount: 5.99
       },
       {
-        title: 'titolo3',
-        duration: 'durata3'
+        title: 'hard',
+        duration: '6',
+        amount: 9.99
       }
     ]
   }

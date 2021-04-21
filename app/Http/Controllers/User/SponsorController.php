@@ -13,7 +13,8 @@ class SponsorController extends Controller
       $sponsors = Sponsor::all();
 
       $data = [
-        'sponsors' => $sponsors
+        'sponsors' => $sponsors,
+        'apartment' => $apartment
       ];
       
       return view('user.sponsor.index', $data);

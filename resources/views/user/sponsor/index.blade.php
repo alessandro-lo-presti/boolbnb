@@ -18,19 +18,30 @@
     <div id="sponsor">
 
         <div class="container">
-            <div class="card" style="width: 18rem;" v-for="sponsor in sponsors">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">@{{ sponsor.title }}</h5>
-                    <p class="card-text">@{{ sponsor.duration }}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h3>Rendi più visibile il tuo appartamento {{ $apartment->title }} a {{ $apartment->city }}</h3>
+            <p>Acquista una delle nostre sponsorizzazioni</p>
+            <div class="layout-cards">
+                <div class="card" style="width: 18rem;" v-for="sponsor in sponsors">
+                    <div class="card-body center-card">
+                        <h5 class="card-title">@{{ sponsor.title }}</h5>
+                        <p class="card-text">@{{ sponsor.duration }} days</p>
+                        <p class="card-text">@{{ sponsor.amount }}€</p>
+                        <a href="#" class="btn btn-success">Buy it</a>
+                    </div>
                 </div>
             </div>
-
         </div>
+
+        
 
     </div>
 
     <script src="{{ asset('js/sponsor.js') }}"></script>
 </body>
 </html>
+
+
+
+{{-- ● 2,99 € per 24 ore di sponsorizzazione
+● 5.99 € per 72 ore di sponsorizzazione
+● 9.99 € per 144 ore di sponsorizzazione --}}

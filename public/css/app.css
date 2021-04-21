@@ -11757,6 +11757,35 @@ header .row .search a i {
   }
 }
 
+#sponsor .container > h3 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#sponsor .container > p {
+  margin: 10px 0 30px 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#sponsor .container .layout-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+#sponsor .container i {
+  font-size: 4em;
+}
+
+#sponsor .container .center-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #advanced-search * {
   box-sizing: border-box;
 }
