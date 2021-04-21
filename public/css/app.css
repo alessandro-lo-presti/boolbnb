@@ -11835,42 +11835,42 @@ footer .container .row.second {
   padding-top: 20px;
 }
 
-footer .container .row.second .box.left ul {
-  list-style: none;
+footer .container .row.second ul.left {
+  padding-left: 0;
 }
 
-footer .container .row.second .box.left ul li {
+footer .container .row.second ul.left li {
   padding-right: 5px;
   display: inline-block;
 }
 
-footer .container .row.second .box.left ul li a {
+footer .container .row.second ul.left li a {
   color: black;
 }
 
-footer .container .row.second .box.left ul li a:hover {
+footer .container .row.second ul.left li a:hover {
   color: lightslategray;
 }
 
-footer .container .row.second .box.center ul,
-footer .container .row.second .box.right ul {
+footer .container .row.second ul.center,
+footer .container .row.second ul.right {
   list-style: none;
 }
 
-footer .container .row.second .box.center ul li,
-footer .container .row.second .box.right ul li {
+footer .container .row.second ul.center li,
+footer .container .row.second ul.right li {
   padding-left: 20px;
   display: inline-block;
 }
 
-footer .container .row.second .box.center ul li a,
-footer .container .row.second .box.right ul li a {
+footer .container .row.second ul.center li a,
+footer .container .row.second ul.right li a {
   color: black;
   font-size: 15px;
 }
 
-footer .container .row.second .box.center ul li a:hover,
-footer .container .row.second .box.right ul li a:hover {
+footer .container .row.second ul.center li a:hover,
+footer .container .row.second ul.right li a:hover {
   color: lightslategray;
 }
 
