@@ -780,21 +780,29 @@
             text-align: center;
             font-size: 1.2em;
         }
-    
+        
         .layout-cards{
             display: flex;
             align-items: center;
             justify-content: space-around;
             margin: 30px 0;
         }
-        i{
-            font-size: 4em;
+        .card{
+            border: none;
         }
         .center-card{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            border: 1px solid #787a7d8c;
+            border-radius: 10px;
+            box-shadow: 2px 5px 30px;
+            &:hover{
+                border: 1px solid yellow;
+                border-radius: 10px;
+                box-shadow: 2px 5px 30px yellow;
+            }
         }
     }
 }

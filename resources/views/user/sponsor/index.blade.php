@@ -16,7 +16,6 @@
 <body>
     @include('partials.header')
     <div id="sponsor">
-
         <div class="container">
             <h3>Rendi più visibile il tuo appartamento {{ $apartment->title }} a {{ $apartment->city }}</h3>
             <p>Acquista una delle nostre sponsorizzazioni</p>
@@ -31,6 +30,7 @@
                 </div>
             </div>
         </div>
+
 
         
 
