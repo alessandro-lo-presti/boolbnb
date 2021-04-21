@@ -10997,23 +10997,12 @@ header .row .box.login .user .dropdown .dropdown-menu .account {
   padding: 0.25rem 1.5rem;
 }
 
-header .row .search {
-  height: 30px;
-  width: 30px;
-  background-color: #ff5a5f;
-  border-radius: 100%;
-  border: none;
-  color: #fff;
-}
-
 header .row .search a {
-  color: white;
+  color: black;
 }
 
-header .row .search a i {
-  font-size: 1.3em;
-  line-height: 30px;
-  padding-left: 6px;
+header .row .search a:hover {
+  color: #ff5a5f;
 }
 
 @media screen and (max-width: 576px) {
