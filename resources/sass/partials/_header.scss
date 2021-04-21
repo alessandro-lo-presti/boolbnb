@@ -92,19 +92,19 @@ header {
         }
 
         .search {
-            height: 30px;
-            width: 30px;
-            background-color: #ff5a5f;
-            border-radius: 100%;
-            border: none;
-            color: #fff;
+            // height: 30px;
+            // width: 30px;
+            // background-color: #ff5a5f;
+            // border-radius: 100%;
+            // border: none;
+            // color: #fff;
             a {
-                color: white;
-                i {
-                    font-size: 1.3em;
-                    line-height: 30px;
-                    padding-left: 6px;
+                color: black;
+                &:hover{
+                    color:#ff5a5f;
+
                 }
+
             }
         }
         // .box.search_bar {
