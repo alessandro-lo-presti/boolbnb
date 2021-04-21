@@ -10989,6 +10989,14 @@ header .row .box.login .user .dropdown .btn_dd {
   color: #ff5a5f;
 }
 
+header .row .box.login .user .dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+header .row .box.login .user .dropdown .dropdown-menu .account {
+  padding: 0.25rem 1.5rem;
+}
+
 header .row .search {
   height: 30px;
   width: 30px;
