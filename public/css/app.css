@@ -10997,23 +10997,12 @@ header .row .box.login .user .dropdown .dropdown-menu .account {
   padding: 0.25rem 1.5rem;
 }
 
-header .row .search {
-  height: 30px;
-  width: 30px;
-  background-color: #ff5a5f;
-  border-radius: 100%;
-  border: none;
-  color: #fff;
-}
-
 header .row .search a {
-  color: white;
+  color: black;
 }
 
-header .row .search a i {
-  font-size: 1.3em;
-  line-height: 30px;
-  padding-left: 6px;
+header .row .search a:hover {
+  color: #ff5a5f;
 }
 
 @media screen and (max-width: 576px) {
@@ -11356,8 +11345,6 @@ header .row .search a i {
   max-width: 275px;
   height: 100vh;
   background-color: #f8fafc;
-  padding-left: 20px;
-  border-left: 1px solid #ff5a5f;
 }
 
 #dashboard ul hr {
@@ -11369,7 +11356,6 @@ header .row .search a i {
   list-style: none;
   height: 80px;
   border-bottom: 1px solid #ff5a5f;
-  padding-left: 75px;
   text-align: left;
 }
 
@@ -11432,6 +11418,11 @@ header .row .search a i {
     vertical-align: middle;
     width: 40px;
     margin-top: 10px;
+    text-align: center;
+  }
+
+  #dashboard ul a li {
+    text-align: center;
   }
 
   #dashboard ul a li span {
@@ -11455,34 +11446,35 @@ header .row .search a i {
     margin-top: 10px;
   }
 
+  #dashboard ul a li {
+    text-align: center;
+  }
+
   #dashboard ul a li span {
     display: none;
   }
 }
 
-#apa-index a {
+#apa-index .row .table thead {
+  border-top: none;
+}
+
+#apa-index .row .table a {
   margin-bottom: 5px;
 }
 
-#apa-index a i {
-  display: none;
-}
-
-#apa-index .del {
+#apa-index .row .table .del {
   text-align: center;
 }
 
+#apa-index .row .table .del input[type=submit] {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1em;
+}
+
 @media screen and (max-width: 767px) {
-  #apa-index a {
+  #apa-index #aggiungi a {
     margin-bottom: 5px;
-  }
-
-  #apa-index a span {
-    display: none;
-  }
-
-  #apa-index a i {
-    display: inline-block;
   }
 }
 

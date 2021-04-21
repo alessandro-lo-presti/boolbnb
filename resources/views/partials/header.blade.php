@@ -17,7 +17,7 @@
                 <!-- SEARCHBAR -->
                 <div class="search">
                     <a href="{{ route('search') }}">
-                        <i class="fas fa-search"></i></a>
+                        Dove vuoi andare ?</a>
                 </div>
 
 
@@ -52,7 +52,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                                    <a class="dropdown-item" href="#">Sponsor</a>
+                                    <a class="dropdown-item" href="{{route ('apartment.index')}}">I miei appartamenti</a>
                                 </div>
                             </div>
 
