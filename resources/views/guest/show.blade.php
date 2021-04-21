@@ -186,5 +186,15 @@
   </section>
   <!-- / info-section -->
 
+  <!-- mail -->
+  <section>
+
+    <form class="form-group">
+      <label for="email">Email address</label>
+    </form>
+
+  </section>
+  <!-- / mail -->
+
 </div>
 @endsection
