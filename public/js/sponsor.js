@@ -81,102 +81,58 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/edit.js":
-/*!******************************!*\
-  !*** ./resources/js/edit.js ***!
-  \******************************/
+/***/ "./resources/js/sponsor.js":
+/*!*********************************!*\
+  !*** ./resources/js/sponsor.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var edit = new Vue({
-  el: '#edit',
-  data: function data() {
-    return {
-      rooms: 0,
-      beds: 0,
-      bathrooms: 0,
-      mq: 40,
-      phpRooms: 'active',
-      vueRooms: 'hidden',
-      phpBeds: 'active',
-      vueBeds: 'hidden',
-      phpBathrooms: 'active',
-      vueBathrooms: 'hidden',
-      phpMq: 'active',
-      vueMq: 'hidden'
-    };
+var search = new Vue({
+  el: '#advanced-search',
+  data: {
+    apartments: [],
+    searchInput: '',
+    suggests: []
   },
   methods: {
-    addRoom: function addRoom() {
-      this.phpRooms = 'hidden';
-      this.vueRooms = 'active';
-      this.rooms++;
-    },
-    removeRoom: function removeRoom() {
-      this.phpRooms = 'hidden';
-      this.vueRooms = 'active';
+    search: function search() {
+      var _this = this;
 
-      if (this.rooms > 0) {
-        this.rooms--;
-      }
+      axios.get('http://127.0.0.1:8000/api/search?title=' + this.searchInput).then(function (result) {
+        _this.apartments = result.data.response;
+        _this.searchInput = '';
+      });
     },
-    addBed: function addBed() {
-      this.phpBeds = 'hidden';
-      this.vueBeds = 'active';
-      this.beds++;
-    },
-    removeBed: function removeBed() {
-      this.phpBeds = 'hidden';
-      this.vueBeds = 'active';
+    autocomplete: function autocomplete() {
+      var _this2 = this;
 
-      if (this.beds > 0) {
-        this.beds--;
-      }
+      axios.get('http://127.0.0.1:8000/api/autocomplete?title=' + this.searchInput).then(function (result) {
+        _this2.suggests = result.data.response;
+      });
     },
-    addBathroom: function addBathroom() {
-      this.phpBathrooms = 'hidden';
-      this.vueBathrooms = 'active';
-      this.bathrooms++;
-    },
-    removeBathroom: function removeBathroom() {
-      this.phpBathrooms = 'hidden';
-      this.vueBathrooms = 'active';
-
-      if (this.bathrooms > 0) {
-        this.bathrooms--;
-      }
-    },
-    addMq: function addMq() {
-      this.phpMq = 'hidden';
-      this.vueMq = 'active';
-      this.mq += 5;
-    },
-    removeMq: function removeMq() {
-      this.phpMq = 'hidden';
-      this.vueMq = 'active';
-
-      if (this.mq > 0) {
-        this.mq -= 5;
-      }
+    changeSearchInput: function changeSearchInput(suggest) {
+      this.searchInput = suggest;
+      this.search();
     }
   }
 });
 
 /***/ }),
 
-/***/ 1:
-/*!************************************!*\
-  !*** multi ./resources/js/edit.js ***!
-  \************************************/
+/***/ 5:
+/*!***************************************!*\
+  !*** multi ./resources/js/sponsor.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/PENNA/Programmazione/Corso24/mamp_public/progetto-finale/boolbnb/resources/js/edit.js */"./resources/js/edit.js");
+module.exports = __webpack_require__(/*! /Volumes/PENNA/Programmazione/Corso24/mamp_public/progetto-finale/boolbnb/resources/js/sponsor.js */"./resources/js/sponsor.js");
 
 
 /***/ })

@@ -4,5 +4,6 @@
     "/js/create.js": "/js/create.js",
     "/js/edit.js": "/js/edit.js",
     "/js/home.js": "/js/home.js",
-    "/js/search.js": "/js/search.js"
+    "/js/search.js": "/js/search.js",
+    "/js/sponsor.js": "/js/sponsor.js"
 }
