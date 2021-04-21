@@ -15,16 +15,17 @@
                 </div>
 
                 <!-- SEARCHBAR -->
-                <div class="search">
-                    <a href="{{ route('search') }}">
-                        Dove vuoi andare ?</a>
-                </div>
+
 
 
                 <!-- Rotta show/Ricerca -->
-                <div class="box login d-flex align-items-center">
+                <div class="box login d-flex justify-content-end align-items-center">
+                    <div class="search">
+                        <a href="{{ route('search') }}">
+                            Dove vuoi andare ?</a>
+                    </div>
                     <!-- DROPDOWN UTENTE -->
-                    <div class="user d-flex justify-content-around">
+                    <div class="user d-flex justify-content-end">
                         @guest
                             <div class="nav-item">
                                 <a class="btn_l" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -38,21 +39,21 @@
                             <!-- Rotta Log In utente -->
                             <div class="nav-item dropdown">
                                 <a id="navbarDropdown btn_dd" class="nav-link dropdown-toggle" href="#" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-user-circle fa-2x btn_dd"></i>
                                 </a>
-
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <span class="account"> {{ Auth::user()->name }}</span>
+                                    <a class="dropdown-item" href="{{ route('apartment.index') }}">I miei appartamenti</a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();">
+                                                                     document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                                    <a class="dropdown-item" href="{{route ('apartment.index')}}">I miei appartamenti</a>
+
                                 </div>
                             </div>
 
@@ -61,8 +62,6 @@
                     </div>
                 @endguest
             </div>
-        </div>
-        </div>
         </div>
     </header>
     <!-- /header -->
