@@ -93,33 +93,19 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var search = new Vue({
-  el: '#advanced-search',
+var app = new Vue({
+  el: '#sponsor',
   data: {
-    apartments: [],
-    searchInput: '',
-    suggests: []
-  },
-  methods: {
-    search: function search() {
-      var _this = this;
-
-      axios.get('http://127.0.0.1:8000/api/search?title=' + this.searchInput).then(function (result) {
-        _this.apartments = result.data.response;
-        _this.searchInput = '';
-      });
-    },
-    autocomplete: function autocomplete() {
-      var _this2 = this;
-
-      axios.get('http://127.0.0.1:8000/api/autocomplete?title=' + this.searchInput).then(function (result) {
-        _this2.suggests = result.data.response;
-      });
-    },
-    changeSearchInput: function changeSearchInput(suggest) {
-      this.searchInput = suggest;
-      this.search();
-    }
+    sponsors: [{
+      title: 'titolo1',
+      duration: 'durata1'
+    }, {
+      title: 'titolo2',
+      duration: 'durata2'
+    }, {
+      title: 'titolo3',
+      duration: 'durata3'
+    }]
   }
 });
 
