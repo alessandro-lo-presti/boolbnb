@@ -8,6 +8,8 @@ use App\Service;
 use App\Image;
 use App\Message;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendNewMail;
 
 
 class HomeController extends Controller
