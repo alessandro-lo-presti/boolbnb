@@ -20,12 +20,12 @@
             <h3>Rendi più visibile il tuo appartamento {{ $apartment->title }} a {{ $apartment->city }}</h3>
             <p>Acquista una delle nostre sponsorizzazioni</p>
             <div class="layout-cards">
-                <div class="card" style="width: 18rem;" v-for="sponsor in sponsors">
-                    <div class="card-body center-card">
+                <div class="card" style="width: 18rem;" v-for="(sponsor, index) in sponsors">
+                    <div class="card-body center-card" v-on:mouseenter="enter(index)" v-on:mouseleave="leave(index)" :class="test">
                         <h5 class="card-title">@{{ sponsor.title }}</h5>
                         <p class="card-text">@{{ sponsor.duration }} days</p>
                         <p class="card-text">@{{ sponsor.amount }}€</p>
-                        <a href="#" class="btn btn-success">Buy it</a>
+                        <a href="#" class="btn btn-success">Acquista</a>
                     </div>
                 </div>
             </div>
