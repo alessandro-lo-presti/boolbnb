@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="form-group row col-6">
-                  <div class="counter d-flex justify-content-star">
+                  <div class="counter d-flex justify-content-start">
                     <div class="counter-title">Letti</div>
                     <div class="counter-number d-flex justify-content-around">
                       <a @click="removeBed"><i class="fas fa-minus-circle fa-lg"></i></a>
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="form-group row col-6">
-                  <div class="counter d-flex justify-content-star">
+                  <div class="counter d-flex justify-content-start">
                     <div class="counter-title">Bagni</div>
                     <div class="counter-number d-flex justify-content-around">
                       <a @click="removeBathroom"><i class="fas fa-minus-circle fa-lg"></i></a>
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="form-group row col-6">
-                  <div class="counter d-flex justify-content-star ">
+                  <div class="counter d-flex justify-content-start ">
                     <div class="counter-title">M<sup>2</sup></div>
                     <div class="counter-number d-flex justify-content-around">
                       <a @click="removeMq"><i class="fas fa-minus-circle fa-lg"></i></a>

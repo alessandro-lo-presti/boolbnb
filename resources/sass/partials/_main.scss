@@ -781,6 +781,48 @@
     * {
         box-sizing: border-box;
     }
+    // fede-gio
+    .card{
+      .card-header{
+        background-color: white;
+      }
+      .card-body{
+        input:focus,
+        input:active {
+            outline: none;
+            box-shadow: none;
+            border-color: inherit;
+            -webkit-box-shadow: none;
+        }
+        input[type="number"] {
+            display: none;
+        }
+        .counter {
+            .counter-title {
+                width: 60px;
+            }
+            .counter-number {
+                width: 100px;
+                a {
+                    i {
+                        color: #ff5a5f;
+                    }
+                }
+            }
+        }
+      }
+      a.btn {
+          width: 100%;
+          color: white;
+          background: #ff5a5f;
+      }
+      a.btn:focus {
+          outline: none;
+          box-shadow: none;
+          border-color: inherit;
+          -webkit-box-shadow: none;
+      }
+    }
 
     .search {
         position: relative;
@@ -793,8 +835,9 @@
             padding: 5px;
             position: absolute;
             top: 58px;
-            left: 20px;
+            left: 90px;
             background-color: white;
+            color: black;
             border: 1px solid lightgrey;
             display: flex;
             flex-direction: column;
@@ -803,9 +846,10 @@
             div {
                 padding: 0 10px;
 
-                &:hover {
-                    background-color: #cce3f6;
-                }
+            }
+            &:hover {
+              color: white;
+              background-color: #ff5a5f;
             }
         }
     }

@@ -5,6 +5,11 @@ var search = new Vue(
       apartments: [],
       searchInput: '',
       suggests: [],
+      rooms: 1,
+      beds: 1,
+      bathrooms: 1,
+      mq: 40,
+      radius: 20
     },
     methods: {
       search(){
@@ -26,6 +31,46 @@ var search = new Vue(
       changeSearchInput(suggest) {
         this.searchInput = suggest;
         this.search();
+      },
+      addRoom() {
+        this.rooms++;
+      },
+      removeRoom() {
+        if (this.rooms > 1) {
+          this.rooms--;
+        }
+      },
+      addBed() {
+        this.beds++;
+      },
+      removeBed() {
+        if (this.beds > 1) {
+          this.beds--;
+        }
+      },
+      addBathroom() {
+        this.bathrooms++;
+      },
+      removeBathroom() {
+        if (this.bathrooms > 1) {
+          this.bathrooms--;
+        }
+      },
+      addMq() {
+        this.mq += 5;
+      },
+      removeMq() {
+        if (this.mq > 1) {
+          this.mq -= 5;
+        }
+      },
+      addRadius() {
+        this.radius += 5;
+      },
+      removeRadius() {
+        if (this.radius > 1) {
+          this.radius -= 5;
+        }
       }
     }
   });

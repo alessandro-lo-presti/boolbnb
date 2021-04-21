@@ -11753,6 +11753,47 @@ header .row .search a:hover {
   box-sizing: border-box;
 }
 
+#advanced-search .card .card-header {
+  background-color: white;
+}
+
+#advanced-search .card .card-body input:focus,
+#advanced-search .card .card-body input:active {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+}
+
+#advanced-search .card .card-body input[type=number] {
+  display: none;
+}
+
+#advanced-search .card .card-body .counter .counter-title {
+  width: 60px;
+}
+
+#advanced-search .card .card-body .counter .counter-number {
+  width: 100px;
+}
+
+#advanced-search .card .card-body .counter .counter-number a i {
+  color: #ff5a5f;
+}
+
+#advanced-search .card a.btn {
+  width: 100%;
+  color: white;
+  background: #ff5a5f;
+}
+
+#advanced-search .card a.btn:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+}
+
 #advanced-search .search {
   position: relative;
 }
@@ -11765,8 +11806,9 @@ header .row .search a:hover {
   padding: 5px;
   position: absolute;
   top: 58px;
-  left: 20px;
+  left: 90px;
   background-color: white;
+  color: black;
   border: 1px solid lightgrey;
   display: flex;
   flex-direction: column;
@@ -11777,8 +11819,9 @@ header .row .search a:hover {
   padding: 0 10px;
 }
 
-#advanced-search .search .autocomplete.active div:hover {
-  background-color: #cce3f6;
+#advanced-search .search .autocomplete.active:hover {
+  color: white;
+  background-color: #ff5a5f;
 }
 
 @media (max-width: 768px) {
