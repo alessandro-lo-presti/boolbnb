@@ -16,21 +16,6 @@
     <div id="home">
 
 
-        <section class="search d-flex justify-content-center">
-            <div class="box_search d-flex justify-content-center">
-                <div class="search_location d-flex flex-column justify-content-center">
-                    <p>dove</p>
-                    <input type="text" placeholder="dove vuoi andare">
-                </div>
-                <div class="search_button d-flex align-items-center ml-3 mr-2">
-                    <button>
-                        <a href="{{route('search')}}">
-                        <i class="fas fa-search"></i></a>
-                    </button>
-                </div>
-            </div>
-        </section>
-
         {{-- section jumbotron --}}
         <section class="jumbo">
             <div class="d-flex justify-content-center">

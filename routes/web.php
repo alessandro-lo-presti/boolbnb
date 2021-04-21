@@ -22,10 +22,12 @@ Auth::routes();
 
 
 Route::prefix('user')
-		->namespace('User')
-		->middleware('auth')
-		->group(function () {
-            Route::get('/', 'HomeController@index')->name('home');
-						Route::get('/sponsor/{apartment}', 'SponsorController@index')->name('sponsor.index');
-            Route::resource('apartment', 'ApartmentController');
-					});
+    ->namespace('User')
+    ->middleware('auth')
+    ->group(function () {
+        Route::get('/', 'HomeController@index')->name('home');
+        Route::get('/sponsor/{apartment}', 'SponsorController@index')->name('sponsor.index');
+        Route::resource('apartment', 'ApartmentController');
+        Route::get('/payment', 'PaymentController@request')->name('request');
+        Route::post('/payment', 'PaymentController@payment')->name('payment');
+    });

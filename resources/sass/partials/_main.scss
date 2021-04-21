@@ -1,51 +1,10 @@
-#home {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+#home {
     position: relative;
-
-    section.search {
-        p {
-            margin: 0;
-            padding: 0;
-        }
-        .box_search {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 80px;
-            background-color: lightgrey;
-            border-radius: 100px;
-            .search_location {
-                padding-left: 30px;
-                input {
-                    border: none;
-                    width: 150px;
-                    background-color: lightgrey;
-                    &:focus {
-                        outline: none;
-                    }
-                }
-            }
-            .search_button {
-                button {
-                    background-color: #ff385c;
-                    border-radius: 50%;
-                    border: none;
-                    padding: 17px;
-                    height: 50px;
-                    color: #fff;
-                    a {
-                        color: white;
-                        i {
-                            font-size: 1.3em;
-                        }
-                    }
-                }
-            }
-        }
-    }
 
     section.jumbo {
         background-color: black;
@@ -369,8 +328,6 @@
         max-width: 275px;
         height: 100vh;
         background-color: #f8fafc;
-        padding-left: 20px;
-        border-left: 1px solid #ff5a5f;
         hr {
             color: #ff5a5f;
         }
@@ -380,7 +337,6 @@
             list-style: none;
             height: 80px;
             border-bottom: 1px solid #ff5a5f;
-            padding-left: 75px;
             text-align: left;
             &:active {
                 background-color: #ff5a5f;
@@ -435,9 +391,11 @@
                 vertical-align: middle;
                 width: 40px;
                 margin-top: 10px;
+                text-align: center;
             }
             a {
                 li {
+                    text-align: center;
                     span {
                         display: none;
                     }
@@ -458,9 +416,11 @@
                 vertical-align: middle;
                 width: 40px;
                 margin-top: 10px;
+
             }
             a {
                 li {
+                    text-align: center;
                     span {
                         display: none;
                     }
@@ -472,25 +432,30 @@
 
 //sezione Index
 #apa-index {
-    a {
-        margin-bottom: 5px;
-        i {
-            display: none;
+    .row {
+        .table {
+            thead {
+                border-top: none;
+            }
+            a {
+                margin-bottom: 5px;
+            }
+            .del {
+                text-align: center;
+                input[type="submit"] {
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 1em;
+                }
+            }
         }
-    }
-    .del {
-        text-align: center;
     }
 }
 @media screen and (max-width: 767px) {
     #apa-index {
-        a {
-            margin-bottom: 5px;
-            span {
-                display: none;
-            }
-            i {
-                display: inline-block;
+        #aggiungi {
+            a {
+                margin-bottom: 5px;
+
             }
         }
     }
@@ -503,109 +468,109 @@
 }
 
 // sezione create Giorgio
-#create{
-  .container{
-    .card{
-      .card-header{
-        background-color: white;
-      }
-      .card-body{
-        .form-group{
-          label{
-            font-size: 16px;
-          }
-          input:focus,
-          input:active{
-              outline: none;
-              box-shadow: none;
-              border-color: inherit;
-              -webkit-box-shadow: none;
-          }
-          input[type="number"]{
-            display: none;
-          }
-          .counter{
-            .counter-title{
-              width: 60px;
+#create {
+    .container {
+        .card {
+            .card-header {
+                background-color: white;
             }
-            .counter-number{
-              width: 100px;
-              a{
-                i{
-                  color: #ff5a5f;
+            .card-body {
+                .form-group {
+                    label {
+                        font-size: 16px;
+                    }
+                    input:focus,
+                    input:active {
+                        outline: none;
+                        box-shadow: none;
+                        border-color: inherit;
+                        -webkit-box-shadow: none;
+                    }
+                    input[type="number"] {
+                        display: none;
+                    }
+                    .counter {
+                        .counter-title {
+                            width: 60px;
+                        }
+                        .counter-number {
+                            width: 100px;
+                            a {
+                                i {
+                                    color: #ff5a5f;
+                                }
+                            }
+                        }
+                    }
                 }
-              }
+                button {
+                    width: 100%;
+                    color: white;
+                    background: #ff5a5f;
+                }
+                button:focus {
+                    outline: none;
+                    box-shadow: none;
+                    border-color: inherit;
+                    -webkit-box-shadow: none;
+                }
             }
-          }
         }
-        button{
-          width: 100%;
-          color:white;
-          background: #ff5a5f;
-        }
-        button:focus{
-          outline: none;
-          box-shadow: none;
-          border-color: inherit;
-          -webkit-box-shadow: none;
-        }
-      }
     }
-  }
 }
 // sezione edit Giorigio
-#edit{
-  .container{
-    .card{
-      .card-header{
-        background-color: white;
-      }
-      .card-body{
-        .form-group{
-          label{
-            font-size: 16px;
-          }
-          input:focus,
-          input:active{
-              outline: none;
-              box-shadow: none;
-              border-color: inherit;
-              -webkit-box-shadow: none;
-          }
-          input[type="number"]{
-            display: none;
-          }
-          .counter{
-            .counter-title{
-              width: 60px;
+#edit {
+    .container {
+        .card {
+            .card-header {
+                background-color: white;
             }
-            .counter-number{
-              width: 100px;
-              .hidden{
-                display: none;
-              }
-              a{
-                i{
-                  color: #ff5a5f;
+            .card-body {
+                .form-group {
+                    label {
+                        font-size: 16px;
+                    }
+                    input:focus,
+                    input:active {
+                        outline: none;
+                        box-shadow: none;
+                        border-color: inherit;
+                        -webkit-box-shadow: none;
+                    }
+                    input[type="number"] {
+                        display: none;
+                    }
+                    .counter {
+                        .counter-title {
+                            width: 60px;
+                        }
+                        .counter-number {
+                            width: 100px;
+                            .hidden {
+                                display: none;
+                            }
+                            a {
+                                i {
+                                    color: #ff5a5f;
+                                }
+                            }
+                        }
+                    }
                 }
-              }
+                button {
+                    width: 100%;
+                    color: white;
+                    background: #ff5a5f;
+                }
+                button:focus {
+                    outline: none;
+                    box-shadow: none;
+                    border-color: inherit;
+                    -webkit-box-shadow: none;
+                }
             }
-          }
         }
-        button{
-          width: 100%;
-          color:white;
-          background: #ff5a5f;
-        }
-        button:focus{
-          outline: none;
-          box-shadow: none;
-          border-color: inherit;
-          -webkit-box-shadow: none;
-        }
-      }
     }
-  }
 }
 // sezione show Alessandro
 #show {
