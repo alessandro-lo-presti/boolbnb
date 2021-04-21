@@ -799,14 +799,24 @@
             border: 1px solid #787a7d8c;
             border-radius: 10px;
             box-shadow: 0px 2px 10px;
-
-            .ciao{
-                // border: 1px solid yellow;
-                // border-radius: 10px;
-                // box-shadow: 0px 2px 40px yellow;
-                // cursor: pointer;
-                color: green;
-            }
+        }
+        .gold{
+            border: 1px solid yellow;
+            border-radius: 10px;
+            box-shadow: 0px 2px 40px yellow;
+            cursor: pointer;
+        }
+        .silver{
+            border: 1px solid green;
+            border-radius: 10px;
+            box-shadow: 0px 2px 40px green;
+            cursor: pointer;
+        }
+        .bronze{
+            border: 1px solid blue;
+            border-radius: 10px;
+            box-shadow: 0px 2px 40px blue;
+            cursor: pointer;
         }
     }
 }

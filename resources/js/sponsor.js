@@ -2,8 +2,8 @@ var app = new Vue ({
 
   el: '#sponsor',
   data:{
-    test: 'ciao',
-    counter: 0,
+    test: 'null',
+    counter: -1,
     sponsors:[
       {
         title: 'bronze',
@@ -24,20 +24,11 @@ var app = new Vue ({
   },
   methods:{
     enter(index){
-      console.log(index);
-      if (this.test == 'ciao') {
-        this.test = 'null'
-      } else if (this.test == 'null'){
-        this.test = 'ciao'
-      }
+      this.counter = index;
+      console.log(this.counter);
     },
     leave(index){
-      console.log(index);
-      if (this.test == 'ciao') {
-        this.test = 'null'
-      } else if (this.test == 'null') {
-        this.test = 'ciao'
-      }
+      this.counter = -1;
     }
   }
 
