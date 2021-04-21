@@ -11804,37 +11804,34 @@ footer {
   background-color: #f7f7f7;
 }
 
-footer .container .first {
+footer .container .row {
   padding-top: 30px;
 }
 
-footer .container .first .box ul {
+footer .container .row.first ul {
   list-style: none;
 }
 
-footer .container .first .box ul h6 {
+footer .container .row.first ul h6 {
   text-transform: uppercase;
   font-weight: bold;
   padding-bottom: 15px;
 }
 
-footer .container .first .box ul li {
+footer .container .row.first ul li {
   padding-bottom: 15px;
 }
 
-footer .container .first .box ul li a {
+footer .container .row.first ul li a {
   color: black;
 }
 
-footer .container .first .box ul li a:hover {
+footer .container .row.first ul li a:hover {
   color: lightslategray;
 }
 
-footer .container .row {
-  border-top: 1px solid lightslategray;
-}
-
 footer .container .row.second {
+  border-top: 1px solid lightslategray;
   padding-top: 20px;
 }
 
@@ -11874,11 +11871,5 @@ footer .container .row.second .box.right ul li a {
 footer .container .row.second .box.center ul li a:hover,
 footer .container .row.second .box.right ul li a:hover {
   color: lightslategray;
-}
-
-@media screen and (max-width: 767px) {
-  footer .container .row .box.left ul li {
-    display: block;
-  }
 }
 

@@ -1,9 +1,9 @@
 footer {
     background-color: #f7f7f7;
     .container{
-        .first{
+        .row{
             padding-top: 30px;
-            .box{
+            &.first{
                 ul{
                     list-style: none;
                     h6{
@@ -24,8 +24,8 @@ footer {
             }
         }
         .row {
-            border-top: 1px solid lightslategray;
             &.second{
+                border-top: 1px solid lightslategray;
                 padding-top: 20px;
                .box {
                    &.left {
@@ -67,20 +67,28 @@ footer {
 
 //Cambiare il box left da orizzontale a verticale.
 @media screen and (max-width: 767px) {
-    footer{
-        .container{
-            .row{
-                .box{
-                    &.left{
-                        ul{
-                            li{
-                                display: block;
-                            }
-                        }
+    // footer{
+    //     .container{
+    //         .row{
+    //             .box{
+    //                 &.left{
+    //                     ul{
+    //                         li{
+    //                             display: block;
+    //                         }
+    //                     }
 
-                    }
-                }
-            }
-        }
-    }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 1200px){
+
 }
