@@ -11689,21 +11689,72 @@ footer {
 }
 
 footer .container .row {
-  max-height: 150px;
+  padding-top: 30px;
 }
 
-footer .container .row .box.left li {
+footer .container .row.first ul {
+  list-style: none;
+}
+
+footer .container .row.first ul h6 {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+footer .container .row.first ul li {
+  padding-bottom: 15px;
+}
+
+footer .container .row.first ul li a {
+  color: black;
+}
+
+footer .container .row.first ul li a:hover {
+  color: lightslategray;
+}
+
+footer .container .row.second {
+  border-top: 1px solid lightslategray;
+  padding-top: 20px;
+}
+
+footer .container .row.second ul.left {
+  padding-left: 0;
+}
+
+footer .container .row.second ul.left li {
   padding-right: 5px;
+  display: inline-block;
 }
 
-footer .container .row .box.center li,
-footer .container .row .box.right li {
+footer .container .row.second ul.left li a {
+  color: black;
+}
+
+footer .container .row.second ul.left li a:hover {
+  color: lightslategray;
+}
+
+footer .container .row.second ul.center,
+footer .container .row.second ul.right {
+  list-style: none;
+}
+
+footer .container .row.second ul.center li,
+footer .container .row.second ul.right li {
   padding-left: 20px;
+  display: inline-block;
 }
 
-@media screen and (max-width: 767px) {
-  footer .container .row .box.left ul li {
-    display: block;
-  }
+footer .container .row.second ul.center li a,
+footer .container .row.second ul.right li a {
+  color: black;
+  font-size: 15px;
+}
+
+footer .container .row.second ul.center li a:hover,
+footer .container .row.second ul.right li a:hover {
+  color: lightslategray;
 }
 

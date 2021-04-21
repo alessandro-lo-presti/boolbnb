@@ -1,42 +1,61 @@
-//Footer
 footer {
     background-color: #f7f7f7;
     .container{
-        .row {
-           max-height: 150px;
-            .box {
-                &.left {
-                    li {
-                        padding-right: 5px;
+        .row{
+            padding-top: 30px;
+            &.first{
+                ul{
+                    list-style: none;
+                    h6{
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        padding-bottom: 15px;
                     }
-                }
-                &.center,
-                &.right {
-                    li {
-                        padding-left: 20px;
+                    li{
+                        padding-bottom: 15px;
+                        a{
+                            color: black;
+                            &:hover {
+                                color: lightslategray;
+                            }
+                        }
                     }
                 }
             }
         }
-    }
-}
-
-// MediaQuery FOOTER
-
-//Cambiare il box left da orizzontale a verticale.
-@media screen and (max-width: 767px) {
-    footer{
-        .container{
-            .row{
-                .box{
-                    &.left{
-                        ul{
-                            li{
-                                display: block;
+        .row {
+            &.second{
+                border-top: 1px solid lightslategray;
+                padding-top: 20px;
+                ul {
+                    &.left {
+                        padding-left: 0;
+                       li {
+                            padding-right: 5px;
+                            display: inline-block;
+                            a{
+                                color: black;
+                                &:hover {
+                                    color: lightslategray;
+                                }
                             }
                         }
-
                     }
+                    &.center,
+                    &.right {
+                       list-style: none;
+                       li {
+                            padding-left: 20px;
+                            display: inline-block;
+                            a{
+                                color: black;
+                                font-size: 15px;
+                                &:hover {
+                                    color: lightslategray;
+                                }
+                            }
+                        }
+                     }
                 }
             }
         }
