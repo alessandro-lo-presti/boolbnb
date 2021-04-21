@@ -52,6 +52,7 @@ footer {
                                display: inline-block;
                                a {
                                    color: black;
+                                   font-size: 15px;
                                    &:hover {
                                        color: lightslategray;
                                    }
@@ -63,32 +64,4 @@ footer {
            }
         }
     }
-}
-
-//Cambiare il box left da orizzontale a verticale.
-@media screen and (max-width: 767px) {
-    // footer{
-    //     .container{
-    //         .row{
-    //             .box{
-    //                 &.left{
-    //                     ul{
-    //                         li{
-    //                             display: block;
-    //                         }
-    //                     }
-
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-}
-
-@media screen and (max-width: 992px){
-
-}
-
-@media screen and (max-width: 1200px){
-
 }

@@ -11866,6 +11866,7 @@ footer .container .row.second .box.right ul li {
 footer .container .row.second .box.center ul li a,
 footer .container .row.second .box.right ul li a {
   color: black;
+  font-size: 15px;
 }
 
 footer .container .row.second .box.center ul li a:hover,

@@ -1,9 +1,9 @@
 
     <footer>
         <div class="container">
-            <div class="row first d-flex flex-row align-items-start justify-content-between">
+            <div class="row first d-flex  align-items-start justify-content-between">
                 {{-- <div class="box"> --}}
-                    <ul class="col-md-12 col-lg-2">
+                    <ul class="col-md-6 col-lg-2">
                         <h6>Informazioni</h6>
                         <li><a href="#">Come funziona Airbnb</a></li>
                         <li><a href="#">Newsroom</a></li>
@@ -18,7 +18,7 @@
                     </ul>
                 {{-- </div> --}}
                 {{-- <div class="box"> --}}
-                    <ul class="col-md-12 col-lg-2">
+                    <ul class="col-md-6 col-lg-2">
                         <h6>Community</h6>
                         <li><a href="#">Diversit&agrave; e appartenenza</a></li>
                         <li><a href="#">Accessibilit&agrave;</a></li>
@@ -29,7 +29,7 @@
                     </ul>
                 {{-- </div>
                 <div class="box"> --}}
-                    <ul class="col-md-12 col-lg-2">
+                    <ul class="col-md-6 col-lg-2">
                         <h6>Ospita</h6>
                         <li><a href="#">Diventa un host</a></li>
                         <li><a href="#">Offri un'Esperienza online</a></li>
@@ -40,7 +40,7 @@
                     </ul>
                 {{-- </div>
                 <div class="box"> --}}
-                    <ul class="col-md-12 col-lg-2">
+                    <ul class="col-md-6 col-lg-2">
                         <h6>Assistenza</h6>
                         <li><a href="#">La nostra risposta all'emergenza COVID-19</a></li>
                         <li><a href="#">Centro Assistenza</a></li>
