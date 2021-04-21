@@ -718,7 +718,12 @@
 
       h2 {
         margin-bottom: 30px;
+
+        span {
+          text-transform: capitalize;
+        }
       }
+
 
       .mail_card {
         padding: 20px 30px;

@@ -189,7 +189,7 @@
   <!-- mail -->
   <section class="mail-section row d-flex justify-content-center align-items-center">
 
-    <h2 class="col-12 text-center">Contatta l'Host</h2>
+    <h2 class="col-12 text-center">Contatta <span>{{ $apartment->user->name }}</span></h2>
 
     <div class="card col-11">
 

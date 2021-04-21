@@ -11712,6 +11712,10 @@ header .row .search a:hover {
   margin-bottom: 30px;
 }
 
+#show .mail-section h2 span {
+  text-transform: capitalize;
+}
+
 #show .mail-section .mail_card {
   padding: 20px 30px;
 }
