@@ -11702,6 +11702,10 @@ header .row .search a:hover {
   margin-right: 10px;
 }
 
+#show .mail textarea {
+  resize: none;
+}
+
 @media screen and (max-width: 991px) {
   #show .image_box_right > div:first-child .image_div:first-child > img {
     border-top-right-radius: 15px;

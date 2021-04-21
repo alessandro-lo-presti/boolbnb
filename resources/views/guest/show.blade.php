@@ -187,10 +187,24 @@
   <!-- / info-section -->
 
   <!-- mail -->
-  <section>
+  <section class="mail">
 
-    <form class="form-group">
-      <label for="email">Email address</label>
+    <form action="{{ route('sent', $apartment->id) }}" method="post">
+      @csrf
+      @method('POST')
+      <div class="form-group">
+        <label for="email">Indirizzo Email</label>
+        <input type="email" class="form-control" name="email">
+      </div>
+
+      <div class="form-group mt-2">
+        <label for="message">Corpo delle Email</label>
+        <textarea class="form-control" name="body" rows="10">
+        </textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Invia</button>
+
     </form>
 
   </section>

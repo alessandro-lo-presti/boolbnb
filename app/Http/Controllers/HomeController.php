@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Apartment;
 use App\Service;
 use App\Image;
+use App\Message;
+use Carbon\Carbon;
+
 
 class HomeController extends Controller
 {
@@ -46,5 +49,24 @@ class HomeController extends Controller
     public function search()
     {
         return view('guest.search');
+    }
+
+    public function sent(Request $request, Apartment $apartment)
+  	{
+  		  $data = $request->all();
+
+        $data["date"] = new Carbon();
+
+        $newMessage = new Message();
+        $newMessage->apartment_id = $apartment->id;
+        $newMessage->fill($data);
+        $newMessage->save();
+
+        return redirect()->route('send')->with('status', 'ok');
+  	}
+
+    public function send()
+    {
+      return view('guest.send');
     }
 }
