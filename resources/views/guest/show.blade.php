@@ -189,9 +189,9 @@
   <!-- mail -->
   <section class="mail-section row d-flex justify-content-center align-items-center">
 
-    <h2>Contatta l'Host</h2>
+    <h2 class="col-12 text-center">Contatta l'Host</h2>
 
-    <div class="card col-12">
+    <div class="card col-11">
 
       <div class="card-body mail_card">
 
@@ -206,7 +206,7 @@
 
           <div class="form-group mt-2">
             <label for="message">Corpo delle Email</label>
-            <textarea class="form-control" name="body" rows="10">
+            <textarea class="form-control" name="body" rows="15">
             </textarea>
           </div>
 
