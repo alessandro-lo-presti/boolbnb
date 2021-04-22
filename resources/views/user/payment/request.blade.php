@@ -13,7 +13,7 @@
   <body>
     @include('partials.header')
     <div class= "container">
-        <form id="payment-form" action="{{ route("payment", $apartment->id) }}" method="post">
+        <form id="payment-form" action="{{ route("payment.payment", $apartment->id) }}" method="post">
           @csrf
           @method('POST')
           <!-- Putting the empty container you plan to pass to

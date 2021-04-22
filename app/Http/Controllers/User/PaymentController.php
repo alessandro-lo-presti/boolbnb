@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Apartment;
+use App\Sponsor;
 use Carbon\Carbon;
 
 class PaymentController extends Controller
@@ -39,9 +40,11 @@ class PaymentController extends Controller
             'privateKey' => config('services.braintree.privateKey')
         ]);
 
+        $sponsor = Sponsor::find($data['sponsor']);
+
         //transaction
         $result = $gateway->transaction()->sale([
-            'amount' => '10.00',
+            'amount' => $sponsor->price,
             'paymentMethodNonce' => $data['payment_method_nonce'],
             // 'deviceData' => $deviceDataFromTheClient,
             'options' => [
@@ -49,13 +52,19 @@ class PaymentController extends Controller
             ]
         ]);
 
+        $status = false;
+
         if($result) {
-          $end = Carbon::now()->addDay();
+          $status = true;
+          $end = Carbon::now()->addDay($sponsor->time / 24);
           $apartment->sponsors()->attach($data['sponsor'], ['end'=> $end ]);
         }
 
-        dd($result);
+        return redirect()->route('payment.check')->with('status', $status);
+    }
 
-        return 0;
+    public function check()
+    {
+      return view('user.payment.check');
     }
 }
