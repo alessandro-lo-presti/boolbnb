@@ -202,7 +202,7 @@
 
           <div class="form-group">
             <label for="email">Indirizzo Email</label>
-            <input type="email" class="form-control" name="email" value="{{ (Auth::id() && (Auth::id() != $apartment->user_id)) ? Auth::user()->email : '' }}" {{ (Auth::id() || (Auth::id() != $apartment->user_id)) ? 'readonly' : ''}}>
+            <input type="email" class="form-control" name="email" value="{{ (Auth::id() && (Auth::id() != $apartment->user_id)) ? Auth::user()->email : '' }}" {{ (Auth::id()) ? 'readonly' : ''}}>
           </div>
 
           <div class="form-group mt-2">
