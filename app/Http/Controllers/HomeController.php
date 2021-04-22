@@ -39,6 +39,9 @@ class HomeController extends Controller
         $services = Service::all();
         $images = Image::where('apartment_id', $apartment->id)->get()->toArray();
 
+        $apartment->visualization += 1;
+        $apartment->save();
+
         $data = [
           'apartment' => $apartment,
           'services' => $services,
