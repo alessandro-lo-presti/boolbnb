@@ -3,6 +3,7 @@
   <script src="{{ asset('js/create.js') }}"></script>
 @endsection
 @section('content')
+@include('partials.header')
 <div id="create">
   <div class="container">
     <div class="row justify-content-center">

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('partials.header')
 <div id="show" class="container">
 
   <!--Title-->
@@ -84,7 +85,7 @@
           </p>
 
           <div class="">
-            <a href="#" class="btn btn_user">Contatta {{ $apartment->user->name }}</a>
+            <a href="#mail" class="btn btn_user">Contatta {{ $apartment->user->name }}</a>
           </div>
 
         </div>
@@ -185,6 +186,43 @@
 
   </section>
   <!-- / info-section -->
+
+  <!-- mail -->
+  <section class="mail-section row d-flex justify-content-center align-items-center">
+
+    <h2 class="col-12 text-center">Contatta <span>{{ $apartment->user->name }}</span></h2>
+
+    <div class="card col-11">
+
+      <div class="card-body mail_card">
+
+        <form action="{{ route('sent', $apartment->id) }}" method="post">
+          @csrf
+          @method('POST')
+
+          <div class="form-group">
+            <label for="email">Indirizzo Email</label>
+            <input type="email" class="form-control" name="email" value="{{ (Auth::id() && (Auth::id() != $apartment->user_id)) ? Auth::user()->email : '' }}" {{ (Auth::id()) ? 'readonly' : ''}}>
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="message">Corpo delle Email</label>
+            <textarea class="form-control" name="body" rows="15" {{ (Auth::id() == $apartment->user_id) ? 'readonly' : ''}}>
+            </textarea>
+          </div>
+
+          <div class="d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn_mail">Invia</button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- / mail -->
 
 </div>
 @endsection

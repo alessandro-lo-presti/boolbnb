@@ -315,127 +315,24 @@
     }
 }
 
-// sezione dashboard Simone
-#h-dash {
-    height: 100px;
-    width: calc(100% - 200px);
-    box-shadow: 1px 3px 2px #817f7fde;
-}
-#dashboard {
-    overflow: hidden;
-    float: left;
-    ul {
-        max-width: 275px;
-        height: 100vh;
-        background-color: #f8fafc;
-        hr {
-            color: #ff5a5f;
-        }
-
-        li {
-            width: 100%;
-            list-style: none;
-            height: 80px;
-            border-bottom: 1px solid #ff5a5f;
-            text-align: left;
-            &:active {
-                background-color: #ff5a5f;
-
-                i {
-                    color: white;
-                }
-                span {
-                    color: white;
-                }
-            }
-        }
-        &:focus {
-            background-color: #ff5a5f;
-            a {
-                i {
-                    color: white;
-                }
-                span {
-                    color: white;
-                }
-            }
-        }
-    }
-    a {
-        color: #ff5a5f;
-        font-weight: 700;
-        i {
-            color: #ff5a5f;
-            line-height: 80px;
-            margin-right: 10px;
-        }
-    }
-    .logo-big {
-        vertical-align: middle;
-        width: 100px;
-        margin-top: 20px;
-    }
-    .logo-small {
-        display: none;
-    }
-}
-@media screen and (max-width: 576px) {
-    #dashboard {
-        ul {
-            width: 50px;
-            .logo-big {
-                display: none;
-            }
-            .logo-small {
-                display: inline-block;
-                vertical-align: middle;
-                width: 40px;
-                margin-top: 10px;
-                text-align: center;
-            }
-            a {
-                li {
-                    text-align: center;
-                    span {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width: 767px) and (min-width: 577px) {
-    #dashboard {
-        ul {
-            width: 100px;
-            .logo-big {
-                display: none;
-            }
-            .logo-small {
-                display: inline-block;
-                vertical-align: middle;
-                width: 40px;
-                margin-top: 10px;
-
-            }
-            a {
-                li {
-                    text-align: center;
-                    span {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-}
-
 //sezione Index
 #apa-index {
+    i{
+        display: none;
+    }
+    .p_top {
+        padding-top: 10px;
+    }
     .row {
         .table {
             thead {
                 border-top: none;
+                tr {
+                    border-top: none;
+                    th {
+                        border-top: none;
+                    }
+                }
             }
             a {
                 margin-bottom: 5px;
@@ -452,10 +349,15 @@
 }
 @media screen and (max-width: 767px) {
     #apa-index {
+        .add{
+            display: none;
+        }
+        i{
+            display: inline-block;
+        }
         #aggiungi {
             a {
                 margin-bottom: 5px;
-
             }
         }
     }
@@ -642,8 +544,8 @@
 
     // info-section
     .info-section {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 60px;
+        padding-bottom: 60px;
         border-top: 1px solid lightgrey;
 
         .user_box {
@@ -710,7 +612,39 @@
         }
     }
 
-    // map-section
+    // mail-section
+    .mail-section {
+      padding-top: 30px;
+      padding-bottom: 60px;
+      border-top: 1px solid lightgrey;
+
+      h2 {
+        margin-bottom: 30px;
+
+        span {
+          text-transform: capitalize;
+        }
+      }
+
+
+      .mail_card {
+        padding: 20px 30px;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .btn_mail {
+          width: 100px;
+          padding: 5px 10px;
+          background-color: #ff5a5f;
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+      }
+
+    }
 
     @media screen and (max-width: 991px) {
         // image-section
@@ -728,11 +662,11 @@
 
         // info-section
         .user_box {
-            padding-bottom: 30px;
+            padding-bottom: 60px;
         }
 
         .info_box {
-            padding-top: 30px;
+            padding-top: 60px;
             border-top: 1px solid lightgrey;
         }
     }
@@ -747,11 +681,11 @@
     @media screen and (max-width: 575px) {
         // info-section
         .services_box {
-            padding-bottom: 30px;
+            padding-bottom: 60px;
         }
 
         .info_room_box {
-            padding-top: 30px;
+            padding-top: 60px;
             border-top: 1px solid lightgrey;
         }
     }
@@ -766,6 +700,28 @@
             }
         }
     }
+}
+
+// messaggio inviato, check pagamento: Alessandro
+#send, #check{
+
+  .result {
+    padding: 60px 0;
+
+    .message-img, .check-img {
+      height: 200px;
+      width: 200px;
+      margin: 30px 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+  }
+
 }
 
 // sezione statistics

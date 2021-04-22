@@ -2,6 +2,7 @@
 @section('script')
   <script src="{{ asset('js/search.js') }}" defer></script>
 @endsection
+@include('partials.header')
 @section('content')
   <div id="advanced-search" class="container">
     <div class="card">
@@ -11,7 +12,7 @@
         <div class="card-body search">
           <input type="text" class='form-control' name="title" placeholder="Search..." v-model="searchInput" @keyup='autocomplete' @keyup.enter='search' autocomplete="off">
 
-          <div :class="(searchInput.length) ? 'active' : ''" class="autocomplete">
+          <div :class="(searchInput.length) ? 'active' : ''" class="autocomplete" v-if="suggests.length">
 
             <div v-for='suggest in suggests'>
               <span @click='changeSearchInput(suggest)'>@{{ suggest }}</span>

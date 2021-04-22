@@ -11,20 +11,22 @@
   </head>
 
   <body>
+    @include('partials.header')
     <div class= "container">
-        <form id="payment-form" action="{{ route("payment") }}" method="post">
+        <form id="payment-form" action="{{ route("payment.payment", $apartment->id) }}" method="post">
           @csrf
           @method('POST')
           <!-- Putting the empty container you plan to pass to
             braintree.dropin.create inside a form will make layout and flow
             easier to manage -->
           <div id="dropin-container"></div>
+          <input type="number" name="sponsor">
           <input type="hidden" id="nonce" name="payment_method_nonce"/>
           <input type="submit" />
           {{-- 4111 1111 1111 1111 --}}
         </form>
     </div>
-
+    @include('partials.footer')
     <script>
     const form = document.getElementById('payment-form');
 
