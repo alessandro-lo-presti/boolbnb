@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Apartment;
+use Carbon\Carbon;
 
 class PaymentController extends Controller
 {
@@ -49,7 +50,8 @@ class PaymentController extends Controller
         ]);
 
         if($result) {
-          dd("ciao");
+          $end = Carbon::now()->addDay();
+          $apartment->sponsors()->attach($data['sponsor'], ['end'=> $end ]);
         }
 
         dd($result);
