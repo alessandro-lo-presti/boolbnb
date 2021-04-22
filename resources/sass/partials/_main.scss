@@ -702,13 +702,13 @@
     }
 }
 
-// messaggio inviato: Alessandro
-#send {
+// messaggio inviato, check pagamento: Alessandro
+#send, #check{
 
   .result {
     padding: 60px 0;
 
-    .message-img {
+    .message-img, .check-img {
       height: 200px;
       width: 200px;
       margin: 30px 0;

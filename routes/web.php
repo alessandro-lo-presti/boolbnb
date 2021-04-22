@@ -18,7 +18,7 @@ Route::get('/', "HomeController@index")->name("index");
 Route::get('/search', "HomeController@search")->name("search");
 Route::get('/apartment/{apartment}', "HomeController@show")->name("show");
 Route::post('/apartment/{apartment}', "HomeController@sent")->name("sent");
-Route::get('/inviato', "HomeController@send")->name("send");
+Route::get('/send', "HomeController@send")->name("send");
 
 Auth::routes();
 
@@ -28,8 +28,9 @@ Route::prefix('user')
     ->middleware('auth')
     ->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
-        Route::get('/sponsor/{apartment}', 'SponsorController@index')->name('sponsor.index');
+        Route::get('/sponsor/{apartment}', 'SponsorController@index')->name('sponsor.index'); //da togliere
         Route::resource('apartment', 'ApartmentController');
-        Route::get('/payment', 'PaymentController@request')->name('request');
-        Route::post('/payment', 'PaymentController@payment')->name('payment');
+        Route::get('/payment/{apartment}', 'PaymentController@request')->name('payment.request');
+        Route::post('/payment/{apartment}', 'PaymentController@payment')->name('payment.payment');
+        Route::get('/check', 'PaymentController@check')->name('payment.check');
     });
