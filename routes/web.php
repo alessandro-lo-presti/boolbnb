@@ -30,6 +30,6 @@ Route::prefix('user')
         Route::get('/', 'HomeController@index')->name('home');
         Route::get('/sponsor/{apartment}', 'SponsorController@index')->name('sponsor.index');
         Route::resource('apartment', 'ApartmentController');
-        Route::get('/payment', 'PaymentController@request')->name('request');
-        Route::post('/payment', 'PaymentController@payment')->name('payment');
+        Route::get('/payment/{apartment}', 'PaymentController@request')->name('request');
+        Route::post('/payment/{apartment}', 'PaymentController@payment')->name('payment');
     });

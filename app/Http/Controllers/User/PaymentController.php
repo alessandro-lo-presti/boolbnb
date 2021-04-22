@@ -4,10 +4,11 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Apartment;
 
 class PaymentController extends Controller
 {
-    public function request()
+    public function request(Apartment $apartment)
     {
         //gateway
         $gateway = new \Braintree\Gateway([
@@ -18,13 +19,14 @@ class PaymentController extends Controller
         ]);
 
         $data = [
-            'token' => $clientToken = $gateway->clientToken()->generate()
+            'token' => $clientToken = $gateway->clientToken()->generate(),
+            'apartment' => $apartment
         ];
 
         return view('user.payment.request', $data);
     }
 
-    public function payment(Request $request)
+    public function payment(Request $request, Apartment $apartment)
     {
         $data = $request->all();
 
