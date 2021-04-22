@@ -153,6 +153,7 @@
         </div>
 
     </div>
+    @include('partials.footer')
 
     <script src="{{ asset('js/home.js') }}"></script>
 </body>

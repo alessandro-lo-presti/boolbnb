@@ -25,7 +25,7 @@
           {{-- 4111 1111 1111 1111 --}}
         </form>
     </div>
-
+    @include('partials.footer')
     <script>
     const form = document.getElementById('payment-form');
 
