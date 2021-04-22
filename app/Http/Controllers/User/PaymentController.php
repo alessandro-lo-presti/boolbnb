@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Apartment;
 use App\Sponsor;
 use Carbon\Carbon;
@@ -12,20 +13,24 @@ class PaymentController extends Controller
 {
     public function request(Apartment $apartment)
     {
+      if(Auth::id() == $apartment->user_id) {
         //gateway
         $gateway = new \Braintree\Gateway([
-            'environment' => config('services.braintree.environment'),
-            'merchantId' => config('services.braintree.merchantId'),
-            'publicKey' => config('services.braintree.publicKey'),
-            'privateKey' => config('services.braintree.privateKey')
+          'environment' => config('services.braintree.environment'),
+          'merchantId' => config('services.braintree.merchantId'),
+          'publicKey' => config('services.braintree.publicKey'),
+          'privateKey' => config('services.braintree.privateKey')
         ]);
 
         $data = [
-            'token' => $clientToken = $gateway->clientToken()->generate(),
-            'apartment' => $apartment
+          'token' => $clientToken = $gateway->clientToken()->generate(),
+          'apartment' => $apartment
         ];
 
         return view('user.payment.request', $data);
+      }
+
+      return redirect()->route('home');
     }
 
     public function payment(Request $request, Apartment $apartment)
