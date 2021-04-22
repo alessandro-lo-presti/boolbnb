@@ -201,12 +201,12 @@
 
           <div class="form-group">
             <label for="email">Indirizzo Email</label>
-            <input type="email" class="form-control" name="email" value="{{ (Auth::id() && (Auth::id() != $apartment->user_id)) ? Auth::user()->email : '' }}" {{ (Auth::id() && (Auth::id() != $apartment->user_id)) ? 'readonly' : ''}}>
+            <input type="email" class="form-control" name="email" value="{{ (Auth::id() && (Auth::id() != $apartment->user_id)) ? Auth::user()->email : '' }}" {{ (Auth::id() || (Auth::id() != $apartment->user_id)) ? 'readonly' : ''}}>
           </div>
 
           <div class="form-group mt-2">
             <label for="message">Corpo delle Email</label>
-            <textarea class="form-control" name="body" rows="15">
+            <textarea class="form-control" name="body" rows="15" {{ (Auth::id() == $apartment->user_id) ? 'readonly' : ''}}>
             </textarea>
           </div>
 
