@@ -18,7 +18,7 @@ Route::get('/', "HomeController@index")->name("index");
 Route::get('/search', "HomeController@search")->name("search");
 Route::get('/apartment/{apartment}', "HomeController@show")->name("show");
 Route::post('/apartment/{apartment}', "HomeController@sent")->name("sent");
-Route::get('/inviato}', "HomeController@send")->name("send");
+Route::get('/inviato', "HomeController@send")->name("send");
 
 Auth::routes();
 

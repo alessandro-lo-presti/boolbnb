@@ -14,12 +14,10 @@ class CreateApartmentSponsorTable extends Migration
     public function up()
     {
         Schema::create('apartment_sponsor', function (Blueprint $table) {
+            $table->id();
             $table->foreignId("apartment_id")->constrained();
             $table->foreignId("sponsor_id")->constrained();
-            $table->dateTime('begin');
             $table->dateTime('end');
-            $table->string('payment_status',100);
-            $table->primary(["apartment_id", "sponsor_id"]);
             $table->timestamps();
         });
     }
