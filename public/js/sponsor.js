@@ -99,26 +99,38 @@ var app = new Vue({
     test: 'null',
     counter: -1,
     sponsors: [{
+      id: 1,
       title: 'bronze',
       duration: '1',
       amount: 2.99
     }, {
+      id: 2,
       title: 'silver',
       duration: '3',
       amount: 5.99
     }, {
+      id: 3,
       title: 'gold',
       duration: '6',
       amount: 9.99
     }]
   },
   methods: {
-    enter: function enter(index) {
-      this.counter = index;
-      console.log(this.counter);
-    },
-    leave: function leave(index) {
-      this.counter = -1;
+    // enter(index){
+    //   this.counter = index;
+    //   console.log(this.counter);
+    // },
+    // leave(index){
+    //   this.counter = -1;
+    // },
+    selection: function selection(sponsor, index) {
+      if (this.counter == index) {
+        this.counter = -1;
+        document.getElementById("sel").removeAttribute("value");
+      } else {
+        this.counter = index;
+        document.getElementById("sel").setAttribute("value", sponsor.id);
+      }
     }
   }
 });
@@ -132,7 +144,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/PENNA/Programmazione/Corso24/mamp_public/progetto-finale/boolbnb/resources/js/sponsor.js */"./resources/js/sponsor.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/sponsor.js */"./resources/js/sponsor.js");
 
 
 /***/ })

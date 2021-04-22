@@ -14,13 +14,21 @@ class SponsorController extends Controller
       $sponsors = Sponsor::all();
       $images = Image::where('apartment_id', $apartment->id)->get()->toArray();
 
+      $gateway = new \Braintree\Gateway([
+          'environment' => config('services.braintree.environment'),
+          'merchantId' => config('services.braintree.merchantId'),
+          'publicKey' => config('services.braintree.publicKey'),
+          'privateKey' => config('services.braintree.privateKey')
+      ]);
+
       $data = [
         'sponsors' => $sponsors,
         'apartment' => $apartment,
-        'images' => $images
-
+        'images' => $images,
+        'token' => $clientToken = $gateway->clientToken()->generate(),
       ];
-      
+
       return view('user.sponsor.index', $data);
     }
+
 }
