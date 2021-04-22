@@ -46,6 +46,10 @@ class PaymentController extends Controller
             ]
         ]);
 
+        if($result) {
+          dd("ciao");
+        }
+
         dd($result);
 
         return 0;
