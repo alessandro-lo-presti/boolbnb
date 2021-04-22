@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    @include('partials.header')
     <div class= "container">
         <form id="payment-form" action="{{ route("payment") }}" method="post">
           @csrf
