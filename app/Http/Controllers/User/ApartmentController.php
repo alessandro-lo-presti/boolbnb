@@ -110,13 +110,18 @@ class ApartmentController extends Controller
       $services = Service::all();
       $images = Image::where('apartment_id', $apartment->id)->get()->toArray();
 
+      if(Auth::id() == $apartment->user_id) {
+
         $data = [
-            'apartment' => $apartment,
-            'services' => $services,
-            'images' => $images
+          'apartment' => $apartment,
+          'services' => $services,
+          'images' => $images
         ];
 
         return view('user.apartment.show', $data);
+      }
+
+      return redirect()->route('home');
     }
 
     /**
@@ -129,12 +134,17 @@ class ApartmentController extends Controller
     {
         $services = Service::all();
 
-        $data = [
-          'apartment' => $apartment,
-          "services" => $services
-        ];
+        if(Auth::id() == $apartment->user_id) {
+          $data = [
+            'apartment' => $apartment,
+            "services" => $services
+          ];
 
-        return view('user.apartment.edit', $data);
+          return view('user.apartment.edit', $data);
+        }
+
+        return redirect()->route('home');
+
     }
 
     /**
