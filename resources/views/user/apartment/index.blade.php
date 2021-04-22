@@ -2,48 +2,49 @@
 
 @section('content')
     @include('partials.header')
-    <div id="dashboard">
+    {{-- <div id="dashboard">
         <ul class="nav nav-flush flex-column mb-auto text-center">
             {{-- rotta allo apartment/show --}}
-            <a href="{{ route('apartment.index') }}">
+    {{-- <a href="{{ route('apartment.index') }}">
                 <li class="nav-item"><i class="fas fa-building fa-2x"></i> <span>My apartments</span> </li>
-            </a>
+            </a> --}}
 
 
-            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+    {{-- <a href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                 <li class="nav-item"><i class="fas fa-sign-out-alt fa-2x"></i> <span>Logout</span> </li>
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            </a> --}}
+    {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
-        </ul>
-    </div>
+        </ul> --}}
+    {{-- </div> --}}
 
     {{-- Aggiungi appartamento --}}
-
 
     @if (session('status'))
         <div class="alert alert-success">
             {{ session('status') }}
         </div>
     @endif
-    <div id="apa-index" class="container">
+    <div id="apa-index" class="container d-flex flex-column">
+        <div class="d-flex p_top justify-content-between">
+            <h3 class=""> Benvenuto {{ Auth::user()->name }}</h3>
+            <a class="btn btn-success mb-2" href="{{ route('apartment.create') }}">
+                <span class="add">Aggiungi un appartamento</span>
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
         <div class="row">
             <table class="table table-hover table-responsive">
                 <thead>
                     <tr>
-                        <th scope="col">Annuncio</th>
-                        <th scope="col">Titolo</th>
-                        <th scope="col">Stanze</th>
-                        <th scope="col">Letti</th>
-                        <th scope="col">Bagni</th>
-                        <th scope="col">Posizione</th>
-                        <th class='float-right' id='aggiungi'>
-                            <a class="btn btn-success mb-2" href="{{ route('apartment.create') }}">
-                                <i class="fas fa-plus"></i>
-                            </a>
-                        </th>
+                        <th scope="col-2">Annuncio</th>
+                        <th scope="col-2">Titolo</th>
+                        <th scope="col-2">Stanze</th>
+                        <th scope="col-2">Letti</th>
+                        <th scope="col-2">Bagni</th>
+                        <th scope="col-2">Posizione</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -79,8 +80,7 @@
             </table>
         </div>
     </div>
+    <script src="{{ asset('js/app.js') }}"></script>
 
 
-
-    @include('partials.footer')
 @endsection

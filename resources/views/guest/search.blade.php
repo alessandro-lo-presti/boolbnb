@@ -2,6 +2,7 @@
 @section('script')
   <script src="{{ asset('js/search.js') }}" defer></script>
 @endsection
+@include('partials.header')
 @section('content')
   <div id="advanced-search" class="container">
     <div class="card">

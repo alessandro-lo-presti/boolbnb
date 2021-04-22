@@ -50,7 +50,6 @@ header {
             // }
             &.login {
                 .user {
-                    width: 200px;
                     a{
                         text-decoration: none;
                     }
@@ -99,6 +98,7 @@ header {
             // border: none;
             // color: #fff;
             a {
+                text-decoration: none;
                 color: black;
                 &:hover{
                     color:#ff5a5f;

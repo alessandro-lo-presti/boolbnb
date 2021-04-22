@@ -10961,10 +10961,6 @@ header .row .box.logo .logo-small {
   display: none;
 }
 
-header .row .box.login .user {
-  width: 200px;
-}
-
 header .row .box.login .user a {
   text-decoration: none;
 }
@@ -10998,6 +10994,7 @@ header .row .box.login .user .dropdown .dropdown-menu .account {
 }
 
 header .row .search a {
+  text-decoration: none;
   color: black;
 }
 
@@ -11330,132 +11327,23 @@ header .row .search a:hover {
   opacity: 0.9;
 }
 
-#h-dash {
-  height: 100px;
-  width: calc(100% - 200px);
-  box-shadow: 1px 3px 2px #817f7fde;
-}
-
-#dashboard {
-  overflow: hidden;
-  float: left;
-}
-
-#dashboard ul {
-  max-width: 275px;
-  height: 100vh;
-  background-color: #f8fafc;
-}
-
-#dashboard ul hr {
-  color: #ff5a5f;
-}
-
-#dashboard ul li {
-  width: 100%;
-  list-style: none;
-  height: 80px;
-  border-bottom: 1px solid #ff5a5f;
-  text-align: left;
-}
-
-#dashboard ul li:active {
-  background-color: #ff5a5f;
-}
-
-#dashboard ul li:active i {
-  color: white;
-}
-
-#dashboard ul li:active span {
-  color: white;
-}
-
-#dashboard ul:focus {
-  background-color: #ff5a5f;
-}
-
-#dashboard ul:focus a i {
-  color: white;
-}
-
-#dashboard ul:focus a span {
-  color: white;
-}
-
-#dashboard a {
-  color: #ff5a5f;
-  font-weight: 700;
-}
-
-#dashboard a i {
-  color: #ff5a5f;
-  line-height: 80px;
-  margin-right: 10px;
-}
-
-#dashboard .logo-big {
-  vertical-align: middle;
-  width: 100px;
-  margin-top: 20px;
-}
-
-#dashboard .logo-small {
+#apa-index i {
   display: none;
 }
 
-@media screen and (max-width: 576px) {
-  #dashboard ul {
-    width: 50px;
-  }
-
-  #dashboard ul .logo-big {
-    display: none;
-  }
-
-  #dashboard ul .logo-small {
-    display: inline-block;
-    vertical-align: middle;
-    width: 40px;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  #dashboard ul a li {
-    text-align: center;
-  }
-
-  #dashboard ul a li span {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 767px) and (min-width: 577px) {
-  #dashboard ul {
-    width: 100px;
-  }
-
-  #dashboard ul .logo-big {
-    display: none;
-  }
-
-  #dashboard ul .logo-small {
-    display: inline-block;
-    vertical-align: middle;
-    width: 40px;
-    margin-top: 10px;
-  }
-
-  #dashboard ul a li {
-    text-align: center;
-  }
-
-  #dashboard ul a li span {
-    display: none;
-  }
+#apa-index .p_top {
+  padding-top: 10px;
 }
 
 #apa-index .row .table thead {
+  border-top: none;
+}
+
+#apa-index .row .table thead tr {
+  border-top: none;
+}
+
+#apa-index .row .table thead tr th {
   border-top: none;
 }
 
@@ -11473,6 +11361,14 @@ header .row .search a:hover {
 }
 
 @media screen and (max-width: 767px) {
+  #apa-index .add {
+    display: none;
+  }
+
+  #apa-index i {
+    display: inline-block;
+  }
+
   #apa-index #aggiungi a {
     margin-bottom: 5px;
   }
@@ -11839,21 +11735,72 @@ footer {
 }
 
 footer .container .row {
-  max-height: 150px;
+  padding-top: 30px;
 }
 
-footer .container .row .box.left li {
+footer .container .row.first ul {
+  list-style: none;
+}
+
+footer .container .row.first ul h6 {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+footer .container .row.first ul li {
+  padding-bottom: 15px;
+}
+
+footer .container .row.first ul li a {
+  color: black;
+}
+
+footer .container .row.first ul li a:hover {
+  color: lightslategray;
+}
+
+footer .container .row.second {
+  border-top: 1px solid lightslategray;
+  padding-top: 20px;
+}
+
+footer .container .row.second ul.left {
+  padding-left: 0;
+}
+
+footer .container .row.second ul.left li {
   padding-right: 5px;
+  display: inline-block;
 }
 
-footer .container .row .box.center li,
-footer .container .row .box.right li {
+footer .container .row.second ul.left li a {
+  color: black;
+}
+
+footer .container .row.second ul.left li a:hover {
+  color: lightslategray;
+}
+
+footer .container .row.second ul.center,
+footer .container .row.second ul.right {
+  list-style: none;
+}
+
+footer .container .row.second ul.center li,
+footer .container .row.second ul.right li {
   padding-left: 20px;
+  display: inline-block;
 }
 
-@media screen and (max-width: 767px) {
-  footer .container .row .box.left ul li {
-    display: block;
-  }
+footer .container .row.second ul.center li a,
+footer .container .row.second ul.right li a {
+  color: black;
+  font-size: 15px;
+}
+
+footer .container .row.second ul.center li a:hover,
+footer .container .row.second ul.right li a:hover {
+  color: lightslategray;
 }
 
