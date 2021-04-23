@@ -98,7 +98,9 @@ var search = new Vue({
   data: {
     apartments: [],
     searchInput: '',
-    suggests: []
+    suggests: [],
+    baseUrl: '' // baseUrl: '/marzo/progetto-boolbnb/public'
+
   },
   methods: {
     search: function search() {
@@ -132,7 +134,7 @@ var search = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/PENNA/Programmazione/Corso24/mamp_public/progetto-finale/boolbnb/resources/js/search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! F:\Corso Boolean\mamp-public\marzo\progetto-boolbnb\resources\js\search.js */"./resources/js/search.js");
 
 
 /***/ })
