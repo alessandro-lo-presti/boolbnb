@@ -486,6 +486,9 @@
                         border-color: inherit;
                         -webkit-box-shadow: none;
                     }
+                    input[type="file"] {
+                        margin: 10px 0;
+                    }
                     input[type="number"] {
                         display: none;
                     }
@@ -536,6 +539,9 @@
                         box-shadow: none;
                         border-color: inherit;
                         -webkit-box-shadow: none;
+                    }
+                    input[type="file"] {
+                        margin: 10px 0;
                     }
                     input[type="number"] {
                         display: none;
@@ -787,6 +793,16 @@
         background-color: white;
       }
       .card-body{
+        position: relative;
+        padding-bottom: 40px;
+        h2{
+          font-size: 20px;
+          margin-top: 10px;
+        }
+        h3{
+          font-size: 16px;
+          margin-top: 10px;
+        }
         input:focus,
         input:active {
             outline: none;
@@ -810,11 +826,16 @@
                 }
             }
         }
+
       }
       a.btn {
-          width: 100%;
+          width: 90%;
           color: white;
           background: #ff5a5f;
+          position: absolute;
+          left: 50%;
+          bottom: 10px;
+          transform: translateX(-50%);
       }
       a.btn:focus {
           outline: none;
@@ -832,10 +853,11 @@
         }
 
         .autocomplete.active {
-            padding: 5px;
+            padding: 0;
+            width: calc(100% - 70px);
             position: absolute;
             top: 58px;
-            left: 90px;
+            left: 35px;
             background-color: white;
             color: black;
             border: 1px solid lightgrey;
@@ -844,12 +866,14 @@
             z-index: 1;
 
             div {
-                padding: 0 10px;
-
-            }
-            &:hover {
-              color: white;
-              background-color: #ff5a5f;
+                width: 100%;
+                span{
+                  padding: 0 10px;
+                }
+                &:hover {
+                  color: white;
+                  background-color: #ff5a5f;
+                }
             }
         }
     }
