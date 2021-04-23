@@ -28,7 +28,7 @@ Route::prefix('user')
     ->middleware('auth')
     ->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
-        Route::get('/sponsor/{apartment}', 'SponsorController@index')->name('sponsor.index'); //da togliere
+        Route::get('/message/{apartment}', 'MessageController@index')->name('message.index');
         Route::resource('apartment', 'ApartmentController');
         Route::get('/payment/{apartment}', 'PaymentController@request')->name('payment.request');
         Route::post('/payment/{apartment}', 'PaymentController@payment')->name('payment.payment');
