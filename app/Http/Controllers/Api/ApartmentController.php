@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Apartment;
 use App\Image;
 
@@ -18,8 +19,12 @@ class ApartmentController extends Controller
       $apartments = Apartment::where('title', 'LIKE', '%'.$data['title'].'%')->get();
 
       foreach($apartments as $apartment) {
+
         $image = Image::where('apartment_id', $apartment->id)->first();
         $apartment->image = $image->path;
+
+        $services = DB::table('apartment_service')->where('apartment_id', $apartment->id)->get()->pluck('service_id');
+        $apartment->services = $services;
       }
 
       return response()->json([
