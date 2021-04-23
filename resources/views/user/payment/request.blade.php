@@ -44,7 +44,7 @@
               <div id="dropin-container"></div>
               {{-- <input type="number" name="sponsor"> --}}
               <input type="hidden" id="nonce" name="payment_method_nonce"/>
-              <input type="submit" />
+              <input type="submit" id="paga" />
               {{-- 4111 1111 1111 1111 --}}
             </form>
         </div>
