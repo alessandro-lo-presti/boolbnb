@@ -144,7 +144,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\Corso Boolean\mamp-public\marzo\progetto-boolbnb\resources\js\sponsor.js */"./resources/js/sponsor.js");
+module.exports = __webpack_require__(/*! C:\Users\user\Documents\Boolean\mamp_public\boolbnb-proj\resources\js\sponsor.js */"./resources/js/sponsor.js");
 
 
 /***/ })

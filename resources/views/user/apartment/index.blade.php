@@ -16,7 +16,7 @@
             </a>
         </div>
         <div class="row">
-            <table class="table table-hover table-responsive">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th scope="col">Annuncio</th>
