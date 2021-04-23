@@ -21,10 +21,14 @@ class ApartmentController extends Controller
       foreach($apartments as $apartment) {
 
         $image = Image::where('apartment_id', $apartment->id)->first();
-        $apartment->image = $image->path;
+        if($image != null) {
+          $apartment->image = $image->path;
+        }
 
         $services = DB::table('apartment_service')->where('apartment_id', $apartment->id)->get()->pluck('service_id');
-        $apartment->services = $services;
+        if($services != null) {
+          $apartment->services = $services;
+        }
       }
 
       return response()->json([
