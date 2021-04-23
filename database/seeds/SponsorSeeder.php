@@ -13,7 +13,7 @@ class SponsorSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 3; $i++) {
             $newSponsor = new Sponsor();
 
             switch ($i) {
