@@ -53,7 +53,11 @@ class HomeController extends Controller
 
     public function search()
     {
-        return view('guest.search');
+        $services = Service::all();
+        $data = [
+            'services' => $services
+        ];
+        return view('guest.search', $data);
     }
 
     public function sent(Request $request, Apartment $apartment)

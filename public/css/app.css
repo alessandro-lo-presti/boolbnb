@@ -11404,6 +11404,10 @@ header .row .search a:hover {
   -webkit-box-shadow: none;
 }
 
+#create .container .card .card-body .form-group input[type=file] {
+  margin: 10px 0;
+}
+
 #create .container .card .card-body .form-group input[type=number] {
   display: none;
 }
@@ -11447,6 +11451,10 @@ header .row .search a:hover {
   box-shadow: none;
   border-color: inherit;
   -webkit-box-shadow: none;
+}
+
+#edit .container .card .card-body .form-group input[type=file] {
+  margin: 10px 0;
 }
 
 #edit .container .card .card-body .form-group input[type=number] {
@@ -11784,6 +11792,66 @@ header .row .search a:hover {
   box-sizing: border-box;
 }
 
+#advanced-search .card .card-header {
+  background-color: white;
+}
+
+#advanced-search .card .card-body {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+#advanced-search .card .card-body h2 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#advanced-search .card .card-body h3 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#advanced-search .card .card-body input:focus,
+#advanced-search .card .card-body input:active {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+}
+
+#advanced-search .card .card-body input[type=number] {
+  display: none;
+}
+
+#advanced-search .card .card-body .counter .counter-title {
+  width: 60px;
+}
+
+#advanced-search .card .card-body .counter .counter-number {
+  width: 100px;
+}
+
+#advanced-search .card .card-body .counter .counter-number a i {
+  color: #ff5a5f;
+}
+
+#advanced-search .card a.btn {
+  width: 90%;
+  color: white;
+  background: #ff5a5f;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+
+#advanced-search .card a.btn:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+}
+
 #advanced-search .search {
   position: relative;
 }
@@ -11793,11 +11861,13 @@ header .row .search a:hover {
 }
 
 #advanced-search .search .autocomplete.active {
-  padding: 5px;
+  padding: 0;
+  width: calc(100% - 70px);
   position: absolute;
   top: 58px;
-  left: 20px;
+  left: 35px;
   background-color: white;
+  color: black;
   border: 1px solid lightgrey;
   display: flex;
   flex-direction: column;
@@ -11805,11 +11875,16 @@ header .row .search a:hover {
 }
 
 #advanced-search .search .autocomplete.active div {
+  width: 100%;
+}
+
+#advanced-search .search .autocomplete.active div span {
   padding: 0 10px;
 }
 
 #advanced-search .search .autocomplete.active div:hover {
-  background-color: #cce3f6;
+  color: white;
+  background-color: #ff5a5f;
 }
 
 @media (max-width: 768px) {

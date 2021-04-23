@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="form-group row col-6">
-                  <div class="counter d-flex justify-content-star">
+                  <div class="counter d-flex justify-content-start">
                     <div class="counter-title">Letti</div>
                     <div class="counter-number d-flex justify-content-around">
                       <a @click="removeBed"><i class="fas fa-minus-circle fa-lg"></i></a>
@@ -82,7 +82,7 @@
                 </div>
 
                 <div class="form-group row col-6">
-                  <div class="counter d-flex justify-content-star">
+                  <div class="counter d-flex justify-content-start">
                     <div class="counter-title">Bagni</div>
                     <div class="counter-number d-flex justify-content-around">
                       <a @click="removeBathroom"><i class="fas fa-minus-circle fa-lg"></i></a>
@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="form-group row col-6">
-                  <div class="counter d-flex justify-content-star ">
+                  <div class="counter d-flex justify-content-start ">
                     <div class="counter-title">M<sup>2</sup></div>
                     <div class="counter-number d-flex justify-content-around">
                       <a @click="removeMq"><i class="fas fa-minus-circle fa-lg"></i></a>
@@ -110,8 +110,8 @@
                 <div class="services row">
                   @foreach ($services as $service)
                     <div class="form-group row form-check offset-1 col-5">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="services[]" value="{{$service->id}}">
-                      <label class="form-check-label" for="exampleCheck1">
+                      <input type="checkbox" class="form-check-input" id="{{$service->id}}" name="services[]" value="{{$service->id}}">
+                      <label class="form-check-label" for="{{$service->id}}">
                         @if ($service -> name == "WiFi")
                           <i class="fas fa-wifi"></i>
                         @elseif ($service -> name == "Posto Auto")

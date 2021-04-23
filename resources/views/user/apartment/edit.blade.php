@@ -114,8 +114,8 @@
                 <div class="services row">
                   @foreach ($services as $service)
                     <div class="form-group row form-check offset-1 col-5">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="services[]" value="{{$service->id}}" {{$apartment->services->contains($service->id) ? 'checked' : ''}}>
-                      <label class="form-check-label" for="exampleCheck1">
+                      <input type="checkbox" class="form-check-input" id="{{$service->id}}" name="services[]" value="{{$service->id}}" {{$apartment->services->contains($service->id) ? 'checked' : ''}}>
+                      <label class="form-check-label" for="{{$service->id}}">
                         @if ($service -> name == "WiFi")
                           <i class="fas fa-wifi"></i>
                         @elseif ($service -> name == "Posto Auto")

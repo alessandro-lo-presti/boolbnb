@@ -99,8 +99,10 @@ var search = new Vue({
     apartments: [],
     searchInput: '',
     suggests: [],
-    baseUrl: '' // baseUrl: '/marzo/progetto-boolbnb/public'
-
+    beds: 1,
+    bathrooms: 1,
+    mq: 40,
+    radius: 20
   },
   methods: {
     search: function search() {
@@ -121,6 +123,46 @@ var search = new Vue({
     changeSearchInput: function changeSearchInput(suggest) {
       this.searchInput = suggest;
       this.search();
+    },
+    addRoom: function addRoom() {
+      this.rooms++;
+    },
+    removeRoom: function removeRoom() {
+      if (this.rooms > 1) {
+        this.rooms--;
+      }
+    },
+    addBed: function addBed() {
+      this.beds++;
+    },
+    removeBed: function removeBed() {
+      if (this.beds > 1) {
+        this.beds--;
+      }
+    },
+    addBathroom: function addBathroom() {
+      this.bathrooms++;
+    },
+    removeBathroom: function removeBathroom() {
+      if (this.bathrooms > 1) {
+        this.bathrooms--;
+      }
+    },
+    addMq: function addMq() {
+      this.mq += 5;
+    },
+    removeMq: function removeMq() {
+      if (this.mq > 1) {
+        this.mq -= 5;
+      }
+    },
+    addRadius: function addRadius() {
+      this.radius += 5;
+    },
+    removeRadius: function removeRadius() {
+      if (this.radius > 1) {
+        this.radius -= 5;
+      }
     }
   }
 });
@@ -134,7 +176,7 @@ var search = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! C:\Users\user\Documents\Boolean\mamp_public\boolbnb-proj\resources\js\search.js */"./resources/js/search.js");
 
 
 /***/ })
