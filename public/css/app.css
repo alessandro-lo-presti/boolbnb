@@ -11335,6 +11335,10 @@ header .row .search a:hover {
   padding-top: 10px;
 }
 
+#apa-index .row .table {
+  width: 100%;
+}
+
 #apa-index .row .table thead {
   border-top: none;
 }

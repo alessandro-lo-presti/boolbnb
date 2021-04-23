@@ -325,6 +325,7 @@
     }
     .row {
         .table {
+            width: 100%;
             thead {
                 border-top: none;
                 tr {
@@ -740,7 +741,7 @@
             text-align: center;
             font-size: 1.2em;
         }
-        
+
         .layout-cards{
             display: flex;
             align-items: center;

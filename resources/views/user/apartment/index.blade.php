@@ -2,26 +2,6 @@
 
 @section('content')
     @include('partials.header')
-    {{-- <div id="dashboard">
-        <ul class="nav nav-flush flex-column mb-auto text-center">
-            {{-- rotta allo apartment/show --}}
-    {{-- <a href="{{ route('apartment.index') }}">
-                <li class="nav-item"><i class="fas fa-building fa-2x"></i> <span>My apartments</span> </li>
-            </a> --}}
-
-
-    {{-- <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                <li class="nav-item"><i class="fas fa-sign-out-alt fa-2x"></i> <span>Logout</span> </li>
-            </a> --}}
-    {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-        </ul> --}}
-    {{-- </div> --}}
-
-    {{-- Aggiungi appartamento --}}
-
     @if (session('status'))
         <div class="alert alert-success">
             {{ session('status') }}
@@ -80,7 +60,5 @@
             </table>
         </div>
     </div>
-    <script src="{{ asset('js/app.js') }}"></script>
-
 
 @endsection
