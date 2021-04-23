@@ -16,62 +16,26 @@ header {
                     display: none;
                 }
             }
-            // .search_bar{
-            //     position: relative;
-            //     flex-grow: 0.66;
-            //     padding: 10px 20px;
-            //     box-shadow: 0 0 15px lightgray;
-            //     border-radius: 20px;
-            //     a {
-            //         position: absolute;
-            //         top: 50%;
-            //         right: 0;
-            //         transform: translate(-50%, -50%);
-            //         padding: 5px 10px;
-            //         background-color: #ff5a5f;
-            //         border-radius: 50%;
-            //         color: white;
-            //     }
-            // input {
-            //     padding-left: 50px;
-            //     max-width: 100%;
-            //     height: 100%;
-            //     border-radius: 50px;
-            //     &::placeholder {
-            //         border-radius: 50px;
-            //     }
-            //     &:active {
-            //         outline: none;
-            //     }
-            //     &:focus {
-            //         outline: none;
-            //     }
-            // }
-            // }
             &.login {
                 .user {
-                    a{
+                    a {
+                        padding-right: 10px;
                         text-decoration: none;
                     }
 
-                    .btn_l{
-                        color:  black;
-                        &:hover{
-                            color:#ff5a5f;
-
-                        }
-                    }
-                    .btn_r{
+                    .btn_l {
+                        padding-left: 10px;
                         color: black;
-                        &:hover{
-                            color:#ff5a5f;
-
+                        &:hover {
+                            color: #ff5a5f;
                         }
                     }
-
-
-
-
+                    .btn_r {
+                        color: black;
+                        &:hover {
+                            color: #ff5a5f;
+                        }
+                    }
 
                     .dropdown {
                         .btn_dd {
@@ -100,11 +64,9 @@ header {
             a {
                 text-decoration: none;
                 color: black;
-                &:hover{
-                    color:#ff5a5f;
-
+                &:hover {
+                    color: #ff5a5f;
                 }
-
             }
         }
         // .box.search_bar {

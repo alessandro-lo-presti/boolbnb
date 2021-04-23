@@ -10962,10 +10962,12 @@ header .row .box.logo .logo-small {
 }
 
 header .row .box.login .user a {
+  padding-right: 10px;
   text-decoration: none;
 }
 
 header .row .box.login .user .btn_l {
+  padding-left: 10px;
   color: black;
 }
 
