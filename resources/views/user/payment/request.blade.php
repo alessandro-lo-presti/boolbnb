@@ -19,6 +19,8 @@
     <div id="sponsor">
 
         <div class= "container">
+
+          @if($sponsor) {
             <form id="payment-form" action="{{ route("payment.payment", $apartment->id) }}" method="post">
               @csrf
               @method('POST')
@@ -26,15 +28,15 @@
               <h3>Rendi più visibile il tuo appartamento {{ $apartment->title }} a {{ $apartment->city }}</h3>
               <p>Acquista una delle nostre sponsorizzazioni</p>
               <div class="layout-cards">
-                  <div class="card" style="width: 18rem;" v-for="(sponsor, index) in sponsors">
-                      <div class="card-body center-card"  :class="(counter == index) ? sponsor.title : '' " v-on:click="selection(sponsor, index)">
-                          <h5 class="card-title">@{{ sponsor.title }}</h5>
-                          <p class="card-text">@{{ sponsor.duration }} days</p>
-                          <p class="card-text">@{{ sponsor.amount }}€</p>
-                          {{-- <a href="#" class="btn btn-success">Acquista</a> --}}
-                          {{-- <input type="checkbox" name="mario" value=""> --}}
-                      </div>
+                <div class="card" style="width: 18rem;" v-for="(sponsor, index) in sponsors">
+                  <div class="card-body center-card"  :class="(counter == index) ? sponsor.title : '' " v-on:click="selection(sponsor, index)">
+                    <h5 class="card-title">@{{ sponsor.title }}</h5>
+                    <p class="card-text">@{{ sponsor.duration }} days</p>
+                    <p class="card-text">@{{ sponsor.amount }}€</p>
+                    {{-- <a href="#" class="btn btn-success">Acquista</a> --}}
+                    {{-- <input type="checkbox" name="mario" value=""> --}}
                   </div>
+                </div>
               </div>
 
               {{-- v-on:mouseenter="enter(index)" v-on:mouseleave="leave(index)" --}}
@@ -47,6 +49,12 @@
               <input type="submit" />
               {{-- 4111 1111 1111 1111 --}}
             </form>
+          }
+          @else {
+          
+          }
+          @endif
+
         </div>
         @include('partials.footer')
         <script>

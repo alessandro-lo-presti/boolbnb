@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Apartment;
 use App\Sponsor;
 use Carbon\Carbon;
@@ -22,9 +23,13 @@ class PaymentController extends Controller
           'privateKey' => config('services.braintree.privateKey')
         ]);
 
+        $sponsor = DB::table('apartment_sponsor')->where('apartment_id', $apartment->id)->latest('end')->first();
+        ($sponsor->end > Carbon::now()) ? $sponsor = true : $sponsor = false;
+
         $data = [
           'token' => $clientToken = $gateway->clientToken()->generate(),
           'apartment' => $apartment
+          'sponsor' => $sponsor,
         ];
 
         return view('user.payment.request', $data);
