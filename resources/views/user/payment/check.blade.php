@@ -14,7 +14,7 @@
           @if(session('status'))
             <h2>Pagamento riuscito</h2>
             <div class="check-img">
-              <img src="https://lh3.googleusercontent.com/proxy/kECnQtbWpFi54L-4bQS41LcpDPQQhHldx2lvpJ0S3x6-FOqV8T8bdKHNtNJAh9Pnk88P-NdZR7A5yADxLFw3RlOIuQKcoGi4knzWb1YyTUSi2ik2o22T" alt="">
+              <img src="https://icons-for-free.com/iconfiles/png/512/complete+done+green+success+valid+icon-1320183462969251652.png" alt="">
             </div>
           @else
             <h2>Pagamento non riuscito</h2>

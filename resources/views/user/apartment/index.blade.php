@@ -46,7 +46,7 @@
                             <td class="col-xs-2">{{ $apartment->address }}
                                 {{ $apartment->city }}</td>
                                 <td class="mex col-xs-2">
-                                    <a href="{{route('send')}}"><input class="btn btn-primary" value="&#xf086;" type="submit"></a></td>
+                                    <a href="#"><input class="btn btn-primary" value="&#xf086;" type="submit"></a></td>
                             <td class="del col-xs-2">
                                 <form action="{{ route('apartment.destroy', $apartment->id) }}" method='post'>
                                     @csrf
