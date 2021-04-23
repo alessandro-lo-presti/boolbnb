@@ -120,7 +120,7 @@
                       <i class="fas fa-water"></i>
                     @endif
                   </span>
-                  <span class"text">
+                  <span class="text">
                     {{ $service->name }}:
                   </span>
                 </div>

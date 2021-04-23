@@ -11355,6 +11355,15 @@ header .row .search a:hover {
   margin-bottom: 5px;
 }
 
+#apa-index .row .table .mex {
+  text-align: center;
+}
+
+#apa-index .row .table .mex input[type=submit] {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1em;
+}
+
 #apa-index .row .table .del {
   text-align: center;
 }

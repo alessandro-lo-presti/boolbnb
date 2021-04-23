@@ -25,6 +25,8 @@
                         <th scope="col-2">Letti</th>
                         <th scope="col-2">Bagni</th>
                         <th scope="col-2">Posizione</th>
+                        <th scope="col-2">Messaggi</th>
+                        <th scope="col-2">Cancella</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,6 +45,8 @@
                             <td>{{ $apartment->n_bathrooms }}</td>
                             <td>{{ $apartment->address }}
                                 {{ $apartment->city }}</td>
+                                <td class="mex">
+                                    <a href="{{route('send')}}"><input class="btn btn-primary" value="&#xf086;" type="submit"></a></td>
                             <td class="del">
                                 <form action="{{ route('apartment.destroy', $apartment->id) }}" method='post'>
                                     @csrf
