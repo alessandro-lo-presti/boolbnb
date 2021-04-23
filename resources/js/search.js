@@ -5,8 +5,8 @@ var search = new Vue(
       apartments: [],
       searchInput: '',
       suggests: [],
-      baseUrl: ''
-      // baseUrl: '/marzo/progetto-boolbnb/public'
+      baseUrl: '',
+      // baseUrl: '/marzo/progetto-boolbnb/public,'
       rooms: 1,
       beds: 1,
       bathrooms: 1,
