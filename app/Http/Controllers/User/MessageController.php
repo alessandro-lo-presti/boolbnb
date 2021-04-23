@@ -11,12 +11,12 @@ class MessageController extends Controller
 {
     public function index(Apartment $apartment){
 
-        $messages = Message::where('apartment_id', $apartment->id)->get();
+        $message = Message::where('apartment_id', $apartment->id)->get();
         $data = [
             'message' => $message,
             'apartment' => $apartment
         ];
 
-        return view('user.message', $data);
+        return view('user.message.index', $data);
     }
 }
