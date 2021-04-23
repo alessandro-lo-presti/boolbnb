@@ -19,7 +19,7 @@ class ServiceSeeder extends Seeder
 
             switch ($i) {
               case 0:
-                $newService->name = 'Wifi';
+                $newService->name = 'WiFi';
                 break;
               case 1:
                 $newService->name = 'Piscina';
