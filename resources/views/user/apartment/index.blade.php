@@ -19,14 +19,14 @@
             <table class="table table-hover table-responsive">
                 <thead>
                     <tr>
-                        <th scope="col-2">Annuncio</th>
-                        <th scope="col-2">Titolo</th>
-                        <th scope="col-2">Stanze</th>
-                        <th scope="col-2">Letti</th>
-                        <th scope="col-2">Bagni</th>
-                        <th scope="col-2">Posizione</th>
-                        <th scope="col-2">Messaggi</th>
-                        <th scope="col-2">Cancella</th>
+                        <th scope="col">Annuncio</th>
+                        <th scope="col">Titolo</th>
+                        <th scope="col">Stanze</th>
+                        <th scope="col">Letti</th>
+                        <th scope="col">Bagni</th>
+                        <th scope="col">Posizione</th>
+                        <th scope="col">Messaggi</th>
+                        <th scope="col">Cancella</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,16 +38,16 @@
                                     src="{{ $apartment->image == null ? asset('storage/covers/placeholder.png') : asset('storage/' . $apartment->image) }}"
                                     alt="{{ $apartment->title }}">
                             </th>
-                            <td><a href="{{ route('apartment.show', $apartment->id) }}">{{ $apartment->title }}</a>
+                            <td class="col-xs-2"><a href="{{ route('apartment.show', $apartment->id) }}">{{ $apartment->title }}</a>
                             </td>
-                            <td>{{ $apartment->n_rooms }}</td>
-                            <td>{{ $apartment->n_beds }}</td>
-                            <td>{{ $apartment->n_bathrooms }}</td>
-                            <td>{{ $apartment->address }}
+                            <td class="col-xs-2">{{ $apartment->n_rooms }}</td>
+                            <td class="col-xs-2">{{ $apartment->n_beds }}</td>
+                            <td class="col-xs-2">{{ $apartment->n_bathrooms }}</td>
+                            <td class="col-xs-2">{{ $apartment->address }}
                                 {{ $apartment->city }}</td>
-                                <td class="mex">
+                                <td class="mex col-xs-2">
                                     <a href="{{route('send')}}"><input class="btn btn-primary" value="&#xf086;" type="submit"></a></td>
-                            <td class="del">
+                            <td class="del col-xs-2">
                                 <form action="{{ route('apartment.destroy', $apartment->id) }}" method='post'>
                                     @csrf
                                     @method('delete')

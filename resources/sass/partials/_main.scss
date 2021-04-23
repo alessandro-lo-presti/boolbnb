@@ -325,13 +325,13 @@
     }
     .row {
         .table {
-            width: 100%;
             thead {
                 border-top: none;
                 tr {
                     border-top: none;
                     th {
                         border-top: none;
+                        width: calc(100% / 6);
                     }
                 }
             }

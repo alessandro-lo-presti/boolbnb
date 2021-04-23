@@ -11335,10 +11335,6 @@ header .row .search a:hover {
   padding-top: 10px;
 }
 
-#apa-index .row .table {
-  width: 100%;
-}
-
 #apa-index .row .table thead {
   border-top: none;
 }
@@ -11349,6 +11345,7 @@ header .row .search a:hover {
 
 #apa-index .row .table thead tr th {
   border-top: none;
+  width: calc(100% / 6);
 }
 
 #apa-index .row .table a {
