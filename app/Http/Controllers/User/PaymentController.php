@@ -24,12 +24,18 @@ class PaymentController extends Controller
         ]);
 
         $sponsor = DB::table('apartment_sponsor')->where('apartment_id', $apartment->id)->latest('end')->first();
-        ($sponsor->end > Carbon::now()) ? $sponsor = true : $sponsor = false;
+
+        if($sponsor != null) {
+          ($sponsor->end > Carbon::now()) ? $sponsor = false : $sponsor = true;
+        }
+        else {
+          $sponsor = true;
+        }
 
         $data = [
           'token' => $clientToken = $gateway->clientToken()->generate(),
-          'apartment' => $apartment
-          'sponsor' => $sponsor,
+          'apartment' => $apartment,
+          'sponsor' => $sponsor
         ];
 
         return view('user.payment.request', $data);
