@@ -749,14 +749,16 @@
         } 
     }
     .container{
-        >h3{
-            text-align: center;
-            margin-top: 30px;
-        }
-        >p{
-            margin: 10px 0 30px 0;
-            text-align: center;
-            font-size: 1.2em;
+        #payment-form{     
+            h3{
+                text-align: center;
+                margin-top: 30px;
+            }
+            p{
+                margin: 10px 0 30px 0;
+                text-align: center;
+                font-size: 1.2em;
+            }
         }
 
         .layout-cards{
