@@ -121,7 +121,7 @@
     </div>
     <div class="row d-flex justify-content-around">
       <div class="card mt-4" style="width: 18rem;" v-for="apartment in apartments">
-        <img src="{{asset('storage/covers/placeholder.png')}}" class="card-img-top" alt="appartamento">
+        <img :src="(apartment.image) ? host + '/storage/' + apartment.image : host + '/storage/covers/placeholder.png'" class="card-img-top" alt="appartamento">
         <div class="card-body">
           <h5 class="card-title">@{{apartment.title}}</h5>
           <p class="card-text">

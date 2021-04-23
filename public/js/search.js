@@ -101,6 +101,8 @@ var search = new Vue({
     suggests: [],
     baseUrl: '',
     // baseUrl: '/marzo/progetto-boolbnb/public,'
+    host: 'http://localhost:8000',
+    // host: 'http://localhost:8080/marzo/progetto-boolbnb/public',
     rooms: 1,
     beds: 1,
     bathrooms: 1,
