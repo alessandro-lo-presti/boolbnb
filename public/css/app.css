@@ -11510,12 +11510,21 @@ header .row .search a:hover {
 }
 
 #show .title-section {
+  margin-top: 30px;
   margin-bottom: 15px;
 }
 
 #show .title-section p {
   color: #717171;
   text-decoration: underline;
+}
+
+#show .title-section a {
+  margin: 0 10px 0 20px;
+  padding: 3px 8px;
+  font-size: 18px;
+  background-color: #ff5a5f;
+  color: white;
 }
 
 #show .image-section {

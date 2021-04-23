@@ -11,6 +11,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class ApartmentController extends Controller
 {
@@ -109,13 +111,22 @@ class ApartmentController extends Controller
     {
       $services = Service::all();
       $images = Image::where('apartment_id', $apartment->id)->get()->toArray();
+      $sponsor = DB::table('apartment_sponsor')->where('apartment_id', $apartment->id)->latest('end')->first();
+
+      if($sponsor != null) {
+        ($sponsor->end > Carbon::now()) ? $sponsor = false : $sponsor = true;
+      }
+      else {
+        $sponsor = true;
+      }
 
       if(Auth::id() == $apartment->user_id) {
 
         $data = [
           'apartment' => $apartment,
           'services' => $services,
-          'images' => $images
+          'images' => $images,
+          'sponsor' => $sponsor
         ];
 
         return view('user.apartment.show', $data);

@@ -510,12 +510,22 @@
 
     // title-section
     .title-section {
+        margin-top: 30px;
         margin-bottom: 15px;
 
         p {
             color: #717171;
             text-decoration: underline;
         }
+
+        a {
+          margin: 0 10px 0 20px;
+          padding: 3px 8px;
+          font-size: 18px;
+          background-color: #ff5a5f;
+          color: white;
+        }
+
     }
 
     // image-section
@@ -752,10 +762,10 @@
             padding: 10px;
             color: white;
             margin-bottom: 12px;
-        } 
+        }
     }
     .container{
-        #payment-form{     
+        #payment-form{
             h3{
                 text-align: center;
                 margin-top: 30px;

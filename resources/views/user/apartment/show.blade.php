@@ -6,12 +6,26 @@
 
   <!--Title-->
   <section class="row title-section">
-    <div class="col-12">
+
+    <div class="col-6 d-flex flex-column">
       <h2>{{ $apartment->title }}</h2>
-    </div>
-    <div class="col-12">
       <p>{{ $apartment->address }} {{ $apartment->city }}</p>
     </div>
+
+    <div class="col-6 d-flex flex-row-reverse align-items-center">
+        @if($sponsor)
+          <a class="btn btn_title" href="{{ route('payment.request', $apartment->id) }}">
+            <i class="far fa-star"></i>
+          </a>
+        @else
+          <a class="btn btn_title" href="">
+            <i class="fas fa-star"></i>
+          </a>
+        @endif
+      </a>
+      <span>Visite {{ $apartment->visualization }}</span>
+    </div>
+
   </section>
   <!-- / Title-->
 
