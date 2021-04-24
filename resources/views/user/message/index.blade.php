@@ -23,39 +23,22 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col-2">Email</th>
-                            <th scope="col-2">Testo</th>
-                            <th scope="col-2">Ricevuto il</th>
-                            <th scope="col-2">Vedi Messaggio</th>
-                            <th scope="col-2">Cancella</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Testo</th>
+                            <th scope="col">Ricevuto il</th>
+                            <th scope="col">Cancella</th>
                         </tr>
                     </thead>
-                    {{-- <tbody>
-                        @foreach ($message as $mess)
+                    <tbody>
+                        @foreach ($messages as $message)
                             <tr>
-
-                                <td><a href="{{ route('apartment.show', $apartment->id) }}">{{ $apartment->title }}</a>
-                                </td>
-                                <td>{{ $apartment->n_rooms }}</td>
-                                <td>{{ $apartment->n_beds }}</td>
-                                <td>{{ $apartment->n_bathrooms }}</td>
-                                <td>{{ $apartment->address }}
-                                    {{ $apartment->city }}</td>
-                                    <td class="mex">
-                                        <a href="{{route('send')}}"><input class="btn btn-primary" value="&#xf086;" type="submit"></a></td>
-                                <td class="del">
-                                    <form action="{{ route('apartment.destroy', $apartment->id) }}" method='post'>
-                                        @csrf
-                                        @method('delete')
-                                        <div class="form-group">
-                                            <input class="btn btn-danger" value="&#xf2ed;" type="submit">
-                                        </div>
-                                    </form>
-                                </td>
-
+                                <td>{{ $message->email }}</td>
+                                <td class="anteprima"><a href="#">{{ $message->body }}</a></td>
+                                <td>{{ $message->date }}</td>
+                                {{-- <td>{{ $apartment->n_rooms }}</td> --}}
                             </tr>
                         @endforeach
-                    </tbody> --}}
+                    </tbody>
 
                 </table>
             </div>

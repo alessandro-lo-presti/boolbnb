@@ -11711,6 +11711,10 @@ header .row .search a:hover {
   height: 100%;
 }
 
+#message .anteprima {
+  text-overflow: ellipsis;
+}
+
 #sponsor #payment-form #paga {
   background-color: green;
   border: none;

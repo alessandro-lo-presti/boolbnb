@@ -738,7 +738,12 @@
 
 // sezione messaggi
 #message{
-    
+
+
+    .anteprima{
+        text-overflow: ellipsis;
+    }
+
 }
 
 // sezione sponsor Emanuele

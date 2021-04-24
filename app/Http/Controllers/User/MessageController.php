@@ -11,9 +11,9 @@ class MessageController extends Controller
 {
     public function index(Apartment $apartment){
 
-        $message = Message::where('apartment_id', $apartment->id)->get();
+        $messages = Message::where('apartment_id', $apartment->id)->get();
         $data = [
-            'message' => $message,
+            'messages' => $messages,
             'apartment' => $apartment
         ];
 

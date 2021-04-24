@@ -23,6 +23,7 @@
               @csrf
               @method('POST')
 
+              {{-- INSERISCI IL FLEX WRAP PER IL RESPONSIVE --}}
               <h3>Rendi più visibile il tuo appartamento {{ $apartment->title }} a {{ $apartment->city }}</h3>
               <p>Acquista una delle nostre sponsorizzazioni</p>
               <div class="layout-cards">
