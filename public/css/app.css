@@ -11711,6 +11711,11 @@ header .row .search a:hover {
   height: 100%;
 }
 
+#message .bordo_tabella {
+  box-shadow: 0 0 15px lightgray;
+  margin: 20px 0;
+}
+
 #message .anteprima {
   text-overflow: ellipsis;
 }

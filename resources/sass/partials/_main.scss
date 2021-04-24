@@ -739,7 +739,10 @@
 // sezione messaggi
 #message{
 
-
+    .bordo_tabella{
+        box-shadow: 0 0 15px lightgray;
+        margin: 20px 0;
+    }
     .anteprima{
         text-overflow: ellipsis;
     }

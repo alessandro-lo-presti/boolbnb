@@ -20,23 +20,21 @@
 
         <div class= "container">
             <div class="row">
-                <table class="table">
+                <table class="table bordo_tabella">
                     <thead>
                         <tr>
                             <th scope="col">Email</th>
-                            <th scope="col">Testo</th>
                             <th scope="col">Ricevuto il</th>
-                            <th scope="col">Cancella</th>
+                            <th scope="col">Azioni</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($messages as $message)
-                            <tr>
-                                <td>{{ $message->email }}</td>
-                                <td class="anteprima"><a href="#">{{ $message->body }}</a></td>
-                                <td>{{ $message->date }}</td>
-                                {{-- <td>{{ $apartment->n_rooms }}</td> --}}
-                            </tr>
+                        <tr>
+                            <td>{{ $message->email }}</td>
+                            <td>{{ $message->date }}</td>
+                            <td>leggi / cancella</td>
+                        </tr>
                         @endforeach
                     </tbody>
 
