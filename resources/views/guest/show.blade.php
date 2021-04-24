@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('cdn')
+  <!--TomTom-->
+  <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps.css'>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps-web.min.js"></script>
+@endsection
+
+
 @section('content')
 @include('partials.header')
 <div id="show" class="container">
@@ -186,6 +193,27 @@
 
   </section>
   <!-- / info-section -->
+
+  <!-- map -->
+  <section class="row">
+
+    <div style="width:800px; height: 800px;" id="mymap">
+    </div>
+
+    <script>
+      var APIKEY = "GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX";
+      var madrid = [-3.703790, 40.416775];
+
+      var map = tt.map({
+        key: APIKEY,
+        container: 'mymap',
+        center: madrid,
+        style: 'tomtom://vector/1/basic-main'
+      });
+    </script>
+
+  </section>
+  <!-- / map-->
 
   <!-- mail -->
   <section class="mail-section row d-flex justify-content-center align-items-center">
