@@ -752,10 +752,10 @@
             padding: 10px;
             color: white;
             margin-bottom: 12px;
-        } 
+        }
     }
     .container{
-        #payment-form{     
+        #payment-form{
             h3{
                 text-align: center;
                 margin-top: 30px;
@@ -822,7 +822,7 @@
       }
       .card-body{
         position: relative;
-        padding-bottom: 40px;
+        padding: 30px 0;
         h2{
           font-size: 20px;
           margin-top: 10px;
@@ -841,18 +841,27 @@
         input[type="number"] {
             display: none;
         }
-        .counter {
+        .services{
+          margin: 25px auto 0;
+          // .form-group{
+          //   width: 150px;
+          // }
+        }
+        .counter-details{
+          margin-left: 8%;
+          .counter {
             .counter-title {
-                width: 60px;
+              width: 60px;
             }
             .counter-number {
-                width: 100px;
-                a {
-                    i {
-                        color: #ff5a5f;
-                    }
+              width: 100px;
+              a {
+                i {
+                  color: #ff5a5f;
                 }
+              }
             }
+          }
         }
 
       }
@@ -906,6 +915,7 @@
         }
     }
 }
+
 
 // mediaquery create-edit
 @media (max-width: 768px) {

@@ -11798,7 +11798,7 @@ header .row .search a:hover {
 
 #advanced-search .card .card-body {
   position: relative;
-  padding-bottom: 40px;
+  padding: 30px 0;
 }
 
 #advanced-search .card .card-body h2 {
@@ -11823,15 +11823,23 @@ header .row .search a:hover {
   display: none;
 }
 
-#advanced-search .card .card-body .counter .counter-title {
+#advanced-search .card .card-body .services {
+  margin: 25px auto 0;
+}
+
+#advanced-search .card .card-body .counter-details {
+  margin-left: 8%;
+}
+
+#advanced-search .card .card-body .counter-details .counter .counter-title {
   width: 60px;
 }
 
-#advanced-search .card .card-body .counter .counter-number {
+#advanced-search .card .card-body .counter-details .counter .counter-number {
   width: 100px;
 }
 
-#advanced-search .card .card-body .counter .counter-number a i {
+#advanced-search .card .card-body .counter-details .counter .counter-number a i {
   color: #ff5a5f;
 }
 
