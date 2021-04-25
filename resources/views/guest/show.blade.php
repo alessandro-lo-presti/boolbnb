@@ -5,7 +5,6 @@
   <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
   <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
   <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
-
 @endsection
 
 
@@ -208,20 +207,13 @@
 
 
     <script>
+
       const API_KEY = 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX';
       const APPLICATION_NAME = 'BoolBnb';
       const APPLICATION_VERSION = '1.0';
+      const LOCATION = {lng: -122.47483, lat: 37.80776};
 
       tt.setProductInfo(APPLICATION_NAME, APPLICATION_VERSION);
-
-      // const LOCATION = {lng: -122.47483, lat: 37.80776};
-      //
-      // var map = tt.map({
-      //   key: API_KEY,
-      //   container: 'map-div',
-      //   center: LOCATION,
-      //   zoom: 12
-      // });
 
       // ricerca
       tt.services.fuzzySearch({
@@ -229,12 +221,15 @@
         query: '{{ $apartment->address . " " . $apartment->city }}'
       })
       .then(function(response) {
-        map = tt.map({
-      	key: API_KEY,
-      	container: 'map-div',
-      	center: response.results[0].position,
-      	zoom: 12
-        });
+        console.log(response.results[0].position);
+      });
+
+      // mappa
+      var map = tt.map({
+        key: API_KEY,
+        container: 'map-div',
+        center: LOCATION,
+        zoom: 12
       });
 
     </script>

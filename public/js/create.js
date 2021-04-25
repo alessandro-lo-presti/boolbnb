@@ -101,8 +101,31 @@ var create = new Vue({
       rooms: 1,
       beds: 1,
       bathrooms: 1,
-      mq: 40
+      mq: 40,
+      apiKey: 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX',
+      applicationName: 'BoolBnb',
+      applicationVersion: '1.0',
+      form: document.getElementById('form')
     };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    tt.setProductInfo(this.applicationName, this.applicationVersion);
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var address = document.getElementById('inputAddress');
+      var city = document.getElementById('inputCity');
+      tt.services.fuzzySearch({
+        key: _this.apiKey,
+        query: address + " " + city
+      }).then(function (response) {
+        var coords = response.results[0].position;
+        document.getElementById('longitude').value = coords.lng;
+        document.getElementById('latitude').value = coords.lat;
+        form.submit();
+      });
+    });
   },
   methods: {
     addRoom: function addRoom() {

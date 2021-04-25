@@ -1,7 +1,16 @@
 @extends('layouts.app')
+
+@section('cdn')
+  <!--TomTom-->
+  <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
+@endsection
+
 @section('script')
   <script src="{{ asset('js/create.js') }}"></script>
 @endsection
+
 @section('content')
 @include('partials.header')
 <div id="create">
@@ -24,7 +33,7 @@
           </div>
           <div class="card-body">
             {{-- form --}}
-            <form action="{{route('apartment.store')}}" method="post" enctype="multipart/form-data">
+            <form id="form" action="{{route('apartment.store')}}" method="post" enctype="multipart/form-data">
               @csrf
               @method('POST')
 
@@ -131,6 +140,9 @@
                   @endforeach
                 </div>
 
+                <input type="hidden" id="longitude" name="longitude" value="">
+                <input type="hidden" id="latitude" name="latitude" value="">
+
                 <button type="submit" class="btn btn-primary">Salva</button>
 
               </form>
@@ -139,5 +151,6 @@
       </div>
     </div>
   </div>
+
 </div>
 @endsection
