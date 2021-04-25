@@ -817,6 +817,17 @@
     }
 }
 
+// mediaquery sponsor
+@media (max-width: 768px) {
+    .layout-cards{
+        flex-direction: column;
+        .card{
+            margin: 20px 0;
+        }
+    }
+}
+
+
 // sezione advanced-search
 #advanced-search {
     * {

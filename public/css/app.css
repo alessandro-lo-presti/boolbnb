@@ -11787,6 +11787,16 @@ header .row .search a:hover {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .layout-cards {
+    flex-direction: column;
+  }
+
+  .layout-cards .card {
+    margin: 20px 0;
+  }
+}
+
 #advanced-search * {
   box-sizing: border-box;
 }
