@@ -5,11 +5,20 @@
     @include('partials.header')
     <div id="message">
         
-        <div class= "container">
-            <p>{{ $message->body }}</p>
-            <p>{{ $message->email }}</p>
-            <p>{{ $message->date }}</p>
+        <div class="container">
+            <div class="evidence">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Messaggio ricevuto da: {{ $message->email }}</h5>
+                        <h6 class="card-title">il {{ $message->date }}</h6>
+                        <p class="card-text">{{ $message->body }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+
         @include('partials.footer')
         
     </div>

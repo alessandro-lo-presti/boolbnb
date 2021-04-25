@@ -759,6 +759,17 @@
         font-size: 1em;
     }
 
+    .evidence{
+        padding: 30px 0;
+        display: flex;
+        justify-content: center;
+        .card{
+            border: 1px solid #8eb9cb;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px;
+        }
+    }
+
 }
 
 // sezione sponsor Emanuele

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Apartment;
 use App\Message;
+use Carbon\Carbon;
 
 class MessageController extends Controller
 {
@@ -24,7 +25,7 @@ class MessageController extends Controller
     public function show(Apartment $apartment, Message $message){
 
         $data = [
-            'message' => $message    
+            'message' => $message 
         ];
 
         return view('user.message.show', $data);

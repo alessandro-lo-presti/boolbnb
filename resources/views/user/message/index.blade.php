@@ -32,6 +32,8 @@
                         <tr>
                             <td>{{ $message->email }}</td>
                             <td>{{ $message->date }}</td>
+                            <td>{{ $message->id }}</td>
+                            <td>{{ $apartment->id }}</td>
                             <td class="read text-center">
                                 <button class ="btn btn-success">
                                     <a href="#">
