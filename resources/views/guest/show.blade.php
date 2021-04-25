@@ -211,18 +211,9 @@
       const API_KEY = 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX';
       const APPLICATION_NAME = 'BoolBnb';
       const APPLICATION_VERSION = '1.0';
-      const LOCATION = {lng: -122.47483, lat: 37.80776};
+      const LOCATION = {lng: {{ $apartment->longitude }}, lat: {{ $apartment->latitude }} };
 
       tt.setProductInfo(APPLICATION_NAME, APPLICATION_VERSION);
-
-      // ricerca
-      tt.services.fuzzySearch({
-        key: API_KEY,
-        query: '{{ $apartment->address . " " . $apartment->city }}'
-      })
-      .then(function(response) {
-        console.log(response.results[0].position);
-      });
 
       // mappa
       var map = tt.map({

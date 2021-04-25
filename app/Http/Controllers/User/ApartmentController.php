@@ -71,13 +71,9 @@ class ApartmentController extends Controller
           // "apartment_image" => 'file|image|mimes:jpeg,png,gif,webp|max:4096'
         ]);
 
-        dd($data['latitude']);
-
         $newApartment = new Apartment;
 
         $newApartment->user_id = Auth::id();
-        $data["longitude"] = 0;
-        $data["latitude"] = 0;
         $data["visibility"] = 1;
         $data["visualization"] = 0;
 

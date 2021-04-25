@@ -21,8 +21,8 @@ mounted() {
   form.addEventListener('submit', event => {
     event.preventDefault();
 
-    let address = document.getElementById('inputAddress');
-    let city = document.getElementById('inputCity');
+    let address = document.getElementById('inputAddress').value;
+    let city = document.getElementById('inputCity').value;
 
     tt.services.fuzzySearch({
       key: this.apiKey,

@@ -114,8 +114,8 @@ var create = new Vue({
     tt.setProductInfo(this.applicationName, this.applicationVersion);
     form.addEventListener('submit', function (event) {
       event.preventDefault();
-      var address = document.getElementById('inputAddress');
-      var city = document.getElementById('inputCity');
+      var address = document.getElementById('inputAddress').value;
+      var city = document.getElementById('inputCity').value;
       tt.services.fuzzySearch({
         key: _this.apiKey,
         query: address + " " + city
