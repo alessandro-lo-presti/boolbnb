@@ -743,8 +743,20 @@
         box-shadow: 0 0 15px lightgray;
         margin: 20px 0;
     }
-    .anteprima{
-        text-overflow: ellipsis;
+    tbody tr{
+        &:hover{
+            cursor: pointer;
+            background-color: lightgrey;
+        }
+    }
+    .del{
+        input[type="submit"] {
+            font-family: "Font Awesome 5 Free";
+            font-size: 1em;
+        }
+    }
+    .btn > i{
+        font-size: 1em;
     }
 
 }

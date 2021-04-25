@@ -11716,8 +11716,18 @@ header .row .search a:hover {
   margin: 20px 0;
 }
 
-#message .anteprima {
-  text-overflow: ellipsis;
+#message tbody tr:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+#message .del input[type=submit] {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1em;
+}
+
+#message .btn > i {
+  font-size: 1em;
 }
 
 #sponsor #payment-form #paga {

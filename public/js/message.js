@@ -95,7 +95,14 @@
 
 var app = new Vue({
   el: '#message',
-  data: {}
+  data: {
+    ciao: 99
+  },
+  methods: {
+    valore: function valore() {
+      console.log(this.ciao); // location.href = "https://www.w3schools.com"
+    }
+  }
 });
 
 /***/ }),

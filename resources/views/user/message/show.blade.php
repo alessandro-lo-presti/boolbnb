@@ -19,7 +19,7 @@
     <div id="message">
 
         <div class= "container">
-           
+           io sono la pagina show messaggio
         </div>
         @include('partials.footer')
 

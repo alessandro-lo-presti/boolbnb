@@ -21,17 +21,31 @@
                 <table class="table bordo_tabella">
                     <thead>
                         <tr>
-                            <th scope="col">Email</th>
+                            <th scope="col">Contatto</th>
                             <th scope="col">Ricevuto il</th>
-                            <th scope="col">Azioni</th>
+                            <th scope="col" colspan="2" class="text-center">Azioni</th>
                         </tr>
                     </thead>
                     <tbody>
+                        
                         @foreach ($messages as $message)
                         <tr>
                             <td>{{ $message->email }}</td>
                             <td>{{ $message->date }}</td>
-                            <td>leggi / cancella</td>
+                            <td class="read text-center">
+                                <button class ="btn btn-success">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </button>
+                            </td>
+                            <td class="del text-center">
+                                <form action="#" method='post'>
+                                    @csrf
+                                    @method('delete')
+                                    <div class="form-group">
+                                        <input class="btn btn-danger" value="&#xf2ed;" type="submit">
+                                    </div>
+                                </form>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
