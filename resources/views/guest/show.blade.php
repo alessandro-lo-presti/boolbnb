@@ -199,8 +199,13 @@
   <!-- map -->
   <section class="row">
 
-    <div style="width:800px; height: 800px;" id="map-div">
+    <div class="col-12">
+
+      <div style="width:100%; height: 600px;" id="map-div">
+      </div>
+
     </div>
+
 
     <script>
       const API_KEY = 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX';
