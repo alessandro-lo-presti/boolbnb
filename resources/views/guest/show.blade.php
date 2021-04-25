@@ -214,14 +214,29 @@
 
       tt.setProductInfo(APPLICATION_NAME, APPLICATION_VERSION);
 
-      const GOLDEN_GATE_BRIDGE = {lng: -122.47483, lat: 37.80776};
+      // const LOCATION = {lng: -122.47483, lat: 37.80776};
+      //
+      // var map = tt.map({
+      //   key: API_KEY,
+      //   container: 'map-div',
+      //   center: LOCATION,
+      //   zoom: 12
+      // });
 
-      var map = tt.map({
+      // ricerca
+      tt.services.fuzzySearch({
         key: API_KEY,
-        container: 'map-div',
-        center: GOLDEN_GATE_BRIDGE,
-        zoom: 12
+        query: '{{ $apartment->address . " " . $apartment->city }}'
+      })
+      .then(function(response) {
+        map = tt.map({
+      	key: API_KEY,
+      	container: 'map-div',
+      	center: response.results[0].position,
+      	zoom: 12
+        });
       });
+
     </script>
 
   </section>
