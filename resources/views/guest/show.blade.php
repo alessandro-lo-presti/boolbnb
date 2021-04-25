@@ -2,8 +2,10 @@
 
 @section('cdn')
   <!--TomTom-->
-  <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps.css'>
-  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps-web.min.js"></script>
+  <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
+
 @endsection
 
 
@@ -197,18 +199,23 @@
   <!-- map -->
   <section class="row">
 
-    <div style="width:800px; height: 800px;" id="mymap">
+    <div style="width:800px; height: 800px;" id="map-div">
     </div>
 
     <script>
-      var APIKEY = "GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX";
-      var madrid = [-3.703790, 40.416775];
+      const API_KEY = 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX';
+      const APPLICATION_NAME = 'BoolBnb';
+      const APPLICATION_VERSION = '1.0';
+
+      tt.setProductInfo(APPLICATION_NAME, APPLICATION_VERSION);
+
+      const GOLDEN_GATE_BRIDGE = {lng: -122.47483, lat: 37.80776};
 
       var map = tt.map({
-        key: APIKEY,
-        container: 'mymap',
-        center: madrid,
-        style: 'tomtom://vector/1/basic-main'
+        key: API_KEY,
+        container: 'map-div',
+        center: GOLDEN_GATE_BRIDGE,
+        zoom: 12
       });
     </script>
 
