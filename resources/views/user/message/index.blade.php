@@ -34,7 +34,9 @@
                             <td>{{ $message->date }}</td>
                             <td class="read text-center">
                                 <button class ="btn btn-success">
-                                    <i class="fas fa-sign-in-alt"></i>
+                                    <a href="#">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                    </a>
                                 </button>
                             </td>
                             <td class="del text-center">

@@ -19,4 +19,14 @@ class MessageController extends Controller
 
         return view('user.message.index', $data);
     }
+
+
+    public function show(Apartment $apartment, Message $message){
+
+        $data = [
+            'message' => $message    
+        ];
+
+        return view('user.message.show', $data);
+    }
 }

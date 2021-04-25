@@ -46,7 +46,7 @@
                             <td>{{ $apartment->address }}
                                 {{ $apartment->city }}</td>
                                 <td class="mex">
-                                    <a href="{{route('send')}}"><input class="btn btn-primary" value="&#xf086;" type="submit"></a></td>
+                                    <a href="{{route('message.index', $apartment->id)}}"><input class="btn btn-primary" value="&#xf086;" type="submit"></a></td>
                             <td class="del">
                                 <form action="{{ route('apartment.destroy', $apartment->id) }}" method='post'>
                                     @csrf
