@@ -30,6 +30,7 @@ Route::prefix('user')
         Route::get('/', 'HomeController@index')->name('home');
         Route::get('/message/{apartment}', 'MessageController@index')->name('message.index');
         Route::get('/message/{apartment}/{message}', 'MessageController@show')->name('message.show');
+        Route::delete('/message/{apartment}/{message}', 'MessageController@destroy');
         Route::resource('apartment', 'ApartmentController');
         Route::get('/payment/{apartment}', 'PaymentController@request')->name('payment.request');
         Route::post('/payment/{apartment}', 'PaymentController@payment')->name('payment.payment');

@@ -28,7 +28,7 @@
                                 </button>
                             </td>
                             <td class="del text-center">
-                                <form action="#" method='post'>
+                                <form action="{{ url('user/message/' . $apartment->id . '/' . $message->id) }}" method='post'>
                                     @csrf
                                     @method('delete')
                                     <div class="form-group">
@@ -49,7 +49,7 @@
     </div>
 
     <script src="{{ asset('js/message.js') }}"></script>
-    
+
 @endsection
 
 

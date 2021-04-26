@@ -30,4 +30,12 @@ class MessageController extends Controller
 
         return view('user.message.show', $data);
     }
+
+    public function destroy(Apartment $apartment, Message $message){
+
+        $message->delete();
+
+        return redirect()->route('message.index', $apartment->id);
+    }
+
 }
