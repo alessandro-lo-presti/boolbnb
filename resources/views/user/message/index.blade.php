@@ -11,7 +11,7 @@
                         <tr>
                             <th scope="col">Contatto</th>
                             <th scope="col">Ricevuto il</th>
-                            <th scope="col" colspan="2" class="text-center">Azioni</th>
+                            <th scope="col">Azioni</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -20,21 +20,18 @@
                         <tr>
                             <td>{{ $message->email }}</td>
                             <td>{{ $message->date }}</td>
-                            <td class="read text-center">
-                                <button class ="btn btn-success">
-                                    <a href="{{ url('user/message/' . $apartment->id . '/' . $message->id) }}">
-                                        <i class="fas fa-sign-in-alt"></i>
-                                    </a>
-                                </button>
-                            </td>
-                            <td class="del text-center">
-                                <form action="{{ url('user/message/' . $apartment->id . '/' . $message->id) }}" method='post'>
-                                    @csrf
-                                    @method('delete')
-                                    <div class="form-group">
-                                        <input class="btn btn-danger" value="&#xf2ed;" type="submit">
-                                    </div>
-                                </form>
+                            <td class="read d-flex align-items-center ">
+
+                                <a class ="form-group btn btn-success mr-2" href="{{ url('user/message/' . $apartment->id . '/' . $message->id) }}">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </a>
+                                    <form action="{{ url('user/message/' . $apartment->id . '/' . $message->id) }}" method='post'>
+                                        @csrf
+                                        @method('delete')
+                                        <div class="form-group d-flex align-items-center justify-content-center">
+                                            <input class="btn btn-danger" value="&#xf2ed;" type="submit">
+                                        </div>
+                                    </form>
                             </td>
                         </tr>
                         @endforeach

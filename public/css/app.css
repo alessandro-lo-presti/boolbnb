@@ -11721,13 +11721,15 @@ header .row .search a:hover {
   background-color: lightgrey;
 }
 
-#message .del input[type=submit] {
+#message .read input[type=submit] {
   font-family: "Font Awesome 5 Free";
   font-size: 1em;
+  color: white;
 }
 
-#message .btn > i {
+#message .read a {
   font-size: 1em;
+  color: white;
 }
 
 #message .evidence {
