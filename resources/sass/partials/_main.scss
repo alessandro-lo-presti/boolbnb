@@ -636,6 +636,24 @@
         }
     }
 
+    // map-section
+    .map-section {
+      padding-top: 30px;
+      padding-bottom: 60px;
+      border-top: 1px solid lightgrey;
+
+      h2 {
+        margin-bottom: 30px;
+
+      }
+
+      .map {
+        height: 600px;
+        width: 90%;
+      }
+
+    }
+
     // mail-section
     .mail-section {
       padding-top: 30px;

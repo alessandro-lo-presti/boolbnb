@@ -196,18 +196,15 @@
   <!-- / info-section -->
 
   <!-- map -->
-  <section class="row">
+  <section class="row map-section">
 
-    <div class="col-12">
+    <h2 class="col-12 text-center">Guarda la Mappa</h2>
 
-      <div style="width:100%; height: 600px;" id="map-div">
-      </div>
-
+    <div class="col-12 d-flex justify-content-center">
+      <div class="map" id="map-div"></div>
     </div>
 
-
     <script>
-
       const API_KEY = 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX';
       const APPLICATION_NAME = 'BoolBnb';
       const APPLICATION_VERSION = '1.0';
@@ -220,9 +217,8 @@
         key: API_KEY,
         container: 'map-div',
         center: LOCATION,
-        zoom: 12
+        zoom: 14
       });
-
     </script>
 
   </section>

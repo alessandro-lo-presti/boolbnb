@@ -11627,6 +11627,21 @@ header .row .search a:hover {
   margin-right: 10px;
 }
 
+#show .map-section {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  border-top: 1px solid lightgrey;
+}
+
+#show .map-section h2 {
+  margin-bottom: 30px;
+}
+
+#show .map-section .map {
+  height: 600px;
+  width: 90%;
+}
+
 #show .mail-section {
   padding-top: 30px;
   padding-bottom: 60px;
