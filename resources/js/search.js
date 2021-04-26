@@ -13,7 +13,9 @@ var search = new Vue(
       beds: 1,
       bathrooms: 1,
       mq: 40,
-      radius: 20
+      radius: 20,
+      dropdownBox: 'hidden',
+      dropdownAngle: 'down'
     },
     methods: {
       search(){
@@ -74,6 +76,17 @@ var search = new Vue(
       removeRadius() {
         if (this.radius > 1) {
           this.radius -= 5;
+        }
+      },
+      dropdown() {
+        if(this.dropdownBox == 'hidden')
+        {
+          this.dropdownBox = 'active';
+          this.dropdownAngle = 'up';
+        }
+        else{
+          this.dropdownBox = 'hidden';
+          this.dropdownAngle = 'down';
         }
       }
     }

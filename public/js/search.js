@@ -107,7 +107,9 @@ var search = new Vue({
     beds: 1,
     bathrooms: 1,
     mq: 40,
-    radius: 20
+    radius: 20,
+    dropdownBox: 'hidden',
+    dropdownAngle: 'down'
   },
   methods: {
     search: function search() {
@@ -168,6 +170,15 @@ var search = new Vue({
       if (this.radius > 1) {
         this.radius -= 5;
       }
+    },
+    dropdown: function dropdown() {
+      if (this.dropdownBox == 'hidden') {
+        this.dropdownBox = 'active';
+        this.dropdownAngle = 'up';
+      } else {
+        this.dropdownBox = 'hidden';
+        this.dropdownAngle = 'down';
+      }
     }
   }
 });
@@ -181,7 +192,7 @@ var search = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! C:\Users\user\Documents\Boolean\mamp_public\boolbnb-proj\resources\js\search.js */"./resources/js/search.js");
 
 
 /***/ })

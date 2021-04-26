@@ -897,14 +897,20 @@
     * {
         box-sizing: border-box;
     }
+    .active{
+      display: flex !important;
+    }
+    .hidden{
+      display: none !important;
+    }
     // fede-gio
-    .card{
+    .card.search-bar{
       .card-header{
         background-color: white;
       }
       .card-body{
         position: relative;
-        padding-bottom: 40px;
+        padding: 30px 0 0 0;
         h2{
           font-size: 20px;
           margin-top: 10px;
@@ -923,37 +929,70 @@
         input[type="number"] {
             display: none;
         }
-        .counter {
+        .services{
+          margin: 25px auto 0;
+          // .form-group{
+          //   width: 150px;
+          // }
+        }
+        .filters-dropdown{
+          border-top: 1px solid lightgrey;
+          text-align: center;
+          margin-top: 30px;
+          padding: 5px 0;
+          a{
+            i{
+              color: black;
+              &.up{
+                transform: rotate(180deg);
+              }
+              &.down{
+                transform: rotate(0deg);
+              }
+            }
+          }
+        }
+        .counter-details{
+          margin-left: 8%;
+          .counter {
             .counter-title {
-                width: 60px;
+              width: 60px;
             }
             .counter-number {
-                width: 100px;
-                a {
-                    i {
-                        color: #ff5a5f;
-                    }
+              width: 100px;
+              a {
+                i {
+                  color: #ff5a5f;
                 }
+              }
             }
+          }
         }
 
       }
+    }
+    // end search-bar
+    .card{
       a.btn {
-          width: 90%;
-          color: white;
-          background: #ff5a5f;
-          position: absolute;
-          left: 50%;
-          bottom: 10px;
-          transform: translateX(-50%);
+        width: 90%;
+        color: white;
+        background: #ff5a5f;
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
       }
       a.btn:focus {
-          outline: none;
-          box-shadow: none;
-          border-color: inherit;
-          -webkit-box-shadow: none;
+        outline: none;
+        box-shadow: none;
+        border-color: inherit;
+        -webkit-box-shadow: none;
+      }
+      .card-body{
+        padding: 30px 0;
       }
     }
+
 
     .search {
         position: relative;
@@ -964,10 +1003,10 @@
 
         .autocomplete.active {
             padding: 0;
-            width: calc(100% - 70px);
+            width: calc(100% - 30px);
             position: absolute;
-            top: 58px;
-            left: 35px;
+            top: 68px;
+            left: 15px;
             background-color: white;
             color: black;
             border: 1px solid lightgrey;
@@ -988,6 +1027,7 @@
         }
     }
 }
+
 
 // mediaquery create-edit
 @media (max-width: 768px) {
