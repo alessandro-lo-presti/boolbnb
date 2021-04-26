@@ -74,8 +74,6 @@ class ApartmentController extends Controller
         $newApartment = new Apartment;
 
         $newApartment->user_id = Auth::id();
-        $data["longitude"] = 0;
-        $data["latitude"] = 0;
         $data["visibility"] = 1;
         $data["visualization"] = 0;
 

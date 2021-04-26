@@ -11571,7 +11571,7 @@ header .row .search a:hover {
 }
 
 #show .info-section .user_box .user_card {
-  max-width: 500px;
+  max-width: 380px;
   margin: 0 30px;
   padding: 20px 30px;
   border-radius: 10px;
@@ -11625,6 +11625,21 @@ header .row .search a:hover {
 
 #show .info-section .info_box .text {
   margin-right: 10px;
+}
+
+#show .map-section {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  border-top: 1px solid lightgrey;
+}
+
+#show .map-section h2 {
+  margin-bottom: 30px;
+}
+
+#show .map-section .map {
+  height: 600px;
+  width: 90%;
 }
 
 #show .mail-section {
