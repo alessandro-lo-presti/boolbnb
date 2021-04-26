@@ -19,7 +19,7 @@
 
     <div id="sponsor">
 
-          @if($sponsor) {
+          @if($sponsor) 
             <div class= "container">
               <form id="payment-form" action="{{ route("payment.payment", $apartment->id) }}" method="post">
                 @csrf
@@ -76,8 +76,8 @@
                   });
                 });
             </script>
-          }
-          @else {
+          
+          @else 
             <div class="container result">
 
               <div class="row d-flex justify-content-center">
@@ -94,7 +94,7 @@
                 </div>
 
               </div>
-          }
+          
           @endif
 
         </div>
