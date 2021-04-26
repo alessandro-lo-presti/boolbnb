@@ -231,6 +231,12 @@
         center: LOCATION,
         zoom: 14
       });
+
+      //marker
+      var marker = new tt.Marker()
+        .setLngLat([{{ $apartment->longitude }}, {{ $apartment->latitude }}])
+        .addTo(map);
+        
     </script>
 
   </section>
