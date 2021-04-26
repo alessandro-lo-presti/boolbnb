@@ -4,7 +4,7 @@
 @endsection
 @section('content')
   <div id="advanced-search" class="container">
-    <div class="card">
+    <div class="card search-bar">
         <div class="card-header text-center font-weight-bold">
           Ricerca avanzata
         </div>
@@ -20,7 +20,7 @@
 
           </div>
 
-          <div class="d-flex justify-content-around">
+          <div class="filters-dropdown d-flex justify-content-around" :class="dropdownBox">
             <div class="filters-left">
               <h3 class="text-center">Caratteristiche</h3>
               <div class="counter-details row d-flex justify-content-center col-md-12 p-3">
@@ -75,7 +75,7 @@
 
               </div>
             </div>
-            <div class="filters-right">
+            <div class="filters-right mr-5">
               <h3 class="text-center">Servizi</h3>
               {{-- servizi --}}
               <div class="services row d-flex justify-content-around col-md-12">
@@ -103,30 +103,22 @@
               </div>
             </div>
           </div>
+          <div class="filters-dropdown">
+            <a href="#" @click="dropdown"><i class="fas fa-angle-down fa-lg" :class="dropdownAngle"></i></a>
+          </div>
         </div>
     </div>
     <div class="row d-flex justify-content-around">
       <div class="card mt-4" style="width: 18rem;" v-for="apartment in apartments">
         <img src="{{asset('storage/covers/placeholder.png')}}" class="card-img-top" alt="appartamento">
         <div class="card-body">
-          <h5 class="card-title">@{{apartment.title}}</h5>
-          <p class="card-text">
+          <h5 class="card-title ml-3">@{{apartment.title}}</h5>
+          <p class="card-text ml-3 pb-2">
             @{{apartment.address}}
           </p>
           <a :href='"/apartment/" + apartment.id' class="btn btn-primary">Visualizza</a>
         </div>
       </div>
     </div>
-    {{-- card ufficale --}}
-    {{-- <div class="card mt-4" v-for="apartment in apartments">
-      <div class="card-header text-center font-weight-bold">
-        @{{apartment.title}}
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a :href='"/apartment/" + apartment.id' class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div> --}}
   </div>
 @endsection
