@@ -11747,6 +11747,39 @@ header .row .search a:hover {
   height: 100%;
 }
 
+#message .bordo_tabella {
+  box-shadow: 0 0 15px lightgray;
+  margin: 20px 0;
+}
+
+#message tbody tr:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+#message .read input[type=submit] {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1em;
+  color: white;
+}
+
+#message .read a {
+  font-size: 1em;
+  color: white;
+}
+
+#message .evidence {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#message .evidence .card {
+  border: 1px solid #8eb9cb;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px;
+}
+
 #sponsor #payment-form #paga {
   background-color: green;
   border: none;
@@ -11812,6 +11845,16 @@ header .row .search a:hover {
   border-radius: 10px;
   box-shadow: 0px 2px 40px #d38d32;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .layout-cards {
+    flex-direction: column;
+  }
+
+  .layout-cards .card {
+    margin: 20px 0;
+  }
 }
 
 #advanced-search * {
