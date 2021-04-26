@@ -81,7 +81,7 @@
               <div class="services row d-flex justify-content-around col-md-12">
                 @foreach ($services as $service)
                   <div class="form-group row form-check col-md-4">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="services[]" value="{{$service->id}}">
+                    <input v-model="{{ str_replace(" ","", $service->name) }}" type="checkbox" class="form-check-input" id="exampleCheck1" name="services[]" value="{{$service->id}}">
                     <label class="form-check-label" for="{{$service->id}}">
                       @if ($service -> name == "WiFi")
                         <i class="fas fa-wifi"></i>
@@ -109,7 +109,13 @@
         </div>
     </div>
     <div class="row d-flex justify-content-around">
-      <div class="card mt-4" style="width: 18rem;" v-for="apartment in apartments" v-if="(rooms <= apartment.n_rooms) && (beds <= apartment.n_beds) && (bathrooms <= apartment.n_bathrooms)">
+      <div class="card mt-4" style="width: 18rem;" v-for="apartment in apartments"
+       v-if="(rooms <= apartment.n_rooms) && (beds <= apartment.n_beds) &&
+              (bathrooms <= apartment.n_bathrooms) && ( (WiFi) ? apartment.services.includes(1) : true ) &&
+              ( (Piscina) ? apartment.services.includes(2) : true ) && ( (PostoAuto) ? apartment.services.includes(3) : true ) &&
+              ( (Portineria) ? apartment.services.includes(4) : true ) && ( (Sauna) ? apartment.services.includes(5) : true ) &&
+              ( (VistaMare) ? apartment.services.includes(6) : true )
+              ">
           <img :src="(apartment.image) ? host + '/storage/' + apartment.image : host + '/storage/covers/placeholder.png'" class="card-img-top" alt="appartamento">
         <div class="card-body">
           <h5 class="card-title ml-3">@{{apartment.title}}</h5>

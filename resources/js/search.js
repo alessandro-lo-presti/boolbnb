@@ -15,7 +15,13 @@ var search = new Vue(
       mq: 40,
       radius: 20,
       dropdownBox: 'hidden',
-      dropdownAngle: 'down'
+      dropdownAngle: 'down',
+      WiFi: false,
+      PostoAuto: false,
+      Piscina: false,
+      Portineria: false,
+      Sauna: false,
+      VistaMare: false
     },
     methods: {
       search(){
