@@ -7,7 +7,6 @@
   <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
 @endsection
 
-
 @section('content')
 @include('partials.header')
 <div id="show" class="container">
@@ -89,7 +88,7 @@
 
           <p class="card-text card_text">
             Gli appartamenti di {{ $apartment->user->name }} sono i migliori, forse perché sono gli unici non creati in automatico.<br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
           </p>
 
           <div class="">
@@ -225,7 +224,7 @@
   <!-- / map-->
 
   <!-- mail -->
-  <section class="mail-section row d-flex justify-content-center align-items-center">
+  <section id="mail" class="mail-section row d-flex justify-content-center align-items-center">
 
     <h2 class="col-12 text-center">Contatta <span>{{ $apartment->user->name }}</span></h2>
 

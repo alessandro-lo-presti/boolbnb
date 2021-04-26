@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('cdn')
+  <!--TomTom-->
+  <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
+@endsection
+
 @section('content')
 @include('partials.header')
 <div id="show" class="container">
@@ -199,6 +206,35 @@
 
   </section>
   <!-- / info-section -->
+
+  <!-- map -->
+  <section class="row map-section">
+
+    <h2 class="col-12 text-center">Guarda la Mappa</h2>
+
+    <div class="col-12 d-flex justify-content-center">
+      <div class="map" id="map-div"></div>
+    </div>
+
+    <script>
+      const API_KEY = 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX';
+      const APPLICATION_NAME = 'BoolBnb';
+      const APPLICATION_VERSION = '1.0';
+      const LOCATION = {lng: {{ $apartment->longitude }}, lat: {{ $apartment->latitude }} };
+
+      tt.setProductInfo(APPLICATION_NAME, APPLICATION_VERSION);
+
+      // mappa
+      var map = tt.map({
+        key: API_KEY,
+        container: 'map-div',
+        center: LOCATION,
+        zoom: 14
+      });
+    </script>
+
+  </section>
+  <!-- / map-->
 
 </div>
 @endsection
