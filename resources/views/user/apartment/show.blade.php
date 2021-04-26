@@ -1,17 +1,38 @@
 @extends('layouts.app')
 
+@section('cdn')
+  <!--TomTom-->
+  <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
+@endsection
+
 @section('content')
 @include('partials.header')
 <div id="show" class="container">
 
   <!--Title-->
   <section class="row title-section">
-    <div class="col-12">
+
+    <div class="col-6 d-flex flex-column">
       <h2>{{ $apartment->title }}</h2>
-    </div>
-    <div class="col-12">
       <p>{{ $apartment->address }} {{ $apartment->city }}</p>
     </div>
+
+    <div class="col-6 d-flex flex-row-reverse align-items-center">
+        @if($sponsor)
+          <a class="btn btn_title" href="{{ route('payment.request', $apartment->id) }}">
+            <i class="far fa-star"></i>
+          </a>
+        @else
+          <a class="btn btn_title" href="">
+            <i class="fas fa-star"></i>
+          </a>
+        @endif
+      </a>
+      <span>Visite {{ $apartment->visualization }}</span>
+    </div>
+
   </section>
   <!-- / Title-->
 
@@ -185,6 +206,41 @@
 
   </section>
   <!-- / info-section -->
+
+  <!-- map -->
+  <section class="row map-section">
+
+    <h2 class="col-12 text-center">Guarda la Mappa</h2>
+
+    <div class="col-12 d-flex justify-content-center">
+      <div class="map" id="map-div"></div>
+    </div>
+
+    <script>
+      const API_KEY = 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX';
+      const APPLICATION_NAME = 'BoolBnb';
+      const APPLICATION_VERSION = '1.0';
+      const LOCATION = {lng: {{ $apartment->longitude }}, lat: {{ $apartment->latitude }} };
+
+      tt.setProductInfo(APPLICATION_NAME, APPLICATION_VERSION);
+
+      // mappa
+      var map = tt.map({
+        key: API_KEY,
+        container: 'map-div',
+        center: LOCATION,
+        zoom: 14
+      });
+
+      //marker
+      var marker = new tt.Marker()
+        .setLngLat([{{ $apartment->longitude }}, {{ $apartment->latitude }}])
+        .addTo(map);
+        
+    </script>
+
+  </section>
+  <!-- / map-->
 
 </div>
 @endsection

@@ -19,7 +19,7 @@
 
     <div id="sponsor">
 
-          @if($sponsor) {
+          @if($sponsor) 
             <div class= "container">
               <form id="payment-form" action="{{ route("payment.payment", $apartment->id) }}" method="post">
                 @csrf
@@ -46,7 +46,7 @@
                 <div id="dropin-container"></div>
                 {{-- <input type="number" name="sponsor"> --}}
                 <input type="hidden" id="nonce" name="payment_method_nonce"/>
-                <input type="submit" />
+                <input id="paga" type="submit" />
                 {{-- 4111 1111 1111 1111 --}}
               </form>
             </div>
@@ -76,8 +76,8 @@
                   });
                 });
             </script>
-          }
-          @else {
+          
+          @else 
             <div class="container result">
 
               <div class="row d-flex justify-content-center">
@@ -94,7 +94,7 @@
                 </div>
 
               </div>
-          }
+          
           @endif
 
         </div>

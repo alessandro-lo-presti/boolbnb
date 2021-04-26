@@ -81,98 +81,40 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/create.js":
-/*!********************************!*\
-  !*** ./resources/js/create.js ***!
-  \********************************/
+/***/ "./resources/js/message.js":
+/*!*********************************!*\
+  !*** ./resources/js/message.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// require('./bootstrap');
-var create = new Vue({
-  el: '#create',
-  data: function data() {
-    return {
-      rooms: 1,
-      beds: 1,
-      bathrooms: 1,
-      mq: 40,
-      apiKey: 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX',
-      applicationName: 'BoolBnb',
-      applicationVersion: '1.0',
-      form: document.getElementById('form')
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    tt.setProductInfo(this.applicationName, this.applicationVersion);
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      var address = document.getElementById('inputAddress').value;
-      var city = document.getElementById('inputCity').value;
-      tt.services.fuzzySearch({
-        key: _this.apiKey,
-        query: address + " " + city
-      }).then(function (response) {
-        var coords = response.results[0].position;
-        document.getElementById('longitude').value = coords.lng;
-        document.getElementById('latitude').value = coords.lat;
-        form.submit();
-      });
-    });
+var app = new Vue({
+  el: '#message',
+  data: {
+    ciao: 99
   },
   methods: {
-    addRoom: function addRoom() {
-      this.rooms++;
-    },
-    removeRoom: function removeRoom() {
-      if (this.rooms > 1) {
-        this.rooms--;
-      }
-    },
-    addBed: function addBed() {
-      this.beds++;
-    },
-    removeBed: function removeBed() {
-      if (this.beds > 1) {
-        this.beds--;
-      }
-    },
-    addBathroom: function addBathroom() {
-      this.bathrooms++;
-    },
-    removeBathroom: function removeBathroom() {
-      if (this.bathrooms > 1) {
-        this.bathrooms--;
-      }
-    },
-    addMq: function addMq() {
-      this.mq += 5;
-    },
-    removeMq: function removeMq() {
-      if (this.mq > 1) {
-        this.mq -= 5;
-      }
+    valore: function valore() {
+      console.log(this.ciao); // location.href = "https://www.w3schools.com"
     }
   }
 });
 
 /***/ }),
 
-/***/ 2:
-/*!**************************************!*\
-  !*** multi ./resources/js/create.js ***!
-  \**************************************/
+/***/ 6:
+/*!***************************************!*\
+  !*** multi ./resources/js/message.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/create.js */"./resources/js/create.js");
+module.exports = __webpack_require__(/*! /Volumes/PENNA/Programmazione/Corso24/mamp_public/progetto-finale/boolbnb/resources/js/message.js */"./resources/js/message.js");
 
 
 /***/ })

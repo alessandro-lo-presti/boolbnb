@@ -108,8 +108,31 @@ var edit = new Vue({
       phpBathrooms: 'active',
       vueBathrooms: 'hidden',
       phpMq: 'active',
-      vueMq: 'hidden'
+      vueMq: 'hidden',
+      apiKey: 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX',
+      applicationName: 'BoolBnb',
+      applicationVersion: '1.0',
+      form: document.getElementById('form')
     };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    tt.setProductInfo(this.applicationName, this.applicationVersion);
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var address = document.getElementById('inputAddress').value;
+      var city = document.getElementById('inputCity').value;
+      tt.services.fuzzySearch({
+        key: _this.apiKey,
+        query: address + " " + city
+      }).then(function (response) {
+        var coords = response.results[0].position;
+        document.getElementById('longitude').value = coords.lng;
+        document.getElementById('latitude').value = coords.lat;
+        form.submit();
+      });
+    });
   },
   methods: {
     addRoom: function addRoom() {
@@ -176,7 +199,7 @@ var edit = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\user\Documents\Boolean\mamp_public\boolbnb-proj\resources\js\edit.js */"./resources/js/edit.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/edit.js */"./resources/js/edit.js");
 
 
 /***/ })

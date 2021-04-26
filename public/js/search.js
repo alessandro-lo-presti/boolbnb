@@ -99,6 +99,11 @@ var search = new Vue({
     apartments: [],
     searchInput: '',
     suggests: [],
+    baseUrl: '',
+    // baseUrl: '/marzo/progetto-boolbnb/public,'
+    host: 'http://localhost:8000',
+    // host: 'http://localhost:8080/marzo/progetto-boolbnb/public',
+    rooms: 1,
     beds: 1,
     bathrooms: 1,
     mq: 40,
@@ -176,7 +181,7 @@ var search = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\user\Documents\Boolean\mamp_public\boolbnb-proj\resources\js\search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/search.js */"./resources/js/search.js");
 
 
 /***/ })

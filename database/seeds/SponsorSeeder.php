@@ -13,10 +13,24 @@ class SponsorSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 3; $i++) {
             $newSponsor = new Sponsor();
-            $newSponsor->price = $faker->randomFloat(2 ,1 ,9);
-            $newSponsor->time = $faker->numberBetween(0, 150);
+
+            switch ($i) {
+              case 0:
+                $newSponsor->price = 2.99;
+                $newSponsor->time = 24;
+                break;
+              case 1:
+                $newSponsor->price = 5.99;
+                $newSponsor->time = 72;
+                break;
+              default:
+                $newSponsor->price = 9.99;
+                $newSponsor->time = 144;
+                break;
+            }
+
             $newSponsor->save();
         }
     }

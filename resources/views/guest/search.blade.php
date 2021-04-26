@@ -21,8 +21,21 @@
           </div>
         </div>
     </div>
-    <div class="card mt-4" v-for="apartment in apartments">
-      <div class="card-header">
+    <div class="row d-flex justify-content-around">
+      <div class="card mt-4" style="width: 18rem;" v-for="apartment in apartments">
+        <img :src="(apartment.image) ? host + '/storage/' + apartment.image : host + '/storage/covers/placeholder.png'" class="card-img-top" alt="appartamento">
+        <div class="card-body">
+          <h5 class="card-title">@{{apartment.title}}</h5>
+          <p class="card-text">
+            @{{apartment.address}}
+          </p>
+          <a :href='"/apartment/" + apartment.id' class="btn btn-primary">Visualizza</a>
+        </div>
+      </div>
+    </div>
+    {{-- card ufficale --}}
+    {{-- <div class="card mt-4" v-for="apartment in apartments">
+      <div class="card-header text-center font-weight-bold">
         @{{apartment.title}}
       </div>
       <div class="card-body">
