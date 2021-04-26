@@ -1,4 +1,11 @@
 @extends('layouts.app')
+@section('cdn')
+  <!--TomTom-->
+  <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
+@endsection
+
 @section('script')
   <script src="{{ asset('js/search.js') }}" defer></script>
 @endsection
@@ -19,7 +26,10 @@
             </div>
 
           </div>
-
+          <div class="col-md-12">
+            <input type="text" class='form-control mt-3' name="address" placeholder="Inserisci indirizzo" v-model="inputAddress" @keyup="getCordsAddress()">
+            <button type="button" name="button" v-on:click="addressFilter()">Address</button>
+          </div>
           <div class="filters-dropdown d-flex justify-content-around" :class="dropdownBox">
             <div class="filters-left">
               <h3 class="text-center">Caratteristiche</h3>
@@ -114,7 +124,7 @@
               (bathrooms <= apartment.n_bathrooms) && ( (WiFi) ? apartment.services.includes(1) : true ) &&
               ( (Piscina) ? apartment.services.includes(2) : true ) && ( (PostoAuto) ? apartment.services.includes(3) : true ) &&
               ( (Portineria) ? apartment.services.includes(4) : true ) && ( (Sauna) ? apartment.services.includes(5) : true ) &&
-              ( (VistaMare) ? apartment.services.includes(6) : true )
+              ( (VistaMare) ? apartment.services.includes(6) : true ) && (checkBound(apartment.latitude, apartment.longitude))
               ">
           <img :src="(apartment.image) ? host + '/storage/' + apartment.image : host + '/storage/covers/placeholder.png'" class="card-img-top" alt="appartamento">
         <div class="card-body">

@@ -1,3 +1,4 @@
+var cordsAddress = '';
 var search = new Vue(
   {
     el: '#advanced-search',
@@ -14,6 +15,7 @@ var search = new Vue(
       bathrooms: 1,
       mq: 40,
       radius: 20,
+      arrayBounds: [],
       dropdownBox: 'hidden',
       dropdownAngle: 'down',
       WiFi: false,
@@ -21,7 +23,10 @@ var search = new Vue(
       Piscina: false,
       Portineria: false,
       Sauna: false,
-      VistaMare: false
+      VistaMare: false,
+      apiKey: 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX',
+      inputAddress: ''
+      // cordsAddress: ''
     },
     methods: {
       search(){
@@ -94,6 +99,32 @@ var search = new Vue(
           this.dropdownBox = 'hidden';
           this.dropdownAngle = 'down';
         }
+      },
+      getCordsAddress(){
+        tt.services.fuzzySearch({
+          key: this.apiKey,
+          query: this.inputAddress
+        })
+        .then(function(response) {
+          cordsAddress =  response.results[0].position;
+        });
+      },
+      addressFilter(){
+        console.log(cordsAddress);
+        // let distance = new tt.LngLat(this.cordsAddress.lng, this.cordsAddress.lat);
+        // this.arrayBounds = distance.toBounds(this.radius).toArray();
+      },
+      checkBound(latitude, longitude) {
+        let value = true;
+        if (this.arrayBounds.length) {
+          if (longitude <= this.arrayBounds[1][0] && longitude >= this.arrayBounds[0][0] && latitude<=this.arrayBounds[1][1] && latitude >= this.arrayBounds[0][1]) {
+            value = true;
+          }
+          else {
+            value = false;
+          }
+        }
+        return value;
       }
     }
   });

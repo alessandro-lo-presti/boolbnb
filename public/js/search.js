@@ -93,6 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+var cordsAddress = '';
 var search = new Vue({
   el: '#advanced-search',
   data: {
@@ -108,6 +109,7 @@ var search = new Vue({
     bathrooms: 1,
     mq: 40,
     radius: 20,
+    arrayBounds: [],
     dropdownBox: 'hidden',
     dropdownAngle: 'down',
     WiFi: false,
@@ -115,7 +117,10 @@ var search = new Vue({
     Piscina: false,
     Portineria: false,
     Sauna: false,
-    VistaMare: false
+    VistaMare: false,
+    apiKey: 'GNSLhVGN7KNDGb9SFVEjknBWIKpB1HjX',
+    inputAddress: '' // cordsAddress: ''
+
   },
   methods: {
     search: function search() {
@@ -185,6 +190,31 @@ var search = new Vue({
         this.dropdownBox = 'hidden';
         this.dropdownAngle = 'down';
       }
+    },
+    getCordsAddress: function getCordsAddress() {
+      tt.services.fuzzySearch({
+        key: this.apiKey,
+        query: this.inputAddress
+      }).then(function (response) {
+        cordsAddress = response.results[0].position;
+      });
+    },
+    addressFilter: function addressFilter() {
+      console.log(cordsAddress); // let distance = new tt.LngLat(this.cordsAddress.lng, this.cordsAddress.lat);
+      // this.arrayBounds = distance.toBounds(this.radius).toArray();
+    },
+    checkBound: function checkBound(latitude, longitude) {
+      var value = true;
+
+      if (this.arrayBounds.length) {
+        if (longitude <= this.arrayBounds[1][0] && longitude >= this.arrayBounds[0][0] && latitude <= this.arrayBounds[1][1] && latitude >= this.arrayBounds[0][1]) {
+          value = true;
+        } else {
+          value = false;
+        }
+      }
+
+      return value;
     }
   }
 });
@@ -198,7 +228,7 @@ var search = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! C:\Users\shadi\Documents\mamp_public\boolbnb\resources\js\search.js */"./resources/js/search.js");
 
 
 /***/ })
