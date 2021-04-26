@@ -25,7 +25,7 @@ class MessageController extends Controller
     public function show(Apartment $apartment, Message $message){
 
         $data = [
-            'message' => $message 
+            'message' => $message
         ];
 
         return view('user.message.show', $data);
