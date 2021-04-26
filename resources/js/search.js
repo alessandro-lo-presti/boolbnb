@@ -66,7 +66,7 @@ var search = new Vue(
         this.mq += 5;
       },
       removeMq() {
-        if (this.mq > 1) {
+        if (this.mq > 5) {
           this.mq -= 5;
         }
       },
@@ -74,7 +74,7 @@ var search = new Vue(
         this.radius += 5;
       },
       removeRadius() {
-        if (this.radius > 1) {
+        if (this.radius > 5) {
           this.radius -= 5;
         }
       },

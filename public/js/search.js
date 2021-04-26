@@ -159,7 +159,7 @@ var search = new Vue({
       this.mq += 5;
     },
     removeMq: function removeMq() {
-      if (this.mq > 1) {
+      if (this.mq > 5) {
         this.mq -= 5;
       }
     },
@@ -167,7 +167,7 @@ var search = new Vue({
       this.radius += 5;
     },
     removeRadius: function removeRadius() {
-      if (this.radius > 1) {
+      if (this.radius > 5) {
         this.radius -= 5;
       }
     },
@@ -192,7 +192,7 @@ var search = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\user\Documents\Boolean\mamp_public\boolbnb-proj\resources\js\search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/search.js */"./resources/js/search.js");
 
 
 /***/ })
