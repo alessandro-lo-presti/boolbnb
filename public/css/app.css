@@ -11679,10 +11679,10 @@ body {
   }
 }
 
-#send .result,
-#check .result,
-#sponsor .result {
-  padding: 60px 0;
+#send .card,
+#check .card,
+#sponsor .card {
+  margin: 90px 0;
 }
 
 #send .result .message-img,

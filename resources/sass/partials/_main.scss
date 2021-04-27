@@ -756,8 +756,11 @@ body {
 // messaggio inviato, check pagamento: Alessandro
 #send, #check, #sponsor{
 
+  .card {
+    margin: 90px 0;
+  }
+
   .result {
-    padding: 60px 0;
 
     .message-img, .check-img {
       height: 200px;
