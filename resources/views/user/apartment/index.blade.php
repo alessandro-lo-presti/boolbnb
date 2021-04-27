@@ -9,14 +9,14 @@
     @endif
     <div id="apa-index" class="container d-flex flex-column">
         <div class="d-flex p_top justify-content-between">
-            <h3 class=""> Benvenuto {{ Auth::user()->name }}</h3>
+            <h3 class=""> I Miei Appartamenti</h3>
             <a class="btn btn-success mb-2" href="{{ route('apartment.create') }}">
                 <span class="add">Aggiungi un appartamento</span>
                 <i class="fas fa-plus"></i>
             </a>
         </div>
         <div class="row">
-            <table class="table table-hover">
+            <table class="table table-hover bordo_tabella">
                 <thead>
                     <tr>
                         <th scope="col">Annuncio</th>

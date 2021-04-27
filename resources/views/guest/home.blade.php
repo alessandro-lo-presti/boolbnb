@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     @include('partials.header')
     <div id="home">
@@ -153,7 +154,6 @@
         </div>
 
     </div>
-    @include('partials.footer')
 
     <script src="{{ asset('js/home.js') }}"></script>
 </body>
