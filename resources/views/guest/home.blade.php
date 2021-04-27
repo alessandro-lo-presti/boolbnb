@@ -54,7 +54,7 @@
           <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in types">
 
             <div class="apartment_type">
-              <img :src="item.cover" :alt="item.type">
+              <img :src="(item.image) ? host + '/storage/' + apartment.image : host + '/storage/covers/placeholder.png'">
               <h5 class="pt-2">@{{ item.type }}</h5>
             </div>
 

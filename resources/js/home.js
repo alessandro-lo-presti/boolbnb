@@ -10,6 +10,10 @@ var app = new Vue({
     el: '#home',
     data: {
         nextCounter: 1,
+        host: 'http://localhost:8000/',
+        // host: 'http://localhost:8080/marzo/progetto-boolbnb/public',
+        baseUrl: '',
+        // baseUrl: '/marzo/progetto-boolbnb/public,'
         counter: 0,
         destinations: [
 

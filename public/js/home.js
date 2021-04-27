@@ -103,6 +103,10 @@ var app = new Vue({
   el: '#home',
   data: {
     nextCounter: 1,
+    host: 'http://localhost:8000/',
+    // host: 'http://localhost:8080/marzo/progetto-boolbnb/public',
+    baseUrl: '',
+    // baseUrl: '/marzo/progetto-boolbnb/public,'
     counter: 0,
     destinations: [{
       cover: 'https://a0.muscache.com/im/pictures/e8d3d6de-40b1-4341-89f2-afb2a1a4f71f.jpg?im_q=medq&im_w=240',
