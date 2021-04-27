@@ -11362,6 +11362,15 @@ body {
   width: 50px;
 }
 
+#create .container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+#create .container .card {
+  margin-bottom: 30px;
+}
+
 #create .container .card .card-header {
   background-color: white;
 }
