@@ -2,7 +2,6 @@
 
 @section('content')
     <div id="message">
-
         <div class= "container">
             <div class="row">
                 <table class="table bordo_tabella">
@@ -14,7 +13,6 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         @foreach ($messages as $message)
                         <tr>
                             <td>{{ $message->email }}</td>
@@ -35,7 +33,6 @@
                         </tr>
                         @endforeach
                     </tbody>
-
                 </table>
             </div>
         </div>
