@@ -9,9 +9,9 @@
 @endsection
 
 @section('content')
+  @if($sponsor)
   <div id="sponsor">
 
-    @if($sponsor)
       <div class= "container">
         <form id="payment-form" action="{{ route("payment.payment", $apartment->id) }}" method="post">
           @csrf
@@ -69,30 +69,33 @@
       });
     </script>
 
+  </div>
+
   @else
-    <div class="container result">
+    <div id="sponsorization">
 
-      <div class="row d-flex justify-content-center">
+      <div class="container result">
 
-        <div class="card col-8 pt-3 pb-3">
+        <div class="row d-flex justify-content-center">
 
-          <div class="card-body d-flex flex-column align-items-center">
-            <h2>Sponsorizzazione già attiva</h2>
-            <div class="check-img">
-              <img src="https://www.freeiconspng.com/uploads/error-icon-4.png" alt="">
+          <div class="card col-8 pt-3 pb-3">
+
+            <div class="card-body d-flex flex-column align-items-center">
+              <h2>Sponsorizzazione già attiva</h2>
+              <div class="check-img">
+                <img src="https://www.freeiconspng.com/uploads/error-icon-4.png" alt="">
+              </div>
+              <a class="btn btn_back" href="{{ route('home') }}">Avanti</a>
             </div>
-            <a class="btn btn_back" href="{{ route('home') }}">Avanti</a>
+
           </div>
 
         </div>
 
-      </div>
 
-    @endif
-
+    </div>
   </div>
-
-</div>
+@endif
 @endsection
 
 
