@@ -6,11 +6,18 @@
 
         <div class="container">
             <div class="evidence">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
+                <div class="card" style="width: 28rem;">
+                    {{-- <div class="card-body">
                         <h5 class="card-title">Messaggio ricevuto da: {{ $message->email }}</h5>
                         <h6 class="card-title">il {{ $message->date }}</h6>
                         <p class="card-text">{{ $message->body }}</p>
+                    </div> --}}
+                    <div class="card-body">
+                        <h5 class="card-title">Messaggio ricevuto da: {{ $message->email }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">il {{ $message->date }}</h6>
+                        <p class="card-text">{{ $message->body }}</p>
+                        <a href="#" class="card-link">Torna indietro</a>
+                        <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
             </div>
