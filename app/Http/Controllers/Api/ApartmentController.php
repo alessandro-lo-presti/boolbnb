@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Apartment;
 use App\Image;
+use Carbon\Carbon;
 
 class ApartmentController extends Controller
 {
@@ -60,6 +61,12 @@ class ApartmentController extends Controller
         "error" => "Errore nella richiesta"
       ]);
     }
+  }
+
+  public function sponsoredApartment(Request $request){
+    $apartments = DB::table('apartment_sponsor')->where('end', '>', )->get();
+    dd($apartments);
+   
   }
 
 }
