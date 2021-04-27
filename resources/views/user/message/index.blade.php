@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('partials.header')
     <div id="message">
 
         <div class= "container">
@@ -15,7 +14,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+
                         @foreach ($messages as $message)
                         <tr>
                             <td>{{ $message->email }}</td>
@@ -40,7 +39,7 @@
                 </table>
             </div>
         </div>
-        
+
         @include('partials.footer')
 
     </div>

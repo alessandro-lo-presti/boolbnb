@@ -8,7 +8,6 @@
 @endsection
 
 @section('content')
-@include('partials.header')
 <div id="show" class="container">
 
   <!--Title-->

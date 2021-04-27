@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('cdn')
   <!--TomTom-->
   <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
@@ -9,6 +10,7 @@
 @section('script')
   <script src="{{ asset('js/search.js') }}" defer></script>
 @endsection
+
 @section('content')
   <div id="advanced-search" class="container">
     <div class="card search-bar">

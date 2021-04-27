@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('partials.header')
     @if (session('status'))
         <div class="alert alert-success">
             {{ session('status') }}

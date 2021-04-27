@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+  background-color: white;
+}
+
 #home {
     position: relative;
 
@@ -178,6 +183,7 @@
     .container {
         .row {
             .card {
+              margin: 90px 0 90px;
                 .card-header {
                     background-color: white;
                     font-size: 18px;
@@ -225,6 +231,7 @@
     .container {
         .row {
             .card {
+              margin: 90px 0 90px;
                 .card-header {
                     background-color: white;
                     font-size: 18px;
@@ -275,6 +282,7 @@
     .container {
         .row {
             .card {
+              margin: 90px 0 90px;
                 .card-header {
                     background-color: white;
                     font-size: 18px;
@@ -503,6 +511,7 @@
 #show {
     $image_height: 530px;
     font-size: 18px;
+    margin-bottom: 60px;
 
     * {
         margin: 0;
@@ -684,9 +693,23 @@
         padding: 20px 30px;
       }
 
+      input:focus, input:active {
+            outline: none;
+            box-shadow: none;
+            border-color: inherit;
+            -webkit-box-shadow: none;
+        }
+
       textarea {
         resize: none;
       }
+
+      textarea:focus, textarea:active {
+            outline: none;
+            box-shadow: none;
+            border-color: inherit;
+            -webkit-box-shadow: none;
+        }
 
       .btn_mail {
           width: 100px;
@@ -756,10 +779,13 @@
 }
 
 // messaggio inviato, check pagamento: Alessandro
-#send, #check, #sponsor{
+#send, #check, #sponsorization{
+
+  .card {
+    margin: 90px 0;
+  }
 
   .result {
-    padding: 60px 0;
 
     .message-img, .check-img {
       height: 200px;
@@ -773,12 +799,17 @@
 
     }
 
+    .btn_back {
+        margin-top: 15px;
+        padding: 5px 10px;
+        background-color: #ff5a5f;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
   }
 
-}
-
-// sezione statistics
-#statistics {
 }
 
 // sezione messaggi

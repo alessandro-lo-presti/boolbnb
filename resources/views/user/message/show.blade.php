@@ -2,9 +2,8 @@
 
 @section('content')
 
-    @include('partials.header')
     <div id="message">
-        
+
         <div class="container">
             <div class="evidence">
                 <div class="card" style="width: 18rem;">
@@ -20,9 +19,9 @@
 
 
         @include('partials.footer')
-        
+
     </div>
-    
+
     <script src="{{ asset('js/message.js') }}"></script>
 
 @endsection

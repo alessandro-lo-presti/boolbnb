@@ -12,7 +12,6 @@
 @endsection
 
 @section('content')
-@include('partials.header')
 <div id="edit">
   <div class="container">
     <div class="row justify-content-center">

@@ -1,4 +1,4 @@
-require('./bootstrap');
+// require('./bootstrap');
 
 // Vue.component(
 //     'example-component',

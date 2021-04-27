@@ -8,7 +8,6 @@
 @endsection
 
 @section('content')
-@include('partials.header')
 <div id="show" class="container">
 
   <!--Title-->
@@ -236,7 +235,7 @@
       var marker = new tt.Marker()
         .setLngLat([{{ $apartment->longitude }}, {{ $apartment->latitude }}])
         .addTo(map);
-        
+
     </script>
 
   </section>
