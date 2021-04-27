@@ -11706,6 +11706,17 @@ body {
   height: 100%;
 }
 
+#send .result .btn_back,
+#check .result .btn_back,
+#sponsor .result .btn_back {
+  margin-top: 15px;
+  padding: 5px 10px;
+  background-color: #ff5a5f;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 #message .bordo_tabella {
   box-shadow: 0 0 15px lightgray;
   margin: 20px 0;

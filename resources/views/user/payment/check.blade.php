@@ -22,6 +22,7 @@
               <img src="https://www.freeiconspng.com/uploads/error-icon-4.png" alt="">
             </div>
           @endif
+          <a class="btn btn_back" href="{{ route('home') }}">Avanti</a>
         </div>
 
       </div>
