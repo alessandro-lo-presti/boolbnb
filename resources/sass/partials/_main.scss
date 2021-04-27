@@ -344,6 +344,16 @@ body {
             }
         }
         .table {
+            &.bordo_tabella{
+                box-shadow: 0 0 15px lightgray;
+                margin: 20px 0;
+            }
+            tbody tr{
+                &:hover{
+                    cursor: pointer;
+                    background-color: lightgrey;
+                }
+            }
             thead {
                 border-top: none;
                 tr {
