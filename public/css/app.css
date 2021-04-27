@@ -11619,8 +11619,24 @@ body {
   padding: 20px 30px;
 }
 
+#show .mail-section input:focus,
+#show .mail-section input:active {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+}
+
 #show .mail-section textarea {
   resize: none;
+}
+
+#show .mail-section textarea:focus,
+#show .mail-section textarea:active {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
 }
 
 #show .mail-section .btn_mail {
