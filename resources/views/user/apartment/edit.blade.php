@@ -15,16 +15,7 @@
 <div id="edit">
   <div class="container">
     <div class="row justify-content-center">
-      {{-- validation --}}
-      @if ($errors->any())
-        <div class="alert alert-danger">
-          <ul>
-            @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
-            @endforeach
-          </ul>
-        </div>
-      @endif
+
       <div class="col-md-8 col-lg-6">
         <div class="card">
           <div class="card-header text-center font-weight-bold">
@@ -153,6 +144,20 @@
           </div>
         </div>
       </div>
+
+      {{-- validation --}}
+      @if ($errors->any())
+        <div class="col-12 d-flex justify-content-center row">
+          <div class="alert alert-danger col-md-8 col-lg-6">
+            <ul>
+              @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+        </div>
+      @endif
+      
     </div>
   </div>
 </div>
