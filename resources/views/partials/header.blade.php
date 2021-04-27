@@ -7,7 +7,7 @@
 
       <a class="navbar-brand" href="{{ route('index') }}">
         <img class="main"
-            src="https://i.postimg.cc/J76FxnvG/Airbnb-Logo-bianco.png"
+            src="https://i.postimg.cc/8ccPsg1K/Airbnb-logo-intero-bianco.png"
             alt="logo">
       </a>
 
