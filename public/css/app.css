@@ -11329,12 +11329,26 @@ header .row .search a:hover {
   opacity: 0.9;
 }
 
+#apa-index {
+  padding-bottom: 50px;
+}
+
 #apa-index i {
   display: none;
 }
 
 #apa-index .p_top {
-  padding-top: 10px;
+  padding-top: 50px;
+}
+
+#apa-index .row .bordo_tabella {
+  box-shadow: 0 0 15px lightgray;
+  margin: 20px 0;
+}
+
+#apa-index .row tbody tr:hover {
+  cursor: pointer;
+  background-color: lightgrey;
 }
 
 #apa-index .row .table thead {

@@ -16,7 +16,7 @@
             </a>
         </div>
         <div class="row">
-            <table class="table table-hover">
+            <table class="table table-hover bordo_tabella">
                 <thead>
                     <tr>
                         <th scope="col">Annuncio</th>

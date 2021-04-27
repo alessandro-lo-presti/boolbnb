@@ -317,13 +317,24 @@
 
 //sezione Index
 #apa-index {
+    padding-bottom: 50px;
     i{
         display: none;
     }
     .p_top {
-        padding-top: 10px;
+        padding-top: 50px;
     }
     .row {
+        .bordo_tabella{
+            box-shadow: 0 0 15px lightgray;
+            margin: 20px 0;
+        }
+        tbody tr{
+            &:hover{
+                cursor: pointer;
+                background-color: lightgrey;
+            }
+        }
         .table {
             thead {
                 border-top: none;

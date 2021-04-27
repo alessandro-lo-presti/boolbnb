@@ -172,7 +172,7 @@ var create = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\shadi\Documents\mamp_public\boolbnb\resources\js\create.js */"./resources/js/create.js");
+module.exports = __webpack_require__(/*! C:\Users\user\Documents\Boolean\mamp_public\boolbnb-proj\resources\js\create.js */"./resources/js/create.js");
 
 
 /***/ })

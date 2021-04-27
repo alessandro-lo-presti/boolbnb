@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Login')
 @section('content')
 @include('partials.header')
 <div id="login">
