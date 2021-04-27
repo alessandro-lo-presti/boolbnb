@@ -15,11 +15,6 @@
                 </div>
             </div>
         </div>
-
-
-
-        {{-- @include('partials.footer') --}}
-
     </div>
 
     <script src="{{ asset('js/message.js') }}"></script>
