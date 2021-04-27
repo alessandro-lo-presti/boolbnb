@@ -1,67 +1,60 @@
-    <!-- header -->
-    <header>
-        <div class="container">
-            <div class="row d-flex align-items-center justify-content-between">
-                <!-- LOGO -->
-                <div class="box logo">
-                    <!-- Rotta home del guest -->
-                    <a href="{{ route('index') }}">
-                        <img class="main"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png"
-                            alt="logo">
-                        <img class="logo-small" src="https://i.postimg.cc/5242xRKq/Senza-titolo-1.png"
-                            alt="Logo piccolo">
-                    </a>
-                </div>
+<!-- header -->
+<header>
 
-                <!-- SEARCHBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-3">
 
+    <div class="container">
 
+      <a class="navbar-brand" href="{{ route('index') }}">
+          <img class="main"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png"
+              alt="logo">
+      </a>
 
-                <!-- Rotta show/Ricerca -->
-                <div class="box login d-flex justify-content-end align-items-center">
-                    <div class="search">
-                        <a href="{{ route('search') }}">
-                            Dove vuoi andare ?</a>
-                    </div>
-                    <!-- DROPDOWN UTENTE -->
-                    <div class="user d-flex justify-content-end">
-                        @guest
-                            <div class="nav-item">
-                                <a class="btn_l" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </div>
-                            @if (Route::has('register'))
-                                <div class="nav-item">
-                                    <a class="btn_r" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </div>
-                            @endif
-                        @else
-                            <!-- Rotta Log In utente -->
-                            <div class="nav-item dropdown">
-                                <a id="navbarDropdown btn_dd" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-user-circle fa-2x btn_dd"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('apartment.index') }}">I miei appartamenti</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-
-                                </div>
-                            </div>
-
-                            <!-- Rotta sponsor utente -->
-                        </div>
-                    </div>
-                @endguest
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item {{  'active'}}">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('search') }}">Ricerca</a>
+          </li>
+          <li class="nav-item dropdown">
+            @guest
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Area Clienti
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{{route('login')}}">Login</a>
+                @if (Route::has('register'))
+                  <a class="dropdown-item" href="{{ 'register' }}">Registrati</a>
+                @endif
+              </div>
+            @else
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ Auth::user()->name }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{{route('apartment.index')}}">I miei Appartamenti</a>
+              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+              </form>
             </div>
-        </div>
-    </header>
-    <!-- /header -->
+            @endguest
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
+<!-- /header -->

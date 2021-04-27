@@ -10942,85 +10942,27 @@ a.text-dark:focus {
   }
 }
 
-header {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: white;
+header nav {
+  background: #010101;
 }
 
-header .row {
-  height: 80px;
-}
-
-header .row .box.logo img {
+header nav a img {
   height: 32px;
 }
 
-header .row .box.logo .logo-small {
-  display: none;
-}
-
-header .row .box.login .user a {
-  padding-right: 10px;
-  text-decoration: none;
-}
-
-header .row .box.login .user .btn_l {
-  padding-left: 10px;
-  color: black;
-}
-
-header .row .box.login .user .btn_l:hover {
-  color: #ff5a5f;
-}
-
-header .row .box.login .user .btn_r {
-  color: black;
-}
-
-header .row .box.login .user .btn_r:hover {
-  color: #ff5a5f;
-}
-
-header .row .box.login .user .dropdown .btn_dd {
-  color: #ff5a5f;
-}
-
-header .row .box.login .user .dropdown .dropdown-toggle::after {
-  display: none;
-}
-
-header .row .box.login .user .dropdown .dropdown-menu .account {
-  padding: 0.25rem 1.5rem;
-}
-
-header .row .search a {
-  text-decoration: none;
-  color: black;
-}
-
-header .row .search a:hover {
-  color: #ff5a5f;
-}
-
-@media screen and (max-width: 576px) {
-  header .container .row .box a .main {
-    display: none;
+@media screen and (max-width: 992px) {
+  .dropdown-menu.show {
+    background-color: #000000;
+    padding-top: 0;
+    margin-top: 0;
   }
 
-  header .container .row .box a .logo-small {
-    display: inline-block;
-  }
-}
-
-@media screen and (max-width: 767px) and (min-width: 577px) {
-  header .container .row .box a .main {
-    display: none;
+  .dropdown-menu.show .dropdown-item {
+    color: #717171;
   }
 
-  header .container .row .box a .logo-small {
-    display: inline-block;
+  .dropdown-menu.show .dropdown-item:hover {
+    color: #010101;
   }
 }
 
@@ -11028,6 +10970,10 @@ header .row .search a:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: white;
 }
 
 #home {
