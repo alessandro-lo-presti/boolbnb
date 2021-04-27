@@ -108,6 +108,7 @@ var app = new Vue({
     baseUrl: '',
     // baseUrl: '/marzo/progetto-boolbnb/public,'
     counter: 0,
+    sponsored: [],
     destinations: [{
       cover: 'https://a0.muscache.com/im/pictures/e8d3d6de-40b1-4341-89f2-afb2a1a4f71f.jpg?im_q=medq&im_w=240',
       city: 'Milano',
@@ -195,7 +196,11 @@ var app = new Vue({
     }
   },
   mounted: function mounted() {
-    axios.get('http://127.0.0.1:8000/api/sponsored').then();
+    var _this = this;
+
+    axios.get('http://127.0.0.1:8000/api/sponsored').then(function (result) {
+      _this.sponsored = result.data.response;
+    });
   }
 });
 
@@ -208,7 +213,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/PENNA/Programmazione/Corso24/mamp_public/progetto-finale/boolbnb/resources/js/home.js */"./resources/js/home.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/home.js */"./resources/js/home.js");
 
 
 /***/ })

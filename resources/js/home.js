@@ -15,6 +15,7 @@ var app = new Vue({
         baseUrl: '',
         // baseUrl: '/marzo/progetto-boolbnb/public,'
         counter: 0,
+        sponsored: [],
         destinations: [
 
             {
@@ -126,10 +127,12 @@ var app = new Vue({
 
     },
     mounted(){
-        
-        axios
-        .get('http://127.0.0.1:8000/api/sponsored')
-        .then()
+
+      axios
+      .get('http://127.0.0.1:8000/api/sponsored')
+      .then((result)=> {
+        this.sponsored = result.data.response;
+      });
 
     }
 

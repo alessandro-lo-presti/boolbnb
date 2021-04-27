@@ -65,26 +65,25 @@ class ApartmentController extends Controller
 
   public function sponsoredApartment(Request $request){
     $date = new Carbon();
-    $apartments = DB::table('apartment_sponsor')->where('end', '>', $date )->limit(8)->get();
+    $sponsoredApartments = DB::table('apartment_sponsor')->where('end', '>', $date )->limit(8)->get();
 
-      foreach($apartments as $apartment) {
+      foreach($sponsoredApartments as $sponsoredApartment) {
 
-        $image = Image::where('apartment_id', $apartment->id)->first();
+        $image = Image::where('apartment_id', $sponsoredApartment->apartment_id)->first();
         if($image != null) {
-          $apartment->image = $image->path;
+          $sponsoredApartment->image = $image->path;
         }
 
-        $data = Apartment::select('title', 'city')->where('id', $apartment->id)->get()->toArray();
-
-        $apartment->title = $data[0]['title'];
-        $apartment->city = $data[0]['city'];
+        $data = Apartment::select('title', 'city')->where('id', $sponsoredApartment->apartment_id)->get()->toArray();
+        $sponsoredApartment->title = $data[0]['title'];
+        $sponsoredApartment->city = $data[0]['city'];
 
       }
 
 
     return response()->json([
         "success" => true,
-        "response" => $data
+        "response" => $sponsoredApartments
       ]);
   }
 
