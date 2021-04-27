@@ -64,9 +64,16 @@ class ApartmentController extends Controller
   }
 
   public function sponsoredApartment(Request $request){
-    $apartments = DB::table('apartment_sponsor')->where('end', '>', )->get();
-    dd($apartments);
-   
+    $date = new Carbon();
+    $apartments = DB::table('apartment_sponsor')->where('end', '>', $date )->get();
+    
+      foreach($apartments as $apartment) {
+
+        $services = DB::table('apartment_service')->where('apartment_id', $apartment->id)->get()->pluck('service_id');
+        if($services != null) {
+          $apartment->services = $services;
+        }
+      }
   }
 
 }
