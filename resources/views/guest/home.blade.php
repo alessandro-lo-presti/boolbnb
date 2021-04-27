@@ -54,7 +54,7 @@
           <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="item in sponsored">
 
             <div class="apartment_type">
-              <img :src="(item.image) ? host + '/storage/' + apartment.image : host + '/storage/covers/placeholder.png'">
+              <img :src="(item.image) ? host + '/storage/' + item.image : host + '/storage/covers/placeholder.png'">
               <h5 class="pt-2">@{{ item.type }}</h5>
             </div>
 

@@ -103,7 +103,7 @@ var app = new Vue({
   el: '#home',
   data: {
     nextCounter: 1,
-    host: 'http://localhost:8000/',
+    host: 'http://localhost:8000',
     // host: 'http://localhost:8080/marzo/progetto-boolbnb/public',
     baseUrl: '',
     // baseUrl: '/marzo/progetto-boolbnb/public,'
@@ -200,6 +200,7 @@ var app = new Vue({
 
     axios.get('http://127.0.0.1:8000/api/sponsored').then(function (result) {
       _this.sponsored = result.data.response;
+      console.log(_this.sponsored);
     });
   }
 });
