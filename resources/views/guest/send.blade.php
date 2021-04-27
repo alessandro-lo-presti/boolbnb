@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@include('partials.header')
 <div id="send">
 
   <div class="container result">
