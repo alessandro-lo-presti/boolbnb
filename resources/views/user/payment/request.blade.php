@@ -3,6 +3,7 @@
 @section('cdn')
   <script src="https://js.braintreegateway.com/web/dropin/1.27.0/js/dropin.min.js"></script>
 @endsection
+@section('title' ,'payment request')
 
 @section('script')
   <script src="{{ asset('js/sponsor.js') }}"></script>

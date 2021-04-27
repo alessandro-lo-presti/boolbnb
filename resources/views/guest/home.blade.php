@@ -3,6 +3,8 @@
 @section('script')
   <script src="{{ asset('js/home.js') }}"></script>
 @endsection
+@section('title' ,'home')
+    
 
 
 @section('content')

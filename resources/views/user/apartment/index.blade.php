@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title' ,'apartment')
 @section('content')
     @if (session('status'))
         <div class="alert alert-success">

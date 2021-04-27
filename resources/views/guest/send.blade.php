@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title' ,'send')
 @section('content')
 <div id="send">
 
