@@ -7,7 +7,7 @@
 
 @section('content')
 
-  <div id="home">
+  <div id="home" class="mb-3">
 
     {{-- section jumbotron --}}
     <section class="jumbo">
@@ -113,32 +113,27 @@
         <div class="container">
           <div class="image_behost">
             <div class="description text-white">
-              <h2>ciao</h2>
-              <p>a tutti</p>
-              <button class="btn btn-primary">ciao</button>
+              <h2>Diventa host</h2>
+              <p>Condividi il tuo spazio per guadagnare qualcosa in più e cogliere nuove opportunità.</p>
+              <button class="btn btn-primary">scopri di più</button>
             </div>
           </div>
         </div>
       </section>
 
 
-      {{-- test push --}}
-
       {{-- section experience --}}
-      <section class="experience mt-5">
+      <section class="experience mt-5 mb-4">
         <h4>scopri le esperienze</h4>
 
         <p>attivit&aacute; uniche con esperti del luogo, di persona oppure online</p>
 
-        <div class="d-flex justify-content-center flex-wrap mt-3 position-relative">
+        <div class="row justify-content-center position-relative">
 
-          <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in experiences">
-
-            <div class="apartment_type">
-              <img :src="item.cover" :alt="item.type">
-              <h5 class="pt-2">@{{ item.title }}</h5>
-              <p class="pt-2">@{{ item.type }}</p>
-            </div>
+          <div class="apartment_type col-sm-12 col-md-6 col-lg-4 mt-3 mb-2" v-for="(item, index) in experiences">
+            <img :src="item.cover" :alt="item.type">
+            <h5 class="pt-2">@{{ item.title }}</h5>
+            <p class="pt-2">@{{ item.type }}</p>
           </div>
 
         </div>

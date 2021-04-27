@@ -13,7 +13,7 @@ var app = new Vue({
         host: 'http://localhost:8000',
         // host: 'http://localhost:8080/marzo/progetto-boolbnb/public',
         baseUrl: '',
-        // baseUrl: '/marzo/progetto-boolbnb/public,'
+        // baseUrl: '/marzo/progetto-boolbnb/public',
         counter: 0,
         sponsored: [],
         destinations: [

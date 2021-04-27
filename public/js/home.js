@@ -106,7 +106,7 @@ var app = new Vue({
     host: 'http://localhost:8000',
     // host: 'http://localhost:8080/marzo/progetto-boolbnb/public',
     baseUrl: '',
-    // baseUrl: '/marzo/progetto-boolbnb/public,'
+    // baseUrl: '/marzo/progetto-boolbnb/public',
     counter: 0,
     sponsored: [],
     destinations: [{
@@ -214,7 +214,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/home.js */"./resources/js/home.js");
+module.exports = __webpack_require__(/*! /Volumes/PENNA/Programmazione/Corso24/mamp_public/progetto-finale/boolbnb/resources/js/home.js */"./resources/js/home.js");
 
 
 /***/ })

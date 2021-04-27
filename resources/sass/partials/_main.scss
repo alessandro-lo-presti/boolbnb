@@ -102,16 +102,21 @@ body {
             top: 50%;
             left: 20%;
             transform: translate(-50%, -50%);
+            width: 200px;
         }
     }
 
     section.experience {
-        height: 400px;
         h5,
         p,
         [class*="col-"] {
             margin: 0;
             padding: 0;
+        }
+        .apartment_type{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         img {
             height: 250px;
@@ -151,13 +156,13 @@ body {
             .image_behost {
                 height: 280px;
             }
+            .description{
+                padding-left: 20px;
+            }
         }
     }
 
     @media screen and (max-width: 577px) {
-        .boxes {
-            width: 300px;
-        }
         section.types {
             .terzo {
                 display: flex;
@@ -171,7 +176,11 @@ body {
             .image_behost {
                 height: 195px;
                 .description {
+                    margin-left: 20px;
                     top: 40%;
+                    p{
+                        display: none;
+                    }
                 }
             }
         }
