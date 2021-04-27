@@ -11967,6 +11967,17 @@ body {
   transform: translateX(-50%);
 }
 
+#advanced-search .card a.btn.address {
+  width: 100%;
+  margin-top: 15px;
+  color: white;
+  background: #ff5a5f;
+  position: static;
+  left: 0;
+  bottom: 0;
+  transform: translateX(0);
+}
+
 #advanced-search .card a.btn:focus {
   outline: none;
   box-shadow: none;

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'advanced search')
 @section('cdn')
   <!--TomTom-->
   <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-  <div id="advanced-search" class="container">
+  <div id="advanced-search" class="container mt-5 mb-5">
     <div class="card search-bar">
         <div class="card-header text-center font-weight-bold">
           Ricerca avanzata
@@ -29,8 +29,8 @@
 
           </div>
           <div class="col-md-12">
-            <input type="text" class='form-control mt-3' name="address" placeholder="Inserisci indirizzo" v-model="inputAddress" @keyup="getCordsAddress()">
-            <button type="button" name="button" v-on:click="addressFilter()">Address</button>
+            <input type="text" class='form-control mt-3' name="address" placeholder="Inserisci indirizzo" autocomplete="off" v-model="inputAddress" @keyup="getCordsAddress()">
+            <a class="btn btn-primary address" v-on:click="addressFilter()">Cerca</a>
           </div>
           <div class="filters-dropdown d-flex justify-content-around" :class="dropdownBox">
             <div class="filters-left">
@@ -38,8 +38,8 @@
               <div class="counter-details row d-flex justify-content-center col-md-12 p-3">
                 {{-- n stanze --}}
                 <div class="form-group row col-md-6">
-                  <div class="counter d-flex justify-content-center">
-                    <div class="counter-title">Stanze</div>
+                  <div class="counter d-flex justify-content-start">
+                    <div class="counter-title text-left">Stanze</div>
                     <div class="counter-number d-flex justify-content-around">
                       <a @click="removeRoom"><i class="fas fa-minus-circle fa-lg"></i></a>
                       @{{rooms}}
@@ -50,8 +50,8 @@
                 </div>
                 {{-- n letti --}}
                 <div class="form-group row col-md-6">
-                  <div class="counter d-flex justify-content-center">
-                    <div class="counter-title">Letti</div>
+                  <div class="counter d-flex justify-content-start">
+                    <div class="counter-title text-left">Letti</div>
                     <div class="counter-number d-flex justify-content-around">
                       <a @click="removeBed"><i class="fas fa-minus-circle fa-lg"></i></a>
                       @{{beds}}
@@ -62,8 +62,8 @@
                 </div>
                 {{-- bagni --}}
                 <div class="form-group row col-md-6">
-                  <div class="counter d-flex justify-content-center">
-                    <div class="counter-title">Bagni</div>
+                  <div class="counter d-flex justify-content-start">
+                    <div class="counter-title text-left text-left">Bagni</div>
                     <div class="counter-number d-flex justify-content-around">
                       <a @click="removeBathroom"><i class="fas fa-minus-circle fa-lg"></i></a>
                       @{{bathrooms}}
@@ -74,8 +74,8 @@
                 </div>
                 {{-- raggio --}}
                 <div class="form-group row col-md-6">
-                  <div class="counter d-flex justify-content-center">
-                    <div class="counter-title">Raggio</div>
+                  <div class="counter d-flex justify-content-start">
+                    <div class="counter-title text-left">Raggio</div>
                     <div class="counter-number d-flex justify-content-around">
                       <a @click="removeRadius"><i class="fas fa-minus-circle fa-lg"></i></a>
                       @{{radius}}
@@ -90,9 +90,9 @@
             <div class="filters-right mr-5">
               <h3 class="text-center">Servizi</h3>
               {{-- servizi --}}
-              <div class="services row d-flex justify-content-around col-md-12">
+              <div class="services row d-flex justify-content-around ml-5">
                 @foreach ($services as $service)
-                  <div class="form-group row form-check col-md-4">
+                  <div class="form-group row form-check col-md-4 text-left">
                     <input v-model="{{ str_replace(" ","", $service->name) }}" type="checkbox" class="form-check-input" id="exampleCheck1" name="services[]" value="{{$service->id}}">
                     <label class="form-check-label" for="{{$service->id}}">
                       @if ($service -> name == "WiFi")

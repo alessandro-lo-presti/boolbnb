@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

@@ -1030,6 +1030,16 @@ body {
         bottom: 10px;
         transform: translateX(-50%);
       }
+      a.btn.address {
+        width: 100%;
+        margin-top: 15px;
+        color: white;
+        background: #ff5a5f;
+        position: static;
+        left: 0;
+        bottom: 0;
+        transform: translateX(0);
+      }
       a.btn:focus {
         outline: none;
         box-shadow: none;
