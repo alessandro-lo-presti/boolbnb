@@ -11156,6 +11156,10 @@ body {
   }
 }
 
+#login .container .row .card {
+  margin: 90px 0 90px;
+}
+
 #login .container .row .card .card-header {
   background-color: white;
   font-size: 18px;
@@ -11194,6 +11198,10 @@ body {
 
 #login .container .row .card .card-body form .form-group button:hover {
   opacity: 0.9;
+}
+
+#login-email .container .row .card {
+  margin: 90px 0 90px;
 }
 
 #login-email .container .row .card .card-header {
@@ -11235,6 +11243,10 @@ body {
 
 #login-email .container .row .card .card-body form .form-group button:hover {
   background-color: black;
+}
+
+#login-register .container .row .card {
+  margin: 90px 0 90px;
 }
 
 #login-register .container .row .card .card-header {
