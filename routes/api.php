@@ -21,3 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get("/search", "Api\ApartmentController@index");
 Route::get("/autocomplete", "Api\ApartmentController@autocomplete");
 Route::get("/sponsored", "Api\ApartmentController@sponsoredApartment");
+Route::get("/homesearch", "Api\ApartmentController@searchHome");

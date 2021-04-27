@@ -73,7 +73,7 @@ class ApartmentController extends Controller
         if($image != null) {
           $apartment->image = $image->path;
         }
-        
+
         $data = Apartment::select('title', 'city')->where('id', $apartment->id)->get()->toArray();
 
         $apartment->title = $data[0]['title'];
@@ -86,6 +86,36 @@ class ApartmentController extends Controller
         "success" => true,
         "response" => $data
       ]);
+  }
+
+  public function searchHome(Request $request) {
+
+    $data = $request->all();
+
+    if(array_key_exists('title', $data)) {
+
+      $apartments = Apartment::where('title', 'LIKE', '%'.$data['title'].'%')->get();
+
+      foreach($apartments as $apartment) {
+
+        $image = Image::where('apartment_id', $apartment->id)->first();
+        if($image != null) {
+          $apartment->image = $image->path;
+        }
+
+      }
+
+      return response()->json([
+        "success" => true,
+        "response" => $apartments
+      ]);
+    }
+    else {
+      return response()->json([
+        "success" => false,
+        "error" => "Errore nella richiesta"
+      ]);
+    }
   }
 
 }
