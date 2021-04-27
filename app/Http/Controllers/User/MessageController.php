@@ -32,7 +32,8 @@ class MessageController extends Controller
 
         if(Auth::id() == $apartment->user_id) {
           $data = [
-              'message' => $message
+              'message' => $message,
+              'apartment' => $apartment
           ];
 
           return view('user.message.show', $data);
