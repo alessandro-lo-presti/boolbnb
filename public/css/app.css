@@ -11793,9 +11793,16 @@ body {
 }
 
 #message .evidence .card {
-  border: 1px solid #8eb9cb;
-  border-radius: 10px;
-  box-shadow: 0px 2px 10px;
+  box-shadow: 0 0 15px lightgrey;
+}
+
+#message .evidence .card .card-body a {
+  text-decoration: underline;
+  color: #717171;
+}
+
+#message .evidence .card .card-body a:hover {
+  color: black;
 }
 
 #sponsor #payment-form #paga {
