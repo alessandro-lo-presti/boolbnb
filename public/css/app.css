@@ -11288,7 +11288,7 @@ body {
 }
 
 #apa-index {
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 #apa-index i {
@@ -11296,7 +11296,7 @@ body {
 }
 
 #apa-index .p_top {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 #apa-index .row .bordo_tabella {
@@ -11305,6 +11305,16 @@ body {
 }
 
 #apa-index .row tbody tr:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+#apa-index .row .table.bordo_tabella {
+  box-shadow: 0 0 15px lightgray;
+  margin: 20px 0;
+}
+
+#apa-index .row .table tbody tr:hover {
   cursor: pointer;
   background-color: lightgrey;
 }
@@ -11763,6 +11773,11 @@ body {
   color: white;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+#message {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 #message .bordo_tabella {
