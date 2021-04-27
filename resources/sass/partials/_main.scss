@@ -849,11 +849,16 @@ body {
     // }
 
     .evidence{
-        padding: 30px 0;
+        padding: 50px 0;
         display: flex;
         justify-content: center;
         .card{
             box-shadow: 0 0 15px lightgrey;
+            .card-header{
+                h6{
+                    font-size: 12px;
+                }
+            }
             .card-body{
                 a {
                     text-decoration: underline;
@@ -865,7 +870,6 @@ body {
             }
         }
     }
-
 }
 
 // sezione sponsor Emanuele
