@@ -25,6 +25,13 @@ class ApartmentController extends Controller
     {
         $apartments = Apartment::where('user_id', Auth::id())->get();
 
+        foreach($apartments as $apartment) {
+          $image = Image::where('apartment_id', $apartment->id)->first();
+          if($image != null) {
+            $apartment->image = $image->path;
+          }
+        }
+
         $data = [
             'apartments' => $apartments
         ];
