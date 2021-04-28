@@ -114,6 +114,49 @@ body {
         }
     }
 
+    section.search{
+        .search {
+        position: relative;
+            input:focus,
+            input:active {
+                outline: none;
+                box-shadow: none;
+                border-color: inherit;
+                -webkit-box-shadow: none;
+                color: #717171;
+            }
+        .autocomplete {
+            display: none;
+        }
+        .card-header{
+            background-color: #fff;
+        }
+        .autocomplete.active {
+            padding: 0;
+            width: calc(100% - 50px);
+            position: absolute;
+            top: 68px;
+            left: 30px;
+            background-color: white;
+            color: black;
+            border: 1px solid lightgrey;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            div {
+                width: 100%;
+                span{
+                  padding: 0 10px;
+                }
+                &:hover {
+                  color: white;
+                  background-color: #ff5a5f;
+                }
+            }
+        }
+        }
+    }
+
     section.experience {
         h5,
         p,

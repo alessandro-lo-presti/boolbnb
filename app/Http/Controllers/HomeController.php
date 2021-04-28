@@ -31,7 +31,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('guest.home');
+      $apartments = Apartment::all();
+
+      $data = [
+        'apartments' => $apartments
+      ];
+
+      return view('guest.home', $data);
     }
 
     public function show(Apartment $apartment)

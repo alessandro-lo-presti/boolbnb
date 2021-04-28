@@ -59,6 +59,40 @@
         </div>
       </section>
 
+      {{-- section search --}}
+        <section class="search">
+          <div class="card search-bar mt-4">
+            <div class="card-header text-center font-weight-bold">
+              Ricerca
+            </div>
+            <div class="card-body search">
+              <div class="col-md-12">
+                <input type="text" class='form-control' name="title" placeholder="Inserisci appartamento" v-model="searchInput" @keyup='autocomplete' @keyup.enter='search' autocomplete="off">
+              </div>
+              <div :class="(searchInput.length) ? 'active' : ''" class="autocomplete">
+
+                <div v-for='suggest in suggests' @click='changeSearchInput(suggest)'>
+                  <span>@{{ suggest }}</span>
+                </div>
+
+              </div>
+
+              <div class="row d-flex justify-content-around">
+                <div class="card mt-5 mx-2" style="width: 18rem;" v-for="apartment in apartments">
+                  <img :src="(apartment.image) ? host + '/storage/' + apartment.image : host + '/storage/covers/placeholder.png'" class="card-img-top" alt="appartamento">
+                  <div class="card-body">
+                    <h5 class="card-title ml-3">@{{apartment.title}}</h5>
+                    <p class="card-text ml-3 pb-2">
+                      @{{apartment.address}}
+                    </p>
+                    <a :href='"/apartment/" + apartment.id' class="btn btn-primary">Visualizza</a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
 
       {{-- section experience --}}
       <section class="experience mt-5 mb-4">
