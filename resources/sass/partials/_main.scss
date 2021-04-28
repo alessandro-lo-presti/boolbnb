@@ -898,25 +898,35 @@ body {
 
 // sezione sponsor Emanuele
 #sponsor {
+
     #payment-form{
+
+      #dropin-container {
+        max-width: 1030px;
+        margin: auto;
+      }
+
        #paga{
             background-color: #ff5a5f;
             border: none;
             border-radius: 5px;
             padding: 10px;
             color: white;
-            margin-bottom: 12px;
+            margin-top: 17px;
+            margin-bottom: 30px;
             text-transform: uppercase;
             font-weight: bold;
         }
     }
     .container{
         #payment-form{
-            h3{
+          margin-top: 60px;
+
+            h1{
                 text-align: center;
                 margin-top: 30px;
             }
-            p{
+            h4{
                 margin: 10px 0 30px 0;
                 text-align: center;
                 font-size: 1.2em;
@@ -927,11 +937,23 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-around;
-            margin: 30px 0;
+            margin: 60px 0;
         }
         .card{
             border-radius: 10px;
             border-color: transparent;
+
+            .card-title {
+              text-transform: capitalize;
+              font-weight: bold;
+            }
+
+            .card-text {
+              margin: 10px 0 30px 0;
+              text-align: center;
+              font-size: 1.2em;
+            }
+
         }
         .center-card{
             display: flex;

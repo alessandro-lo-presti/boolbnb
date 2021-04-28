@@ -18,13 +18,13 @@
           @csrf
           @method('POST')
 
-          <h3>Rendi più visibile il tuo appartamento</h3>
-          <p>Acquista una delle nostre sponsorizzazioni</p>
+          <h1>Rendi più visibile il tuo appartamento</h1>
+          <h4>Acquista una delle nostre sponsorizzazioni</h4>
           <div class="layout-cards">
             <div class="card" style="width: 18rem;" v-for="(sponsor, index) in sponsors">
               <div class="card-body center-card"  :class="(counter == index) ? sponsor.title : '' " v-on:click="selection(sponsor, index)">
                 <h5 class="card-title">@{{ sponsor.title }}</h5>
-                <p class="card-text">@{{ sponsor.duration }} days</p>
+                <p class="card-text">@{{ sponsor.duration }} @{{ (sponsor.duration == 1) ? 'giorno' : 'giorni' }}</p>
                 <p class="card-text">@{{ sponsor.amount }}€</p>
                 {{-- <a href="#" class="btn btn-success">Acquista</a> --}}
                 {{-- <input type="checkbox" name="mario" value=""> --}}
@@ -39,7 +39,9 @@
           <div id="dropin-container"></div>
           {{-- <input type="number" name="sponsor"> --}}
           <input type="hidden" id="nonce" name="payment_method_nonce"/>
-          <button id="paga" type="submit" value="Pagamento" v-bind:disabled="counter < 0 "/>Pagamento</button>
+          <div class="d-flex justify-content-center">
+            <button id="paga" type="submit" value="Pagamento" v-bind:disabled="counter < 0"/>Pagamento</button>
+          </div>
         </form>
       </div>
 
