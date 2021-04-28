@@ -20,10 +20,10 @@
                     <tr>
                         <th scope="col">Annuncio</th>
                         <th scope="col">Titolo</th>
-                        <th scope="col">Stanze</th>
-                        <th scope="col">Letti</th>
-                        <th scope="col">Bagni</th>
-                        <th scope="col">Posizione</th>
+                        <th scope="col" class="d-none d-md-table-cell">Stanze</th>
+                        <th scope="col" class="d-none d-md-table-cell">Letti</th>
+                        <th scope="col" class="d-none d-md-table-cell">Bagni</th>
+                        <th scope="col" class="d-none d-md-table-cell">Posizione</th>
                         <th scope="col">Messaggi</th>
                         <th scope="col">Cancella</th>
                     </tr>
@@ -39,13 +39,13 @@
                             </th>
                             <td class="col-xs-2"><a href="{{ route('apartment.show', $apartment->id) }}">{{ $apartment->title }}</a>
                             </td>
-                            <td class="col-xs-2">{{ $apartment->n_rooms }}</td>
-                            <td class="col-xs-2">{{ $apartment->n_beds }}</td>
-                            <td class="col-xs-2">{{ $apartment->n_bathrooms }}</td>
-                            <td class="col-xs-2">{{ $apartment->address }}
+                            <td class="col-xs-2 d-none d-md-table-cell">{{ $apartment->n_rooms }}</td>
+                            <td class="col-xs-2 d-none d-md-table-cell">{{ $apartment->n_beds }}</td>
+                            <td class="col-xs-2 d-none d-md-table-cell">{{ $apartment->n_bathrooms }}</td>
+                            <td class="col-xs-2 d-none d-md-table-cell">{{ $apartment->address }}
                                 {{ $apartment->city }}</td>
-                                <td class="mex">
-                                    <a href="{{route('message.index', $apartment->id)}}"><input class="btn btn-primary" value="&#xf086;" type="submit"></a></td>
+                          <td class="mex d-flex justify-content-center align-items-center">
+                              <a href="{{route('message.index', $apartment->id)}}"><input class="btn btn-primary" value="&#xf086;" type="submit"></a></td>
                             <td class="del">
                                 <form action="{{ route('apartment.destroy', $apartment->id) }}" method='post'>
                                     @csrf
