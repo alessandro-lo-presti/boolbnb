@@ -4,7 +4,7 @@
   <script src="{{ asset('js/home.js') }}"></script>
 @endsection
 @section('title' ,'home')
-    
+
 
 
 @section('content')
@@ -59,7 +59,7 @@
           <div class="img-array" style='align-items: center;'>
             <div :style='`left: ${pippo}px`' class="invisibile" style="height: 300px; left: 0px;">
                 <div v-for='(item, index) in sponsored' class="container-img">
-                  <img :src="item.image" alt="apartment_sponsored">
+                  <img :src="(item.image) ? host + '/storage/' + item.image : host + '/storage/covers/placeholder.png'" alt="apartment_sponsored">
                   <h5 class="pt-2">@{{ item.city }}</h5>
                   <p class="pt-2">@{{ item.title }}</p>
                 </div>
@@ -68,7 +68,7 @@
 
           {{-- <div class="apartment_type" v-for="item in sponsored">
             <img :src="item.image" alt="apartment_sponsored">
-            
+
           </div> --}}
           <div class="next">
             <i class="fas fa-arrow-right" v-on:click="nextImg()"></i>

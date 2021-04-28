@@ -63,7 +63,7 @@ class ApartmentController extends Controller
     }
   }
 
-  public function sponsoredApartment(Request $request){
+  public function sponsoredApartment() {
     $date = new Carbon();
     $sponsoredApartments = DB::table('apartment_sponsor')->where('end', '>', $date )->limit(8)->get();
 
