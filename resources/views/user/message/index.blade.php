@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title' ,'message')
+@section('title' ,'I tuoi messaggi')
 @section('content')
     <div id="message">
         <div class= "container">

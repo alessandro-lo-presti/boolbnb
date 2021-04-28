@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title' ,'apartment')
+@section('title' ,'I tuoi Appartamenti')
 @section('content')
     @if (session('status'))
         <div class="alert alert-success">

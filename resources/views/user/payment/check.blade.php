@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title' ,'payment check')
+@section('title' ,'Esito Pagamento')
 @section('content')
 <div id="check">
 

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title' ,'edit')
+@section('title' ,'Modifica Appartamento')
 @section('cdn')
   <!--TomTom-->
   <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
@@ -157,7 +157,7 @@
           </div>
         </div>
       @endif
-      
+
     </div>
   </div>
 </div>
