@@ -93,7 +93,7 @@ class ApartmentController extends Controller
 
     if(array_key_exists('title', $data)) {
 
-      $apartments = Apartment::where('title', 'LIKE', '%'.$data['title'].'%')->get();
+      $apartments = Apartment::where('title', 'LIKE', '%'.$data['title'].'%')->limit(12)->get();
 
       foreach($apartments as $apartment) {
 
