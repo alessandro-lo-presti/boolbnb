@@ -203,7 +203,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/home.js */"./resources/js/home.js");
+module.exports = __webpack_require__(/*! C:\Users\shadi\Documents\mamp_public\boolbnb\resources\js\home.js */"./resources/js/home.js");
 
 
 /***/ })

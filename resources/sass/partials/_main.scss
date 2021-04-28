@@ -1006,6 +1006,7 @@ body {
 
 // sezione advanced-search
 #advanced-search {
+  padding: 100px 0;
     * {
         box-sizing: border-box;
     }
@@ -1085,6 +1086,10 @@ body {
     }
     // end search-bar
     .card{
+      img{
+        width: 100%;
+        height: 200px;
+      }
       a.btn {
         width: 90%;
         color: white;
@@ -1093,6 +1098,16 @@ body {
         left: 50%;
         bottom: 10px;
         transform: translateX(-50%);
+      }
+      a.btn.address {
+        width: 100%;
+        margin-top: 15px;
+        color: white;
+        background: #ff5a5f;
+        position: static;
+        left: 0;
+        bottom: 0;
+        transform: translateX(0);
       }
       a.btn:focus {
         outline: none;

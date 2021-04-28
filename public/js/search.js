@@ -200,8 +200,8 @@ var search = new Vue({
       });
     },
     addressFilter: function addressFilter() {
-      console.log(cordsAddress); // let distance = new tt.LngLat(this.cordsAddress.lng, this.cordsAddress.lat);
-      // this.arrayBounds = distance.toBounds(this.radius).toArray();
+      var distance = new tt.LngLat(cordsAddress.lng, cordsAddress.lat);
+      this.arrayBounds = distance.toBounds(this.radius * 1000).toArray();
     },
     checkBound: function checkBound(latitude, longitude) {
       var value = true;
@@ -228,7 +228,7 @@ var search = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/laravel-project/BoolBnb/resources/js/search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! C:\Users\shadi\Documents\mamp_public\boolbnb\resources\js\search.js */"./resources/js/search.js");
 
 
 /***/ })

@@ -110,9 +110,8 @@ var search = new Vue(
         });
       },
       addressFilter(){
-        console.log(cordsAddress);
-        // let distance = new tt.LngLat(this.cordsAddress.lng, this.cordsAddress.lat);
-        // this.arrayBounds = distance.toBounds(this.radius).toArray();
+        let distance = new tt.LngLat(cordsAddress.lng, cordsAddress.lat);
+        this.arrayBounds = distance.toBounds(this.radius*1000).toArray();
       },
       checkBound(latitude, longitude) {
         let value = true;
