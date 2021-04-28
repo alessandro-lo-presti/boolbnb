@@ -32,7 +32,42 @@ body {
     }
 
     section.types {
-        height: 350px;
+        .h_types{
+            height: 330px;
+        }
+        .prev,
+        .next{
+            align-self: center;
+        }
+        .container-img{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            padding: 20px;
+        }
+        .img-array{
+            overflow: hidden;
+            display: flex;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            flex-shrink: 0;
+            position: relative;
+            left: 0px;
+        }
+        .invisibile{
+            position: relative;
+            left: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transition: 400ms ease all;
+            display: flex;
+        }
+        .apartment_type{
+            width: calc(100% / 3 - 10px);
+            margin: 0 10px;
+        }
         h5,
         p,
         [class*="col-"] {
@@ -40,8 +75,10 @@ body {
             padding: 0;
         }
         img {
-            height: 250px;
+            height: 180px;
             border-radius: 10px;
+            object-fit: cover;
+            width: 100%;
         }
         .scroll {
             border-radius: 50%;
@@ -60,25 +97,7 @@ body {
                 transform: translateY(-50%);
             }
         }
-        .carousel {
-            display: flex;
-            justify-content: center;
-        }
-        .secondo,
-        .terzo {
-            display: none;
-        }
-        .btn {
-            height: 30px;
-            position: relative;
-            margin-top: 115px;
-            i {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
+    
     }
 
     section.behost {
@@ -102,16 +121,21 @@ body {
             top: 50%;
             left: 20%;
             transform: translate(-50%, -50%);
+            width: 200px;
         }
     }
 
     section.experience {
-        height: 400px;
         h5,
         p,
         [class*="col-"] {
             margin: 0;
             padding: 0;
+        }
+        .apartment_type{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         img {
             height: 250px;
@@ -137,41 +161,28 @@ body {
                 font-size: 1.7em;
             }
         }
-        section.types {
-            .secondo {
-                display: flex;
-            }
-            .primo,
-            .terzo {
-                display: none;
-            }
-        }
         section.behost {
             height: 280px;
             .image_behost {
                 height: 280px;
             }
+            .description{
+                padding-left: 20px;
+            }
         }
     }
 
     @media screen and (max-width: 577px) {
-        .boxes {
-            width: 300px;
-        }
-        section.types {
-            .terzo {
-                display: flex;
-            }
-            .primo,
-            .secondo {
-                display: none;
-            }
-        }
+       
         section.behost {
             .image_behost {
                 height: 195px;
                 .description {
+                    margin-left: 20px;
                     top: 40%;
+                    p{
+                        display: none;
+                    }
                 }
             }
         }

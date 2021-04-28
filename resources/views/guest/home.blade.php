@@ -9,7 +9,7 @@
 
 @section('content')
 
-  <div id="home">
+  <div id="home" class="mb-3">
 
     {{-- section jumbotron --}}
     <section class="jumbo">
@@ -37,8 +37,7 @@
 
             <div class="right_side d-flex flex-column justify-content-center pl-3">
 
-              <h5 class="">@{{ item.city }}</h5>
-              <p class="">@{{ item.description }}</p>
+              <h5>@{{ item.city }}</h5>
 
             </div>
 
@@ -51,62 +50,31 @@
       <section class="types mt-4">
         <h4>Una casa ovunque nel mondo</h4>
 
-        <div class="primo carousel flex-no-wrap mt-3 position-relative">
+        <div class="h_types d-flex mb-2 mt-3">
 
-          <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in types">
+          <div class="prev">
+            <i class="fas fa-arrow-left" v-on:click="prevImg()"></i>
+          </div>
 
-            <div class="apartment_type">
-              <img :src="item.cover" :alt="item.type">
-              <h5 class="pt-2">@{{ item.type }}</h5>
+          <div class="img-array" style='align-items: center;'>
+            <div :style='`left: ${pippo}px`' class="invisibile" style="height: 300px; left: 0px;">
+                <div v-for='(item, index) in sponsored' class="container-img">
+                  <img :src="item.image" alt="apartment_sponsored">
+                  <h5 class="pt-2">@{{ item.city }}</h5>
+                  <p class="pt-2">@{{ item.title }}</p>
+                </div>
+            </div>
+          </div>
+
+          {{-- <div class="apartment_type" v-for="item in sponsored">
+            <img :src="item.image" alt="apartment_sponsored">
+            
+          </div> --}}
+          <div class="next">
+            <i class="fas fa-arrow-right" v-on:click="nextImg()"></i>
             </div>
 
-          </div>
-
         </div>
-
-
-
-        <div class="secondo carousel mt-4">
-
-          <button v-on:click="prev()" class="btn btn-primary mr-2">
-            <i class="fas fa-angle-left"></i>
-          </button>
-
-          <div class="image mr-1">
-            <img :src="types[counter].cover" alt="foto">
-            <p>@{{ types[counter].type }}</p>
-          </div>
-
-          <div class="image ml-1">
-            <img :src="types[nextCounter].cover" alt="foto">
-            <p>@{{ types[nextCounter].type }}</p>
-          </div>
-
-          <button v-on:click="next()" class="btn btn-primary ml-2">
-            <i class="fas fa-angle-right"></i>
-          </button>
-
-        </div>
-
-        <div class="terzo carousel mt-4">
-
-          <button v-on:click="prev()" class="btn btn-primary mr-2">
-            <i class="fas fa-angle-left"></i>
-          </button>
-
-          <div class="ciao">
-            <img :src="types[counter].cover" alt="foto">
-            <p>@{{ types[counter].type }}</p>
-          </div>
-
-
-          <button v-on:click="next()" class="btn btn-primary ml-2">
-            <i class="fas fa-angle-right"></i>
-          </button>
-        </div>
-
-
-
 
       </section>
 
@@ -115,32 +83,27 @@
         <div class="container">
           <div class="image_behost">
             <div class="description text-white">
-              <h2>ciao</h2>
-              <p>a tutti</p>
-              <button class="btn btn-primary">ciao</button>
+              <h2>Diventa host</h2>
+              <p>Condividi il tuo spazio per guadagnare qualcosa in più e cogliere nuove opportunità.</p>
+              <button class="btn btn-primary">scopri di più</button>
             </div>
           </div>
         </div>
       </section>
 
 
-      {{-- test push --}}
-
       {{-- section experience --}}
-      <section class="experience mt-5">
+      <section class="experience mt-5 mb-4">
         <h4>scopri le esperienze</h4>
 
         <p>attivit&aacute; uniche con esperti del luogo, di persona oppure online</p>
 
-        <div class="d-flex justify-content-center flex-wrap mt-3 position-relative">
+        <div class="row justify-content-center position-relative">
 
-          <div class="boxes d-flex col-lg-3 col-sm-6 mb-2" v-for="(item, index) in experiences">
-
-            <div class="apartment_type">
-              <img :src="item.cover" :alt="item.type">
-              <h5 class="pt-2">@{{ item.title }}</h5>
-              <p class="pt-2">@{{ item.type }}</p>
-            </div>
+          <div class="apartment_type col-sm-12 col-md-6 col-lg-4 mt-3 mb-2" v-for="(item, index) in experiences">
+            <img :src="item.cover" :alt="item.type">
+            <h5 class="pt-2">@{{ item.title }}</h5>
+            <p class="pt-2">@{{ item.type }}</p>
           </div>
 
         </div>
