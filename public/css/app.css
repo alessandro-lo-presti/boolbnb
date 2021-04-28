@@ -11875,6 +11875,10 @@ body {
   }
 }
 
+#advanced-search {
+  padding: 100px 0;
+}
+
 #advanced-search * {
   box-sizing: border-box;
 }
@@ -11955,6 +11959,11 @@ body {
 
 #advanced-search .card.search-bar .card-body .counter-details .counter .counter-number a i {
   color: #ff5a5f;
+}
+
+#advanced-search .card img {
+  width: 100%;
+  height: 200px;
 }
 
 #advanced-search .card a.btn {

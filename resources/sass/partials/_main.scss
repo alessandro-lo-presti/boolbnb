@@ -942,6 +942,7 @@ body {
 
 // sezione advanced-search
 #advanced-search {
+  padding: 100px 0;
     * {
         box-sizing: border-box;
     }
@@ -1021,6 +1022,10 @@ body {
     }
     // end search-bar
     .card{
+      img{
+        width: 100%;
+        height: 200px;
+      }
       a.btn {
         width: 90%;
         color: white;
