@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-  <div id="advanced-search" class="container mt-5 mb-5">
+  <div id="advanced-search" class="container">
     <div class="card search-bar">
         <div class="card-header text-center font-weight-bold">
           Ricerca avanzata
@@ -23,8 +23,8 @@
           </div>
           <div :class="(searchInput.length) ? 'active' : ''" class="autocomplete">
 
-            <div v-for='suggest in suggests'>
-              <span @click='changeSearchInput(suggest)'>@{{ suggest }}</span>
+            <div v-for='suggest in suggests' @click='changeSearchInput(suggest)'>
+              <span>@{{ suggest }}</span>
             </div>
 
           </div>
@@ -121,7 +121,7 @@
         </div>
     </div>
     <div class="row d-flex justify-content-around">
-      <div class="card mt-4" style="width: 18rem;" v-for="apartment in apartments"
+      <div class="card mt-5 mx-2" style="width: 18rem;" v-for="apartment in apartments"
        v-if="(rooms <= apartment.n_rooms) && (beds <= apartment.n_beds) &&
               (bathrooms <= apartment.n_bathrooms) && ( (WiFi) ? apartment.services.includes(1) : true ) &&
               ( (Piscina) ? apartment.services.includes(2) : true ) && ( (PostoAuto) ? apartment.services.includes(3) : true ) &&

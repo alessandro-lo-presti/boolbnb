@@ -1006,7 +1006,7 @@ body {
 
 // sezione advanced-search
 #advanced-search {
-  padding: 100px 0;
+  padding: 60px 0 90px;
     * {
         box-sizing: border-box;
     }
@@ -1098,6 +1098,8 @@ body {
         left: 50%;
         bottom: 10px;
         transform: translateX(-50%);
+        text-transform: uppercase;
+        font-weight: bold;
       }
       a.btn.address {
         width: 100%;
@@ -1108,6 +1110,8 @@ body {
         left: 0;
         bottom: 0;
         transform: translateX(0);
+        text-transform: uppercase;
+        font-weight: bold;
       }
       a.btn:focus {
         outline: none;
