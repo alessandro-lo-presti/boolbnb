@@ -10988,50 +10988,45 @@ body {
   width: 95%;
 }
 
-#home section.types .h_types {
-  height: 330px;
-}
-
-#home section.types .prev,
-#home section.types .next {
-  background-color: lightgrey;
-  border-radius: 50%;
-  padding: 7px 10px;
-  align-self: center;
-  font-size: 1.2em;
-}
-
-#home section.types .container-img {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  padding: 20px;
-}
-
-#home section.types .img-array {
-  overflow: hidden;
-  display: flex;
+#home section.types .card img {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  flex-shrink: 0;
-  position: relative;
-  left: 0px;
+  height: 200px;
 }
 
-#home section.types .invisibile {
-  position: relative;
+#home section.types .card a.btn {
+  width: 90%;
+  color: white;
+  background: #ff5a5f;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#home section.types .card a.btn.address {
+  width: 100%;
+  margin-top: 15px;
+  color: white;
+  background: #ff5a5f;
+  position: static;
   left: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  transition: 400ms ease all;
-  display: flex;
+  bottom: 0;
+  transform: translateX(0);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-#home section.types .apartment_type {
-  width: calc(100% / 3 - 10px);
-  margin: 0 10px;
+#home section.types .card a.btn:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+}
+
+#home section.types .card .card-body {
+  padding: 30px 0;
 }
 
 #home section.types h5,

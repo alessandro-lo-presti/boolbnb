@@ -29,29 +29,18 @@
       <section class="types mt-4">
         <h2>Scopri gli alloggi in primo piano</h2>
 
-        <div class="h_types d-flex mb-2">
+        <div class="h_types d-flex justify-content-center flex-wrap mb-2">
 
-          <div class="prev">
-            <i class="fas fa-angle-left" v-on:click="prevImg()"></i>
-          </div>
-
-          <div class="img-array" style='align-items: center;'>
-            <div :style='`left: ${pippo}px`' class="invisibile" style="height: 300px; left: 0px;">
-                <div v-for='(item, index) in sponsored' class="container-img">
-                  <img :src="(item.image) ? host + '/storage/' + item.image : host + '/storage/covers/placeholder.png'" alt="apartment_sponsored">
-                  <h5 class="pt-2">@{{ item.city }}</h5>
-                  <p class="pt-2">@{{ item.title }}</p>
-                </div>
+          <div class="card mt-5 mx-2 " style="width: 18rem;" v-for="apartment in sponsored">
+            <img :src="(apartment.image) ? host + '/storage/' + apartment.image : host + '/storage/covers/placeholder.png'" class="card-img-top" alt="appartamento">
+            <div class="card-body">
+              <h5 class="card-title ml-3">@{{apartment.title}}</h5>
+              <p class="card-text ml-3 pb-4">
+                @{{apartment.city}}
+              </p>
+              <a :href='"/apartment/" + apartment.id' class="btn btn-primary">Visualizza</a>
             </div>
           </div>
-
-          {{-- <div class="apartment_type" v-for="item in sponsored">
-            <img :src="item.image" alt="apartment_sponsored">
-
-          </div> --}}
-          <div class="next">
-            <i class="fas fa-angle-right" v-on:click="nextImg()"></i>
-            </div>
 
         </div>
 

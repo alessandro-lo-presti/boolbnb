@@ -36,54 +36,7 @@ var app = new Vue({
         ]
 
     },
-    methods: {
-        nextImg() {
-        
-            let larghezzaImg = document.getElementsByClassName('container-img')[0].offsetWidth;
-
-            const container = document.getElementsByClassName('invisibile')[0];
-
-            const larghezzaContenitore = container.offsetWidth;
-
-            const scrollLeft = Math.abs(container.style.left.replace('px', ''));
-
-            const larghezzaInner = document.getElementsByClassName('img-array')[0].offsetWidth;
-
-            if (scrollLeft > (larghezzaContenitore - larghezzaInner - larghezzaImg)) {
-                return;
-            }
-            this.pippo -= larghezzaImg;
-
-
-
-        },
-        prevImg() {
-            var blocco = true;
-            this.countImg--;
-            let larghezzaImg = document.getElementsByClassName('container-img')[0].offsetWidth;
-
-            const container = document.getElementsByClassName('invisibile')[0];
-
-            const larghezzaContenitore = container.offsetWidth;
-
-            const scrollRight = Math.abs(container.style.left.replace('px', ''));
-
-            const larghezzaInner = document.getElementsByClassName('img-array')[0].offsetWidth;
-
-            if (this.pippo == 0) {
-                return blocco = false;
-            }
-            if (scrollRight > (larghezzaContenitore + larghezzaInner + larghezzaImg)) {
-
-                return;
-            }
-            this.pippo += larghezzaImg;
-
-
-
-        }
-
-    },
+    
     mounted(){
 
       axios

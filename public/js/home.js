@@ -124,40 +124,6 @@ var app = new Vue({
       type: 'gite di più giorni con vitto e alloggio'
     }]
   },
-  methods: {
-    nextImg: function nextImg() {
-      var larghezzaImg = document.getElementsByClassName('container-img')[0].offsetWidth;
-      var container = document.getElementsByClassName('invisibile')[0];
-      var larghezzaContenitore = container.offsetWidth;
-      var scrollLeft = Math.abs(container.style.left.replace('px', ''));
-      var larghezzaInner = document.getElementsByClassName('img-array')[0].offsetWidth;
-
-      if (scrollLeft > larghezzaContenitore - larghezzaInner - larghezzaImg) {
-        return;
-      }
-
-      this.pippo -= larghezzaImg;
-    },
-    prevImg: function prevImg() {
-      var blocco = true;
-      this.countImg--;
-      var larghezzaImg = document.getElementsByClassName('container-img')[0].offsetWidth;
-      var container = document.getElementsByClassName('invisibile')[0];
-      var larghezzaContenitore = container.offsetWidth;
-      var scrollRight = Math.abs(container.style.left.replace('px', ''));
-      var larghezzaInner = document.getElementsByClassName('img-array')[0].offsetWidth;
-
-      if (this.pippo == 0) {
-        return blocco = false;
-      }
-
-      if (scrollRight > larghezzaContenitore + larghezzaInner + larghezzaImg) {
-        return;
-      }
-
-      this.pippo += larghezzaImg;
-    }
-  },
   mounted: function mounted() {
     var _this = this;
 
