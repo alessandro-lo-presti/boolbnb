@@ -9,7 +9,10 @@
             <div class="evidence">
                 <div class="card" style="width: 28rem;">
                     <div class="card-header">
-                        <h5><strong>Messaggio ricevuto da:</strong> {{ $message->email }}</h5>
+                        <h5><strong>Messaggio ricevuto da:</strong>
+
+                           {{ $message->email }}
+                         </h5>
                         <h6 class="card-subtitle mb-2 text-muted">il {{ $message->date }}</h6>
                     </div>
                     <div class="card-body">
