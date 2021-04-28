@@ -18,26 +18,17 @@ body {
         }
     }
 
-    section.explore {
-        img {
-            height: 80px;
-            border-radius: 10px;
-        }
-        h5,
-        p,
-        [class*="col-"] {
-            margin: 0;
-            padding: 0;
-        }
-    }
-
     section.types {
         .h_types{
             height: 330px;
         }
         .prev,
         .next{
+            background-color: lightgrey;
+            border-radius: 50%;
+            padding: 7px 10px;
             align-self: center;
+            font-size: 1.2em;
         }
         .container-img{
             width: 200px;
@@ -152,11 +143,6 @@ body {
             img {
                 width: 100%;
             }
-            h2 {
-                font-size: 1.7em;
-            }
-        }
-        section.explore {
             h2 {
                 font-size: 1.7em;
             }

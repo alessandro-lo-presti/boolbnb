@@ -10988,25 +10988,17 @@ body {
   width: 95%;
 }
 
-#home section.explore img {
-  height: 80px;
-  border-radius: 10px;
-}
-
-#home section.explore h5,
-#home section.explore p,
-#home section.explore [class*=col-] {
-  margin: 0;
-  padding: 0;
-}
-
 #home section.types .h_types {
   height: 330px;
 }
 
 #home section.types .prev,
 #home section.types .next {
+  background-color: lightgrey;
+  border-radius: 50%;
+  padding: 7px 10px;
   align-self: center;
+  font-size: 1.2em;
 }
 
 #home section.types .container-img {
@@ -11129,10 +11121,6 @@ body {
   }
 
   #home .jumbo h2 {
-    font-size: 1.7em;
-  }
-
-  #home section.explore h2 {
     font-size: 1.7em;
   }
 

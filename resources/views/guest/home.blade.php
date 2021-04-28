@@ -25,35 +25,14 @@
 
     <div class="container">
 
-      {{-- section explore --}}
-      <section class="explore">
-        <h4>Esplora i dintorni</h4>
-        <div class="d-flex justify-content-center flex-wrap mt-3">
-          <div class="boxes d-flex col-lg-3 col-sm-6 col-6 mb-2" v-for="(item, index) in destinations">
-
-            <div class="left_side">
-              <img :src="item.cover" :alt="item.city">
-            </div>
-
-            <div class="right_side d-flex flex-column justify-content-center pl-3">
-
-              <h5>@{{ item.city }}</h5>
-
-            </div>
-
-          </div>
-        </div>
-
-      </section>
-
       {{-- section types --}}
       <section class="types mt-4">
-        <h4>Una casa ovunque nel mondo</h4>
+        <h2>Scopri gli alloggi in primo piano</h2>
 
-        <div class="h_types d-flex mb-2 mt-3">
+        <div class="h_types d-flex mb-2">
 
           <div class="prev">
-            <i class="fas fa-arrow-left" v-on:click="prevImg()"></i>
+            <i class="fas fa-angle-left" v-on:click="prevImg()"></i>
           </div>
 
           <div class="img-array" style='align-items: center;'>
@@ -71,7 +50,7 @@
 
           </div> --}}
           <div class="next">
-            <i class="fas fa-arrow-right" v-on:click="nextImg()"></i>
+            <i class="fas fa-angle-right" v-on:click="nextImg()"></i>
             </div>
 
         </div>
@@ -94,7 +73,7 @@
 
       {{-- section experience --}}
       <section class="experience mt-5 mb-4">
-        <h4>scopri le esperienze</h4>
+        <h2>Scopri le esperienze</h2>
 
         <p>attivit&aacute; uniche con esperti del luogo, di persona oppure online</p>
 
