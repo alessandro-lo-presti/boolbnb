@@ -11877,6 +11877,11 @@ body {
   border-color: transparent;
 }
 
+#sponsor .container .card .card-header {
+  width: 100%;
+  text-align: center;
+}
+
 #sponsor .container .card .card-title {
   text-transform: capitalize;
   font-weight: bold;

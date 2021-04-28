@@ -21,9 +21,11 @@
           <h1>Rendi più visibile il tuo appartamento</h1>
           <h4>Acquista una delle nostre sponsorizzazioni</h4>
           <div class="layout-cards">
-            <div class="card" style="width: 18rem;" v-for="(sponsor, index) in sponsors">
-              <div class="card-body center-card"  :class="(counter == index) ? sponsor.title : '' " v-on:click="selection(sponsor, index)">
+            <div class="card center-card" style="width: 18rem;" v-for="(sponsor, index) in sponsors" :class="(counter == index) ? sponsor.title : '' " v-on:click="selection(sponsor, index)">
+              <div class="card-header">
                 <h5 class="card-title">@{{ sponsor.title }}</h5>
+              </div>
+              <div class="card-body">
                 <p class="card-text">@{{ sponsor.duration }} @{{ (sponsor.duration == 1) ? 'giorno' : 'giorni' }}</p>
                 <p class="card-text">@{{ sponsor.amount }}€</p>
                 {{-- <a href="#" class="btn btn-success">Acquista</a> --}}

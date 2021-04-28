@@ -943,6 +943,11 @@ body {
             border-radius: 10px;
             border-color: transparent;
 
+            .card-header {
+              width: 100%;
+              text-align: center;
+            }
+
             .card-title {
               text-transform: capitalize;
               font-weight: bold;
