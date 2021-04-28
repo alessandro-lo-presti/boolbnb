@@ -32,6 +32,13 @@ body {
     }
 
     section.types {
+        .h_types{
+            height: 330px;
+        }
+        .prev,
+        .next{
+            align-self: center;
+        }
         .container-img{
             width: 200px;
             height: 200px;

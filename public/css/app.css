@@ -11000,6 +11000,15 @@ body {
   padding: 0;
 }
 
+#home section.types .h_types {
+  height: 330px;
+}
+
+#home section.types .prev,
+#home section.types .next {
+  align-self: center;
+}
+
 #home section.types .container-img {
   width: 200px;
   height: 200px;

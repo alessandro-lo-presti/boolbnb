@@ -48,7 +48,7 @@
       <section class="types mt-4">
         <h4>Una casa ovunque nel mondo</h4>
 
-        <div class="mb-2 mt-3">
+        <div class="h_types d-flex mb-2 mt-3">
 
           <div class="prev">
             <i class="fas fa-arrow-left" v-on:click="prevImg()"></i>
