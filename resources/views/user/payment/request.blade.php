@@ -39,7 +39,7 @@
           <div id="dropin-container"></div>
           {{-- <input type="number" name="sponsor"> --}}
           <input type="hidden" id="nonce" name="payment_method_nonce"/>
-          <input id="paga" type="submit" value="Pagamento" v-bind:disabled="(counter > 0)"/>
+          <button id="paga" type="submit" value="Pagamento" v-bind:disabled="counter < 0 "/>Pagamento</button>
         </form>
       </div>
 
